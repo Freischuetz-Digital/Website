@@ -209,7 +209,7 @@ module.exports = function (grunt) {
         // Automatically inject Bower components into the HTML file
         bowerInstall: {
             app: {
-                src: ['<%= config.app %>/index.html'],
+                src: ['<%= config.app %>/sites/{,*/}*.html', '<%= config.app %>/templates/{,*/}*.html'],
                 exclude: ['bower_components/bootstrap/dist/js/bootstrap.js']
             }
         },
@@ -336,7 +336,7 @@ module.exports = function (grunt) {
                         'audio/{,*/}*.*',
                         'fonts/{,*/}*.*',
                         'pix/{,*/}*.*',
-                        'scripts/{,*/}*.*'
+                        'scripts/{,*/}*.*'                        
                     ]
                 }, {
                     expand: true,
@@ -344,6 +344,14 @@ module.exports = function (grunt) {
                     cwd: 'bower_components/bootstrap/dist',
                     src: ['fonts/*.*'],
                     dest: '<%= config.dist %>'
+                },{
+                    expand: true,
+                    dot: true,
+                    cwd: '<%= config.app %>/../bower_components/jquery',
+                    dest: '<%= config.dist %>/scripts',
+                    src: [
+                        'jquery.min.js'                        
+                    ]
                 }]
             },
             styles: {
@@ -409,7 +417,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('build', [
         'clean:dist',
-        /*'useminPrepare',*/
+        'useminPrepare',
         'includes:build',
         'concurrent:dist',
         'autoprefixer',
@@ -417,8 +425,8 @@ module.exports = function (grunt) {
         'cssmin',
         'uglify',
         'copy:dist'/*,
-        'rev',
-        'usemin',
+        'rev'*/,
+        'usemin'/*,
         'htmlmin'*/
     ]);
 
