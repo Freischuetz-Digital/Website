@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        <title>Freischütz Digital</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content=""/>
+        <meta name="author" content="Daniel Röwenstrunk"/>
+        
+        <link rel="stylesheet" href="styles/bootstrap.css"/>
+        <link rel="stylesheet" href="styles/bootstrap-responsive.css"/>
+        <link href="styles/bootswatch.css" rel="stylesheet"/>
+        <link href="styles/freidi.css" rel="stylesheet"/>
+        <link href="styles/ptsans.css" rel="stylesheet"/>
+        
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="pix/freidi_icon_144.png"/>
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="pix/freidi_icon_114.png"/>
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="pix/freidi_icon_72.png"/>
+        <link rel="apple-touch-icon-precomposed" href="pix/freidi_icon_57.png"/>
+        <link rel="shortcut icon" href="pix/freidi_favicon.png"/>
+    </head>
+    <body data-spy="scroll" data-target="#navbar" data-offset="30">
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="brand" href="/index.html">Freischütz<br/>
+                        <small>Digital</small>
+                    </a>
+                    <ul class="nav">
+                        <li class="active">
+                            <a href="/index.html">Projekt</a>
+                        </li>
+                        <li>
+                            <a href="/edition/">Edition</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+            
+
+<div id="content" class="container">
+    
+    <div id="figure-top" class="figure visible-desktop">
+        <img style="height: 330px;" src="_blank" alt=""/>
+    </div>
+
+    <header id="overview" class="jumbotron subhead">
+        <div class="row" style="min-height: 0;">
+            <div class="span8">
+                <img style="margin: 40px 0 0 3px;" src="pix/Logo_greenInset.png"/>
+            </div>
+            <div class="span4"> </div>
+        </div>
+        <div id="navbar" class="subnav">
+            <ul class="nav nav-pills">
+                <li id="nav_home">
+                    <a href="index.html">Startseite</a>
+                </li>
+                <li id="nav_work">
+                    <a href="work-packages.html">Arbeitspakete</a>
+                </li>
+                <li id="nav_loc">
+                    <a href="locations.html">Standorte</a>
+                </li>
+                <li id="nav_team">
+                    <a href="team.html">Mitarbeiter</a>
+                </li>
+                <li id="nav_events">
+                    <a href="events.html">Veranstaltungen</a>
+                </li>
+                <li id="nav_publications">
+                    <a href="publications.html">Publikationen &amp; Vorträge</a>
+                </li>
+                <li id="nav_releases">
+                    <a href="releases.html">Versionen der Edition</a>
+                </li>
+            </ul>
+        </div>
+        <div id="backlink" style="display:none;">
+            <a href="#" onclick="nav_back(); false;">zurück</a>
+        </div>
+    </header>
+
+    
+    <section id="release">
+    <div class="page-header">
+        <h1>Release-Bericht 1.0.0</h1>
+        <h3>Juli 2014</h3>
+    </div>
+    <div class="row marginBottom30">
+        <div class="span12">
+            <h3>Einführung und Ziel dieses Releases</h3>
+            <p>Mit diesem ersten Release 1.0.0 von <em>Freischütz Digital</em> werden erstmals Daten
+                des Projekts frei zugänglich gemacht. Im Bereich der Musikedition sind neben Webers
+                Autograph alle zur Zeit nachweisbaren autorisierten Abschriften und der postum
+                veröffentlichte erste Partiturdruck als Faksimile bereitgestellt und auf Taktebene
+                miteinander in Beziehung gesetzt. Hinzu kommen auf der Ebene der Textedition zwei
+                wichtige Überlieferungsdokumente (Webers Handexemplar des Libretto-Manuskripts
+                    K<sup>A</sup>-tx<sub>4</sub> sowie die zweite Druckfassung des kompletten
+                Librettos von Friedrich Kind D-tx<sub>s</sub>), ferner als Referenzwerk Kinds
+                    <em>Geisterinsel</em>, die ihm unter anderem Anregungen für die Gestaltung der
+                Wolfsschluchtszene gab. Für den Audio-Bereich beschränkt sich dieses Release darauf,
+                an wenigen ausgewählten Beispielen der drei eigens eingespielten Nummern die erst in
+                späteren Arbeitspaketen aufzuarbeitenden Möglichkeiten anzudeuten. Grundsätzlich
+                wird mit diesem Release lediglich die Datenbasis vor dem ersten Milestone des
+                Projekts vorgelegt, d.h. es werden u.a. keine Verknüpfungen der publizierten Daten
+                und – mit wenigen Ausnahmen – auch keine grundsätzlichen Erläuterungen zu
+                Hintergründen, Zielen und zum Kontext der Edition angeboten. <button type="button"
+                    class="btn popover-dismiss btn-mini btn-tooltip" data-placement="right"
+                    data-toggle="popover"
+                    data-content="Eine erste Einführung vermitteln die Menüpunkte &lt;a href='index.html'&gt;Startseite&lt;/a&gt;                      und &lt;a href='work-packages.html'&gt;Arbeitspakete&lt;/a&gt; der Website.                      Vgl. auch den Abschnitt “Das FreiDi-Datenmodell” in der Dokumentation."
+                    >*</button> Die genaue Zusammenstellung der Daten und ihre weitere Verwendung im
+                Projekt wird im Folgenden für die einzelnen Projektbereiche getrennt
+                vorgestellt.</p>
+            <p>Genutzte Veröffentlichungsplattformen sind diese Webseite (<a
+                    href="http://www.freischuetz-digital.de" target="_blank"
+                        ><u>http://www.freischuetz-digital.de</u></a>), das TextGrid-Repository (<a
+                    href="http://textgridrep.de" target="_blank"><u>http://textgridrep.de</u></a>)
+                und das GitHub-Repository des Projekts (<a
+                    href="https://github.com/Edirom/freischuetz-digital" target="_blank"
+                        ><u>https://github.com/Edirom/freischuetz-digital</u></a>).</p>
+            <h3>Musikedition</h3>
+            <p>Wohl aufgrund des großen Erfolgs des <em>Freischütz</em> führte Weber ein
+                Ausgabenbuch, in dem er alle von ihm beauftragten Abschriften der Oper auflistete
+                und dem jeweiligen Aufführungsort zuordnete. Von den dort erfassten über vierzig
+                Abschriften lassen sich heute acht zweifelsfrei nachweisen. Das erste Release von
+                    <em>Freischütz Digital </em>umfasst neben dem Weberschen Autograph sowie dem
+                ersten Partitur-Druck des Werks von 1849 diese acht Abschriften<button type="button"
+                    class="btn popover-dismiss btn-mini btn-tooltip" data-placement="right"
+                    data-toggle="popover"
+                    data-content="KA1, KA2, KA9, K13, K15, KA19, K20, KA26. Die Nummern beziehen sich auf                     die Zählung in Webers Ausgabenbuch. Als besonderer Erfolg kann die in                     Zusammenarbeit mit der Weber-Gesamtausgabe geglückte Identifizierung                     einer in der Berliner Staatsbibliothek überlieferten Kopie ehemals                     unklarer Provenienz als K20 (für das Theater Neustrelitz) gelten."
+                    >*</button> in hochauflösenden Digitalisaten. Alle Quellendigitalisate werden
+                durch Codierungen nach den Richtlinien der <em>Music Encoding Initiative</em> (MEI)
+                erschlossen, die auf Taktebene konkordiert sind und damit eine schnelle Navigation
+                durch die überlieferten Notentexte ermöglichen. Im weiteren Verlauf des Projekts
+                werden auch die eigentlichen Notentexte dieser Quellen in MEI übertragen. Dies
+                erfolgt für ausgewählte Nummern vollständig in Form eines Querschnitts durch alle
+                Quellen, ferner als Längsschnitt in Form einer vollständigen Übertragung des
+                Autographs. Die Codierungen enthalten durch die detaillierte Aufbereitung der
+                Differenzen zwischen den beteiligten Quellen sowie diplomatischer Details (etwa im
+                Bereich unklarer Bogensetzungen) bereits Anteile des Arbeitspakets 3. Um diese
+                weiterführenden Daten angemessen aufbereiten zu können, wurde auf eine
+                Berücksichtigung in diesem Release bewusst verzichtet. Bestandteil des Release ist
+                allerdings eine erste Dokumentation des intern bereits im Einsatz befindlichen
+                Datenmodells, das einen Ausblick auf die zu erwartenden Daten bietet.</p>
+            <p>Durch diesen Verzicht auf die Wiedergabe detaillierter Codierungen gibt es im Release
+                keine Möglichkeit zur Anzeige einer Transkription der Notentexte; diese Funktion ist
+                erst im Rahmen eines späteren Release vorgesehen. Unberücksichtigt bleibt zum
+                gegenwärtigen Zeitpunkt auch eine Anbindung an die beiden anderen
+                Projektbestandteile Textedition und Audio-Einspielungen.</p>
+            <h3>Textedition</h3>
+            <p>Die in diesem Release in Transkription und Faksimile veröffentlichten Libretti
+                    K<sup>A</sup>-tx<sub>4</sub> und D-tx<sub>2</sub> stellen lediglich eine erste
+                Auswahl aus den für die Textedition zur Verfügung stehenden Textbüchern dar.<button
+                    type="button" class="btn popover-dismiss btn-mini btn-tooltip"
+                    data-placement="right" data-toggle="popover"
+                    data-content="Weiterhin vorgesehen sind die Veröffentlichung von Kinds Manuskript                     (L-tx&lt;sub&gt;2&lt;/sub&gt;), der Textbuch-Kopien für Berlin,                     Gotha, Wien und Hamburg (K-tx&lt;sub&gt;6&lt;/sub&gt;, K-tx&lt;sub&gt;7&lt;/sub&gt;, K&lt;sup&gt;A&lt;/sup&gt;-tx&lt;sub&gt;15&lt;/sub&gt; und K&lt;sup&gt;A&lt;/sup&gt;-tx&lt;sub&gt;21&lt;/sub&gt;), zweier Vorabdrucke von Einzelnummern                     (VD&lt;sub&gt;1&lt;/sub&gt; und VD&lt;sub&gt;2&lt;/sub&gt;),                     des Erstdruckes zur UA (ED-tx) sowie der von Kind verantworteten                     Druck-Ausgaben des kompletten Textbuches (D-tx&lt;sub&gt;1-3&lt;/sub&gt; und Dp-tx&lt;sub&gt;1-3&lt;/sub&gt;). Ergänzt werden                     soll die Edition durch die Aufbereitung von weiterem Aufführungsmaterial                     aus Wien, Detmold und Hamburg."
+                    >*</button> Die Auszeichnung der Texte ist nach den Richtlinien der <em>Text
+                    Encoding Initiative</em> (TEI) und hier speziell der Teilbereiche
+                    <em>Performance Texts</em> und <em>Critical Apparatus </em>durchgeführt worden
+                und deckt bereits sämtliche quellenimmanenten editorischen Erkenntnisse der Edition
+                zur Genese der Texte ab. Beziehungen zwischen den Texten und zu den musikalischen
+                und akustischen Bestandteilen des Projekts sind nicht Teil dieses Releases und
+                werden zu einem späteren Zeitpunkt ergänzt.</p>
+            <p>Anhand dieser Texte, die beispielhaft aufgrund der unterschiedlichen Textsorten
+                ausgewählt wurden, sollen die Codierungskonzepte der Textedition einer Handschrift
+                mit mehrfachen Überarbeitungsspuren (es handelt sich um Webers Handexemplar als
+                Grundlage für die Komposition) und eines vom Librettisten autorisierten Druckes
+                verdeutlicht werden. Darüber hinaus werden anhand dieser Textbücher zwei wesentliche
+                Erweiterungen der Publikationssoftware gezeigt: eine seitenbasierte
+                Gegenüberstellung von Text und Faksimile und eine erste Möglichkeit der Auswahl und
+                somit Reduktion der Transkription auf bestimmte Schreibschichten des Textes. Die
+                Darstellung von Substitutionen bzw. einzelner Ergänzungen und Streichungen ist
+                wiederum nicht Bestandteil dieses Releases und wird zu einem späteren Zeitpunkt
+                ergänzt.</p>
+            <p>Die Quelle zur <em>Geisterinsel</em> aus dem ersten Band der 1793 erschienenen
+                Sammlung <em>Leonardos Schwärmereyen</em> von Friedrich Kind ist als ein erster
+                Referenztext mit Faksimiles in die Veröffentlichung aufgenommen worden. Dessen
+                Codierung erfolgte nach ähnlichen Gesichtspunkten wie jene der Libretto-Texte; der
+                Fokus an dieser Stelle liegt aber in der Integration von thematischen
+                Referenzmarkierungen, die mittels einer <a href="http://www.isotopicmaps.org"
+                    target="_blank">Topic Map</a> Zusammenhänge zwischen dem Opernlibretto und
+                früheren Texten darstellen sollen. Eine Auswertung der Referenzen ist an dieser
+                Stelle noch nicht vorgesehen und wird in einer späteren Veröffentlichung
+                ergänzt.</p>
+            <h3>Metadaten</h3>
+            <p>Metadaten zu Musik und Texten stellen lediglich eine erste, vorläufige Dokumentation
+                von Informationen dar, die sich zudem bei den musikalischen Quellen auf die Punkte
+                “Metadaten” und “Quellenbeschreibung” verteilen. Zum einen sind diese Informationen
+                noch nicht aufeinander abgestimmt, inhaltlich unvollständig und die Quellen
+                ungleichgewichtig beschrieben, zum anderen werden viele Details später in anderer
+                Weise direkt über die Quellenansicht zugänglich sein. Mit diesem ersten Release
+                sollten aber zumindest einige Basisdaten verfügbar gemacht werden. </p>
+            <h3>Audio-Elemente</h3>
+            <p>Zur Erschließung der akustischen wie performativen Aspekte des <em>Freischütz</em>
+                wurden im Rahmen des Projektes ca 30 Tonaufnahmen (Gesamteinspielungen und Auszüge)
+                erfasst sowie eigens Neuaufnahmen dreier Nummern (No. 6, 8 und 9) umgesetzt. Während
+                erstere aufgrund bestehender Schutzrechte vermutlich nur in Auszügen in ein späteres
+                Release aufgenommen werden können, finden letztere hier zunächst nur in
+                exemplarischer Form Verwendung.</p>
+            <p>Die Einspielungen wurden in Kooperation mit der Hochschule für Musik Detmold und dem
+                dortigen Erich-Thienhaus-Institut angefertigt. Dabei wurde sowohl bei der
+                Einspielung wie auch der späteren Mischung Sorge getragen, eine möglichst gute
+                Datenbasis im Hinblick auf weitere Forschungen im Bereich der Quellentrennung und
+                zur Illustration neuer Präsentations- und Abspielformen – im Sinne eines
+                “Quellen-Equalizers” – zu erarbeiten.</p>
+            <p>Nähere Erläuterungen zu den Einspielungen, den Konzepten und den in diesem Rahmen
+                gemachten Erfahrungen finden sich im Bericht über die Aufnahmen. Die Audio-Aspekte
+                bleiben in diesem Release nur rudimentär berücksichtigt; eine umfassendere
+                Integration der Audio-Elemente und der darauf aufbauenden Algorithmen zur zeitlichen
+                und spektralen Segmentierung von Tonaufnahmen wird in einem späteren Release
+                erfolgen.</p>
+            <h3>Technische Aspekte</h3>
+            <p>Im Rahmen der Veröffentlichungen des Projekts werden im Wesentlichen zwei
+                Technologien eingesetzt: <a href="https://github.com/Edirom/Edirom-Online"
+                    target="_blank">Edirom Online</a> und das <a href="http://www.textgridrep.de/"
+                    target="_blank">TextGrid-Repository</a>. Diese Kombination ermöglicht es, die
+                Projektergebnisse in einer dem Medium adäquaten Form zu veröffentlichen und
+                gleichzeitig die Referenzierbarkeit und Verfügbarkeit der Daten zu gewährleisten.
+                Die Veröffentlichung innerhalb des TextGrid-Repository erfolgt lediglich für die
+                Daten, deren Rechte innerhalb des Projekts liegen; Abbildungen und Daten Dritter
+                verbleiben geschützt innerhalb der Edirom Online Applikation.</p>
+            <h4>Edirom Online</h4>
+            <p>Die auf dem Javascript-Framework <a href="http://www.sencha.com/products/extjs/"
+                    target="_blank">Ext-JS</a> aufbauende Web-Applikation Edirom Online wurde im
+                Rahmen dieses Releases auf eine neue Version (4.2.1) von Ext-JS überführt und
+                speziell für die Bedürfnisse des Projekts angepasst. Die Anpassungen, die im
+                Wesentlichen in den Bereichen der Textdarstellung zu finden sind, flossen – soweit
+                sie auf andere Projekte übertragbar sind – wieder in die Code-Base von Edirom Online
+                zurück. Sämtliche Erweiterungen und Modifikationen, die in Form von Plugins in die
+                Anwendung integriert wurden, sind auf <a
+                    href="https://github.com/Edirom/freischuetz-digital" target="_blank">GitHub</a>
+                veröffenlicht. Die Edition wird auf einem virtuellen Server der Universität
+                Paderborn gehostet; das betrifft sowohl die Applikation selbst, als auch die
+                Forschungsergebnisse des Projekts und Abbildungen und Daten Dritter. Hinsichtlich
+                dieser Fremddaten sei ausdrücklich darauf hingewiesen, dass sämtliche Rechte bei den
+                Eigentümern der Originale verbleiben.</p>
+            <h4>TextGrid</h4>
+            <p>Sämtliche innerhalb des Projekts hervorgebrachten Ergebnisse und Daten und die
+                dazugehörigen Schemata und Dokumentationen sind im TextGrid-Repository abgelegt und
+                veröffentlicht; weitere für das Projektergebnis relevante Daten, deren Rechte nicht
+                innerhalb des Projekts liegen, sind hiervon ausgespart. Eine Liste aller in diesem
+                Release veröffentlichten Dateien findet sich am Ende dieses Berichts.</p>
+            <p>Aus Gründen höherer Performanz werden die Daten, die innerhalb des
+                TextGrid-Repository veröffentlicht sind, parallel dazu in der Datenbank der Edirom
+                Online abgelegt. Die Nutzung spezieller Indizes und der darauf basierenden
+                Auswertungen der Daten ist wesentlicher Bestandteil der Publikationssoftware, eine
+                Prüfung, inwieweit diese Stukturen in das TextGrid-Repository integierbar wären,
+                bleibt einem späteren Release vorbehalten.</p>
+            <h4>Browser-Kompatibilität</h4>
+            <p>Durch den Einsatz von Ext-JS und den damit verbundenen Technologien kann das Projekt
+                eine generelle Kompatibilität zu den gängigen Browsern anstreben. Der aktuelle Fokus
+                eines vollständigen Funktionsumfangs und eines optimalen Erscheinungsbilds liegt für
+                dieses Release beim Browser <em>Firefox</em> in der aktuellen Version 30.0. Durch
+                Modifikationen und Erweiterungen der Funktionalität und des Aussehens von Ext-JS
+                kann in diesem Release die Kompatibilität zu allen Browsern nicht gewährleistet
+                werden.</p>
+            <h3>Danksagung</h3>
+            <p>Allen Bibliotheken, Archiven und sonstigen Institutionen, die die Durchführung dieses
+                Projekts durch das Verfügbarmachen ihrer Quellen erst ermöglichst haben, sei an
+                dieser Stelle sehr herzlich gedankt. Allen voran zu nennen ist hier die
+                Staatsbibliothek zu Berlin, die nicht nur in ihrer Musikabteilung den Schatz des
+                Autographs der Oper, sondern in der Sammlung "Weberiana" auch zahlreiche weitere
+                wichtige Quellen des Werkes beherbergt. Ein sehr herzlicher Dank gilt ferner der
+                Lippischen Landesbibliothek in Detmold, der Königlichen Bibliothek in Kopenhagen,
+                der Universitätsbibliothek Johann Christian Senckenberg in Frankfurt, der
+                Württembergischen Landesbibliothek in Stuttgart, dem Thüringischen Landesmusikarchiv
+                in Weimar, der Österreichischen Nationalbibliothek in Wien und der Herzog August
+                Bibliothek in Wolfenbüttel.</p>
+            <p>Desweiteren gilt ein besonderer Dank der Carl-Maria-von-Weber-Gesamtausgabe (WeGA),
+                deren Editionsarbeiten wesentlich mit zur Datenbasis des Projekts beitrugen. Darüber
+                hinaus konnten die Mitarbeiter des Projekts stets auf die kompetente und
+                umfangreiche Hilfe der WeGA vertrauen.</p>
+            <p>Es ist zu hoffen, dass dem vorliegenden Release rasch weitere folgen werden, um die
+                mit dieser Teil-Veröffentlichung der Datenbasis allenfalls andeutbaren Vorteile
+                einer digitalen Opernedition schon in naher Zukunft verdeutlichen zu können.</p>
+            <h3>Anhang</h3>
+            <h4>Dateien im TextGrid-Repository</h4>
+            <h5>Musikalische Quellen</h5>
+            <table class="table table-striped table-bordered table-condensed">
+                <thead>
+                    <tr>
+                        <th> Bezeichnung </th>
+                        <th> Dateiname </th>
+                        <th> TextGrid-PID </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Autographe Partitur</td>
+                        <td>A.xml</td>
+                        <td/>
+                    </tr>
+                    <tr>
+                        <td/>
+                        <td>K13.xml</td>
+                        <td/>
+                    </tr>
+                    <tr>
+                        <td/>
+                        <td>KA1.xml</td>
+                        <td/>
+                    </tr>
+                    <tr>
+                        <td/>
+                        <td>KA26.xml</td>
+                        <td/>
+                    </tr>
+                    <tr>
+                        <td/>
+                        <td>D1849.xml</td>
+                        <td/>
+                    </tr>
+                    <tr>
+                        <td/>
+                        <td>K15.xml</td>
+                        <td/>
+                    </tr>
+                    <tr>
+                        <td/>
+                        <td>KA19.xml</td>
+                        <td/>
+                    </tr>
+                    <tr>
+                        <td/>
+                        <td>KA9.xml</td>
+                        <td/>
+                    </tr>
+                    <tr>
+                        <td/>
+                        <td>ED-kl1.xml</td>
+                        <td/>
+                    </tr>
+                    <tr>
+                        <td/>
+                        <td>K20.xml</td>
+                        <td/>
+                    </tr>
+                    <tr>
+                        <td/>
+                        <td>KA2.xml</td>
+                        <td/>
+                    </tr>
+                </tbody>
+            </table>
+            <h5>Textuelle Quellen</h5>
+            <table class="table table-striped table-bordered table-condensed">
+                <thead>
+                    <tr>
+                        <th> Bezeichnung </th>
+                        <th> Dateiname </th>
+                        <th> TextGrid-PID </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td/>
+                        <td>C_07_Handexemplar.xml</td>
+                        <td/>
+                    </tr>
+                    <tr>
+                        <td/>
+                        <td>C_07_Kind_Druck_1822.xml</td>
+                        <td/>
+                    </tr>
+                    <tr>
+                        <td/>
+                        <td>Geisterinsel.xml</td>
+                        <td/>
+                    </tr>
+                </tbody>
+            </table>
+            <h5>Dokumentation</h5>
+            <table class="table table-striped table-bordered table-condensed">
+                <thead>
+                    <tr>
+                        <th> Bezeichnung </th>
+                        <th> Dateiname </th>
+                        <th> TextGrid-PID </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td/>
+                        <td/>
+                        <td/>
+                    </tr>
+                </tbody>
+            </table>
+            <h4>Dateien im GitHub-Repository</h4>
+            <h5>Schemata</h5>
+            <table class="table table-striped table-bordered table-condensed">
+                <thead>
+                    <tr>
+                        <th> Bezeichnung </th>
+                        <th> Dateiname </th>
+                        <th> TextGrid-PID </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td/>
+                        <td/>
+                        <td/>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+    
+    <div id="footer" style="padding-top: 5px; text-align: center; background-color: #EEEEEE; background-image: -moz-linear-gradient(center top , #F5F5F5 0%, #EEEEEE 100%);     background-repeat: repeat-x;     border: 1px solid #E5E5E5;     border-radius: 4px 4px 4px 4px;     height: 24px;     margin-bottom: 20px;     margin-top: 40px;     width: 100%;"><a style="margin-right: 6px;" href="imprint.html">Impressum</a> · <a style="margin-left: 8px;" href="contact.html">Kontakt</a></div>
+</div>
+
+<script type="text/javascript">
+    window.activeNavLink = 'nav_releases';
+    window.backLink = 'releases.html';
+</script>
+
+<script src="../bower_components/jquery/jquery.min.js"></script>
+<script src="scripts/bootstrap.js"></script>
+<script src="scripts/bootswatch.js"></script>
+<script src="scripts/main.js"></script>
+
+</body>
+</html>
