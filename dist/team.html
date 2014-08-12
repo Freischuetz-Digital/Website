@@ -1,59 +1,60 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<!doctype html>
+<html><head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
         <title>Freischütz Digital</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <meta name="description" content=""/>
-        <meta name="author" content="Daniel Röwenstrunk"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="Daniel Röwenstrunk">
         
-        <link rel="stylesheet" href="styles/bootstrap.css"/>
-        <link rel="stylesheet" href="styles/bootstrap-responsive.css"/>
-        <link href="styles/bootswatch.css" rel="stylesheet"/>
-        <link href="styles/freidi.css" rel="stylesheet"/>
-        <link href="styles/ptsans.css" rel="stylesheet"/>
+        <!--<link rel="stylesheet" href="styles/bootstrap.css">
+        <link rel="stylesheet" href="styles/bootstrap-responsive.css">
+		<link href="styles/bootswatch.css" rel="stylesheet">-->
+		<link href="../../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+		<link href="../../bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+
+        <link href="styles/freidi.css" rel="stylesheet">
+        <link href="styles/ptsans.css" rel="stylesheet">
         
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="pix/freidi_icon_144.png"/>
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="pix/freidi_icon_114.png"/>
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="pix/freidi_icon_72.png"/>
-        <link rel="apple-touch-icon-precomposed" href="pix/freidi_icon_57.png"/>
-        <link rel="shortcut icon" href="pix/freidi_favicon.png"/>
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="pix/freidi_icon_144.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="pix/freidi_icon_114.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="pix/freidi_icon_72.png">
+        <link rel="apple-touch-icon-precomposed" href="pix/freidi_icon_57.png">
+        <link rel="shortcut icon" href="pix/freidi_favicon.png">
     </head>
     <body data-spy="scroll" data-target="#navbar" data-offset="30">
-        <div class="navbar navbar-fixed-top">
-            <div class="navbar-inner">
-                <div class="container">
-                    <a class="brand" href="/index.html">Freischütz<br/>
-                        <small>Digital</small>
+        <div class="navbar navbar-fixed-top navbar-default">
+            <div class="container">
+            	<div class="navbar-header">
+            		<a class="navbar-brand" href="/index.html">Freischütz<br>
+						<small>Digital</small>
                     </a>
-                    <ul class="nav">
-                        <li class="active">
-                            <a href="/index.html">Projekt</a>
-                        </li>
-                        <li>
-                            <a href="/edition/">Edition</a>
-                        </li>
-                    </ul>
                 </div>
-            </div>
-        </div>
-            
+                <ul class="nav navbar-nav">
+					<li class="active">
+						<a href="/index.html">Projekt</a>
+					</li>
+					<li>
+						<a href="/edition/">Edition</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
 
 <div id="content" class="container">
     
-    <div id="figure-top" class="figure visible-desktop">
-        <img style="height: 330px;" src="" alt=""/>
+    <div id="figure-top" class="figure visible-lg">
+        <img style="height: 330px;" src="" alt="">
     </div>
-
-    <header id="overview" class="jumbotron subhead">
+    <header id="overview">
         <div class="row" style="min-height: 0;">
-            <div class="span8">
-                <img style="margin: 40px 0 0 3px;" src="pix/Logo_greenInset.png"/>
+            <div class="col-sm-8 col-md-8">
+                <img style="margin: 40px 0 0 3px;" src="pix/Logo_greenInset.png">
             </div>
-            <div class="span4"> </div>
+            <div class="col-sm-4 col-md-4"> </div>
         </div>
-        <div id="navbar" class="subnav">
-            <ul class="nav nav-pills">
+        <nav id="navbar" class="navbar navbar-default" role="navigation">
+            <ul class="nav nav-pills navbar-nav">
                 <li id="nav_home">
                     <a href="index.html">Startseite</a>
                 </li>
@@ -76,7 +77,7 @@
                     <a href="releases.html">Versionen der Edition</a>
                 </li>
             </ul>
-        </div>
+        </nav>
         <div id="backlink" style="display:none;">
             <a href="#" onclick="nav_back(); false;">zurück</a>
         </div>
@@ -88,9 +89,9 @@
             <h1>Mitarbeiter</h1>
         </div>
         <div class="row">
-            <div class="span6">
+            <div class="col-sm-5 col-md-5">
                 <div class="row" xml:id="betzwieser">
-                    <div class="span5">
+                    <div>
                         <h3>Prof. Dr. Thomas Betzwieser</h3>
                         <img style="width: 100px; float:left; margin-right: 20px;" class="img-polaroid"
                             src="images/team/ThomasBetzwieser.jpg" alt="Thomas Betzwieser"
@@ -112,7 +113,7 @@
                     </div>
                 </div>
                 <div class="row" xml:id="mueller">
-                    <div class="span5">
+                    <div>
                         <h3>Prof. Dr. Meinard Müller</h3>
                         <img style="width: 100px; float:left; margin-right: 20px;" class="img-polaroid"
                             src="images/team/MeinardMueller.jpg" alt="Meinard Müller"
@@ -132,7 +133,7 @@
                     </div>
                 </div>
                 <div class="row" xml:id="szwillus">
-                    <div class="span5">
+                    <div>
                         <h3>Prof. Dr. Gerd Szwillus</h3>
                         <img style="width: 100px; float:left; margin-right: 20px;" class="img-polaroid"
                             src="images/team/GerdSzwillus.jpg" alt="Gerd Szwillus" title="Gerd Szwillus"/>
@@ -154,7 +155,7 @@
                     </div>
                 </div>
                 <div class="row" xml:id="veit">
-                    <div class="span5">
+                    <div>
                         <h3>Prof. Dr. Joachim Veit</h3>
                         <img style="width: 100px; float:left; margin-right: 20px;" class="img-polaroid"
                             src="images/team/JoachimVeit.jpg" alt="Joachim Veit" title="Joachim Veit"/>
@@ -175,9 +176,11 @@
                     </div>
                 </div>
             </div>
-            <div class="span6">
+            <div class="col-sm-1 col-md-1">
+            </div>
+            <div class="col-sm-6 col-md-6">
                 <div class="row" xml:id="bohl">
-                    <div class="span6">
+                    <div>
                         <h3>Benjamin W. Bohl M. A.</h3>
                         <img style="width: 100px; float:left; margin-right: 20px;" class="img-polaroid"
                             src="images/team/BenjaminBohl.jpg" alt="Benjamin W. Bohl"
@@ -196,7 +199,7 @@
                     </div>
                 </div>
                 <div class="row" xml:id="kepper">
-                    <div class="span6">
+                    <div>
                         <h3>Dr. Johannes Kepper</h3>
                         <img style="width: 100px; float:left; margin-right: 20px;" class="img-polaroid"
                             src="images/team/JohannesKepper.jpg" alt="Johannes Kepper"
@@ -213,7 +216,7 @@
                     </div>
                 </div>
                 <div class="row" xml:id="komprecht">
-                    <div class="span6">
+                    <div>
                         <h3>Anna Maria Komprecht M. A.</h3>
                         <img style="width: 100px; float:left; margin-right: 20px;" class="img-polaroid"
                             src="images/team/AnnaMariaKomprecht.jpg" alt="Anna Maria Komprecht"
@@ -225,11 +228,11 @@
                             Validierung der Codierungen und Organisation der <em>Music Encoding
                                 Conference</em> 2013.</p>
                         <p>Seit April 2014 ist Komprecht wissenschaftliche Mitarbeiterin im Projekt.</p>
-                        <address><strong>Anna Maria Komprecht</strong><br/><a href="mailto:k.annamaria@web.de">k.annamaria@web.de</a></address>
+                        <address><strong>Anna Maria Komprecht</strong><br/><a href="mailto:komprecht@edirom.de">komprecht@edirom.de</a></address>
                     </div>
                 </div>
                 <div class="row" xml:id="praetzlich">
-                    <div class="span6">
+                    <div>
                         <h3>Thomas Prätzlich M. S.</h3>
                         <img style="width: 100px; float:left; margin-right: 20px;" class="img-polaroid"
                             src="images/team/ThomasPraetzlich.jpg" alt="Thomas Prätzlich"
@@ -246,7 +249,7 @@
                     </div>
                 </div>
                 <div class="row" xml:id="roewenstrunk">
-                    <div class="span6">
+                    <div>
                         <h3>Dipl. Wirt-Inf. Daniel Röwenstrunk</h3>
                         <img style="width: 100px; float:left; margin-right: 20px;" class="img-polaroid"
                             src="images/team/DanielRoewenstrunk.jpg" alt="Daniel Röwenstrunk"
@@ -265,7 +268,7 @@
                     </div>
                 </div>
                 <div class="row" xml:id="schreiter">
-                    <div class="span6">
+                    <div>
                         <h3>Dr. Solveig Schreiter</h3>
                         <img style="width: 100px; float:left; margin-right: 20px;" class="img-polaroid"
                             src="images/team/SolveigSchreiter.jpg" alt="Solveig Schreiter"
@@ -278,7 +281,7 @@
                     </div>
                 </div>
                 <div class="row" xml:id="seuffert">
-                    <div class="span6">
+                    <div>
                         <h3>Janette Seuffert M. A.</h3>
                         <img style="width: 100px; float:left; margin-right: 20px;" class="img-polaroid"
                             src="images/team/JanetteSeuffert.jpg" alt="Janette Seuffert"
@@ -295,7 +298,7 @@
                     </div>
                 </div>
                 <div class="row" xml:id="viglianti">
-                    <div class="span6">
+                    <div>
                         <h3>Raffaele Viglianti</h3>
                         <img style="width: 100px; float:left; margin-right: 20px;" class="img-polaroid"
                             src="images/team/RaffaeleViglianti.jpg" alt="Raffaele Viglianti"

@@ -1,59 +1,60 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<!doctype html>
+<html><head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
         <title>Freischütz Digital</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <meta name="description" content=""/>
-        <meta name="author" content="Daniel Röwenstrunk"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="Daniel Röwenstrunk">
         
-        <link rel="stylesheet" href="styles/bootstrap.css"/>
-        <link rel="stylesheet" href="styles/bootstrap-responsive.css"/>
-        <link href="styles/bootswatch.css" rel="stylesheet"/>
-        <link href="styles/freidi.css" rel="stylesheet"/>
-        <link href="styles/ptsans.css" rel="stylesheet"/>
+        <!--<link rel="stylesheet" href="styles/bootstrap.css">
+        <link rel="stylesheet" href="styles/bootstrap-responsive.css">
+		<link href="styles/bootswatch.css" rel="stylesheet">-->
+		<link href="../../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+		<link href="../../bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+
+        <link href="styles/freidi.css" rel="stylesheet">
+        <link href="styles/ptsans.css" rel="stylesheet">
         
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="pix/freidi_icon_144.png"/>
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="pix/freidi_icon_114.png"/>
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="pix/freidi_icon_72.png"/>
-        <link rel="apple-touch-icon-precomposed" href="pix/freidi_icon_57.png"/>
-        <link rel="shortcut icon" href="pix/freidi_favicon.png"/>
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="pix/freidi_icon_144.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="pix/freidi_icon_114.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="pix/freidi_icon_72.png">
+        <link rel="apple-touch-icon-precomposed" href="pix/freidi_icon_57.png">
+        <link rel="shortcut icon" href="pix/freidi_favicon.png">
     </head>
     <body data-spy="scroll" data-target="#navbar" data-offset="30">
-        <div class="navbar navbar-fixed-top">
-            <div class="navbar-inner">
-                <div class="container">
-                    <a class="brand" href="/index.html">Freischütz<br/>
-                        <small>Digital</small>
+        <div class="navbar navbar-fixed-top navbar-default">
+            <div class="container">
+            	<div class="navbar-header">
+            		<a class="navbar-brand" href="/index.html">Freischütz<br>
+						<small>Digital</small>
                     </a>
-                    <ul class="nav">
-                        <li class="active">
-                            <a href="/index.html">Projekt</a>
-                        </li>
-                        <li>
-                            <a href="/edition/">Edition</a>
-                        </li>
-                    </ul>
                 </div>
-            </div>
-        </div>
-            
+                <ul class="nav navbar-nav">
+					<li class="active">
+						<a href="/index.html">Projekt</a>
+					</li>
+					<li>
+						<a href="/edition/">Edition</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
 
 <div id="content" class="container">
     
-    <div id="figure-top" class="figure visible-desktop">
-        <img style="height: 330px;" src="" alt=""/>
+    <div id="figure-top" class="figure visible-lg">
+        <img style="height: 330px;" src="" alt="">
     </div>
-
-    <header id="overview" class="jumbotron subhead">
+    <header id="overview">
         <div class="row" style="min-height: 0;">
-            <div class="span8">
-                <img style="margin: 40px 0 0 3px;" src="pix/Logo_greenInset.png"/>
+            <div class="col-sm-8 col-md-8">
+                <img style="margin: 40px 0 0 3px;" src="pix/Logo_greenInset.png">
             </div>
-            <div class="span4"> </div>
+            <div class="col-sm-4 col-md-4"> </div>
         </div>
-        <div id="navbar" class="subnav">
-            <ul class="nav nav-pills">
+        <nav id="navbar" class="navbar navbar-default" role="navigation">
+            <ul class="nav nav-pills navbar-nav">
                 <li id="nav_home">
                     <a href="index.html">Startseite</a>
                 </li>
@@ -76,7 +77,7 @@
                     <a href="releases.html">Versionen der Edition</a>
                 </li>
             </ul>
-        </div>
+        </nav>
         <div id="backlink" style="display:none;">
             <a href="#" onclick="nav_back(); false;">zurück</a>
         </div>
@@ -85,7 +86,7 @@
 
 <section id="ap">
     <div class="page-header"><h1>Arbeitspakete</h1></div>
-    <div class="row" style="display:block;"><div id="ap1" class="span6"><h3>Datenbasis</h3><p>Im
+    <div class="row" style="display:block;"><div id="ap1" class="col-sm-6 col-md-6"><h3>Datenbasis</h3><p>Im
                 Rahmen des ersten Arbeitpakets <em>Aufbau der Datenbasis</em> werden zunächst
                 sämtliche bereits verfügbaren Notentexte, Libretto-Transkriptionen und
                 Audioaufnahmen in die für das Projekt notwendigen Datenformate gebracht.</p><p>Für
@@ -99,7 +100,7 @@
                 textuellen Inhalte werden nach den Richtlinien der <em><a
                         href="http://www.tei-c.org" target="_blank">Text Encoding
                     Initiative</a></em> (TEI) codiert, auch hier kann das Projekt auf Vorarbeiten
-                der WeGA zurückgreifen.</p></div><div id="ap2" class="span6"><h3>Akustische
+                der WeGA zurückgreifen.</p></div><div id="ap2" class="col-sm-6 col-md-6"><h3>Akustische
                 Bestandteile</h3><p>Die akustische Domäne des im Projekt verfolgten Modells
                 digitaler Edition steht im Mittelbunkt des zweiten Arbeitspakets <em>Aufbereitung
                     akustischer Bestandteile</em>.</p><p>Bereits vorhandene Tonaufnahmen der Oper
@@ -112,7 +113,7 @@
                 Nummern der Oper mit Hilfe spezieller Aufnahmetechniken eingespielt, um einerseits
                 Referenzergebnisse für die Optimierung der Verfahren und andererseits ideales
                 Beispielmaterial für die Demonstration des Editionsmodells zu haben.</p></div></div>
-    <div class="row"><div id="ap3" class="span6"><h3>Musikedition</h3><p>Das Arbeitspaket 3
+    <div class="row"><div id="ap3" class="col-sm-6 col-md-6"><h3>Musikedition</h3><p>Das Arbeitspaket 3
                     <em>Freischütz-Edition</em> umfasst sämtliche Arbeiten rund um die Edition der
                 Musik der Oper.</p><p>Zunächst wird das Modell digitaler Edition, wie es in diesem
                 Projekt verstanden wird, verfeinert und an die spezifischen Gegebenheiten des
@@ -123,7 +124,7 @@
                 werden müssen.</p><p>Die Erarbeitung der mediumspezifischen Edition, basierend auf
                 den Vorarbeiten der WeGA, die Verknüpfung von Text- und Musikedition sowie die dafür
                 notwendigen Softwareanpassungen sind weitere Gegenstände dieses
-            Pakets.</p></div><div id="ap4" class="span6"><h3>Textedition</h3><p>Zusätzlich zur
+            Pakets.</p></div><div id="ap4" class="col-sm-6 col-md-6"><h3>Textedition</h3><p>Zusätzlich zur
                 textgenetischen Edition des Librettos steht im vierten Arbeitspaket
                     <em>Libretto-Edition und Intertexte</em> das Beziehungsgeflecht, in dem das Werk
                 situiert ist, im Mittelpunkt.</p><p>So werden neben einer Edition der Stadien und
@@ -135,7 +136,7 @@
                 soll.</p><p>Notwendige Softwareanpassungen für die Darstellung der genetischen
                 Edition, der Textreferenzen und der Werk-Rezeption sind ebenfalls Bestandteil des
                 Arbeitspakets.</p></div></div>
-    <div class="row"><div id="ap5" class="span6"><h3>Benutzerinteraktion</h3><p>Die im Rahmen des
+    <div class="row"><div id="ap5" class="col-sm-6 col-md-6"><h3>Benutzerinteraktion</h3><p>Die im Rahmen des
                 Projekts geplante <em>Integration von Benutzerinteraktionen</em> (Arbeitspaket 5)
                 stellt – neben den üblichen Anforderungen der Softwareentwicklung an die
                 Gebrauchstauglichkeit (Usability) – besondere Ansprüche an eine intuitive und leicht
@@ -147,7 +148,7 @@
                     href="http://www.textgrid.de" target="_blank">TextGrid</a>-Verbundes erlaubt es,
                 die benutzerspezifischen Kommentare und Erweiterungen auch für andere Nutzer
                 sichtbar und somit auch für nachnutzende Forschung erreichbar zu
-            machen.</p></div><div id="ap6" class="span6"><h3>Varianz</h3><p>Beispielhaft für die
+            machen.</p></div><div id="ap6" class="col-sm-6 col-md-6"><h3>Varianz</h3><p>Beispielhaft für die
                 Erarbeitung nachgelagerter Fragestellungen werden im sechsten Arbeitspaket
                     <em>Varianz als Demonstrationsbeispiel für nachnutzende Forschungsfragen</em>
                 verschiedene Themen schriftlicher und akustischer Varianz behandelt.</p><p>Es soll

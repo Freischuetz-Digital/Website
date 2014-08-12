@@ -1,59 +1,60 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<!doctype html>
+<html><head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
         <title>Freischütz Digital</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <meta name="description" content=""/>
-        <meta name="author" content="Daniel Röwenstrunk"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="Daniel Röwenstrunk">
         
-        <link rel="stylesheet" href="styles/bootstrap.css"/>
-        <link rel="stylesheet" href="styles/bootstrap-responsive.css"/>
-        <link href="styles/bootswatch.css" rel="stylesheet"/>
-        <link href="styles/freidi.css" rel="stylesheet"/>
-        <link href="styles/ptsans.css" rel="stylesheet"/>
+        <!--<link rel="stylesheet" href="styles/bootstrap.css">
+        <link rel="stylesheet" href="styles/bootstrap-responsive.css">
+		<link href="styles/bootswatch.css" rel="stylesheet">-->
+		<link href="../../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+		<link href="../../bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+
+        <link href="styles/freidi.css" rel="stylesheet">
+        <link href="styles/ptsans.css" rel="stylesheet">
         
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="pix/freidi_icon_144.png"/>
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="pix/freidi_icon_114.png"/>
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="pix/freidi_icon_72.png"/>
-        <link rel="apple-touch-icon-precomposed" href="pix/freidi_icon_57.png"/>
-        <link rel="shortcut icon" href="pix/freidi_favicon.png"/>
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="pix/freidi_icon_144.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="pix/freidi_icon_114.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="pix/freidi_icon_72.png">
+        <link rel="apple-touch-icon-precomposed" href="pix/freidi_icon_57.png">
+        <link rel="shortcut icon" href="pix/freidi_favicon.png">
     </head>
     <body data-spy="scroll" data-target="#navbar" data-offset="30">
-        <div class="navbar navbar-fixed-top">
-            <div class="navbar-inner">
-                <div class="container">
-                    <a class="brand" href="/index.html">Freischütz<br/>
-                        <small>Digital</small>
+        <div class="navbar navbar-fixed-top navbar-default">
+            <div class="container">
+            	<div class="navbar-header">
+            		<a class="navbar-brand" href="/index.html">Freischütz<br>
+						<small>Digital</small>
                     </a>
-                    <ul class="nav">
-                        <li class="active">
-                            <a href="/index.html">Projekt</a>
-                        </li>
-                        <li>
-                            <a href="/edition/">Edition</a>
-                        </li>
-                    </ul>
                 </div>
-            </div>
-        </div>
-            
+                <ul class="nav navbar-nav">
+					<li class="active">
+						<a href="/index.html">Projekt</a>
+					</li>
+					<li>
+						<a href="/edition/">Edition</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
 
 <div id="content" class="container">
     
-    <div id="figure-top" class="figure visible-desktop">
-        <img style="height: 330px;" src="" alt=""/>
+    <div id="figure-top" class="figure visible-lg">
+        <img style="height: 330px;" src="" alt="">
     </div>
-
-    <header id="overview" class="jumbotron subhead">
+    <header id="overview">
         <div class="row" style="min-height: 0;">
-            <div class="span8">
-                <img style="margin: 40px 0 0 3px;" src="pix/Logo_greenInset.png"/>
+            <div class="col-sm-8 col-md-8">
+                <img style="margin: 40px 0 0 3px;" src="pix/Logo_greenInset.png">
             </div>
-            <div class="span4"> </div>
+            <div class="col-sm-4 col-md-4"> </div>
         </div>
-        <div id="navbar" class="subnav">
-            <ul class="nav nav-pills">
+        <nav id="navbar" class="navbar navbar-default" role="navigation">
+            <ul class="nav nav-pills navbar-nav">
                 <li id="nav_home">
                     <a href="index.html">Startseite</a>
                 </li>
@@ -76,7 +77,7 @@
                     <a href="releases.html">Versionen der Edition</a>
                 </li>
             </ul>
-        </div>
+        </nav>
         <div id="backlink" style="display:none;">
             <a href="#" onclick="nav_back(); false;">zurück</a>
         </div>
@@ -90,11 +91,11 @@
         
         <!-- Headings & Paragraph Copy -->
         <div class="row marginBottom30">
-            <div class="span3">
+            <div class="col-sm-3 col-md-3">
                 <h4 class="noTopMargin">Konsortialtreffen in Erlangen</h4>
                 <p>Juli 2014</p>
             </div>
-            <div class="span9">
+            <div class="col-sm-9 col-md-9">
                 <p>Am 16. und 17. Juli 2014 findet das zweite Konsortialtreffen des Projekts in den
                     International Audio Laboratories der Universität Erlangen statt. Themen sind u.a.
                     das erste Release von <em>Freischütz Digital</em> und die weiteren Planungen des
@@ -102,11 +103,11 @@
             </div>
         </div>
         <div class="row marginBottom30">
-            <div class="span3">
+            <div class="col-sm-3 col-md-3">
                 <h4 class="noTopMargin">Abschluss der Audio-Produktion</h4>
                 <p>April 2014</p>
             </div>
-            <div class="span9">
+            <div class="col-sm-9 col-md-9">
                 <p>Im April 2014 wurden am Erich-Thienhaus-Institut der Hochschule für Musik Detmold die
                     letzten Details der Audio-Produktion des Projekts abgeschlossen. Das Tonmaterial der
                     im Rahmen des Arbeitspakets 2.2 im Februar 2013 angefertigten Einspielungen (<a
@@ -120,22 +121,22 @@
             </div>
         </div>
         <div class="row marginBottom30">
-            <div class="span3">
+            <div class="col-sm-3 col-md-3">
                 <h4 class="noTopMargin">Balisage: The Markup Conference 2013</h4>
                 <p>August 2013</p>
             </div>
-            <div class="span9">
+            <div class="col-sm-9 col-md-9">
                 <p>Im Rahmen der <a href="http://www.balisage.net/" target="_blank"><em>Balisage: The
                     Markup Conference 2013</em></a> ist Daniel Röwenstrunk mit einem Vortrag zu
                     <em>Musical Variants: Encoding, Analysis and Visualization</em> vertreten.</p>
             </div>
         </div>
         <div class="row marginBottom30">
-            <div class="span3">
+            <div class="col-sm-3 col-md-3">
                 <h4 class="noTopMargin">Music Encoding Conference 2013</h4>
                 <p>Mai 2013</p>
             </div>
-            <div class="span9">
+            <div class="col-sm-9 col-md-9">
                 <p>Vom 22. bis 24. Mai richteten Mitarbeiter des Projekts eine Internationale Tagung zur
                     Musikcodierung in der Mainzer Akademie der Wissenschaften und der Literatur aus. Das
                     Projekt ist auf der <a href="http://www.music-encoding.org/conference/"
@@ -145,11 +146,11 @@
             </div>
         </div>
         <div class="row marginBottom30">
-            <div class="span3">
+            <div class="col-sm-3 col-md-3">
                 <h4 class="noTopMargin">Kickoff-Workshop der eHumanities-Verbundprojekte</h4>
                 <p>April 2013</p>
             </div>
-            <div class="span9">
+            <div class="col-sm-9 col-md-9">
                 <p>Im Rahmen des <a href="http://ehumworkshop.informatik.uni-leipzig.de/"
                     target="_blank"><em>Kickoff-Workshops der eHumanities-Verbundprojekte
                         2013</em></a> in Leipzig am 8. und 9. April 2013 werden die
@@ -158,11 +159,11 @@
             </div>
         </div>
         <div id="event_audio_recording_2013" class="row marginBottom30">
-            <div class="span3">
+            <div class="col-sm-3 col-md-3">
                 <h4 class="noTopMargin">Freischütz Einspielung</h4>
                 <p>Februar 2013</p>
             </div>
-            <div class="span9">
+            <div class="col-sm-9 col-md-9">
                 <p>Vom 15. bis 17. Februar wurden am Erich-Thienhaus-Institut der Hochschule für Musik
                     Detmold drei Nummern des Freischütz nach neu edierten Notentexten eingespielt. Damit
                     sollen einerseits das komplexe Wechselspiel zwischen wissenschaftlichem Text und
@@ -175,11 +176,11 @@
             </div>
         </div>
         <div id="event_kickoff_2012" class="row">
-            <div class="span3">
+            <div class="col-sm-3 col-md-3">
                 <h4>FreiDi-Kickoff und Konsortialtreffen</h4>
                 <p>Oktober 2012</p>
             </div>
-            <div class="span9">
+            <div class="col-sm-9 col-md-9">
                 <img style="width: 200px; float:left; margin-right: 20px;" class="img-polaroid"
                     src="images/events/kickoff/Kick-off_thumb.jpg" alt="Freischütz Digital Team"
                     title="Freischütz Digital Team"/>

@@ -2,7 +2,8 @@
   "name": "freischuetz-digital-de",
   "private": true,
   "dependencies": {
-    "jquery": "~1.9.1"
+    "jquery": "~1.9.1",
+    "bootstrap": "~3.2.0"
   },
   "devDependencies": {}
 }
