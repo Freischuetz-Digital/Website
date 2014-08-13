@@ -88,6 +88,7 @@ section {
     position: absolute;
     right: 60px;
     top: 100px;
+    z-index: 1;
 }
 
 .noTopMargin {
