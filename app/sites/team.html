@@ -1,9 +1,87 @@
-<!-- include "_htmlstart.html" -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        <title>Freischütz Digital</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content=""/>
+        <meta name="author" content="Daniel Röwenstrunk"/>
+        
+        <link rel="stylesheet" href="styles/bootstrap.css"/>
+        <link rel="stylesheet" href="styles/bootstrap-responsive.css"/>
+        <link href="styles/bootswatch.css" rel="stylesheet"/>
+        <link href="styles/freidi.css" rel="stylesheet"/>
+        <link href="styles/ptsans.css" rel="stylesheet"/>
+        
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="pix/freidi_icon_144.png"/>
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="pix/freidi_icon_114.png"/>
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="pix/freidi_icon_72.png"/>
+        <link rel="apple-touch-icon-precomposed" href="pix/freidi_icon_57.png"/>
+        <link rel="shortcut icon" href="pix/freidi_favicon.png"/>
+    </head>
+    <body data-spy="scroll" data-target="#navbar" data-offset="30">
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="brand" href="/index.html">Freischütz<br/>
+                        <small>Digital</small>
+                    </a>
+                    <ul class="nav">
+                        <li class="active">
+                            <a href="/index.html">Projekt</a>
+                        </li>
+                        <li>
+                            <a href="/edition/">Edition</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+            
 
 <div id="content" class="container">
     
-    <!-- include "_dude.html" -->
-    <!-- include "_nav.html" -->
+    <div id="figure-top" class="figure visible-desktop">
+        <img style="height: 330px;" src="" alt=""/>
+    </div>
+
+    <header id="overview" class="jumbotron subhead">
+        <div class="row" style="min-height: 0;">
+            <div class="span8">
+                <img style="margin: 40px 0 0 3px;" src="pix/Logo_greenInset.png"/>
+            </div>
+            <div class="span4"> </div>
+        </div>
+        <div id="navbar" class="subnav">
+            <ul class="nav nav-pills">
+                <li id="nav_home">
+                    <a href="index.html">Startseite</a>
+                </li>
+                <li id="nav_work">
+                    <a href="work-packages.html">Arbeitspakete</a>
+                </li>
+                <li id="nav_loc">
+                    <a href="locations.html">Standorte</a>
+                </li>
+                <li id="nav_team">
+                    <a href="team.html">Mitarbeiter</a>
+                </li>
+                <li id="nav_events">
+                    <a href="events.html">Veranstaltungen</a>
+                </li>
+                <li id="nav_publications">
+                    <a href="publications.html">Publikationen &amp; Vorträge</a>
+                </li>
+                <li id="nav_releases">
+                    <a href="releases.html">Versionen der Edition</a>
+                </li>
+            </ul>
+        </div>
+        <div id="backlink" style="display:none;">
+            <a href="#" onclick="nav_back(); false;">zurück</a>
+        </div>
+    </header>
+
     
     <section id="team">
         <div class="page-header">
@@ -117,6 +195,22 @@
                         <address><strong>Benjamin W. Bohl</strong><br/><a href="mailto:bohl@edirom.de">bohl@edirom.de</a></address>
                     </div>
                 </div>
+                <div class="row" xml:id="iffland">
+                    <div class="span6">
+                        <h3>Joachim Iffland M. A.</h3>
+                        <img style="width: 100px; float:left; margin-right: 20px;" class="img-polaroid"
+                            src="images/team/JoachimIffland.jpg" alt="Joachim Iffland"
+                            title="Joachim Iffland"/>
+                        <p>Joachim Iffland, geboren 1983 in Lich, studierte 2-Fach-Bachelor Kulturwissenschaften mit den Fächern 
+                            Musikwissenschaft und Geschichte an der Universität Paderborn. Im Oktober 2013 schloss er sein 
+                            Studium im Master Musikwissenschaft mit Studien zur Alltagsgeschichte der Musik ab.
+                            Von 2009 bis 2013 arbeitete er als studentische Hilfskraft sowie von 2013 bis 2014 als Wissenschaftliche Hilfskraft am Musikwissenschaftlichen Seminar Detmold/Paderborn.
+                            In dieser Funktion unterstützte er Frau Prof. Dr. Grotjahn bei der Mitherausgabe der Musikforschung sowie im Projekt Alltagsgeschichte der Musik.
+                        </p>
+                        <p>Seit September 2014 arbeitet er als freiberuflicher Musikwissenschaftler und ist als Wissenschaftlicher Mitarbeiter für das BMBF-Projekt Freischütz Digital tätig.</p>
+                        <address style="clear:both; margin-top: 30px;"><strong>Joachim Iffland</strong><br/><a href="mailto:Joachim.Iffland@uni-paderborn.de>">Joachim.Iffland@uni-paderborn.de</a></address>
+                    </div>
+                </div>
                 <div class="row" xml:id="kepper">
                     <div class="span6">
                         <h3>Dr. Johannes Kepper</h3>
@@ -131,6 +225,7 @@
                             Musikedition und Fragen der Codierung von Musiknotation. Kepper ist
                             Mitherausgeber der MEI Guidelines und fungiert als Projektleiter des von DFG
                             und NEH gemeinschaftlich geförderten MEI-Projekts.</p>
+                        <p>Im Mai 2014 wechselte Kepper in das Akademieprojekt „Beethovens Werkstatt“.</p>
                         <address><strong>Johannes Kepper</strong><br/><a href="mailto:kepper@edirom.de">kepper@edirom.de</a></address>
                     </div>
                 </div>
@@ -145,9 +240,9 @@
                             Digital Humanities (M.A.) am King's College London. Von April bis Juni 2013
                             absolvierte sie ein Praktikum mit den Schwerpunkten Musikcodierung,
                             Validierung der Codierungen und Organisation der <em>Music Encoding
-                                Conference</em> 2013.</p>
-                        <p>Seit April 2014 ist Komprecht wissenschaftliche Mitarbeiterin im Projekt.</p>
-                        <address><strong>Anna Maria Komprecht</strong><br/><a href="mailto:k.annamaria@web.de">k.annamaria@web.de</a></address>
+                                Conference</em> 2013. Von April bis September 2014 war Komprecht wissenschaftliche Mitarbeiterin im Projekt.</p>
+                        <p>Im September 2014 wechselte sie ins BMBF-Projekt „Zentrum Musik – Edition – Medien“, steht aber weiterhin für konzeptionelle Fragen zu Verfügung.</p>
+                        <address><strong>Anna Maria Komprecht</strong><br/><a href="mailto:k.annamaria@web.de">komprecht@edirom.de</a>, <a href="http://twitter.com/akomprecht">@akomprecht</a></address>
                     </div>
                 </div>
                 <div class="row" xml:id="praetzlich">
@@ -179,11 +274,21 @@
                                 href="http://www.edirom.de" target="_blank"><em>Digitale
                                     Musikedition</em></a> (Edirom) beschäftigt, für das er ab April 2011
                             die Leitung übernahm. Seit Juli 2012 ist Röwenstrunk Projektleiter im
-                            BMBF-Projekt <em>Freischütz Digital</em>.</p>
-                        <p>Seine Forschungsinteressen liegen im Wesentlichen in den Bereichen
+                            BMBF-Projekt <em>Freischütz Digital</em>. Seine Forschungsinteressen liegen im Wesentlichen in den Bereichen
                             computergestützte Werkzeuge für Digitale Musikedition, Codierungsformate für
                             Text und Musik und Usability.</p>
+                        <p>Im September 2014 wechselte Röwenstrunk ins BMBF-Projekt „Zentrum Musik – Edition – Medien“, steht aber weiterhin für konzeptionelle Fragen zu Verfügung.</p>
                         <address><strong>Daniel Röwenstrunk</strong><br/><a href="mailto:roewenstrunk@edirom.de">roewenstrunk@edirom.de</a>, <a href="http://twitter.com/roewenstrunk">@roewenstrunk</a></address>
+                    </div>
+                </div>
+                <div class="row" xml:id="schilke">
+                    <div class="span6">
+                        <h3>Elena Schilke</h3>
+                        <img style="width: 100px; float:left; margin-right: 20px;" class="img-polaroid"
+                            src="images/team/" alt="Elena Schilke"
+                            title="Elena Schilke"/>
+                        <p></p>
+                        <address style="clear:both; margin-top: 30px;"><strong>Elena Schilke</strong><br/><a href="mailto:eschilke@mail.uni-paderborn.de>">eschilke@mail.uni-paderborn.de</a></address>
                     </div>
                 </div>
                 <div class="row" xml:id="schreiter">
@@ -218,7 +323,7 @@
                 </div>
                 <div class="row" xml:id="viglianti">
                     <div class="span6">
-                        <h3>Raffaele Viglianti</h3>
+                        <h3>Raffaele Viglianti M. A.</h3>
                         <img style="width: 100px; float:left; margin-right: 20px;" class="img-polaroid"
                             src="images/team/RaffaeleViglianti.jpg" alt="Raffaele Viglianti"
                             title="Raffaele Viglianti"/>
@@ -241,11 +346,19 @@
     </section>
     
     
-    <!-- include "_footer.html" -->
+    <div id="footer" style="padding-top: 5px; text-align: center; background-color: #EEEEEE; background-image: -moz-linear-gradient(center top , #F5F5F5 0%, #EEEEEE 100%);     background-repeat: repeat-x;     border: 1px solid #E5E5E5;     border-radius: 4px 4px 4px 4px;     height: 24px;     margin-bottom: 20px;     margin-top: 40px;     width: 100%;"><a style="margin-right: 6px;" href="imprint.html">Impressum</a> · <a style="margin-left: 8px;" href="contact.html">Kontakt</a></div>
 </div>
 
 <script type="text/javascript">
     window.activeNavLink = 'nav_team';
 </script>
 
-<!-- include "_htmlend.html" -->
+
+<script src="scripts/jquery.min.js"></script>
+
+<script src="scripts/bootstrap.js"></script>
+<script src="scripts/bootswatch.js"></script>
+<script src="scripts/main.js"></script>
+
+</body>
+</html>
