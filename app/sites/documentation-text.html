@@ -16,529 +16,1272 @@
                 <div class="span12">
                     <h2>Editionskonzept</h2>
                     <h3>Textgenetische Edition des Librettos</h3>
-                    
-                    <h4>Vorbemerkungen</h4>
-                    <p>Die digitale textgenetische Edition des Librettos basiert inhaltlich auf der
-                        gedruckten Textbuch-Ausgabe [ref: <em>Friedrich Kind/Carl Maria von Weber,
-                            Der Freischütz.</em> Kritische Textbuch-Edition von Solveig Schreiter,
-                        München 2007]. Im Gegensatz zur historisch-kritischen Print-Edition, bei der
-                        die Anfertigung eines massgebenden Werktextes für Wissenschaft und
-                        Musikpraxis im Vordergrund steht, kann bei der digitalen Text-Edition der
-                        Fokus beträchtlich erweitert und der Schwerpunkt auf den Prozess der
-                        Entstehung sowie zusätzlich die Rezeption des Librettos gelegt werden.
-                        <br/>Für das Konzept der textgenetischen Edition innerhalb von
-                        Freischütz-digital heißt das konkret, dass nicht mehr eine Hauptquelle
-                        ausgewählt wird, nach der ediert wird und alle anderen Quellen „nur“ die
-                        Vergleichsquellen bilden, sondern alle für die Edition herangezogenen
-                        Textquellen (quasi gleichwertig) nebeneinander stehen, digital und in
-                        Übertragung abgebildet und in ihrer jeweiligen Komplexität aufbereitet
-                        werden. Vordergründiges Interesse richtet sich dabei darauf, neben der
-                        genauen Beschreibung und chronologischen Einordnung der Materialien, die
-                        verschiedenen Textstadien einer Quelle mit Hilfe des digitalen Mediums zu
-                        erschließen und abzubilden sowie eine Verknüpfung der verschiedenen Quellen
-                        herzustellen mit dem Ziel, diese in den Textgenese-Prozess einzuordnen bzw.
-                        bestehende Verbindungen zwischen den verschiedenartigen Quellen
-                        aufzuzeigen.</p>
-                    <h4>Auswahl der Textquellen</h4>
-                    <p>Friedrich Kinds <em>Freischütz</em>-Libretto ist durch eine Vielzahl von
-                        handschriftlichen und gedruckten Textquellen überliefert. Für die digitale
-                        Edition werden alle authentischen bzw. von Kind und Weber autorisierten
-                        Textbücher berücksichtigt. Die Zusammensetzung dieser Quellen verdeutlicht,
-                        dass sich die Textgrundlage der Komposition über einen langen Zeitraum von
-                        der ersten Idee (1817) bis zur UA am 18. Juni 1821 massgeblich wandelte und
-                        Carl Maria von Weber selbst an diesem Prozess entscheidend beteiligt war.
-                        Darüber hinaus zeigen die verschiedenen Druckausgaben, die der Librettist
-                        eigenmächtig 1822 bis 1843 anfertigen ließ, weitere aufschlussreiche
-                        Text-Versionen bzw. -varianten. Diese wurden jedoch teilweise von Weber,
-                        indem er die gedruckten Textbücher an die Theater versandte, akzeptiert und
-                        somit sanktioniert und erlangten dadurch aufführungspraktische Relevanz. Der
-                        eigentliche Text der Uraufführung lässt sich dagegen nicht mehr vollständig
-                        rekonstruieren, da er nur in Form des Erstdruckes der Arien und Gesänge
-                        erhalten ist. <br/>[ref: Johannes Kepper, Solveig Schreiter, Joachim Veit,
-                            <em>Freischütz analog oder digital – Editionsformen im Spannungsfeld von
-                            Wissenschaft und Praxis</em>, in: editio. Internationales Jahrbuch für
-                        Editionswissenschaft, hg. von Rüdiger Nutt-Kofoth und Bodo Plachta, Berlin
-                        u.a. 2014; Solveig Schreiter: <em>Zur Quellensituation des
-                            Freischütz-Librettos</em>, in: Perspektiven der Edition
-                        musikdramatischer Texte. Tagung an der Universität Bayreuth, 22.–24.
-                        November 2012. Tagungsbericht (in Vorbereitung)]</p>
-                    <h4>Überblick (Primärquellen)</h4>
-                    <p>[graphic: Quellenüberblick, s. Datei unten:
-                        Ueberblick_Librettoquellen.odt]</p>
-                    <p>Neben den als authentisch oder autorisiert eingestuften Primärquellen wird
-                        die vorliegende Edition durch einige Libretto-Quellen ergänzt, die
-                        rezeptionsgeschichtlich interessant sind, wie z. B. zwei weitere Textbücher
-                        zur Erstaufführung in Wien 1821 (K-tx15a und K-tx15b), das Textbuch zur
-                        Detmolder Erstaufführung 1825 (K-tx29) und ein unter dem Namen von Friedrich
-                        Kind herausgegebenes gedrucktes Textbuch von 1827 (Dp-tx1).</p>
-                    <h4>Codierung und Visualisierung der Quellen</h4>
-                    <p>Alle Manuskripte und Textdrucke sind diplomatisch getreu transkribiert und
-                        nach den Standards der TEI (<em>Text Encoding Initiative</em>; <a
-                            class="external" href="http://www.tei-c.org/">www.tei-c.org/</a>)
-                        ausgezeichnet. Jede Quelle ergibt dabei eine separate xml-Datei. In den
-                        einzelnen Codierungen werden nicht nur formale Aspekte, wie z.B. Aufbau und
-                        Schriftbild der Quelle, Schriftart, Hoch- und Tiefstellungen,
-                        Unterstreichungen, Zeilenfall erfasst, sondern auch inhaltliche Merkmale
-                        berücksichtigt, d.h. die Art des jeweiligen Textabschnitts definiert wie
-                        Dialogtext, Verszeile, Szenenanweisung, Personennamen etc. Auch die
-                        unterschiedlich ausgeprägte Komplexität der Quellen schlägt sich in den
-                        Codierungen eindrücklich nieder.<br/>Jede Quelle wird in der Codierung
-                        adäquat transkribiert, d.h. auch ihre spezifische Struktur und Komplexität
-                        wird mit Hilfe bestimmter TEI-Elemente erfasst, z.B. verschiedene Schichten
-                        eines Textes, die Einträge von bekannter und unbekannter Hand mittels
-                        zahlreicher Alterationen und Substitutionen werden erfasst [ref:
-                        Codierungsrichtlinien Textedition]. <br/>Während die überlieferten
-                        gedruckten Textbücher (Erstdruck der Gesänge zur UA und die Ausgaben von
-                        Friedrich Kind) jeweils nur eine genau datierbare Textschicht reproduzieren,
-                        stellen die handschriftlichen Quellen überwiegend eine Anhäufung
-                        verschiedener Textstadien dar, welche teilweise von mehreren Autoren
-                        (Schreibern) aus verschiedenen zeitlichen Abschnitten stammen.</p>
-                    <p>Die diplomatisch getreue Codierung der Quellen wird mit Hilfe der
-                        Benutzeroberfläche <em>Edirom</em> [ref s. Einführung in Edirom] in eine
-                        lesbare Textübertragung transferiert, die es ermöglicht, die Texte nicht nur
-                        inhaltlich zu erschließen, sondern auch die Interpretation der Textgenese
-                        durch den Editor schrittweise zu verfolgen. In der Edirom-Visualisierung
-                        werden die in der Codierung rekonstruierten bzw. definierten einzelnen
-                        Textfassungen innerhalb eines Textes nachvollziehbar, indem z.B.
-                        verschiedene Stadien ein- und ausgeblendet oder synoptisch in der
-                        Gegenüberstellung mit anderen Quellen angezeigt werden können, wodurch
-                        wiederum Unterschiede bzw. Abhängigkeiten zwischen den Quellen erkennbar
-                        werden.</p>
-                    <p>Von dem Edirom-Quellenfenster aus sind verschiedene Ansichten der Texte
-                        möglich: <br/>1. Metadaten (inkl. Quellenbeschreibung) <br/>2. Text als
-                        Fließtext<br/>3. seitenbasierendes Faksimile<br/>4. seitenbasierende
-                        Gegenüberstellung Text – Faksimile<br/>5. xml-Ansicht<br/>6. Synopse mit
-                        anderen Quellen (mit Varianz-Anzeige)</p>
-                    <h4>Editionskonzept der textgenetischen Edition</h4>
-                    <p>Methodisch orientiert sich die Konzeption zur Textschichten-Anzeige innerhalb
-                        Freischütz-digital an Darstellungs-Modellen wie z. B. (Daniel fragen...)
-                        sowie anderen digitalen Projekten wie z. B. <br/>(<a class="external"
-                            href="http://dme.mozarteum.at/DME/libredition/synopse.php?idwnma=4814&#38;line=10&#38;end=544&#38;v1=292&#38;v2=266&#38;v3=267&#38;diff_ContentVariation=1"
-                            >http://dme.mozarteum.at/DME/libredition/synopse.php?idwnma=4814&#38;line=10&#38;end=544&#38;v1=292&#38;v2=266&#38;v3=267&#38;diff_ContentVariation=1</a>).<br/>Theoretische
-                        Grundlagen bilden wegweisende Arbeiten zur genetischen Textedition [ref:
-                        Almuth Grésillon, <em>Literarische Handschriften. Einführung in die
-                            „critique génétique“</em>, Bern u.a. 1999 ] sowie Sammlungen zum Thema
-                        [ref: Textgenetische Edition, hg. v. Hans Zeller und Gunter Martens, in :
-                        editio <a class="external"
-                            href="http://erf.sbb.spk-berlin.de/han/780109627/www.degruyter.com/search?f_0=isbnissn&#38;q_0=9783110939996&#38;searchTitles=true"
-                            >http://erf.sbb.spk-berlin.de/han/780109627/www.degruyter.com/search?f_0=isbnissn&#38;q_0=9783110939996&#38;searchTitles=true</a>]</p>
-                    <p>Die textgenetische Edition konzentriert sich auf die Darstellung der
-                        Textgenese-Prozesse innerhalb der Einzelquelle (Textschichten) und im
-                        direkten Quellenvergleich (Varianzen). Dabei soll die tatsächliche
-                        Textentwicklung als transparenter Vorgang mit unterschiedlichen, teils nur
-                        fragmentarisch dokumentierten Stufen nachvollziehbar präsentiert werden.
-                        <br/>In der Textübertragung wird die Textentwicklung innerhalb der
-                        Einzelquelle durch das Konzept der Textschichten nachvollziehbar gemacht.
-                        Über das Menü sind alle interpretierbaren Textschichten der identifizierten
-                        Schreiber sowohl einzeln als auch in der synoptischen Gegenüberstellung
-                        wiedergegeben. Der Quellenvergleich kann auf zwei verschiedene Arten
-                        erfolgen, zum einen in der Synopse von zwei (auswählbaren) Quellen, zum
-                        anderen mit Hilfe der Varianzanzeige innerhalb der Textübertragungen. Die
-                        Varianzanzeige ermöglicht den auf eine konkrete Einzelstelle bezogenen
-                        Überblick aller (sinntragenden) Varianzen der edierten Quellen.</p>
-                    <h5>Konzeption Textgenese (Textschichten innerhalb der Einzelquelle)</h5>
-                    <p>Die Darstellung der Textschichten ist nur für die handschriftlichen Quellen
-                        relevant. In den Drucken ist jeweils nur eine Textfassung vorhanden und wird
-                        dementsprechend abgebildet.<br/>Bei den Handschriften sind zwei
-                        Möglichkeiten der Textschichten-Anzeige möglich:</p>
-                    <h5>1. Wiedergabe der Quelle in separaten Textschichten</h5>
-                    <p>Die Textschichten sind einzeln anwählbar über das Menü: Textschichten. Dabei
-                        ergibt sich die Anzahl der Textschichten über die Anzahl der verschiedenen,
-                        eindeutig voneinander differenzierbaren Schreiber. Konnten anonyme Schreiber
-                        nicht eindeutig identifiziert werden, werden diese unter dem Sammelbegriff
-                        "anonym" zusammengefasst. Die Interpretation der Textschichten erfolgt unter
-                        Betracht der jeweils implizierten chronologischen Reihenfolge, wobei der
-                        Begriff der Textschichten additiv aufgefasst wird, d.h. die verschiedenen
-                        Textfassungen, die durch die Eingriffe der verschiedenen Schreiber erkennbar
-                        sind, werden aufeinander aufbauend verstanden und demzufolge reproduziert,
-                        indem die Textschichten die chronologisch vorherige Textschicht einbeziehen.
-                        Die einzeln anwählbaren Textschichten zeigen die jeweils ausgewählte
-                        Textfassung ohne Markierungen als diplomatische Fließtext-Übertragung in
-                        s/w.</p>
-                    <h5>2. Wiedergabe der Quelle mit allen Eingriffen innerhalb der "fiktiven"
-                            Endschicht</h5>
-                    <p>Die Wiedergabe des Textes mit allen Eingriffen ist über das Menü „Genese des
-                        Textes mit allen Zwischenständen“ anwählbar. An den entsprechenden Stellen,
-                        wo Eingriffe passiert sind, werden alle inhaltlich differenzierbaren
-                        Textschichten untereinander abgebildet, d.h. Textschichten, in denen sich an
-                        einer betreffenden Stelle gegenüber der chronologisch vorhergehenden nichts
-                        geändert hat, erscheinen nicht extra. Jeder interpretierbare
-                        Korrekturvorgang bekommt einen eigenen Rahmen, so dass verschiedene
-                        Korrekturen in einem Textabschnitt voneinander abgrenzbar werden.<br/>Die
-                        synoptische Anzeige der Textschichten erfolgt mit Hilfe verschiedener
-                        (entweder vorgegebener oder vom Benutzer frei wählbarer) Farben, indem die
-                        betreffende Textstelle zeilenweise farbig markiert wird. Dabei werden
-                        zusätzliche Informationen zum Korrekturvorgang gegeben:<br/>1. Angaben zum
-                        jeweiligen Schreiber (Schreiber-Sigle)<br/>2. Klassifizierung der Art des
-                        Vorgangs (+ für Ergänzung, - für Streichung, -/+ für Ersetzung)<br/>3.
-                        Erläuterungen zum Korrekturvorgang (Art und Platzierung des Eingriffes)</p>
-                    <p>Zur Anwendung der verschiedenen Möglichkeiten der textgenetischen Edition s.
-                        Werkzeuge (Demonstratoren).</p>
-                    <h4>Konzeption Textgenese (Varianz zwischen den Quellen)</h4>
-                    <p>Neben der Textschichten-Anzeige bei den Einzelquellen, liegt ein wesentlicher
-                        Schwerpunkt der textgenetischen Edition darin, Zusammenhänge bzw.
-                        Unterschiede zwischen den Primärquellen zum Libretto zu verdeutlichen. Da es
-                        keine Lesarten gegenüber einem erstellten Edierten Text gibt, sondern alle
-                        Primärquellen gleichwertig nebeneinander stehen, werden die Unterschiede als
-                        sogenannte Varianzen bezeichnet.</p>
-                    <h5>Varianz-Begriff</h5>
-                    <p>In der vorliegenden Edition wurden ausschließlich sinntragende Varianzen
-                        berücksichtigt, d. h. substanzielle Abweichungen zwischen den Quellen.
-                        Abweichungen in Interpunktion und Orthographie wurden vernachlässigt, da
-                        jede Einzelquelle sowohl in Codierung als auch Übertragung vorliegt.
-                        <br/>Zusätzlich musste der Begriff der „Varianz“ aufgrund der Problematik
-                        der verschiedenen Textschichten in den handschriftlichen Primärquellen
-                        dahingehend eingegrenzt werden, dass für die Varianz-Definition der Zustand
-                        der Quelle zugrunde gelegt wird, der eine Verbindung zu den Intentionen der
-                        beiden Autoren des Werkes erkennen lässt. D. h. nur authentische (von Kind
-                        und von Weber stammende) Korrekturen sowie autorisierte Korrekturen, die auf
-                        Anweisungen von Kind oder Weber zurückzuführen sind, erscheinen in der
-                        Varianz-Gegenüberstellung. Anonyme Korrekturen, die nicht zugeordnet werden
-                        können, sowie Korrekturen (z. B. innerhalb der Kopien für Wien und Hamburg),
-                        die im Zusammenhang mit den lokalen Aufführungen stehen, werden bei der
-                        Varianz-Anzeige dagegen vernachlässigt. Diese Unterschiede können jedoch bei
-                        der Textschichten-Anzeige in den entsprechenden Quellen in einzelnen
-                        Schritten nachvollzogen werden.</p>
-                    <h5>Codierung der Varianzen</h5>
-                    <p>Die Unterschiede (Varianzen) sind nicht in den Codierungen der Einzelquellen
-                        erfasst, sondern wurden innerhalb einer externen Core-Datei, die wiederum in
-                        szenenweise Teile gegliedert ist, zentral gesammelt. Mit Hilfe eines
-                        speziell für diese Erfassung entwickelten Werkzeugs, dem Core-Builder
-                        (Raffaele Viglianti, Washington), konnten die für die Edition gewünschten
-                        Bezüge zwischen einzelnen Abschnitten, Versen oder Wörtern bzw. Wortgruppen
-                        hergestellt werden. <br/>Alle Varianten sind in der Core-Dateien in Form von
-                        einzelnen Apparat-Einträgen verzeichnet. Der Mechanismus ist derart, dass in
-                        den Quellencodierungen die betreffenden Abschnitte, Zeilen oder Wörter
-                        definiert und mit individuellen Identifikationsnummern ausgestattet worden
-                        sind, die miteinander in Beziehung gesetzt werden. Von der CORE-Datei aus
-                        wird auf die automatisiert vergebenen XML-Identifikatoren referenziert
-                        (Erläuterung des Core-Builder s. unter Werkzeuge). <br/>Die Apparat-Einträge
-                        enthalten die Quellenverweise in Form von &lt;rdg/&gt;-Elementen mit
-                        Attribut @wit, in dem die ID der xml-Datei der Quelle angegeben ist. Dabei
-                        können mehrere &lt;rdg/&gt; zu Gruppen &lt;rdggrp/&gt; zusammengefasst
-                        werden. Die einzelnen &lt;rdg/&gt;-Elemente verweisen mit dem Element
-                        &lt;ptr/&gt; @target wiederum auf die ID der entsprechenden Stelle der
-                        Einzelquellendatei. Hat eine Varianz in einer einzelnen oder mehreren
-                        Quellen keine Entsprechung, fehlt im &lt;rdg/&gt; die Angabe des
-                        &lt;ptr/&gt;.<br/>Die Apparat-Einträge werden kategorisiert nach Art der
-                        Varianz (Weglassung, Ergänzung, Ersetzung, Umstellung, Schreibung). Dabei
-                        können auch Kombinationen von Kategorien auftreten.</p>
-                    <p>Bsp. für einen Apparat-Eintrag:</p>
-                    <p>&lt;app type="Ersetzung"&gt;<br/> &lt;rdggrp n="1"&gt;</p>
-                    <blockquote> <p>&lt;rdg
-                            wit="#freidi-librettoSource_KA-tx4_xml_id_d1e9293"&gt;<br/>&lt;ptr
-                            target="#d1e9409"&gt;&lt;/ptr&gt;<br/>&lt;/rdg&gt;<br/>&lt;rdg
-                            wit="#freidi-librettoSource_L-tx2_xml_id_d1e10504"&gt;<br/>&lt;ptr
-                            target="#d1e10654"&gt;&lt;/ptr&gt;<br/>&lt;/rdg&gt;<br/>&lt;rdg
-                            wit="#freidi-librettoSource_K-tx6_xml_id_d1e9223"&gt;<br/>&lt;ptr
-                            target="#d1e9337"&gt;&lt;/ptr&gt;<br/>&lt;/rdg&gt;<br/>&lt;rdg
-                            wit="#freidi-librettoSource_K-tx7_xml_id_d1e8345"&gt;<br/>&lt;ptr
-                            target="#d1e8452"&gt;&lt;/ptr&gt;<br/>&lt;/rdg&gt;<br/>&lt;rdg
-                            wit="#freidi-librettoSource_KA-tx15_xml_id_d1e10326"&gt;<br/>&lt;ptr
-                            target="#d1e10459"&gt;&lt;/ptr&gt;<br/>&lt;/rdg&gt;<br/>&lt;rdg
-                            wit="#freidi-librettoSource_KA-tx21_xml_id_d1e10144"&gt;<br/>&lt;ptr
-                            target="#d1e10285"&gt;&lt;/ptr&gt;<br/>&lt;/rdg&gt;</p> </blockquote>
-                    &lt;/rdggrp&gt;<br/> &lt;rdggrp n="2"&gt; <blockquote> <p>&lt;rdg
-                            wit="#freidi-librettoSource_D-tx1_xml_id_d1e8196"&gt;<br/>&lt;ptr
-                            target="#d1e8297"&gt;&lt;/ptr&gt;<br/>&lt;/rdg&gt;<br/>&lt;rdg
-                            wit="#freidi-librettoSource_D-tx2_xml_id_d1e8185"&gt;<br/>&lt;ptr
-                            target="#d1e8291"&gt;&lt;/ptr&gt;<br/>&lt;/rdg&gt;<br/>&lt;rdg
-                            wit="#freidi-librettoSource_D-tx3_xml_id_d1e8130"&gt;<br/>&lt;ptr
-                            target="#d1e8236"&gt;&lt;/ptr&gt;<br/>&lt;/rdg&gt;<br/>&lt;rdg
-                            wit="#freidi-librettoSource_Dp-tx2_xml_id_d1e8085"&gt;<br/>&lt;ptr
-                            target="#d1e8190"&gt;&lt;/ptr&gt;<br/>&lt;/rdg&gt;<br/>&lt;rdg
-                            wit="#freidi-librettoSource_Dp-tx3_xml_id_d1e8488"&gt;<br/>&lt;ptr
-                            target="#d1e8588"&gt;&lt;/ptr&gt;<br/>&lt;/rdg&gt;</p> </blockquote>
-                    &lt;/rdggrp&gt;<br/> &lt;/app&gt; <blockquote> </blockquote>
-                    <h5>Möglichkeiten der Varianz-Anzeige</h5>
-                    <h5>1. Varianz-Anzeige innerhalb der Textübertragung der Einzelquelle</h5>
-                    <p>Diese Varianz-Anzeige kann von jedem beliebigen Quellenfenster vorgenommen
-                        werden (allerdings nur in der Ansicht: Text) und zeigt die mittels der
-                        Core-Dateien definierten Abweichungen der entsprechenden Quelle gegenüber
-                        allen weiteren Primärquellen zum Libretto. <br/>Bei den komplexeren
-                        handschriftlichen Quellen mit mehreren Textschichten ist zu beachten, dass
-                        für die Auswahl der Varianz in den Core-Dateien nur die Textschicht zugrunde
-                        gelegt wurde, die als authentisch bzw. als von den beiden Werkautoren Kind
-                        und Weber autorisiert angesehen werden kann [vgl. dazu unter
-                        Varianz-Begriff].</p>
-                    <p>Die Festlegung der Textschicht betrifft folgende Quellen (in dieser Schicht
-                        wird der Text in der Textübertragung angezeigt):</p>
-                    <p>L-tx2 Kind Autograph (zweite Textschicht, mit allen Korrekturen von Kind)</p>
-                    <p>KA-tx4 Handexemplar (Textfassung inkl. Weber und Kopist 2, ohne Eintragungen
-                        von Jähns)</p>
-                    <p>K-tx6 Kopie Berlin (Textfassung mit Korrekturen des Berliner Kopisten)</p>
-                    <p>KA-tx15 Kopie Wien (Textfassung mit Weber-Korrekturen, aber ohne alle
-                        weiteren Korrekturen)</p>
-                    <p>KA-tx21 Kopie Hamburg (Textfassung mit Weber-Korrekturen, aber ohne alle
-                        weiteren Korrekturen)</p>
-                    <p>Über das Menü lassen sich die Varianzmarker ein- und ausblenden, und können
-                        wiederum einzeln angesteuert werden. Bei Anwahl des Varianzmarkers öffnet
-                        sich ein Textfenster mit einer Übersicht der für die entsprechende
-                        Textstelle in der Core-Datei erfassten, sinntragenden Varianzen. Hinter den
-                        tabellarisch aufgeführten Quellen-Siglen findet sich der jeweilige Text der
-                        andere Quellen in entsprechender Textübertragung; gleiche Lesarten werden
-                        dabei in einer Gruppe zusammengefasst und untereinander aufgeführt. Für die
-                        Gruppen-Sortierung wurde auch die Entwicklung der Textstelle in der
-                        jeweiligen Einzelquelle mit berücksichtigt.<br/>Bei Bedarf kann aus dem
-                        Textfenster zu den anderen, nicht geöffneten Quellen weiter navigiert
-                        werden, um sich die Stelle dort im Kontext anzusehen. Die in der Core-Datei
-                        verzeichneten Apparat-Einträge lassen sich auch in der xml-Version anzeigen.
-                        Wenn kein Einzelstellenverweis möglich ist, weil Textpassagen in einzelnen
-                        Quellen nicht vorhanden sind, dann erfolgt ein Verweis auf die Gesamtdatei
-                        der Quelle.</p>
-                    <h5>2. Varianz-Anzeige in der Synopse von zwei beliebig auswählbaren Quellen</h5>
-                    <p>Die mittels Core-Datei erfassten Varianzen können auch in der
-                        Gegenüberstellung von zwei beliebig ausgewählten Primärquellen in der
-                        Textübertragung angezeigt werden. Sie ist über das Menü über Ansicht und:
-                        „Synopse von zwei Texten“ zu erreichen. In der linken Spalte erscheint der
-                        Text der geöffneten Quelle in Textübertragung, in der rechten Spalte kann
-                        die Textübertragung einer beliebigen anderen Textquelle hinzu geblendet
-                        werden. Auch hier gilt die Einschränkung auf nur eine (authentische bzw.
-                        autorisierte ) Textschicht. Nach der erfolgten Auswahl können über das Menü
-                        die Abweichungen zwischen den beiden ausgewählten Texten ein- oder
-                        ausgeblendet werden. Diese werden farblich markiert im Text
-                        hervorgehoben.</p>
-                    <h4>Zusätzliche Kommentare und weiterführende Links zur WeGA</h4>
-                    <p>Editorische Kommentare, die sich nur auf eine Quelle beziehen, werden mittels
-                        &lt;note/&gt; type=“commentary“ in der entsprechenden Codierung der
-                        Einzelquelle erfasst. Mehrere Quellen betreffende Annotationen wurden
-                        (ähnlich wie bei den Varianzen) in einer übergeordneten xml-Datei gesammelt.
-                        Diese sind szenenweise sortiert und inhaltlich kategorisiert. Es gibt
-                        allgemeine Kommentare, Kommentare zur Textkonstitution und Kommentare mit
-                        Wortdefinitionen [s. Codierungsrichtlinien]. <br/>Die &lt;note/&gt;-Elemente
-                        verweisen innerhalb des &lt;note/&gt;- Attributs @target auf die
-                        zusammengehörigen Quellen. Die Verlinkung basiert auf der Angabe der
-                        Quellensigle in Verbindung mit der xml:id der jeweiligen Platzierung in den
-                        Einzelquellen.<br/>In der Edirom-Oberfläche werden die Kommentare, die ein-
-                        und ausgeblendet werden können, mit einem gelben Marker (K) angezeigt. Bei
-                        Anwahl des Markers blendet sich der Kommentar über einen Tooltip ein.
-                        <br/>Tagebuch-Verweise zu Inhalten der Carl-Maria-von-Weber-Gesamtausgabe
-                            (<a class="external" href="http://www.weber-gesamtausgabe.de"
-                            >http://www.weber-gesamtausgabe.de</a>) werden ebenfalls in der
-                        gesonderten Kommentardatei aufgenommen, wobei jedes Datum mit einem
-                        &lt;ref/&gt;-Element versehen wird, in welchem im Attribut @target die
-                        URL-Adresse der entsprechenden Tagebuch-Seite (Bsp.: <a class="external"
-                            href="http://www.weber-gesamtausgabe.de/A060183"
-                            >http://www.weber-gesamtausgabe.de/A060183</a>) angegeben ist.</p>
-                    
-                    <h2>Intertexte: Librettistische Referenzpunkte</h2>
-                    <h3>Vorbemerkung und Auswahl der Textquellen (Referenzen)</h3>
-                    <p>In dem Projekt <em>Freischütz digital</em> werden zusätzlich zu den
-                        Freischütz-Libretti exemplarisch weitere Textquellen einbezogen, die zeitnah
-                        und hinsichtlich ihrer Motive, Themen und Dramencharaktere eng in
-                        Zusammenhang mit den unter [ref: Auswahl der Textquellen] genannten
-                        Freischütz-Librettoquellen stehen. (Lit.: Kathrin Wulfhorst: Intertextuelle
-                        Bezüge in den Freischütz-Texten von Johann Apel und Friedrich Kind.
-                        Weberiana, 19 (2009), S. 101-124) Betrachtet werden die Texte in zwei
-                        Richtungen – im Hinblick auf die rückwärts verweisende Stoffgeschichte und
-                        nach vorne mit Blick auf die Rezeption. <br/>Darunter werden Texte
-                        unterschiedlicher Gattungen (Libretti, Dramen, Prosa) und
-                        Erscheinungsformen, Manuskripte (mit der Sigleangabe RMs-tx…) und Drucke
-                        (mit der Sigleangabe RD-tx…), berücksichtigt, die ein gemeinsames
-                        Beziehungsgeflecht von Begriffen und Themen teilen und in denen eine erneute
-                        Wiederkehr an Motiven und gleichenden Personenkonstellationen erkennen
-                        lassen.</p>
-                    <h4>Überblick der Textquellen (Referenzen) und ihre Siglen</h4>
-                    <p>[graphic -- pdf "Textquellen (Referenzen)"]</p>
-                    <h3>Kodierung und Präsentation der Textquellen (Referenzen)</h3>
-                    <p>Alle Textquellen (Referenzen) werden in diplomatischer Übertragung unter
-                        besonderer Berücksichtigung der formalen und strukturellen Aspekte erfasst
-                        und nach den Standards der TEI (<em>Text Encoding Initiative</em>; <a
-                            class="external" href="http://www.tei-c.org/">www.tei-c.org/</a>)
-                        ausgezeichnet [ref: siehe Codierung und Visualisierung der Quellen]. Die
-                        Transkriptionen orientieren sich daher an der Verfahrensweise wie sie bei
-                        den Transkriptionen und Codierung der Manuskripte und Drucke der
-                        Freischützlibretti angewendet ist. <br/>Die Erfassungsrichtlinien für die
-                        Textquellen (Referenzen) folgen demnach und nur mit wenigen Ergänzungen den
-                        Editions- und Codierungsrichtlinien der Textedition. siehe [ref:
-                        Editionsrichtlinien/Codierungsrichtlinien der Textedition]</p>
-                    <p>Die Codierungen und Quellenbilder der Referenzen werden mit Hilfe der
-                        Benutzeroberfläche Edirom [ref: siehe Einführung in Edirom] präsentiert. Im
-                        Edirom-Quellenfenster sind vier verschiedene Ansichten der Texte auswählbar
-                        [ref: (siehe Codierung und Visualisierung der Quellen)]:<br/>1. Metadaten
-                        (inkl. Quellenbeschreibung)<br/>2. Text als Fließtext<br/>3.
-                        seitenbasierendes Faksimile<br/>4. seitenbasierende Gegenüberstellung Text –
-                        Faksimile</p>
-                    <p>[Ein im Quellenfenster implementierter Menüpunkt ermöglicht den Zugang zur
-                        der Topic Map.]</p>
-                    <h3>Motive, Begriffe und Namen</h3> 
-                    <p>Die wesentlichen Motive der
-                        Freischütz-Geschichte lassen sich als Auslöser und Motor der Tragödie benennen:</p> <ul>
-                        <li>Pflicht des Probeschusses seit Uraltvaterzeiten</li>
-                        <li>Weidmann setzen</li>
-                        <li>die “Kugelguss”-Szene, oder: Die Wolfsschluchtszene</li>
-                        <li>Das herabstürzende Ahnenbild</li>
-                        <li>Die Traum-Geschichte</li>
-                    </ul>
-                    <p>Neben dieser “Motivkonstanz” tritt in den Texten auch immer wieder “ein
-                        Inventar an stereotypen Requisiten und atmosphärischen Gestaltungsmittel[n]”
-                        auf (Susanne Balhar: das Schicksaldrama im 19. Jh. Variationen eines
-                        romantischen Modells. (2004), S. 48f.); diese Kennzeichen zählen unter
-                        vielen andren zu wiederkehrenden Eigenschaften von Schicksalsdramen des 19.
-                        Jh. und finden sich ebenso in den Freischützlibretti und dessen
-                        Referenzen.<br/>Neben den wesentlichen Motiven werden daher ganz gezielt und
-                        punktuell einzelne Begriffe und Namen aufgegriffen und über verschiedene
-                        Texte hinweg verfolgt. So lassen sich Konstanz, Variation (Synonym,
-                        lexikalische Varianten, Namensänderungen) und damit Entwicklung einzelner
-                        Motive als auch Namen und Begriffe und zwar auf Wortebene hinab verfolgen.
-                        Damit erreichen wir eine granulare Sicht auf die Elemente, die letztlich
-                        auch Motive auszeichnen.<br/>[Beispiel "Kugelguss"-Szene: In der
-                        Waldeinsamkeit zur nächtlichen Geisterstunde bei Mondschein gießen zwei
-                        junge Jägerburschen mit Hilfe von bösen Zaubermächten personifiziert durch
-                        dein schwarzen Jäger die fatalen Freikugeln, für den Zweck, den von einem
-                        Jägerburschen zu leistenden Probeschuss zu Erfolg zu verhelfen. Während des
-                        Gusses erleben die Jäger mancherlei Spuk und Geistererscheinungen. Zu den
-                        Elementen und Gestaltungsmitteln der Kugelguss-oder Wolfsschluchtszene
-                        gehören neben dem Akt des Kugelgusses demnach: Wald, Nacht, Glockenschlag,
-                        wildes Heer, Eule, Rabe, Kreis, Hirschfänger, Jäger, Werkzeug für den
-                        Kugelguss etc. ]</p>
-                    <h3>Topic Map</h3>
-                    <p>Anhand der Freischützlibretti und seinen Referenzen werden Namen und Begriffe
-                        als auch deren Varianten oder Entsprechungen in allen Texten aufgespürt; in
-                        den XML-Kodierungen zweier Librettotexte – das Handexemplar Webers (KA-tx4)
-                        und dem Kind-Druck (D-tx2) – und deren Referenzen ([siehe Tabelle]) sind
-                        diese Schlagworte ausgezeichnet und mit einer Identifikation versehen, die
-                        auf eine externe, separat von allen Texten geführte Topic Map hin
-                        verweist.</p>
-                    <p>Mittels dem standardisierten Datenformat der XML Topic Maps (XTM 2.0; <a
-                            class="external" href="http://www.isotopicmaps.org/sam/sam-xtm/"
-                            >http://www.isotopicmaps.org/sam/sam-xtm/</a>) werden die einzelnen
-                        Namen und Begriffe systematisch strukturiert: in einer separat von den
-                        Texten vorliegenden Topic Map werden die einzelnen Begriffe und Namen
-                        festgehalten, kategorisiert und deren Beziehung zueinander als auch
-                        intertextuell zwischen den Librettotexten und seinen Referenzen umfassend
-                        definiert. (Zur Visualisierung der Topic Map siehe auch [ref: Werkzeuge -
-                        Anwendungen (Demonstratoren der Textedition)])</p>
-                    <h3>Zum Aufbau der <em>Freischütz-digital</em>-XTM [to be continued]</h3>
-                    <ul>
-                        <li><strong>Topic-Kategorien</strong>:</li>
-                    </ul>
-                    <p>Die Kategorien, zu denen die Topic-Einträge zugeordnet werden können, werden
-                        wiederum als Topic-Eintragungen zu beginn definiert. <br/>Beispiel:</p>
-                    <blockquote> <p>&lt;topic id="name"&gt;</p> <blockquote> <p>&lt;baseName&gt;</p>
-                                <blockquote>
-                                    <p>&lt;baseNameString&gt;Name&lt;/baseNameString&gt;</p>
-                            </blockquote> <p>&lt;/baseName&gt;</p> </blockquote>
-                            <p>&lt;/topic&gt;</p> </blockquote>
-                    <ul>
-                        <li><strong>Kategorisierung der Varianten</strong></li>
-                    </ul>
-                    <p>In welche Varianten die einzelnen Schlagworte (Topics) in den Texten
-                        auftreten können, werden in der Topic Map festgehalten und wiederum
-                        kategorisiert. Die Kategorien werden wiederum als Topic-Eintragungen
-                        definiert.</p>
-                    <p>Beispiel:</p>
-                    <blockquote> <p>&lt;topic id="synonym"&gt;</p> <blockquote>
-                                <p>&lt;baseName&gt;</p> <blockquote>
-                                    <p>&lt;baseNameString&gt;Synonym&lt;/baseNameString&gt;</p>
-                            </blockquote> <p>&lt;/baseName&gt;</p> </blockquote>
-                            <p>&lt;/topic&gt;</p> </blockquote>
-                    <ul>
-                        <li><strong>Relationstypen (association types)</strong></li>
-                    </ul>
-                    <p>Die Relationen der einzelnen Topics () zueinander werden als
-                        Topic-Eintragungen definiert.</p>
-                    <p>Beispiel:</p>
-                    <blockquote> <p>&lt;topic id="comparable-with"&gt;</p> <blockquote>
-                                <p>&lt;baseName&gt;</p> <blockquote>
-                                    <p>&lt;baseNameString&gt;vergleichbar
-                                    mit&lt;/baseNameString&gt;</p> </blockquote>
-                                <p>&lt;/baseName&gt;</p> </blockquote> <p>&lt;/topic&gt;</p> </blockquote>
-                    <ul>
-                        <li><strong>Associations</strong></li>
-                    </ul>
-                    <p>In der Topic Map werden alle Relationen der einzelnen Topics (Begriffe und
-                        Namen) zueinander in den &lt;asoociations/&gt; definiert. Dabei können die
-                        Topics in unterschiedlichen Verhältnissen stehen, als eigene
-                        Topic-Eintragungen wiuederum definiert sind. siehe [ref: Relationstypen]</p>
-                    <blockquote> <p>&lt;association&gt;</p> <blockquote> <p>&lt;instanceOf&gt;</p>
-                                <blockquote> <p>&lt;topicRef xlink:href="#part-of"/&gt;</p>
-                            </blockquote> <p>&lt;/instanceOf&gt;<br/>&lt;member&gt;</p> <blockquote>
-                                    <p>&lt;roleSpec&gt;&lt;topicRef
-                                    xlink:href="#object-of-use"/&gt;&lt;/roleSpec&gt;<br/>&lt;topicRef
-                                    xlink:href="#myrte"&gt;&lt;/topicRef&gt;</p> </blockquote>
-                                <p>&lt;/member&gt;<br/>&lt;member&gt;</p> <blockquote>
-                                    <p>&lt;roleSpec&gt;&lt;topicRef
-                                    xlink:href="#object-of-use"/&gt;&lt;/roleSpec&gt;<br/>&lt;topicRef
-                                    xlink:href="#kranz"&gt;&lt;/topicRef&gt;</p> </blockquote>
-                                <p>&lt;/member&gt;</p> </blockquote> <p>&lt;/association&gt;</p> </blockquote>
-                    <ul>
-                        <li><strong>Topic</strong><br/>Beispiel: <br/>&lt;topic id="kranz"&gt;<br/>
-                            &lt;instanceOf&gt;<br/> &lt;topicRef
-                            xlink:href="#object-of-use"/&gt;<br/> &lt;/instanceOf&gt;<br/>
-                            &lt;baseName&gt;<br/>
-                            &lt;baseNameString&gt;Jungfernkranz&lt;/baseNameString&gt;<br/>
-                            &lt;variant&gt;<br/> &lt;parameters&gt;&lt;subjectIndicatorRef
-                            xlink:href="#formation"/&gt;&lt;/parameters&gt;<br/>
-                            &lt;variantName&gt;<br/>
-                            &lt;resourceData&gt;Kranz&lt;/resourceData&gt;<br/>
-                            &lt;/variantName&gt;<br/> &lt;/variant&gt;<br/> &lt;variant&gt;<br/>
-                            &lt;parameters&gt;&lt;subjectIndicatorRef
-                            xlink:href="#formation"/&gt;&lt;/parameters&gt;<br/>
-                            &lt;variantName&gt;<br/>
-                            &lt;resourceData&gt;Brautkranz&lt;/resourceData&gt;<br/>
-                            &lt;/variantName&gt;<br/> &lt;/variant&gt;<br/> &lt;variant&gt;<br/>
-                            &lt;parameters&gt;&lt;subjectIndicatorRef
-                            xlink:href="#synonym"/&gt;&lt;/parameters&gt;<br/>
-                            &lt;variantName&gt;<br/>
-                            &lt;resourceData&gt;Todtenkranz&lt;/resourceData&gt;<br/>
-                            &lt;/variantName&gt;<br/> &lt;/variant&gt;<br/> &lt;variant&gt;<br/>
-                            &lt;parameters&gt;&lt;subjectIndicatorRef
-                            xlink:href="#synonym"/&gt;&lt;/parameters&gt;<br/>
-                            &lt;variantName&gt;<br/>
-                            &lt;resourceData&gt;Totenkrone&lt;/resourceData&gt;<br/>
-                            &lt;/variantName&gt;<br/> &lt;/variant&gt;<br/> &lt;variant&gt;<br/>
-                            &lt;parameters&gt;&lt;subjectIndicatorRef
-                            xlink:href="#synonym"/&gt;&lt;/parameters&gt;<br/>
-                            &lt;variantName&gt;<br/>
-                            &lt;resourceData&gt;Brautkrone&lt;/resourceData&gt;<br/>
-                            &lt;/variantName&gt;<br/> &lt;/variant&gt;<br/> &lt;variant&gt;<br/>
-                            &lt;parameters&gt;&lt;subjectIndicatorRef
-                            xlink:href="#formation"/&gt;&lt;/parameters&gt;<br/>
-                            &lt;variantName&gt;<br/>
-                            &lt;resourceData&gt;bekränzt&lt;/resourceData&gt;<br/>
-                            &lt;/variantName&gt;<br/> &lt;/variant&gt;<br/> &lt;/baseName&gt;<br/>
-                            &lt;occurrence&gt;<br/> &lt;resourceRef
-                            xlink:href="FreiDi_TopicMap_Handbuch.xml#kranz"/&gt;<br/>
-                            &lt;/occurrence&gt;<br/> &lt;occurrence&gt;<br/> &lt;resourceRef
-                            xlink:href="freidi-referenceSource_RD-tx3.xml#kranz"/&gt;&lt;/occurrence&gt;<br/>
-                            &lt;occurrence&gt; <br/> &lt;resourceRef
-                            xlink:href="freidi-referenceSource_RD-tx7.xml#kranz"/&gt;
-                            &lt;/occurrence&gt;<br/> &lt;occurrence&gt; <br/> &lt;resourceRef
-                            xlink:href="freidi-referenceSource_RD-tx8.xml#kranz"/&gt; <br/>
-                            &lt;/occurrence&gt; <br/> &lt;occurrence&gt; <br/> &lt;resourceRef
-                            xlink:href="freidi-referenceSource_RD-tx9.xml#kranz"/&gt; <br/>
-                            &lt;/occurrence&gt; <br/> &lt;occurrence&gt; <br/> &lt;resourceRef
-                            xlink:href="freidi-referenceSource_RMs-tx10.xml#kranz"/&gt;&lt;/occurrence&gt;<br/>
-                            &lt;occurrence&gt; <br/> &lt;resourceRef
-                            xlink:href="freidi-referenceSource_RMs-tx11.xml#kranz"/&gt;&lt;/occurrence&gt;<br/>
-                            &lt;occurrence&gt;<br/> &lt;resourceRef
-                            xlink:href="freidi-referenceSource_RD-tx13.xml#kranz"/&gt;<br/>
-                            &lt;/occurrence&gt;<br/> &lt;occurrence&gt; <br/> &lt;resourceRef
-                            xlink:href="C_07_Handexemplar.xml#kranz"/&gt; &lt;/occurrence&gt;<br/>
-                            &lt;occurrence&gt; <br/> &lt;resourceRef
-                            xlink:href="C_07_Kind_Druck_2.xml#kranz"/&gt;&lt;/occurrence&gt;<br/>
-                            &lt;/topic&gt;</li>
-                    </ul>
-                    <h3>Rezeptionsgeschichte</h3>
-                    <p>In rezeptioneller Hinsicht werden in der Edition weitere Texte wie
-                        Rezensionen, Korrespondenzen, u.a. einbezogen, in denen ebenso Motive und
-                        Begriffe der Freischütz-Geschichten erwähnt werden. Diese Texte wurden im
-                        Rahmen der Weber-Gesamtausgabe (<a class="external"
-                            href="http://www.weber-gesamtausgabe.de/de/Index"
-                            >http://www.weber-gesamtausgabe.de/de/Index</a>) aufbereitet und online
-                        zur Verfügung gestellt, auf die mittels Topic Map verwiesen werden kann und
-                        damit in das Beziehungsgeflecht von Begriffen, Namen und Motive einbezogen
-                        werden.</p>
+              		<h4>Vorbemerkungen</h4>
+              		<p>Die digitale textgenetische Edition des Librettos basiert inhaltlich auf der gedruckten
+              			Textbuch-Ausgabe [ref: <em>Friedrich Kind/Carl Maria von Weber, Der Freischütz.</em>
+              			Kritische Textbuch-Edition von Solveig Schreiter, München 2007]. Im Gegensatz zur
+              			historisch-kritischen Print-Edition, bei der die Anfertigung eines massgebenden
+              			Werktextes für Wissenschaft und Musikpraxis im Vordergrund steht, kann bei der digitalen
+              			Text-Edition der Fokus beträchtlich erweitert und der Schwerpunkt auf den Prozess der
+              			Entstehung sowie zusätzlich die Rezeption des Librettos gelegt werden.  Für das
+              			Konzept der textgenetischen Edition innerhalb von Freischütz-digital heißt das konkret,
+              			dass nicht mehr eine Hauptquelle ausgewählt wird, nach der ediert wird und alle anderen
+              			Quellen „nur“ die Vergleichsquellen bilden, sondern alle für die Edition herangezogenen
+              			Textquellen (quasi gleichwertig) nebeneinander stehen, digital und in Übertragung
+              			abgebildet und in ihrer jeweiligen Komplexität aufbereitet werden. Vordergründiges
+              			Interesse richtet sich dabei darauf, neben der genauen Beschreibung und chronologischen
+              			Einordnung der Materialien, die verschiedenen Textstadien einer Quelle mit Hilfe des
+              			digitalen Mediums zu erschließen und abzubilden sowie eine Verknüpfung der verschiedenen
+              			Quellen herzustellen mit dem Ziel, diese in den Textgenese-Prozess einzuordnen bzw.
+              			bestehende Verbindungen zwischen den verschiedenartigen Quellen aufzuzeigen.</p>
+              		<h4>Auswahl der Textquellen</h4>
+              		<p>Friedrich Kinds <em>Freischütz</em>-Libretto ist durch eine Vielzahl von
+              			handschriftlichen und gedruckten Textquellen überliefert. Für die digitale Edition
+              			werden alle authentischen bzw. von Kind und Weber autorisierten Textbücher
+              			berücksichtigt. Die Zusammensetzung dieser Quellen verdeutlicht, dass sich die
+              			Textgrundlage der Komposition über einen langen Zeitraum von der ersten Idee (1817) bis
+              			zur UA am 18. Juni 1821 massgeblich wandelte und Carl Maria von Weber selbst an diesem
+              			Prozess entscheidend beteiligt war. Darüber hinaus zeigen die verschiedenen
+              			Druckausgaben, die der Librettist eigenmächtig 1822 bis 1843 anfertigen ließ, weitere
+              			aufschlussreiche Text-Versionen bzw. -varianten. Diese wurden jedoch teilweise von
+              			Weber, indem er die gedruckten Textbücher an die Theater versandte, akzeptiert und somit
+              			sanktioniert und erlangten dadurch aufführungspraktische Relevanz. Der eigentliche Text
+              			der Uraufführung lässt sich dagegen nicht mehr vollständig rekonstruieren, da er nur in
+              			Form des Erstdruckes der Arien und Gesänge erhalten ist.  [ref: Johannes Kepper,
+              			Solveig Schreiter, Joachim Veit, <em>Freischütz analog oder digital – Editionsformen im
+              				Spannungsfeld von Wissenschaft und Praxis</em>, in: editio. Internationales Jahrbuch
+              			für Editionswissenschaft, hg. von Rüdiger Nutt-Kofoth und Bodo Plachta, Berlin u.a.
+              			2014; Solveig Schreiter: <em>Zur Quellensituation des Freischütz-Librettos</em>, in:
+              			Perspektiven der Edition musikdramatischer Texte. Tagung an der Universität Bayreuth,
+              			22.–24. November 2012. Tagungsbericht (in Vorbereitung)]</p>
+              		<h5>Überblick (Primärquellen)</h5>
+              		<p>
+              		    <table>
+              		    <tr>
+              		        <th>Dateiname</th>
+              		        <th>Titel</th>
+              		        <th>Datierung der Niederschrift</th>
+              		        <th>Quellenart</th>
+              		        <th>Sigle</th>
+              		        <th>xml:id</th></tr>
+              		    <tr>
+              		        <td>Kinds Manuskript</td>
+              		        <td>Die Jägersbraut</td>
+              		        <td>Mai 1817</td>
+              		        <td>Autograph des Librettisten</td>
+              		        <td>L-tx<sub>2</sub> <em>(D–B)</em></td>
+              		        <td>L-tx2</td>
+              		    </tr>
+              		    <tr>
+              		        <td>Handexemplar</td>
+              		        <td>Der Freyschütze</td>
+              		        <td>Juni 1817</td>
+              		        <td>Textbuch-Kopie mit autographen Eintragungen</td>
+              		        <td>K<sup>A</sup>-tx<sub>4</sub> <em>(D–B)</em></td>
+              		        <td>KA-tx4</td>
+              		    </tr>
+              		    <tr>
+              		        <td>Kopie für Berlin</td>
+              		        <td>Die Braut des Jägers / Der Freyschütz</td>
+              		        <td>August 1819</td>
+              		        <td>Textbuch-Kopie</td>
+              		        <td>K-tx<sub>6</sub> <em>(D–B)</em></td>
+              		        <td>K-tx6</td>
+              		    </tr>
+              		    <tr>
+              		        <td>Kopie für Gotha</td>
+              		        <td>Die Braut des Jägers</td>
+              		        <td>Oktober 1819?</td>
+              		        <td>Textbuch-Kopie</td>
+              		        <td>K-tx7 <em>(D–GOl)</em></td>
+              		        <td>K-tx7</td>
+              		    </tr>
+              		    <tr>
+              		        <td>Kopie für Wien</td>
+              		        <td>[Der Freischütz]</td>
+              		        <td>August 1821</td>
+              		        <td>Textbuch-Kopie mit autographen Eintragungen</td>
+              		        <td>K<sup>A</sup>-tx<sub>15</sub> <em>(D–Wn)</em></td>
+              		        <td>KA-tx15</td>
+              		    </tr>
+              		    <tr>
+              		        <td>Kopie für Hamburg</td>
+              		        <td>Der Freyschütz</td>
+              		        <td>Oktober 1821</td>
+              		        <td>Textbuch-Kopie mit autographen Eintragungen</td>
+              		        <td>K<sup>A</sup>-tx<sub>21</sub> <em>(D–Hs)</em></td>
+              		        <td>KA-tx21</td>
+              		    </tr>
+              		    <tr>
+              		        <td>Vorabdruck des nicht vertonten Duetts Eremit/Agathe</td>
+              		        <td>Die geweiheten Rosen</td>
+              		        <td>Herbst 1819</td>
+              		        <td>Vorabdruck</td>
+              		        <td>VD<sub>1</sub></td>
+              		        <td>VD1</td>
+              		    </tr>
+              		    <tr>
+              		        <td>Vorabdruck des Volksliedes Nr. 14</td>
+              		        <td>Volkslied aus der Oper: Der Freischütz</td>
+              		        <td>September 1820</td>
+              		        <td>Vorabdruck</td>
+              		        <td>VD<sub>2</sub></td>
+              		        <td>VD2</td>
+              		    </tr>
+              		    <tr>
+              		        <td>Erstdruck der Arien und Gesänge 1821</td>
+              		        <td>Arien und Gesänge der romantischen Oper: Der Freischütz</td>
+              		        <td>Juni 1821</td>
+              		        <td>Erstdruck</td>
+              		        <td>ED-tx</td>
+              		        <td>ED-tx</td>
+              		    </tr>
+              		    <tr>
+              		        <td>1. Auflage des Textbuches</td>
+              		        <td>Der Freischütz</td>
+              		        <td>Ende 1821/Anfang 1822</td>
+              		        <td>Textbuchdruck</td>
+              		        <td>D-tx1</td>
+              		        <td>D-tx1</td>
+              		    </tr>
+              		    <tr>
+              		        <td>2. Auflage des Textbuches</td>
+              		        <td>Der Freischütz</td>
+              		        <td>Frühjahr 1822</td>
+              		        <td>Textbuchdruck</td>
+              		        <td>D-tx2</td>
+              		        <td>D-tx2</td>
+              		    </tr>
+              		    <tr>
+              		        <td>3. Auflage des Textbuches</td>
+              		        <td>Der Freischütz</td>
+              		        <td>Sommer 1823</td>
+              		        <td>Textbuchdruck</td>
+              		        <td>D-tx3</td>
+              		        <td>D-tx3</td>
+              		    </tr>
+              		    <tr>
+              		        <td>Ausgabe in den Theaterschriften</td>
+              		        <td>Der Freischütz</td>
+              		        <td>Sommer 1827</td>
+              		        <td>postumer Textbuchdruck</td>
+              		        <td>D+-tx2</td>
+              		        <td>Dp-tx2</td>
+              		    </tr>
+              		    <tr>
+              		        <td>Ausgabe letzter Hand</td>
+              		        <td>Der Freischütz</td>
+              		        <td>Frühjahr 1843</td>
+              		        <td>postumer Textbuchdruck</td>
+              		        <td>D+-tx3</td>
+              		        <td>Dp-tx3</td>
+              		    </tr>
+              		</table>
+              		</p>
+              		<p>Neben den als authentisch oder autorisiert eingestuften Primärquellen wird die
+              			vorliegende Edition durch einige Libretto-Quellen ergänzt, die rezeptionsgeschichtlich
+              			interessant sind, wie z. B. zwei weitere Textbücher zur Erstaufführung in Wien 1821
+              			(K-tx15a und K-tx15b), das Textbuch zur Detmolder Erstaufführung 1825 (K-tx29) und ein
+              			unter dem Namen von Friedrich Kind herausgegebenes gedrucktes Textbuch von 1827
+              			(Dp-tx1).</p>
+              		<h4>Codierung und Visualisierung der Quellen</h4>
+              		<p>Alle Manuskripte und Textdrucke sind diplomatisch getreu transkribiert und nach den
+              			Standards der TEI (<em>Text Encoding Initiative</em>; <a class="external"
+              				href="http://www.tei-c.org/">www.tei-c.org/</a>) ausgezeichnet. Jede Quelle ergibt
+              			dabei eine separate xml-Datei. In den einzelnen Codierungen werden nicht nur formale
+              			Aspekte, wie z.B. Aufbau und Schriftbild der Quelle, Schriftart, Hoch- und
+              			Tiefstellungen, Unterstreichungen, Zeilenfall erfasst, sondern auch inhaltliche Merkmale
+              			berücksichtigt, d.h. die Art des jeweiligen Textabschnitts definiert wie Dialogtext,
+              			Verszeile, Szenenanweisung, Personennamen etc. Auch die unterschiedlich ausgeprägte
+              			Komplexität der Quellen schlägt sich in den Codierungen eindrücklich nieder. Jede
+              			Quelle wird in der Codierung adäquat transkribiert, d.h. auch ihre spezifische Struktur
+              			und Komplexität wird mit Hilfe bestimmter TEI-Elemente erfasst, z.B. verschiedene
+              			Schichten eines Textes, die Einträge von bekannter und unbekannter Hand mittels
+              			zahlreicher Alterationen und Substitutionen werden erfasst [ref: Codierungsrichtlinien
+              			Textedition].  Während die überlieferten gedruckten Textbücher (Erstdruck der
+              			Gesänge zur UA und die Ausgaben von Friedrich Kind) jeweils nur eine genau datierbare
+              			Textschicht reproduzieren, stellen die handschriftlichen Quellen überwiegend eine
+              			Anhäufung verschiedener Textstadien dar, welche teilweise von mehreren Autoren
+              			(Schreibern) aus verschiedenen zeitlichen Abschnitten stammen.</p>
+              		<p>Die diplomatisch getreue Codierung der Quellen wird mit Hilfe der Benutzeroberfläche
+              				<em>Edirom</em> [ref s. Einführung in Edirom] in eine lesbare Textübertragung
+              			transferiert, die es ermöglicht, die Texte nicht nur inhaltlich zu erschließen, sondern
+              			auch die Interpretation der Textgenese durch den Editor schrittweise zu verfolgen. In
+              			der Edirom-Visualisierung werden die in der Codierung rekonstruierten bzw. definierten
+              			einzelnen Textfassungen innerhalb eines Textes nachvollziehbar, indem z.B. verschiedene
+              			Stadien ein- und ausgeblendet oder synoptisch in der Gegenüberstellung mit anderen
+              			Quellen angezeigt werden können, wodurch wiederum Unterschiede bzw. Abhängigkeiten
+              			zwischen den Quellen erkennbar werden.</p>
+              		<p>Von dem Edirom-Quellenfenster aus sind verschiedene Ansichten der Texte möglich:  1.
+              			Metadaten (inkl. Quellenbeschreibung)  2. Text als Fließtext 3.
+              			seitenbasierendes Faksimile 4. seitenbasierende Gegenüberstellung Text –
+              			Faksimile 5. xml-Ansicht 6. Synopse mit anderen Quellen (mit
+              			Varianz-Anzeige)</p>
+              		<h4>Editionskonzept der textgenetischen Edition</h4>
+              		<p>Die textgenetische Edition konzentriert sich auf die Darstellung der Textgenese-Prozesse
+              			innerhalb der Einzelquelle (Textschichten) und im direkten Quellenvergleich (Varianzen).
+              			Dabei soll die tatsächliche Textentwicklung als transparenter Vorgang mit
+              			unterschiedlichen, teils nur fragmentarisch dokumentierten Stufen nachvollziehbar
+              			präsentiert werden.  In der Textübertragung wird die Textentwicklung innerhalb der
+              			Einzelquelle durch das Konzept der Textschichten nachvollziehbar gemacht. Über das Menü
+              			sind alle interpretierbaren Textschichten der identifizierten Schreiber sowohl einzeln
+              			als auch in der synoptischen Gegenüberstellung wiedergegeben. Der Quellenvergleich kann
+              			auf zwei verschiedene Arten erfolgen, zum einen in der Synopse von zwei (auswählbaren)
+              			Quellen, zum anderen mit Hilfe der Varianzanzeige innerhalb der Textübertragungen. Die
+              			Varianzanzeige ermöglicht den auf eine konkrete Einzelstelle bezogenen Überblick aller
+              			(sinntragenden) Varianzen der edierten Quellen.</p>
+              		<h5>Konzeption Textgenese (Textschichten innerhalb der Einzelquelle)</h5>
+              		<p>Angeregt wurde die Konzeption zur Textschichten-Anzeige innerhalb Freischütz-digital u.a.
+              			aus dem Bereich der Softwareentwicklung, in dem häufig der Unterschied zwischen zwei
+              			Dateien mittels eines Diff-Tools (Difference Tool) festgestellt wird. Theoretische
+              			Grundlagen bilden wegweisende Arbeiten zur genetischen Textedition [ref: Almuth
+              			Grésillon, <em>Literarische Handschriften. Einführung in die „critique génétique“</em>,
+              			Bern u.a. 1999 ] sowie Sammlungen zum Thema [ref: Textgenetische Edition, hg. v. Hans
+              			Zeller und Gunter Martens, in : editio <a class="external"
+              				href="http://erf.sbb.spk-berlin.de/han/780109627/www.degruyter.com/search?f_0=isbnissn&#38;q_0=9783110939996&#38;searchTitles=true"
+              				>http://erf.sbb.spk-berlin.de/han/780109627/www.degruyter.com/search?f_0=isbnissn&#38;q_0=9783110939996&#38;searchTitles=true</a>] Die
+              			Darstellung der Textschichten ist nur für die handschriftlichen Quellen relevant. In den
+              			Drucken ist jeweils nur eine Textfassung vorhanden und wird dementsprechend
+              			abgebildet. Bei den Handschriften sind zwei Möglichkeiten der Textschichten-Anzeige
+              			möglich:</p>
+              		<h6>1. Wiedergabe der Quelle in separaten Textschichten</h6>
+              		<p>Die Textschichten sind einzeln anwählbar über das Menü: Textschichten. Dabei ergibt sich
+              			die Anzahl der Textschichten über die Anzahl der verschiedenen, eindeutig voneinander
+              			differenzierbaren Schreiber. Konnten anonyme Schreiber nicht eindeutig identifiziert
+              			werden, werden diese unter dem Sammelbegriff "anonym" zusammengefasst. Die
+              			Interpretation der Textschichten erfolgt unter Betracht der jeweils implizierten
+              			chronologischen Reihenfolge, wobei der Begriff der Textschichten additiv aufgefasst
+              			wird, d.h. die verschiedenen Textfassungen, die durch die Eingriffe der verschiedenen
+              			Schreiber erkennbar sind, werden aufeinander aufbauend verstanden und demzufolge
+              			reproduziert, indem die Textschichten die chronologisch vorherige Textschicht
+              			einbeziehen. Die einzeln anwählbaren Textschichten zeigen die jeweils ausgewählte
+              			Textfassung ohne Markierungen als diplomatische Fließtext-Übertragung in s/w.</p>
+              		<h6>2. Wiedergabe der Quelle mit allen Eingriffen innerhalb der "fiktiven" Endschicht</h6>
+              		<p>Die Wiedergabe des Textes mit allen Eingriffen ist über das Menü „Genese des Textes mit
+              			allen Zwischenständen“ anwählbar. An den entsprechenden Stellen, wo Eingriffe passiert
+              			sind, werden alle inhaltlich differenzierbaren Textschichten untereinander abgebildet,
+              			d.h. Textschichten, in denen sich an einer betreffenden Stelle gegenüber der
+              			chronologisch vorhergehenden nichts geändert hat, erscheinen nicht extra. Jeder
+              			interpretierbare Korrekturvorgang bekommt einen eigenen Rahmen, so dass verschiedene
+              			Korrekturen in einem Textabschnitt voneinander abgrenzbar werden. Die synoptische
+              			Anzeige der Textschichten erfolgt mit Hilfe verschiedener (entweder vorgegebener oder
+              			vom Benutzer frei wählbarer) Farben, indem die betreffende Textstelle zeilenweise farbig
+              			markiert wird. Dabei werden zusätzliche Informationen zum Korrekturvorgang
+              			gegeben: 1. Angaben zum jeweiligen Schreiber (Schreiber-Sigle) 2.
+              			Klassifizierung der Art des Vorgangs (+ für Ergänzung, - für Streichung, -/+ für
+              			Ersetzung) 3. Erläuterungen zum Korrekturvorgang (Art und Platzierung des
+              			Eingriffes)</p>
+              		<p>Zur Anwendung der verschiedenen Möglichkeiten der textgenetischen Edition s. Werkzeuge
+              			(Demonstratoren).</p>
+              		<h5>Konzeption Textgenese (Varianz zwischen den Quellen)</h5>
+              		<p>Neben der Textschichten-Anzeige bei den Einzelquellen, liegt ein wesentlicher Schwerpunkt
+              			der textgenetischen Edition darin, Zusammenhänge bzw. Unterschiede zwischen den
+              			Primärquellen zum Libretto zu verdeutlichen. Da es keine Lesarten gegenüber einem
+              			erstellten Edierten Text gibt, sondern alle Primärquellen gleichwertig nebeneinander
+              			stehen, werden die Unterschiede als sogenannte Varianzen bezeichnet.</p>
+              		<h6>Varianz-Begriff</h6>
+              		<p>In der vorliegenden Edition wurden ausschließlich sinntragende Varianzen berücksichtigt,
+              			d. h. substanzielle Abweichungen zwischen den Quellen. Abweichungen in Interpunktion und
+              			Orthographie wurden vernachlässigt, da jede Einzelquelle sowohl in Codierung als auch
+              			Übertragung vorliegt.  Zusätzlich musste der Begriff der „Varianz“ aufgrund der
+              			Problematik der verschiedenen Textschichten in den handschriftlichen Primärquellen
+              			dahingehend eingegrenzt werden, dass für die Varianz-Definition der Zustand der Quelle
+              			zugrunde gelegt wird, der eine Verbindung zu den Intentionen der beiden Autoren des
+              			Werkes erkennen lässt. D. h. nur authentische (von Kind und von Weber stammende)
+              			Korrekturen sowie autorisierte Korrekturen, die auf Anweisungen von Kind oder Weber
+              			zurückzuführen sind, erscheinen in der Varianz-Gegenüberstellung. Anonyme Korrekturen,
+              			die nicht zugeordnet werden können, sowie Korrekturen (z. B. innerhalb der Kopien für
+              			Wien und Hamburg), die im Zusammenhang mit den lokalen Aufführungen stehen, werden bei
+              			der Varianz-Anzeige dagegen vernachlässigt. Diese Unterschiede können jedoch bei der
+              			Textschichten-Anzeige in den entsprechenden Quellen in einzelnen Schritten nachvollzogen
+              			werden.</p>
+              		<h6>Codierung der Varianzen</h6>
+              		<p>Die Unterschiede (Varianzen) sind nicht in den Codierungen der Einzelquellen erfasst,
+              			sondern wurden innerhalb einer externen Core-Datei, die wiederum in szenenweise Teile
+              			gegliedert ist, zentral gesammelt. Mit Hilfe eines speziell für diese Erfassung
+              			entwickelten Werkzeugs, dem Core-Builder (Raffaele Viglianti, Washington), konnten die
+              			für die Edition gewünschten Bezüge zwischen einzelnen Abschnitten, Versen oder Wörtern
+              			bzw. Wortgruppen hergestellt werden.  Alle Varianten sind in der Core-Dateien in
+              			Form von einzelnen Apparat-Einträgen verzeichnet. Der Mechanismus ist derart, dass in
+              			den Quellencodierungen die betreffenden Abschnitte, Zeilen oder Wörter definiert und mit
+              			individuellen Identifikationsnummern ausgestattet worden sind, die miteinander in
+              			Beziehung gesetzt werden. Von der CORE-Datei aus wird auf die automatisiert vergebenen
+              			XML-Identifikatoren referenziert (Erläuterung des Core-Builder s. unter Werkzeuge).
+              			 Die Apparat-Einträge enthalten die Quellenverweise in Form von
+              			&lt;rdg/&gt;-Elementen mit Attribut @wit, in dem die ID der xml-Datei der Quelle
+              			angegeben ist. Dabei können mehrere &lt;rdg/&gt; zu Gruppen &lt;rdggrp/&gt;
+              			zusammengefasst werden. Die einzelnen &lt;rdg/&gt;-Elemente verweisen mit dem Element
+              			&lt;ptr/&gt; @target wiederum auf die ID der entsprechenden Stelle der
+              			Einzelquellendatei. Hat eine Varianz in einer einzelnen oder mehreren Quellen keine
+              			Entsprechung, fehlt im &lt;rdg/&gt; die Angabe des &lt;ptr/&gt;. Die
+              			Apparat-Einträge werden kategorisiert nach Art der Varianz (Weglassung, Ergänzung,
+              			Ersetzung, Umstellung, Schreibung). Dabei können auch Kombinationen von Kategorien
+              			auftreten.</p>
+              		<p>Bsp. für einen Apparat-Eintrag:</p>
+              		<pre><code>
+              		    &lt;app type="Ersetzung"&gt;
+                  		    &lt;rdggrp n="1"&gt;
+                  		        &lt;rdg wit="#freidi-librettoSource_KA-tx4_xml_id_d1e9293"&gt;
+                  		            &lt;ptr target="#d1e9409"&gt;&lt;/ptr&gt;
+                  		        &lt;/rdg&gt;
+                  		        &lt;rdg wit="#freidi-librettoSource_L-tx2_xml_id_d1e10504"&gt;
+                  		            &lt;ptr target="#d1e10654"&gt;&lt;/ptr&gt;
+                  		        &lt;/rdg&gt;
+                  		        &lt;rdg wit="#freidi-librettoSource_K-tx6_xml_id_d1e9223"&gt;
+                  		            &lt;ptr target="#d1e9337"&gt;&lt;/ptr&gt;
+                  		        &lt;/rdg&gt;
+                  		        &lt;rdg wit="#freidi-librettoSource_K-tx7_xml_id_d1e8345"&gt;
+                  		            &lt;ptr target="#d1e8452"&gt;&lt;/ptr&gt;
+                  		        &lt;/rdg&gt;
+                  		        &lt;rdg wit="#freidi-librettoSource_KA-tx15_xml_id_d1e10326"&gt;
+                  		            &lt;ptr target="#d1e10459"&gt;&lt;/ptr&gt;
+                  		        &lt;/rdg&gt;
+                  		        &lt;rdg wit="#freidi-librettoSource_KA-tx21_xml_id_d1e10144"&gt;
+                  		            &lt;ptr target="#d1e10285"&gt;&lt;/ptr&gt;
+                  		        &lt;/rdg&gt;
+                  		    &lt;/rdggrp&gt;
+                            &lt;rdggrp n="2"&gt;
+                                &lt;rdg wit="#freidi-librettoSource_D-tx1_xml_id_d1e8196"&gt;
+                                    &lt;ptr target="#d1e8297"&gt;&lt;/ptr&gt;
+                                &lt;/rdg&gt;
+                                &lt;rdg wit="#freidi-librettoSource_D-tx2_xml_id_d1e8185"&gt;
+                                    &lt;ptr target="#d1e8291"&gt;&lt;/ptr&gt;
+                                &lt;/rdg&gt;
+                                &lt;rdg wit="#freidi-librettoSource_D-tx3_xml_id_d1e8130"&gt;
+                                    &lt;ptr target="#d1e8236"&gt;&lt;/ptr&gt;
+                                &lt;/rdg&gt;
+                                &lt;rdg wit="#freidi-librettoSource_Dp-tx2_xml_id_d1e8085"&gt;
+                                    &lt;ptr target="#d1e8190"&gt;&lt;/ptr&gt;
+                                &lt;/rdg&gt;
+                                &lt;rdg wit="#freidi-librettoSource_Dp-tx3_xml_id_d1e8488"&gt;
+                                    &lt;ptr target="#d1e8588"&gt;&lt;/ptr&gt;
+                                &lt;/rdg&gt;
+                        &lt;/rdggrp&gt;
+                      &lt;/app&gt;
+                    </code></pre>
+              		<h5>Möglichkeiten der Varianz-Anzeige</h5>
+              		<h6>1. Varianz-Anzeige innerhalb der Textübertragung der Einzelquelle</h6>
+              		<p>Diese Varianz-Anzeige kann von jedem beliebigen Quellenfenster vorgenommen werden
+              			(allerdings nur in der Ansicht: Text) und zeigt die mittels der Core-Dateien definierten
+              			Abweichungen der entsprechenden Quelle gegenüber allen weiteren Primärquellen zum
+              			Libretto.  Bei den komplexeren handschriftlichen Quellen mit mehreren Textschichten
+              			ist zu beachten, dass für die Auswahl der Varianz in den Core-Dateien nur die
+              			Textschicht zugrunde gelegt wurde, die als authentisch bzw. als von den beiden
+              			Werkautoren Kind und Weber autorisiert angesehen werden kann [vgl. dazu unter
+              			Varianz-Begriff].</p>
+              		<p>Die Festlegung der Textschicht betrifft folgende Quellen (in dieser Schicht wird der Text
+              			in der Textübertragung angezeigt):</p>
+              		<p>L-tx2 Kind Autograph (zweite Textschicht, mit allen Korrekturen von Kind)</p>
+              		<p>KA-tx4 Handexemplar (Textfassung inkl. Weber und Kopist 2, ohne Eintragungen von
+              			Jähns)</p>
+              		<p>K-tx6 Kopie Berlin (Textfassung mit Korrekturen des Berliner Kopisten)</p>
+              		<p>KA-tx15 Kopie Wien (Textfassung mit Weber-Korrekturen, aber ohne alle weiteren
+              			Korrekturen)</p>
+              		<p>KA-tx21 Kopie Hamburg (Textfassung mit Weber-Korrekturen, aber ohne alle weiteren
+              			Korrekturen)</p>
+              		<p>Über das Menü lassen sich die Varianzmarker ein- und ausblenden, und können wiederum
+              			einzeln angesteuert werden. Bei Anwahl des Varianzmarkers öffnet sich ein Textfenster
+              			mit einer Übersicht der für die entsprechende Textstelle in der Core-Datei erfassten,
+              			sinntragenden Varianzen. Hinter den tabellarisch aufgeführten Quellen-Siglen findet sich
+              			der jeweilige Text der andere Quellen in entsprechender Textübertragung; gleiche
+              			Lesarten werden dabei in einer Gruppe zusammengefasst und untereinander aufgeführt. Für
+              			die Gruppen-Sortierung wurde auch die Entwicklung der Textstelle in der jeweiligen
+              			Einzelquelle mit berücksichtigt. Bei Bedarf kann aus dem Textfenster zu den
+              			anderen, nicht geöffneten Quellen weiter navigiert werden, um sich die Stelle dort im
+              			Kontext anzusehen. Die in der Core-Datei verzeichneten Apparat-Einträge lassen sich auch
+              			in der xml-Version anzeigen. Wenn kein Einzelstellenverweis möglich ist, weil
+              			Textpassagen in einzelnen Quellen nicht vorhanden sind, dann erfolgt ein Verweis auf die
+              			Gesamtdatei der Quelle.</p>
+              		<h6>2. Varianz-Anzeige in der Synopse von zwei beliebig auswählbaren Quellen</h6>
+              		<p>Die mittels Core-Datei erfassten Varianzen können auch in der Gegenüberstellung von zwei
+              			beliebig ausgewählten Primärquellen in der Textübertragung angezeigt werden. Sie ist
+              			über das Menü über Ansicht und: „Synopse von zwei Texten“ zu erreichen. In der linken
+              			Spalte erscheint der Text der geöffneten Quelle in Textübertragung, in der rechten
+              			Spalte kann die Textübertragung einer beliebigen anderen Textquelle hinzu geblendet
+              			werden. Auch hier gilt die Einschränkung auf nur eine (authentische bzw. autorisierte )
+              			Textschicht. Nach der erfolgten Auswahl können über das Menü die Abweichungen zwischen
+              			den beiden ausgewählten Texten ein- oder ausgeblendet werden. Diese werden farblich
+              			markiert im Text hervorgehoben.</p>
+              		<h5>Zusätzliche Kommentare und weiterführende Links zur WeGA</h5>
+              		<p>Editorische Kommentare, die sich nur auf eine Quelle beziehen, werden mittels
+              			&lt;note/&gt; type=“commentary“ in der entsprechenden Codierung der Einzelquelle
+              			erfasst. Mehrere Quellen betreffende Annotationen wurden (ähnlich wie bei den Varianzen)
+              			in einer übergeordneten xml-Datei gesammelt. Diese sind szenenweise sortiert und
+              			inhaltlich kategorisiert. Es gibt allgemeine Kommentare, Kommentare zur Textkonstitution
+              			und Kommentare mit Wortdefinitionen [s. Codierungsrichtlinien].  Die
+              			&lt;note/&gt;-Elemente verweisen innerhalb des &lt;note/&gt;- Attributs @target auf die
+              			zusammengehörigen Quellen. Die Verlinkung basiert auf der Angabe der Quellensigle in
+              			Verbindung mit der xml:id der jeweiligen Platzierung in den Einzelquellen. In der
+              			Edirom-Oberfläche werden die Kommentare, die ein- und ausgeblendet werden können, mit
+              			einem gelben Marker (K) angezeigt. Bei Anwahl des Markers blendet sich der Kommentar
+              			über einen Tooltip ein.  Tagebuch-Verweise zu Inhalten der
+              			Carl-Maria-von-Weber-Gesamtausgabe (<a class="external"
+              				href="http://www.weber-gesamtausgabe.de">http://www.weber-gesamtausgabe.de</a>)
+              			werden ebenfalls in der gesonderten Kommentardatei aufgenommen, wobei jedes Datum mit
+              			einem &lt;ref/&gt;-Element versehen wird, in welchem im Attribut @target die URL-Adresse
+              			der entsprechenden Tagebuch-Seite (Bsp.: <a class="external"
+              				href="http://www.weber-gesamtausgabe.de/A060183"
+              				>http://www.weber-gesamtausgabe.de/A060183</a>) angegeben ist.</p>
+              		<h3>Intertexte: Librettistische Referenzpunkte</h3>
+              		<h4>Vorbemerkung und Auswahl der Textquellen (Referenzen)</h4>
+              		<p>In dem Projekt <em>Freischütz digital</em> werden zusätzlich zu den Freischütz-Libretti
+              			exemplarisch weitere Textquellen einbezogen, die zeitnah und hinsichtlich ihrer Motive,
+              			Themen und Dramencharaktere eng in Zusammenhang mit den unter [ref: Auswahl der
+              			Textquellen] genannten Freischütz-Librettoquellen stehen. (Lit.: Kathrin Wulfhorst:
+              			Intertextuelle Bezüge in den Freischütz-Texten von Johann Apel und Friedrich Kind.
+              			Weberiana, 19 (2009), S. 101-124) Betrachtet werden die Texte in zwei Richtungen – im
+              			Hinblick auf die rückwärts verweisende Stoffgeschichte und nach vorne mit Blick auf die
+              			Rezeption.  Darunter werden Texte unterschiedlicher Gattungen (Libretti, Dramen,
+              			Prosa) und Erscheinungsformen, Manuskripte (mit der Sigleangabe RMs-tx…) und Drucke (mit
+              			der Sigleangabe RD-tx…), berücksichtigt, die ein gemeinsames Beziehungsgeflecht von
+              			Begriffen und Themen teilen und in denen eine erneute Wiederkehr an Motiven und
+              			gleichenden Personenkonstellationen erkennen lassen.</p>
+              		<h5>Überblick der Textquellen (Referenzen) und ihre Siglen</h5>
+              		<p>
+              		    <table>
+              		        <tr>
+              		            <th>Jahr</th>
+              		            <th>Titel</th>
+              		            <th>Autor</th>
+              		            <th>Signatur</th>
+              		            <th>Sigle</th>
+              		        </tr>
+              		        <tr>
+              		            <td>1729</td>
+              		            <td>Unterredungen von dem Reich der Geister […]</td>
+              		            <td>Otto von Graben zum Stein</td>
+              		            <td>D-Mbs Phys.m. 289-1</td>
+              		            <td>RD-tx1</td>
+              		        </tr>
+              		        <tr>
+              		            <td>1792</td>
+              		            <td>Die Geisterinsel</td>
+              		            <td>Friedrich Kind</td>
+              		            <td>D-Mbs P.o.germ. 714 c-1</td>
+              		            <td>RD-tx3</td>
+              		        </tr>
+              		        <tr>
+              		            <td>1803</td>
+              		            <td>Das Schloß Aklam</td>
+              		            <td>Friedrich Kind</td>
+              		            <td>ÖNB Alt Mag 129376-A</td>
+              		            <td>RD-tx5</td>
+              		        </tr>
+              		        <tr>
+              		            <td>1805</td>
+              		            <td>Die Bilder der Ahnen</td>
+              		            <td>Johann August Apel</td>
+              		            <td>UB Frankfurt: MPQ 110, F. 14087-14088</td>
+              		            <td>RD-tx6</td>
+              		        </tr>
+              		        <tr>
+              		            <td>1811</td>
+              		            <td>Gespensterbuch</td>
+              		            <td>Johann August Apel / Friedrich Laun</td>
+              		            <td>D-Mbs P. o. germ 45-1</td>
+              		            <td>RD-tx7</td>
+              		        </tr>
+              		        <tr>
+              		            <td>1812</td>
+              		            <td>Der Freischütz</td>
+              		            <td>Franz Xaver von Caspar</td>
+              		            <td>Hist.Verein Ms Nr. 605</td>
+              		            <td>RMs-tx8</td>
+              		        </tr>
+              		        <tr>
+              		            <td>1813</td>
+              		            <td>Der Freischütz</td>
+              		            <td>Franz Xaver von Caspar</td>
+              		            <td>Stuttgart LB Cod. Don. 139</td>
+              		            <td>RMs-tx9</td>
+              		        </tr>
+              		        <tr>
+              		            <td>1816</td>
+              		            <td>Der Freischütz oder Die Schreckensnacht am Kreuzwege</td>
+              		            <td>Franz de Paula Roser / Joseph Alois Gleich</td>
+              		            <td>Wtm-Schw 161</td>
+              		            <td>RMs-tx10</td>
+              		        </tr>
+              		        <tr>
+              		            <td>1816</td>
+              		            <td>Der Freischütz oder Die Schreckensnacht am Kreuzwege</td>
+              		            <td>Franz de Paula Roser / Joseph Alois Gleich</td>
+              		            <td>Wtm-Cth S 32</td>
+              		            <td>RMs-tx11</td>
+              		        </tr>
+              		        <tr>
+              		            <td>1819</td>
+              		            <td>Der schwarzbraune Jäger</td>
+              		            <td>W. A. Gerle</td>
+              		            <td>D-Mbs 4 Per. 7 pa-1819, 1</td>
+              		            <td>RD-tx12</td>
+              		        </tr>
+              		        <tr>
+              		            <td>1821</td>
+              		            <td>Der Freischütz</td>
+              		            <td>Franz Joseph Riesch</td>
+              		            <td>D-B Yp 4803-1821, 1</td>
+              		            <td>RD-tx13</td>
+              		        </tr>
+              		    </table>
+              		</p>
+              		<h5>Kodierung und Präsentation der Textquellen (Referenzen)</h5>
+              		<p>Alle Textquellen (Referenzen) werden in diplomatischer Übertragung unter besonderer
+              			Berücksichtigung der formalen und strukturellen Aspekte erfasst und nach den Standards
+              			der TEI (<em>Text Encoding Initiative</em>; <a class="external"
+              				href="http://www.tei-c.org/">www.tei-c.org/</a>) ausgezeichnet [ref: siehe Codierung
+              			und Visualisierung der Quellen]. Die Transkriptionen orientieren sich daher an der
+              			Verfahrensweise wie sie bei den Transkriptionen und Codierung der Manuskripte und Drucke
+              			der Freischützlibretti angewendet ist.  Die Erfassungsrichtlinien für die
+              			Textquellen (Referenzen) folgen demnach und nur mit wenigen Ergänzungen den Editions-
+              			und Codierungsrichtlinien der Textedition. siehe [ref:
+              			Editionsrichtlinien/Codierungsrichtlinien der Textedition]</p>
+              		<p>Die Codierungen und Quellenbilder der Referenzen werden mit Hilfe der Benutzeroberfläche
+              			Edirom [ref: siehe Einführung in Edirom] präsentiert. Im Edirom-Quellenfenster sind vier
+              			verschiedene Ansichten der Texte auswählbar [ref: (siehe Codierung und Visualisierung
+              			der Quellen)]: 1. Metadaten (inkl. Quellenbeschreibung) 2. Text als
+              			Fließtext 3. seitenbasierendes Faksimile 4. seitenbasierende Gegenüberstellung
+              			Text – Faksimile</p>
+              		<p>[Ein im Quellenfenster implementierter Menüpunkt ermöglicht den Zugang zur der Topic
+              			Map.]</p>
+              		<h4>Motive, Begriffe und Namen</h4> 
+                    <p>
+                        Die wesentlichen Motive der Freischütz-Geschichte lassen sich als Auslöser und Motor der Tragödie benennen: 
+                        <ul>
+                 			<li>Pflicht des Probeschusses seit Uraltvaterzeiten</li>
+                 			<li>Weidmann setzen</li>
+                 			<li>die “Kugelguss”-Szene, oder: Die Wolfsschluchtszene</li>
+                 			<li>Das herabstürzende Ahnenbild</li>
+                 			<li>Die Traum-Geschichte</li>
+              		    </ul>
+                    </p>
+              		<p>Neben dieser “Motivkonstanz” tritt in den Texten auch immer wieder “ein Inventar an
+              			stereotypen Requisiten und atmosphärischen Gestaltungsmittel[n]” auf (Susanne Balhar:
+              			das Schicksaldrama im 19. Jh. Variationen eines romantischen Modells. (2004), S. 48f.);
+              			diese Kennzeichen zählen unter vielen andren zu wiederkehrenden Eigenschaften von
+              			Schicksalsdramen des 19. Jh. und finden sich ebenso in den Freischützlibretti und dessen
+              			Referenzen. Neben den wesentlichen Motiven werden daher ganz gezielt und punktuell
+              			einzelne Begriffe und Namen aufgegriffen und über verschiedene Texte hinweg verfolgt. So
+              			lassen sich Konstanz, Variation (Synonym, lexikalische Varianten, Namensänderungen) und
+              			damit Entwicklung einzelner Motive als auch Namen und Begriffe und zwar auf Wortebene
+              			hinab verfolgen. Damit erreichen wir eine granulare Sicht auf die Elemente, die
+              			letztlich auch Motive auszeichnen. [Beispiel "Kugelguss"-Szene: In der
+              			Waldeinsamkeit zur nächtlichen Geisterstunde bei Mondschein gießen zwei junge
+              			Jägerburschen mit Hilfe von bösen Zaubermächten personifiziert durch dein schwarzen
+              			Jäger die fatalen Freikugeln, für den Zweck, den von einem Jägerburschen zu leistenden
+              			Probeschuss zu Erfolg zu verhelfen. Während des Gusses erleben die Jäger mancherlei Spuk
+              			und Geistererscheinungen. Zu den Elementen und Gestaltungsmitteln der Kugelguss-oder
+              			Wolfsschluchtszene gehören neben dem Akt des Kugelgusses demnach: Wald, Nacht,
+              			Glockenschlag, wildes Heer, Eule, Rabe, Kreis, Hirschfänger, Jäger, Werkzeug für den
+              			Kugelguss etc. ]</p>
+              		<h5>Topic Map</h5>
+              		<p>Anhand der Freischützlibretti und seinen Referenzen werden Namen und Begriffe als auch
+              			deren Varianten oder Entsprechungen in allen Texten aufgespürt; in den XML-Kodierungen
+              			zweier Librettotexte – das Handexemplar Webers (KA-tx4) und dem Kind-Druck (D-tx2) – und
+              			deren Referenzen ([siehe Tabelle]) sind diese Schlagworte ausgezeichnet und mit einer
+              			Identifikation versehen, die auf eine externe, separat von allen Texten geführte Topic
+              			Map hin verweist.</p>
+              		<p>Mittels dem standardisierten Datenformat der XML Topic Maps (XTM 2.0; <a class="external"
+              				href="http://www.isotopicmaps.org/sam/sam-xtm/"
+              				>http://www.isotopicmaps.org/sam/sam-xtm/</a>) werden die einzelnen Namen und
+              			Begriffe systematisch strukturiert: in einer separat von den Texten vorliegenden Topic
+              			Map werden die einzelnen Begriffe und Namen festgehalten, kategorisiert und deren
+              			Beziehung zueinander als auch intertextuell zwischen den Librettotexten und seinen
+              			Referenzen umfassend definiert. (Zur Visualisierung der Topic Map siehe auch [ref:
+              			Werkzeuge - Anwendungen (Demonstratoren der Textedition)])</p>
+              		<h5>Zum Aufbau der <em>Freischütz-digital</em>-Topic-Kategorien</h5>
+              		<p>Die Kategorien, zu denen die Topic-Einträge zugeordnet werden können, werden wiederum als
+              			Topic-Eintragungen zu beginn definiert.  Beispiel:</p>
+              		<pre><code>
+              			&lt;topic id="name"&gt;
+              				&lt;baseName&gt;
+              					&lt;baseNameString&gt;Name&lt;/baseNameString&gt;
+              				&lt;/baseName&gt;
+              			&lt;/topic&gt;
+              		</code></pre>
+              		<ul>
+              			<li><strong>Kategorisierung der Varianten</strong></li>
+              		</ul>
+              		<p>In welche Varianten die einzelnen Schlagworte (Topics) in den Texten auftreten können,
+              			werden in der Topic Map festgehalten und wiederum kategorisiert. Die Kategorien werden
+              			wiederum als Topic-Eintragungen definiert.</p>
+              		<p>Beispiel:</p>
+              			<pre><code>
+	              			&lt;topic id="synonym"&gt;
+	              				&lt;baseName&gt;
+	              					&lt;baseNameString&gt;Synonym&lt;/baseNameString&gt;
+	              				&lt;/baseName&gt;
+	              			&lt;/topic&gt;
+              			</code></pre>
+              		<ul>
+              			<li><strong>Relationstypen (association types)</strong></li>
+              		</ul>
+              		<p>Die Relationen der einzelnen Topics () zueinander werden als Topic-Eintragungen
+              			definiert.</p>
+              		<p>Beispiel:</p>
+              			<pre><code>
+              				&lt;topic id="comparable-with"&gt;
+	              				&lt;baseName&gt;
+	              					&lt;baseNameString&gt;vergleichbar mit&lt;/baseNameString&gt;
+	              				&lt;/baseName&gt;
+              				&lt;/topic&gt;
+              			</code></pre>
+              		<ul>
+              			<li><strong>Associations</strong></li>
+              		</ul>
+              		<p>In der Topic Map werden alle Relationen der einzelnen Topics (Begriffe und Namen)
+              			zueinander in den &lt;asoociations/&gt; definiert. Dabei können die Topics in
+              			unterschiedlichen Verhältnissen stehen, als eigene Topic-Eintragungen wiuederum
+              			definiert sind. siehe [ref: Relationstypen]</p>
+              			<pre><code>
+	              			&lt;association&gt;
+	              				&lt;instanceOf&gt;
+	              					&lt;topicRef xlink:href="#part-of"/&gt;
+	              				&lt;/instanceOf&gt;
+	              				&lt;member&gt;
+	              					&lt;roleSpec&gt;
+	              						&lt;topicRef xlink:href="#object-of-use"/&gt;
+	              					&lt;/roleSpec&gt;
+	              					&lt;topicRef xlink:href="#myrte"&gt;&lt;/topicRef&gt;
+	              				&lt;/member&gt;
+	              				&lt;member&gt;
+	              					&lt;roleSpec&gt;
+	              						&lt;topicRef xlink:href="#object-of-use"/&gt;
+	              					&lt;/roleSpec&gt;
+	              					&lt;topicRef xlink:href="#kranz"&gt;&lt;/topicRef&gt;
+	              				&lt;/member&gt;
+	              			&lt;/association&gt;
+              			</code></pre>
+              		<ul>
+              			<li><strong>Topic</strong></li>
+              		</ul>
+              			
+              				Beispiel: 
+                	<pre><code>
+                		&lt;topic id="kranz"&gt;
+              				&lt;instanceOf&gt;  
+              					&lt;topicRef xlink:href="#object-of-use"/&gt; 
+              				&lt;/instanceOf&gt;  
+              				&lt;baseName&gt; 
+              					&lt;baseNameString&gt;Jungfernkranz&lt;/baseNameString&gt; 
+              					&lt;variant&gt;
+              						&lt;parameters&gt;
+              							&lt;subjectIndicatorRef xlink:href="#formation"/&gt;
+              						&lt;/parameters&gt;  
+              						&lt;variantName&gt; 
+              							&lt;resourceData&gt;Kranz&lt;/resourceData&gt;  
+              						&lt;/variantName&gt; 
+              					&lt;/variant&gt;  
+              					&lt;variant&gt; 
+              						&lt;parameters&gt;
+              							&lt;subjectIndicatorRef xlink:href="#formation"/&gt;
+              						&lt;/parameters&gt;  
+              						&lt;variantName&gt; 
+              							&lt;resourceData&gt;Brautkranz&lt;/resourceData&gt;  
+              						&lt;/variantName&gt; 
+              					&lt;/variant&gt;  
+              					&lt;variant&gt; 
+              						&lt;parameters&gt;
+              							&lt;subjectIndicatorRef xlink:href="#synonym"/&gt;
+              						&lt;/parameters&gt;  
+              						&lt;variantName&gt; 
+              							&lt;resourceData&gt;Todtenkranz&lt;/resourceData&gt; 
+              						&lt;/variantName&gt;  
+              					&lt;/variant&gt;  
+              					&lt;variant&gt; 
+              						&lt;parameters&gt;
+              							&lt;subjectIndicatorRef xlink:href="#synonym"/&gt;
+              						&lt;/parameters&gt;  
+              						&lt;variantName&gt; 
+              							&lt;resourceData&gt;Totenkrone&lt;/resourceData&gt;  
+              						&lt;/variantName&gt; 
+              					&lt;/variant&gt;  
+              					&lt;variant&gt; 
+              						&lt;parameters&gt;
+              							&lt;subjectIndicatorRef xlink:href="#synonym"/&gt;
+              						&lt;/parameters&gt;  
+              						&lt;variantName&gt; 
+              							&lt;resourceData&gt;Brautkrone&lt;/resourceData&gt;  
+              						&lt;/variantName&gt; 
+              					&lt;/variant&gt;  
+              					&lt;variant&gt; 
+              						&lt;parameters&gt;
+              							&lt;subjectIndicatorRef xlink:href="#formation"/&gt;
+              						&lt;/parameters&gt;  
+              						&lt;variantName&gt; 
+              							&lt;resourceData&gt;bekränzt&lt;/resourceData&gt;  
+              						&lt;/variantName&gt; 
+              					&lt;/variant&gt;  
+              				&lt;/baseName&gt;  
+              				&lt;occurrence&gt; 
+              					&lt;resourceRef xlink:href="FreiDi_TopicMap_Handbuch.xml#kranz"/&gt; 
+              				&lt;/occurrence&gt;  
+              				&lt;occurrence&gt;  
+              					&lt;resourceRef xlink:href="freidi-referenceSource_RD-tx3.xml#kranz"/&gt;
+              				&lt;/occurrence&gt; 
+              				&lt;occurrence&gt;   
+              					&lt;resourceRef xlink:href="freidi-referenceSource_RD-tx7.xml#kranz"/&gt; 
+              				&lt;/occurrence&gt; 
+              				&lt;occurrence&gt;  
+              					&lt;resourceRef xlink:href="freidi-referenceSource_RD-tx8.xml#kranz"/&gt;   
+              				&lt;/occurrence&gt;
+              				&lt;occurrence&gt;   
+              					&lt;resourceRef xlink:href="freidi-referenceSource_RD-tx9.xml#kranz"/&gt;
+              				&lt;/occurrence&gt;
+              				&lt;occurrence&gt;   
+              					&lt;resourceRef xlink:href="freidi-referenceSource_RMs-tx10.xml#kranz"/&gt;
+              				&lt;/occurrence&gt; 
+              				&lt;occurrence&gt;   
+              					&lt;resourceRef xlink:href="freidi-referenceSource_RMs-tx11.xml#kranz"/&gt;
+              				&lt;/occurrence&gt; 
+              				&lt;occurrence&gt;  
+              					&lt;resourceRef xlink:href="freidi-referenceSource_RD-tx13.xml#kranz"/&gt; 
+              				&lt;/occurrence&gt;  
+              				&lt;occurrence&gt;   
+              					&lt;resourceRef xlink:href="C_07_Handexemplar.xml#kranz"/&gt; 
+              				&lt;/occurrence&gt; 
+              				&lt;occurrence&gt;   
+              					&lt;resourceRef xlink:href="C_07_Kind_Druck_2.xml#kranz"/&gt;
+              				&lt;/occurrence&gt; 
+              			&lt;/topic&gt;
+                	</code></pre>
+              		<h4>Rezeptionsgeschichte</h4>
+              		<p>In rezeptioneller Hinsicht werden in der Edition weitere Texte wie Rezensionen,
+              			Korrespondenzen, u.a. einbezogen, in denen ebenso Motive und Begriffe der
+              			Freischütz-Geschichten erwähnt werden. Diese Texte wurden im Rahmen der
+              			Weber-Gesamtausgabe (<a class="external"
+              				href="http://www.weber-gesamtausgabe.de/de/Index"
+              				>http://www.weber-gesamtausgabe.de/de/Index</a>) aufbereitet und online zur
+              			Verfügung gestellt, auf die mittels Topic Map verwiesen werden kann und damit in das
+              			Beziehungsgeflecht von Begriffen, Namen und Motive einbezogen werden.</p>
                 </div>
                 <div class="span12">
                     <h3>Werkzeuge</h3>
                 </div>
+                
+                
                 <div class="span12">
-                    <h3>Richtlinien</h3>
+                    <h3>Codierungsrichtlinien</h3>
+                    <h4>Vorbemerkungen</h4>
+                    <p>Die Editionsrichtlinien der Libretto-Gruppe des Projektes „Freischütz digital“
+                        orientieren sich an den Editionsrichtlinien der „Carl-Maria-von-Weber-Gesamtausgabe –
+                        Digitale Edition“ (s. <a class="external"
+                            href="http://www.weber-gesamtausgabe.de/de/Editionsrichtlinien"
+                            >http://www.weber-gesamtausgabe.de/de/Editionsrichtlinien</a>) sowie an den
+                        Guidelines der Text-Encoding-Initiative (TEI) in der Version P5. Die
+                        Codierungsrichtlinien beziehen sich sowohl auf die Primärquellen zum Libretto als auch
+                        auf die Referenzquellen der Edition. Speziell auf die Referenzquellen bezogene
+                        Sachverhalte werden entsprechend erläutert. Zu beachten ist, dass die umfassendste
+                        Information sich stets im codierten Text selbst findet, d.h. die Darstellung der
+                        codierten Texte in „menschenlesbarer“ Form in der Regel die Informationen nur in
+                        reduzierter oder „aufbereiteter“ Form enthält, d.h. in gefilterter und neu geordneter
+                        Gestalt.</p>
+                    <h4>Grundsätze der Textübertragung und -darstellung</h4>
+                    <h5>Strukturierung</h5>
+                    <p>Alle XML-Dokumente bestehen aus zwei Bereichen: den Metadaten (Informationen zur Datei
+                        und ihren Inhalten) sowie dem eigentlichen Textkorpus.  Der Textkorpus wiederum (=
+                        &lt;text/&gt;) ist unterteilt einen in den Teil der dem Libretto vorgelagerten
+                        Informationen wie Vorsatzblätter, Titelblätter und Personenverzeichnis (=
+                        &lt;front/&gt;) sowie den „reinen“ Librettotext (= &lt;body/&gt;). Die Textauszeichnung
+                        erfolgt TEI-spezifisch nach formalen und inhaltlichen Aspekten.  Mithilfe der
+                        TEI-spezifischen Auszeichnung wird versucht, die Struktur der einzelnen Quellen ihrem
+                        äußeren Erscheinungsbild gemäß festzuhalten.  Angestrebt ist die diplomatische
+                        Übernahme der Vorlagen (unter Einschluss der originalen Orthographie und
+                        Zeichensetzung). Erfasst wird die Grobstruktur der Texte (&lt;body/&gt;) mittels
+                        Akt- und Szeneneinteilungen (= &lt;div/&gt; type=“act“ und &lt;div/&gt; type=“scene“).
+                        Die Feinstruktur wird durch die Definition der Dramatis personae (&lt;speaker/&gt;), von
+                        Paragraphen (&lt;p/&gt;) für Dialogtexte, Verszeilen (&lt;l/&gt; bzw. &lt;lg/&gt;) und
+                        Bühnenanweisungen (&lt;stage/&gt;) vorgenommen. Die Platzierung der Textabschnitte
+                        wird mittels Attributen (rend=left, center bzw. right, rend=indent usw.) gekennzeichnet.
+                        Die v. a. in den handschriftichen Primärquellen zum Libretto mitunter inkonsequent
+                        durchgeführten Einzüge von Dialog- oder Verszeilen werden in der Textübertragung
+                        vereinheitlicht dargestellt bzw. teilweise vernachlässigt.  Seitenumbrüche werden
+                        durch das Element &lt;pb/&gt; mit Angabe der Seitenzahl bzw. Blattzählung (Attribut n=1v
+                        usw.) vermerkt (Paginierung und Foliierung entsprechend der Quelle). Der originale
+                        Zeilenfall wird durch das Element &lt;lb/&gt; am Zeilenanfang erfasst (der meist
+                        vorherrschende Blocksatz wird in der Textübertragung dagegen vernachlässigt).</p>
+                    <h5>Metadaten</h5>
+                    <p>Die Strukturierung der Metadaten erfolgt mittels &lt;teiHeader/&gt;. Der
+                        &lt;teiHeader/&gt; ist untergliedert in: &lt;fileDesc/&gt;, &lt;profileDesc/&gt; und
+                        &lt;revisionDesc/&gt;. Die &lt;fileDesc/&gt; ist die inhaltliche Beschreibung des
+                        vorliegenden Datensatzes (Titelei, Zugänglichkeit, Quellenbeschreibung –
+                        &lt;sourceDesc/&gt; usw.). In der &lt;profileDesc/&gt; folgen Angaben zum
+                        (historischen) „Profil“ des Textes (Entstehung, Datierung, Textsorte, Sprache
+                        usw.). Die &lt;revisionDesc/&gt; beinhaltet Angaben zu Überarbeitung des
+                        vorliegenden Datensatzes (Dokumentation der Änderungen).</p>
+                    <h5>Rahmenangaben (Deklaration der Datei)</h5>
+                    <p>Die erste Zeile eines xml-Dokuments enthält Angaben zur XML-Version und zur verwendeten
+                        Zeichencodierung, die zweite Zeile den Verweis auf das der Datei zugrunde liegende
+                        Schema. Schließlich identifiziert die dritte Zeile den Text als TEI-Dokument (mit Angabe
+                        des entsprechenden Namensraumes) und vergibt eine eindeutige Identifikationsnummer
+                        (xml:id) für dieses Dokument.</p>
+                    <h5>Wiedergabe der handschriftlichen Texte</h5>
+                    <p>Faulenzerstriche (auch Geminationsstriche / Verdoppelungsstriche) werden stillschweigend
+                        in doppelte Buchstaben aufgelöst (im Fall von nachträglich ergänzten Faulenzerstrichen
+                        wird der zweite der Konsonanten als &lt;add&gt; definiert). Trennungs- bzw.
+                        Bindestriche beim Zeilenwechsel werden nicht übernommen (der vorhandene Trennungsstrich
+                        wird nur innerhalb des &lt;lb&gt;-Elements durch &lt;lb break=“no“ rend=“-“&gt;
+                        definiert). Hoch- oder Tiefstellung von Textteilen, Unterstreichung usw. wird in
+                        der Codierung jeweils explizit kenntlich gemacht (hi rend=“superscript“, hi
+                        rend=“subscript“, hi rend=“underline“ n=“1“ usw.). Groß- und Kleinschreibung wird
+                        getreu der Vorlage wiedergegeben (auch bei Verwendung von Großbuchstaben innerhalb
+                        zusammengeschriebener Worte). Schreibversehen oder Druckfehler werden in der Regel
+                        entsprechend der Quelle übernommen und durch das Element &lt;sic/&gt;
+                        markiert. Korrekturen des Herausgebers (Kennzeichnung der originalen Schreibung
+                        mittels &lt;sic/&gt;-Element, Korrektur durch &lt;corr/&gt;; in ein
+                        &lt;choice/&gt;-Element eingeschlossen). Lateinisch geschriebene Textteile
+                        innerhalb eines in Kurrentschrift geschriebenen Textes werden mit Hilfe des Elements
+                        &lt;hi/&gt; (highlighted) und dem Attribut @rend="latintype" gekennzeichnet (Darstellung
+                        im angezeigten Text erfolgt in der Regel durch kursive im Unterschied zu gerader
+                        Schrifttype). Verwendete Klammerungszeichen „/:“ bzw. „:/“ wurden unverändert
+                        übernommen. Satzzeichen werden original übernommen; in besonderen Ausnahmefällen
+                        kann vom Hg. ergänztes Zeichen in der Form &lt;supplied&gt;,&lt;/supplied&gt; eingefügt
+                        werden.  Herausgeber-Eingriffe erfolgten sparsam (mittels &lt;supplied/&gt;).</p>
+                    <p>Bei Zeilen oder Zeileneinheiten von &lt;p/&gt;, die von zwei oder mehreren Personen in
+                        den Quellen geteilt werden, wird deren Zugehörigkeit zueinander mit &lt;seg part="I"&gt;
+                        &lt;seg part="M"&gt; und &lt;seg part="F"&gt; gekennzeichnet.</p>
+                    <h5>Übertragung der gedruckten Texte</h5>
+                    <p>Bei den gedruckten Texten erfolgte die Wiedergabe von verschiedenen Schriftarten (hi
+                        rend=“antiqua“, hi rend=“bold“ hi rend=“spaced_out usw.). Originale
+                        Fußnoten/Anmerkungen werden durch die Elemente &lt;ref/&gt; (referencing string) und
+                        &lt;footnote/&gt; wiedergegeben.</p>
+                    <h5>Umgang mit Texteingriffen (Korrekturen)</h5>
+                    <p>Streichungen von Worten oder Absätzen werden durch das Element &lt;del/&gt; (deleted)
+                        gekennzeichnet, die Form der Streichung wird durch das Attribut @rend (rendition)
+                        angegeben (rend="strikethrough") bzw. durch das Attribut @hand für den jeweils
+                        identifizierten Schreiber näher spezifiziert. Nachträgliche Einfügungen werden mit
+                        dem Element &lt;add/&gt; (addition) vermerkt (Ort der Einfügung wird mit Hilfe des
+                        Attributs @rend bezeichnet: "inline", "margin", "above" (the line), "below" (the line),
+                        "top" bzw. "bottom" und ebenfalls der Angabe des Schreibers. Größere Abschnitte von
+                        Streichungen werden mit dem Element &lt;delSpan/&gt;, strukturübergreifende Ergänzungen
+                        mit Hilfe von &lt;addSpan/&gt; gekennzeichnet und dann ebenfalls mit den nötigen
+                        Attributen versehen. Das Ende der einzelnen Streichungen bzw. Ergänzungen markiert das
+                        Element &lt;anchor/&gt;.  Korrekturen des Autors bzw. eines Schreibers werden als
+                        Substitutionsprozess innerhalb des Elements &lt;subst/&gt; dargestellt (in der Regel aus
+                        zwei Teilen: dem Löschungsvorgang (durch Streichen, Überschreiben o.ä.) und der
+                        Ergänzung des neuen Textes (durch Einfügen, Überschreiben o.a.) mittels &lt;del/&gt; und
+                        &lt;add/&gt;. Überschreibungen werden ebenso als Substitutionsvorgang
+                        gekennzeichnet, bei dem das Löschen durch "Überschreiben" geschieht und die Ergänzung
+                        "inline" erfolgt. Unleserliches wird mit Herausgeberzusätzen (Bsp.: &lt;damage
+                        agent="water"&gt;&lt;unclear&gt;...&lt;/unclear&gt;&lt;/damage&gt;) oder komplett
+                        Unleserliches mittels &lt;gap/&gt; wiedergegeben.</p>
+                    <p><ins>zusätzlich in den Referenzquellen:</ins></p>
+                    <p>Sind die verschiedenen Eingriffe (Streichungen und Ergänzungen) in verschiedenen
+                        Schreibfarben vorgenommen und der jeweilige Schreiber ist unbekannt, werden die
+                        verschiedenen Schreibfarben in der Kodierung gekennzeichnet als @type="ink" für
+                        Eingriffe mit Tinte, @type="pencil" für Eingriffe mit Bleistift und @type="redpencil"
+                        für Eingriffe mit Rötel.</p>
+                    <h5>Auszeichnung von Textinhalten</h5>
+                    <p>Die Auszeichnung der Rollennamen erfolgt direkt mittels &lt;name/&gt; und &lt;rs
+                        type=“name“/&gt; oder mit Hilfe des allgemeineren Verweis-Elements &lt;rs/&gt;
+                        ("referencing string"), wobei im Attribut die Art des Ziels näher bezeichnet wird:
+                        &lt;rs type="person"/&gt;.</p>
+                    <h5>Kommentationsformen</h5>
+                    <p>Editorische Kommentare werden mittels des Elementes &lt;note/&gt; erfasst, dass durch das
+                        Attribut @type näher spezifiziert werden kann: Mögliche &lt;note/&gt; Attribute
+                        sind: @commentary: betrifft Erläuterungen von Sachverhalten, die ohne Erläuterung
+                        nicht unmittelbar verständlich sind,  @textConst: bezieht sich auf Bemerkungen zu
+                        formalen Besonderheiten der Quelle sowie  @definition: umfasst reine
+                        Worterklärungen oder Begriffserläuterungen.</p>
+                    <h5>Topic Map</h5>
+                    <p>Um das Beziehungsgeflecht von Motiven, Begriffen und Namen zu gewährleisten, ist eine
+                        Auszeichnung der jeweiligen Schlagworte in den Texten notwendig. Die Verschlagwortung
+                        der Texte erfolgt in den XML-Kodierungen mit &lt;name/&gt; für Namen und mit &lt;rs/&gt;
+                        für Begriffe, die jeweils mit einem @key-Attribut und mit einer Identifikation versehen
+                        sind, die wiederum auf eine externe, separat von allen Texten geführte Topic Map hin
+                        verweist.</p>
+                    <h5>Auszeichnung von Textzitaten</h5>
+                    <p>Die Auszeichnung von Textzitaten aus externen Texten oder innerhalb der Textedition
+                        erfolgt durch &lt;cit/&gt;, und untergliedert sich weiter in &lt;quote/&gt; für das
+                        eigentliche Zitat und in &lt;bibl/&gt; mit der bibliographischen Angabe der Herkunft des
+                        Zitates. Werden die zitierten Textzeilen oder -passagen unverändert aus der
+                        Zitatquelle übernommen, wird das &lt;cit/&gt; mit @type="true" gekennzeichnet, ist das
+                        Zitat abgeändert, wird das &lt;cit/&gt; mit @type="modified" gekennzeichnet.</p>
                 </div>
+                
+                
+                
                 <div class="span12">
                     <h3>Forschungsergebnisse</h3>
+                    <h4>Abhängigkeiten der Kopien Berlin und Gotha sowie der Kindschen Druckausgaben von einem
+                        verschollenen Manuskript des Textbuches</h4>
+                    <p>Aufgrund der weitgehenden Übereinstimmung von K-tx6 und K-tx7, vor allem den identischen
+                        Abweichungen gegenüber KA-tx4 wurde bereits in der Textbuch-Edition von Schreiter (S.
+                        190) die Vermutung aufgestellt, dass nicht das Webersche Handexemplar, sondern eine
+                        andere, nicht mehr erhaltene Quelle als Vorlage für die Textbuch-Kopien Berlin und Gotha
+                        diente.  Dabei könnte es sich um die Abschrift im Auftrag von Weber für Friedrich
+                        Kind [vgl. Quellenüberblick K-tx5] handeln, die Weber lt. Tagebuch vom 21. Juni 1817
+                        anfertigen ließ. Dass die beiden Kopien K-tx6 und K-tx7 in unmittelbarem Zusammenhang
+                        mit dem verschollenem Manuskript [K-tx5] stehen, wird durch zahlreiche Übereinstimmungen
+                        der beiden Textbücher mit Kinds späteren Druckausgaben (D-tx1–3 sowie D+-tx2 u. 3)
+                        nahegelegt (vgl. Tab. 1). Denn es kann davon ausgegangen werden, dass diese wiederum
+                        vermutlich auf dem in Kinds Besitz verbliebenen Textbuch beruhen, welches sich unter
+                        Hand des Librettisten kontinuierlich veränderte bis zu der Textfassung, wie sie sich in
+                        den Druckausgaben niederschlägt [vgl. dazu auch die Textentwicklung von D-tx1 bis D+-tx3
+                        unter Textentwicklung in den Kindschen Druckausgaben].</p>
+                    <p>
+                        <table>
+                            <tr>
+                                <th>Beispiele</th>
+                                <th>KA-tx4 und alle anderen Quellen</th>
+                                <th>K-tx6, K-tx7 sowie Druckausgaben von Kind</th>
+                            </tr>
+                            <tr>
+                                <td>Nr. 1 Introduktion 2. Strophe im Lied von Kilian</td>
+                                <td>„Stern und Straus hab’ ich vor’m Leibe“</td>
+                                <td>„Stern und Straus <strong>trag’</strong> ich vor’m Leibe“</td>
+                            </tr>
+                            <tr>
+                                <td>Dialog I/2</td>
+                                <td>„meinen <strong>Jäger</strong>purschen“</td>
+                                <td>„meinen Purschen“</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>„in jenen Zeiten“</td>
+                                <td>„in <strong>alten</strong> Zeiten“</td>
+                            </tr>
+                            <tr>
+                                <td>Dialog I/5</td>
+                                <td>„Das will ich dir lernen.“</td>
+                                <td>„Das will ich <strong>Dich lehren</strong>.“</td>
+                            </tr>
+                            <tr>
+                                <td>Nr. 10 Finale</td>
+                                <td>„Caspar. Nicht? So bleib […] zu thun, Hexenmeister?“</td>
+                                <td>fehlt (in K-tx6 nachträglich ergänzt)</td>
+                            </tr>
+                            <tr>
+                                <td>Dialog III/3</td>
+                                <td>„Brautthränen und Frühregen währen nicht lange, sagt das Sprichwort.“</td>
+                                <td>„Brautthränen und Frühregen, sagt das Sprichwort [in D+-tx3 Sprüchwort], währen nicht lange.“</td>
+                            </tr>
+                            <tr>
+                                <td>Nr. 16 Finale</td>
+                                <td>„mit einem finstern Blick“</td>
+                                <td>„mit finsterm Blick“</td>
+                            </tr>
+                        </table>
+                    </p>
+                    <p>Da einige der Abweichungen von K-tx6 und K-tx7 sowie den Kindschen Druckausgaben
+                        gegenüber Webers Handexemplar auch im Erstdruck der Gesangstexte zur UA (ED-tx)
+                        wiederzufinden sind, kann mit Sicherheit davon ausgegangen werden, dass ED-tx u. a. auf
+                        der Berliner Textbuch-Kopie (K-tx6) beruht (vgl. Tabelle 2). Das bedeutet, dass die
+                        Überlieferung dieser kleinen abweichenden Details von den Anfängen der Werkentstehung
+                        1817 bis zur UA 1821 nur über das Bindeglied des verschollenen Kindschen Manuskripts
+                        [K-tx5] und dem von diesem abhängigen ersten Berliner Textbuch (K-tx6) zu erklären
+                        ist.</p>
+                    <p>
+                        <table>
+                            <tr>
+                                <th>Beispiel</th>
+                                <th>KA-tx4 und alle anderen Quellen</th>
+                                <th>K-tx6, K-tx7 sowie ED-tx und Druckausgaben von Kind</th>
+                            </tr>
+                            <tr>
+                                <td>Nr. 2 Terzett mit Chor</td>
+                                <td>Max. Nimmer trüg’ ich den Verlust</td>
+                                <td>fehlt</td>
+                            </tr>
+                            <tr>
+                                <td>Nr. 9 Terzett</td>
+                                <td>„der, der Gott versucht“ </td>
+                                <td>„der, <strong>wer</strong> Gott versucht“ (auch in L-tx2)</td>
+                            </tr>
+                            <tr>
+                                <td>Nr. 10 Finale</td>
+                                <td>„Ja – furchtbar gähnt“</td>
+                                <td>„<strong>Ha</strong> – furchtbar gähnt“</td>
+                            </tr>
+                            <tr>
+                                <td>Nr. 15 Jägerchor</td>
+                                <td>„Was glich wohl auf Erden“</td>
+                                <td>„Was <strong>gleicht</strong> wohl auf Erden“</td>
+                            </tr>
+                            <tr>
+                                <td>Nr. 16 Finale</td>
+                                <td>„die eigne Braut!“</td>
+                                <td>„die Braut!“</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>„war immer treu und gut!“</td>
+                                <td>„war immer <strong>brav</strong> und gut!“</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>„Heil unserm Fürst!“</td>
+                                <td>„Heil unserm <strong>Herrn</strong>!“</td>
+                            </tr>
+                        </table>
+                    </p>
+                    
+                    <h4>Gemeinsamkeiten und Unterschiede zwischen Webers Handexemplar und den Druckausgaben von
+                        Friedrich Kind</h4>
+                    <p>
+                        <table>
+                            <tr>
+                                <th>Beispiele</th>
+                                <th>KA-tx4</th>
+                                <th>D-tx1 bis D+-tx3</th>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>Eremiten-Szenen wieder aufgenommen</td>
+                            </tr>
+                            <tr>
+                                <td>Dialog I/2 bzw. 4</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Nr. 2 Terzett mit Chor</td>
+                                <td>Kuno,  
+                                    /.faßt Max bei der Hand./ 
+                                    Mein Sohn! nur Muth! 
+                                    Wer Gott vertraut, baut gut!</td>
+                                <td>übernommen</td>
+                            </tr>
+                            <tr>
+                                <td>Dialog I/5 bzw. 7</td>
+                                <td>Caspar
+                                    Das würde sich das Wachspüppchen das mich um deinetwillen verwarf, schwerlich einbilden. für sich. Es soll gerochen werden!!</td>
+                                <td>übernommen</td>
+                            </tr>
+                            <tr>
+                                <td>Nr. 6 Duett</td>
+                                <td>Agathe. 
+                                    Wer bezwingt des Busens Schlagen? 
+                                    Wer der Liebe süßen Schmerz? 
+                                    Stets um dich Geliebter zagen 
+                                    Muß dieß ahnungsvolle Herz.</td>
+                                <td>Agathe. 
+                                    Wer bezwingt des Busens Schlagen? 
+                                    Wer der Liebe süßen Schmerz? 
+                                    
+                                    Annchen.
+                                    Die bezwingen Lust und Scherz!
+                                    
+                                    Agathe. 
+                                    Stets um den Geliebten zagen 
+                                    Muß dieß ahnungsvolle Herz!</td>
+                            </tr>
+                            <tr>
+                                <td>Nr. 10 Finale - Geisterchor</td>
+                                <td></td>
+                                <td>leicht modifiziert</td>
+                            </tr>
+                            <tr>
+                                <td>Melodram</td>
+                                <td></td>
+                                <td>übernommen</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>„reicht ihm die Jagdflasche, die Max verweigert.“</td>
+                                <td>„wirft ihm die Jagdflasche zu, die Max weglegt.“
+                                    (Korrektur Webers rückgängig gemacht)</td>
+                            </tr>
+                            <tr>
+                                <td>Nr. 12 Cavatine</td>
+                                <td>Streichung der 3. Strophe</td>
+                                <td>übernommen</td>
+                            </tr>
+                            <tr>
+                                <td>Nr. 14 Volkslied</td>
+                                <td></td>
+                                <td>Korrekturen Webers übernommen</td>
+                            </tr>
+                            <tr>
+                                <td>Dialog III/5</td>
+                                <td>Ein Todtenkranz!</td>
+                                <td>Eine Todtenkrone!</td>
+                            </tr>
+                            <tr>
+                                <td>Nr. 15 Jägerchor</td>
+                                <td>2. Strophe</td>
+                                <td>übernommen</td>
+                            </tr>
+                            <tr>
+                                <td>Nr. 16 Finale</td>
+                                <td>Eremitentext zehn Zeilen gestrichen</td>
+                                <td>Nur vier Zeilen gekürzt</td>
+                            </tr>
+                        </table>
+                    </p>
+                    <h4>Einordnung und Auswertung der Detmolder Textbuch-Kopie</h4>
+                    <p>Bei der Textuch-Edition von 2007 lag eine Libretto-Quelle noch nicht vor, die hier näher
+                        betrachtet werden soll. Es handelt sich um eine handschriftliche Textbuch-Kopie, die
+                        heute in der Lippischen Landesbibliothek in Detmold liegt (Sign.: Mus-n 245, Stempel der
+                        Landesbibliothek Detmold auf fol. 2r). Bisher wurde vermutet, dass dieses Textbuch in
+                        Zusammenhang mit der ebenfalls in Detmold überlieferten Partitur-Kopie (K-pt15) steht.
+                        Hierhin gelangte die für die EA in Bremen am 26. September 1822 bestimmte Partitur über
+                        den Theaterunternehmer August Pichler, der 1825 die Direktion des Hoftheaters Detmold
+                        übernahm.  Das Textbuch scheint jedoch eine vielschichtigere Provenienz
+                        aufzuweisen.  Das erste Rätsel rankt sich um seine Entstehung. Aufgeschrieben wurde
+                        es von zwei Personen, zum einen, Friedrich Langer, der als Besitzer auf dem Deckblatt
+                        angegeben ist und von dem der Beginn des Manuskriptes bis fol. 12r stammt, zum anderen,
+                        Hugo Langer, der die Abschrift (12v bis Bl. 73r) weiterführte und von dem auf fol. 73r
+                        der Datierungvermerk „Geyer den 1sten August 1823 Scripsit Hugo Langer“ stammt.
+                         Inhaltlich basiert die Textbuch-Kopie auf Friedrich Kinds 2. Ausgabe des
+                        Textbuches bei Göschen/Leipzig 1822, was das Vorhandensein der eröffnenden
+                        Eremitenszenen sowie die getreue Übernahme der in dieser Ausgabe angebrachten Fußnoten
+                        beweist. Allerdings muss das Textbuch trotzdem für eine musikalische Aufführung gedacht
+                        gewesen sein, was wiederum die markante Eintragung „Anfang […] Musik.“ vor Beginn der 3.
+                        Szene (der eigentlich 1. Szene der Oper) sowie die zahlreichen Striche bzw. die sich auf
+                        musikalischen Nummern beziehenden Bemerkungen in Blei-/Blaustift und Rötel nahelegen.
+                         Ob und für welche der frühen Aufführungen des „Freischütz“ das Textbuch
+                        herangezogen wurde, kann schwerlich rekonstruiert werden.  Weitere Anhaltspunkte
+                        zur Provenienz liefern die Personaleintragungen im Personenverzeichnis sowie ein
+                        weiterer vorhandener Theaterstempel „DIRECTION DES II. THEATERS IN DRESDEN“ (fol. 2r und
+                        72v), wobei diese allerdings mehr Fragen aufwerfen als Antworten geben. Bei dem II.
+                        Dresdner Theater handelt es sich um das von Joseph Ferdinand Müller, genannt Nesmüller,
+                        1856 im Großen Garten errichtete Sommertheater, dessen Aufführungen zwar eher
+                        volkstümlichen Charakter hatten, aber trotzdem eine nicht zu unterschätzende Konkurrenz
+                        für die Kgl. Bühnen darstellten. Die meisten der dort gespielten Volksstücke stammten
+                        von Nesmüller selbst, u.a. „Die Soldatenfamilie“, „Die Frau Tante“ oder „die
+                        Zillerthaler“. 1881 musste das Theater aufgrund finanzieller Schwierigkeiten schließen
+                        (vgl. Das alte Dresden, Bilder und Dokumente aus zwei Jahrhunderten, hrg. von Erich
+                        Haenel und Eugen Kalkschmidt, Reprint der Ausgabe von 1934, F./M. 1977). Nur zwei der
+                        Personaleintragungen konnten bisher eindeutig zugeordnet werden, und zwar die zur Rolle
+                        des Ottokar gehörige „Boxberg“ und die zum Max „Pechtel“. Erstere gehört dem
+                        Schauspieler und Regisseur Eugen von Boxberg, der lt. Bühnen-Almanach erstmalig 1862 in
+                        Greiz nachweisbar ist, und dann an etlichen (Bühnen)-Orten, u.a. in Hof, Bayreuth,
+                        Annaberg, Pirna, Großenhain und Grimma wirkte und Väter- und Repräsentationsrollen
+                        ausfüllte. Theodor Pechtels Karriere wiederum startete nachweislich 1863 in Döbeln und
+                        führte ihn u.a. über Hischberg, Flensburg, Hamburg bis nach Milwaukee und Chicago. Nur
+                        ein Jahr, 1869, spielte Pechtel am II. Dresdner Theater. Da Boxberg für das Dresdner
+                        Theater überhaupt nicht nachgewiesen werden kann, scheint sich eine direkte Verbindung
+                        zwischen den beiden Personen kaum herstellen zu lassen und bleibt es äußerst rätselhaft,
+                        wieso sich beide Namen in einer Besetzungsliste finden. Immerhin (so viel ist sicher)
+                        kreuzten sich die Wege zischen Boxberg und Nesmüller, dem Dresdner Theaterdirektor,
+                        allerdings ein Jahrzehnt zu spät, um in Zusammenhang mit Pechtel gebracht werden zu
+                        können. Lt. Bühnen-Almanach 1878/79 gastierte Nesmüllers Ensemble bei der
+                        Theatergesellschaft in Grossenhain, Pirna und Oschatz, der in dieser Zeit Boxberg
+                        vorstand. 1878 lässt sich auch ein dritter Name der Liste „Rothe“, der sowohl Cuno als
+                        auch Samiel zugewiesen ist, für die II. Dresdner Bühne nachweisen. Immerhin lässt sich
+                        dadurch vermuten, dass das Textbuch evtl. auf diesem Wege in die Hände von Nesmüller und
+                        somit in den Bestand des II. Dresdner Theaters gelangte. Wie es dahingehend nach Detmold
+                        kam, bleibt bisher unaufgeklärt. Aufschlussreich sind ebenfalls die
+                        aufführungspraktischen Eintragungen im Textbuch. Diese (entweder in verschiedenen Phasen
+                        bzw. von verschiedenen Händen) ausgeführten Eingriffe beinhalten zahlreiche Kürzungen
+                        des Dialogtextes und der Szenenanweisungen sowie vor allem starke Veränderungen der
+                        musikalischen Nummern (z. B. Kürzung in Nr. 1, Streichung Böhmischer Walzer und Max-Arie
+                        Nr. 3, Kürzung Nr. 2 /nachträglich rückgängig gemacht; Streichung 1. Strophe Trinklied/
+                        3. Strophe Zensurvariante nachträglich eingetragen; Streichung von Maxens Arie in Nr. 10
+                        Finale II. Akt sowie weitere Kürzungen im nachfolgenden Dialog und Streichung des
+                        furchtbaren Gesangs; Streichung von 3. und 4. Strophe vom Jungfernkranz Nr. 14;
+                        Streichung 2. Strophe Jägerchor Nr. 15; mehrere Streichungen im Finale III.
+                        Akt). Dass das Textbuch nichts mit der Detmolder Partitur zu tun hat, zeigt u.a.
+                        die Textabweichung in der 2. Strophe in Caspars Trinklied Nr. 4 (vgl. dazu nächstes
+                        Kapitel). <strong>[JV</strong>: Anmerkung zur Veränderung der Aktstruktur -
+                        Wolfsschlucht als Beginn Akt 3 - nicht singuläre Änderung!, die zudem mit einem Teil des
+                        Detmolder Materials korrespondiert - offensichtlich eher spät, da Elzner an
+                        entsprechenden Abschriften beteiligt ist; zu prüfen ist auch noch, ob die teils doppelt
+                        überlieferten Materialien, die möglicherweise auf zwei Bestände zurückgehen, etwas mit
+                        diesem Dresdner Textbuch zu tun haben können]</p>
+                    <h4>Auswertung der Szenenanweisungen am Ende der Textbuch-Kopie Hamburg (KA-tx21)</h4>
+                    <p>Die Hamburger Textbuch-Kopie bildete die Grundlage für die EA in Hamburg am 5. Februar
+                        1822. Im Gegensatz zu den beiden frühen Textbüchern für Berlin und Gotha
+                        repräsentiert die Hamburger Textbuch-Kopie die Fassung des Textes nach der UA (Oktober
+                        1821) einschließlich sämtlicher bis dahin vorgenommenen Eingriffe ins Werk, wie z. B.
+                        der gekürzten Eremiten-Passage im Finale des III. Aufzuges; vgl. auch
+                        Quellenbeschreibung. Aufführungsgeschichtlich interessant sind die seitenlangen
+                        Regie- bzw. Szenenanweisungen, die sich am Ende der Textbuch-Kopie befinden (fol.
+                        58v–70v). Diese Aufführungsmaterialien liegen nun innerhalb der
+                        „Freischütz-digital“-Edition erstmalig in einer diplomatischen Textübertragung mit
+                        gegenübergestelltem Faksimile vor. Ihre inhaltliche Auswertung erbrachte folgende
+                        Erkenntnisse: Es handelt es sich um die dreimalige Niederschrift von Szenen- und
+                        Regieanweisungen verschiedener Schreiber, jeweils Aktweise geordnet und bezogen auf die
+                        Seitenzahlen des Textbuches, ergänzt durch das jeweils agierende Personal des Hamburger
+                        Theaters sowie spezielle Anweisungen für die Wolfsschluchtszene. Die erste (fol.
+                        58v–60r) und die dritte aktweise Niederschrift (fol. 67r–70r) stammen zwar von
+                        verschiedenen Schreibern, die nicht bekannt sind, stehen aber in Zusammenhang. Bei der
+                        wiederholten Abschrift ab fol. 67r, die auf der ersten Niederschrift beruht, wurden die
+                        beim ersten Mal vorgenommenen Ergänzungen der Personalangaben überwiegend regulär in den
+                        Text aufgenommen bzw. um weitere wesentliche Angaben gegenüber der ersten Niederschrift
+                        ergänzt; vgl. v. a. Wolfsschluchtszene und III. Akt. Außerdem wurden noch zusätzliche
+                        Ergänzungen in Blei (evtl. von einer weiteren Hand) vorgenommen.  Die zweite
+                        aktweise Niederschrift (fol. 63r–66r) sowie die Anweisungen für die Wolfsschlucht (fol.
+                        61r–62r) entstammen einer weiteren Hand, höchstwahrscheinlich der von Friedrich Ludwig
+                        Schmidt, dem Hamburger Schauspieldirektor.</p>
+                    <p>Die Anhangsniederschriften sind insgesamt nicht datiert worden, was ihre exakte zeitliche
+                        Einordnung auf den ersten Blick schwierig macht. Durch den Abgleich der innerhalb der
+                        Szenenanweisungen ergänzten Personaleintragungen mit überlieferten Hamburger
+                        Adressbüchern (vgl. Staats- und Universitätsbibliothek Hamburg <a class="external"
+                            href="http://www.sub.uni-hamburg.de">http://www.sub.uni-hamburg.de</a> oder URL: <a
+                                class="external" href="http://agora.sub.uni-hamburg.de/subhh-adress/digbib/start"
+                                >http://agora.sub.uni-hamburg.de/subhh-adress/digbib/start</a>) lässt sich
+                        allerdings mutmaßen, dass die Aufzeichnungen verschiedenen Aufführungsperioden
+                        angehören, wobei sich diese auch näher eingrenzen lassen (die Adressbücher eines
+                        Jahrgangs beziehen sich auf die im Vorjahr begonnene Saison):</p>
+                    <h5>1. Szenenanweisungen:</h5>
+                    <p>Die eigentliche Niederschrift ist schwer datierbar, da sie keine Personalangaben
+                        enthält. Die nachträglichen Eintragungen von Personen in dickerer Tinte vom gleichen
+                        Schreiber gehören jedoch vermutlich erst zu den Aufführungen ab 1827/1828, da der
+                        Maschinen- bzw. Theatermeister Hü(h)nerjäger erstmalig ab 1828 in den Adressbüchern
+                        auftaucht.</p>
+                    <h5>Wolfsschluchtszene und 2. Szenenanweisungen:</h5>
+                    <p>Die höchstwahrscheinlich von Friedrich Ludwig Schmidt angefertigten Notizen gehören
+                        relativ eindeutig zur EA Hamburg 5. Februar 1822, da die Herren Brämer, Petersen und
+                        Schäfer nur 1821/1822 (Brämer auch 1822/1823 noch) zum Personal gehörten; danach fehlen
+                        sie in den Adressbüchern. Vermutlich wurden diese Blätter nachträglich versehentlich
+                        zwischen die beiden anderen Niederschriften, die zeitlich zusammengehören, geheftet.</p>
+                    <h5>3. Szenenanweisungen:</h5>
+                    <p>Diese Niederschrift ist vermutlich ebenso wie die erste in die Saison 1827/1828
+                        einzuordnen (durchgestrichener Herr Kleinschmidt nur bis 1828 im Adressbuch;
+                        Brautjungfern Dlle. Regler d. J. nur Saison 1827/1828; Dlle. Gröger ab Saison 1828/1829
+                        da). Die Korrekturen stammen aber teilweise erst von ca. 1836 (Korrekturen bei den
+                        Brautjungfern: Dlle. Pleß erst ab Herbst 1834, Dlle. Teubner erst Herbst 1836).</p>
+                    <p>Worin liegt nun die Bedeutung dieser Niederschriften?  Bei den drei verschiedenen
+                        aktweisen Niederschriften handelt es sich um stichpunktartige Angaben zu Personenregie,
+                        Requisiten, Handlungsfolgen etc. Szene für Szene finden sich konkrete, auf die im
+                        Textbuch enthaltenen Szenenanweisungen bezogene, Anweisungen für das Theaterpersonal,
+                        des Weiteren bekommt man einen Eindruck, wie Personalaufwendig die Inszenierungen des
+                        „Freischütz“ zum Teil waren, u.a. auch an der genauen Auflistung der für die Aufführung
+                        benötigten Statisten, die reduziert werden können, indem sich z. B. vier der sechs
+                        „Bergmusikanten“ aus dem I. Akt zu „Jagdkavalieren“ für den III. Akt verwandeln (fol.
+                        60v). Die Anordnungen für die Wolfsschlucht „Wie die Besorgungen in der
+                        Wolfsschlucht folgen.“(fol. 61r–62r) sind ein beispielhaftes und aufschlussreiches
+                        Zeugnis, wie die von Weber und Kind ersonnene zentrale Wolfsschluchtszene (Szene II/4–6)
+                        an einer zeitgenössischen Bühne so umgesetzt und ausgestattet wurde, dass den
+                        Theaterbesuchern so richtig „gruselte“.  Präzise werden die Aufgaben für das
+                        konkrete Personal aufgelistet, wer welche Aktionen mit welchen Requisiten durchzuführen
+                        hat, z.B. dass Herr Brämer für das Schlagen der Glocke zuständig war und die Bewegungen
+                        der durch Herrn Hollmann d.j. gesteuerten Eule mit den Aktionen des Herrn Woltereck, dem
+                        Sänger des Caspar, einhergehen sollten (fol. 61r). „Wenn Caspar das Feuer anbläßt,
+                        wedelt die Eule auf dem Zweige mit den Flügeln; auch wendet sie mehrmals den Kopf nach
+                        Caspar, wenn dieser sich nach hinten wendet“ heißt es in den dazugehörigen
+                        Szenenanweisungen (fol. 64r).  Anhand von Korrekturen kann man erkennen, dass sich
+                        die ursprüngliche „Höhle“ in eine „Maschine“ verwandelte, die sich öffnet und
+                        verschwindet, oder dass die „Wagen“ zu „Irrlichtern“ korrigiert wurden. Des
+                        Weiteren wurden die Bühnenaktivitäten nach den einzelnen Echos während des Kugelgießens
+                        genau festgelegt, wie z. B. „Donner und Blitz | Sturm“ „Tannen brechen“,
+                        „Peitschenknall, Geratter“, „Knallerbsen“ sowie der Einsatz verschiedenster Tiere
+                        (Eidechse, Schlange, Bär etc.) Dass sich die Effekte auch hier von Echo Eins bis
+                        Sieben steigerten, zeigt sich deutlich, da aus dem anfänglich „matten Sturm […]
+                        stärkster Sturm mit allem Donner und Blitz und Einschlag“ erwächst, ausführlich in den
+                        Szenenanweisungen (fol. 65r): „Zugleich Regen, anhaltende Blitze, alle Donnermaschinen
+                        wie gegeneinander kämpfende Gewitter – Einschlag. Zwey Felsenstücke stürzen hinten herab
+                        Irrlichter tanzen dazwischen Wettergeläut in der Ferne. der Sturm tobt stets.“
+                         Diese Anweisung gibt auch Weber in seinen „Bemerkungen die Szenischen Anordnungen
+                        des Freyschützen betreffend.“ (entstanden für die Aufführung in München 15. April 1822);
+                        vgl. Veröffentlichung in Freischütz-Edition 2007, S. 244ff.). Da Friedrich Ludwig
+                        Schmidt die Berliner Aufführung nachweisbar selbst besucht hat [vgl. Denkwürdigkeiten
+                        des Schauspielers, Schauspieldichters und Schauspieldirektors Friedrich Ludwig Schmidt
+                        (1772–1841), nach hinterlassenen Entwürfen zusammengestellt und herausgegeben von
+                        Hermann Uhde, Stuttgart 1878, Bd. 2, S. 169], konnte er sich einen genauen Eindruck
+                        verschaffen, wie die szenische Gestaltung (insbesondere die der Wolfsschluchtszene)
+                        Webers Vorstellungen gemäß umgesetzt werden müsse.  Der „Freischütz“ war in Hamburg
+                        ebenso erfolgreich wie in Berlin und andernorts, wie Schmidt weiter resümiert (ebd., S.
+                        193): „Zum heiligen Dreikönigstage [1823] gaben wir im neuen Jahre den „Freischütz“zum
+                        ersten Male; seit dem 5. Februar 1822 war er heute binnen elf Monaten zum acht und
+                        zwanzigsten Male, durchschnittlich also alle zwölf Tage, und mit immer steigendem
+                        Beifall aufgeführt. Die Netto-Einnahme bei dieser Oper belief sich im ersten Jahre ihres
+                        Erscheinens in Hamburg auf 26,281 Mark 3 Schilling; die Durchschnitts-Einnahme bei jeder
+                        Vorstellung hatte daher netto 938 Mark betragen; aus dem Verkauf von 1766 Textbüchern
+                        (jedes zu sechs Schilling) hatten wir noch extra 661 Mark 14 Schilling gelöst.“</p>
                 </div>
 
             </div>
