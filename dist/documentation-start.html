@@ -51,48 +51,84 @@
         <img style="height: 330px;" src="" alt=""/>
     </div>
 
-    <header id="overview" class="jumbotron subhead">
-        <div class="row" style="min-height: 0;">
-            <div class="span8">
-                <img style="margin: 40px 0 0 3px;" src="pix/Logo_greenInset.png"/>
-            </div>
-            <div class="span4"> </div>
-        </div>
-        <div id="navbar" class="subnav">
-            <ul class="nav nav-pills">
-                <li id="nav_docu">
-                    <a href="documentation-start.html">Projekt</a>
-                </li>
-                <li id="nav_music">
-                    <a href="documentation-music.html">Musik</a>
-                </li>
-                <li id="nav_text">
-                    <a href="documentation-text.html">Text</a>
-                </li>
-                <li id="nav_audio">
-                    <a href="documentation-audio.html">Audio</a>
-                </li>
-                <li id="nav_edition">
-                    <a href="documentation-edition.html">Edition</a>
-                </li>
-            </ul>
-        </div>
-        <div id="backlink" style="display:none;">
-            <a href="#" onclick="nav_back(); false;">zurück</a>
-        </div>
-    </header>
-
+    
     
     <section id="imprint">
         <div class="page-header">
             <h1>Dokumentation</h1>
         </div>
         
+        <header id="overview" class="jumbotron subhead">
+            <div class="row" style="min-height: 0;">
+                <div class="span8">
+                    <!--<img style="margin: 40px 0 0 3px;" src="pix/Logo_greenInset.png"/>-->
+                </div>
+                <div class="span4"> </div>
+            </div>
+            <div id="navbar" class="subnav">
+                <ul class="nav nav-pills">
+                    <li id="nav_docu">
+                        <a href="documentation-start.html">Projekt</a>
+                    </li>
+                    <li id="nav_music">
+                        <a href="documentation-music.html">Musik</a>
+                    </li>
+                    <li id="nav_text">
+                        <a href="documentation-text.html">Text</a>
+                    </li>
+                    <li id="nav_audio">
+                        <a href="documentation-audio.html">Audio</a>
+                    </li>
+                    <li id="nav_demos">
+                        <a href="documentation-demos.html">Demonstratoren</a>
+                    </li>
+                    <li id="nav_edition">
+                        <a href="documentation-edition.html">Edition</a>
+                    </li>
+                    <li id="nav_verlauf">
+                        <a href="documentation-verlauf.html">Verlauf</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="backlink" style="display:none;">
+                <a href="#" onclick="nav_back(); false;">zurück</a>
+            </div>
+        </header>
+
+        
         <div class="row" style="margin-bottom: 50px;">
             
             <div class="docu-project">
                     <div class="span12">
-                        <h2>Vorbemerkung</h2>
+                        <div class="content">
+                            <h4>Content</h4>
+                            <ol type="1">
+                                <li><a href="#vorbemerkung">Vorbemerkung</a></li>
+                                <li><a href="#inhalte">Inhalte – Objekte – Daten: Grundlegendes zur Konzeption der Projektmodule</a>
+                                    <ol>
+                                        <li><a href="#notentexte">Notentexte</a>
+                                            <ol>
+                                                <li><a href="#faksimiles">Faksimiles</a></li>
+                                                <li><a href="#codierung">Codierungen der Notentexte</a></li>
+                                            </ol>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li><a href="#textteile-a">Textteile - Teil A: Eigene Arbeitsbereiche des Projekts</a>
+                                    <ol>
+                                        <li><a href="#libretto">Zum Libretto des Freischütz</a></li>
+                                        <li><a href="#referenztexte">Referenztexte des <em>Freischütz</em>-Librettos</a></li>
+                                    </ol>
+                                </li>
+                                <li><a href="#textteile-b">Textteile - Teil B: Integration der digitalen Textanteile der WeGA</a></li>
+                                <li><a href="#audio">Audio-Anteile</a></li>
+                                <li><a href="#technik">Technische Voraussetzungen</a></li>
+                                <li><a href="#präsentationskonzept">Präsentationskonzept</a></li>
+                            </ol>
+                        </div>
+                        
+                        
+                        <h3 id="vorbemerkung">1. Vorbemerkung</h3>
                         <p>Inwieweit verändern die Möglichkeiten digitaler Medien unsere Konzepte musikalischer
                             Edition und wie könnte – vor dem Hintergrund des heutigen Stands der Technik – eine
                             solche Edition aussehen, wenn sie von Anfang an als digitale geplant wird? <br />Das
@@ -181,16 +217,17 @@
                             Erlaubnis von Tonträger-Firmen und Rundfunkanstalten, ihre Audio-Aufnahmen zu nutzen,
                             konnte dieses Vorhaben verwirklicht werden. Ihnen allen sei auch an dieser Stelle
                             gedankt herzlich gedankt!</p>
-                    </div>
-                    <div class="span12">
-                        <h2>Inhalte – Objekte – Daten: Grundlegendes zur Konzeption der Projektmodule</h2>
+                    
+                            <hr/>
+                    
+                        <h3 id="inhalte">2. Inhalte – Objekte – Daten: Grundlegendes zur Konzeption der Projektmodule</h3>
                         <p>In den von den vier Projektpartnern gemeinsam bearbeiteten sechs Arbeitspaketen standen
                             die graphische, logische und akustische (bzw. performative) Domäne des Werkes im
                             Zentrum. Graphische und logische Domäne betreffen dabei sowohl die musikalischen als
                             auch die textlichen Anteile der Edition. Im Folgenden werden die einzelnen Bestandteile
                             der Edition kurz vorgestellt.</p>
-                        <h3>1. Notentexte</h3>
-                        <h4>1.1 Faksimiles</h4> 
+                        <h3 id="notentexte">2.1 Notentexte</h3>
+                        <h4 id="faksimiles">2.1.1 Faksimiles</h4> 
                         <p>Die Überlieferung der musikalischen Anteile des <em>Freischütz</em> beginnt – sieht man von
                         einigen marginalen, in diesem Kontext nicht berücksichtigten Skizzen ab – mit der
                         autographen Partitur Webers und setzt sich dann zunächst in den 41 Abschriften fort, deren
@@ -242,7 +279,7 @@
                                 hat die wohin gepackt? CD fehlt, Daten nicht auf Server??</li>
                         </ul></p>
                         <p>Zur Erfassung dieser Objekte im Detail vgl. den Abschnitt XXX.</p>
-                        <h4>1.2 Codierungen der Notentexte</h4>
+                        <h4 id="codierung">2.1.2 Codierungen der Notentexte</h4>
                         <p>Eine durchgängige Codierung der Notentexte (als Implementierung der logischen Domäne) war
                             für die Verknüpfung der unterschiedlichen Objekte innerhalb des Projekts von zentraler
                             Bedeutung, zumal erst so die wirklichen Vorteile digitaler Editionen verdeutlicht werden
@@ -265,8 +302,11 @@
                             Projekte bereitgestellt werden. Der komplexe Umgang mit den MEI-Daten wird deutlich im
                             Kapitel -> "Werkzeuge GitHub", in dem die einzelnen Tools im Detail beschrieben
                             sind.</p>
-                        <h3>2. Textteile - Teil A: Eigene Arbeitsbereiche des Projekts</h3>
-                        <h4>2.1 Zum Libretto des Freischütz</h4>
+                        
+                        <hr/>
+                        
+                        <h3 id="textteile-a">3. Textteile - Teil A: Eigene Arbeitsbereiche des Projekts</h3>
+                        <h4 id="libretto">3.1 Zum Libretto des Freischütz</h4>
                         <p>Hinsichtlich der textlichen Quellen des Werkes kann beim <em>Freischütz</em> von einer
                             idealen Quellenlage gesprochen werden: Nahezu alle wesentlichen Dokumente zur
                             Entwicklung des Werktextes sind erhalten. Hinzu kommen eine frühe Textbuchkopie (noch
@@ -344,7 +384,7 @@
                             klären]</p>
                         <p>[außerdem hier noch zu erläutern: Verknüpfung von Partitur und Libretto - gibts die
                             noch?]</p>
-                        <h4>2.2 Referenztexte des <em>Freischütz</em>-Librettos</h4> 
+                        <h4 id="referenztexte">3.2 Referenztexte des <em>Freischütz</em>-Librettos</h4> 
                         <p>In der Weber-Literatur hat es wiederholt Auseinandersetzungen über
                         mögliche Vorbilder von Kinds Libretto bis hin zu direkten Plagiatsvorwürfen gegeben. Dass
                         das von August Apel und Friedrich Laun herausgegebene <em>Gespensterbuch</em> (Bd. 1,
@@ -390,27 +430,102 @@
                             hier nur modellhaft vorgestellt werden (erfasst wurden Motive, Begriffe und Namen), es
                             dürfte aber deutlich werden, dass es sich hier um ein mächtiges Werkzeug handelt, dessen
                             Bedeutung zunimmt, wenn die unter 2.3 genannten Texte mit einbezogen werden.</p>
-                        <h3>Textteile - Teil B: Integration der digitalen Textanteile der WeGA [o.ä.]</h3>
+                        
+                        <hr/>
+                        
+                        <h3 id="textteile-b">4. Textteile - Teil B: Integration der digitalen Textanteile der WeGA</h3>
+                        <p>Webers Briefe, Tagebücher und Schriften werden in einer digitalen Edition der WeGA
+                            erarbeitet, die unter <a class="external" href="http://www.weber-gesamtausgabe.de"
+                                >http://www.weber-gesamtausgabe.de</a> zur Verfügung steht. In diesen Ego-Dokumenten
+                            ist selbstverständlich auch die Entstehung des <em>Freischütz</em> und die Überlieferung
+                            zu Webers Lebzeiten dokumentiert. Auf dieser Website stehen darüber hinaus aber eine
+                            Vielzahl weiterer Informationen zur Verfügung: So biographische Daten zum Netzwerk der
+                            Personen, mit denen Weber in Kontakt stand, ferner Rezensionen publizierter Werke Webers
+                            und vor allem Besprechungen von Aufführungen seiner Werke (überwiegend zu Lebzeiten des
+                            Komponisten). Zum <em>Freischütz</em> sind dort gegenwärtig über 300 Besprechungen
+                            zugänglich. Diese Daten, die allesamt nach den Codierungsrichtlinien der TEI erfasst
+                            sind, stehen für das Projekt <em>Freischütz Digital</em> mit zur Verfügung und erweitern
+                            damit das Datenspektrum erheblich. Sämtliche Objekte dieser Website sind mit
+                            Identifieren (ID’s) versehen, so dass sie eindeutig referenzierbar sind. [Hier müsste
+                            noch etwas über die Anbindung stehen - deren Form ist aber offensichtlich noch nicht
+                            geklärt.]</p>
+                        
+                        <hr/>
+                        
+                        <h3 id="audio">5. Audio-Anteile</h3>
+                        <p>Bei der Konzeption des Projekts war von Anfang an vorgesehen, die Audio-Domäne mit in die
+                            Arbeiten einzubeziehen, zeigt sich doch allein schon in den inzwischen über 50
+                            existierenden Tonaufnahmen der Oper, dass hier ein ideales Feld für
+                            Interpretationsforschungen zu bestellen ist, das in Verbindung mit den online
+                            zugänglichen Notentexten neue Erkenntnisformen möglich macht. Da die Projektpartner von
+                            den Audio Laboratories in Erlangen über entsprechende Erfahrungen verfügten, wurde als
+                            eines der Ziele die Synchronisation von Notencodierung und Tonaufnahmen vereinbart.
+                            Dabei ging es weniger um die Synchronisation selbst als um die Entwicklung
+                            halbautomatischer Verfahren zur horizontalen Segmentierung von Audio-Daten. Die
+                            Ergebnisse der modellhaften Versuche – die wesentlich zur Verbesserung der
+                            Segmentierungsalgorithmen führten - sind in der Dokumentation beschrieben, da sie für
+                            den Endnutzer des Projekts nicht unmittelbar sichtbar sind. Der Nutzer profitiert jedoch
+                            von diesen Verfahren insofern als mit dem Werkzeug <em>Score follows Audio</em> eine
+                            Parallelisierung von Notenbild und Audioaufnahme und der Einstieg in jedem beliebigen
+                            Takt der Nummern möglich ist.</p>
+                        <p>Um Experimente mit der Segmentierung nicht nur in der horizontalen, sondern auch in der
+                            vertikalen Zusammensetzung des Klangs vornehmen zu können, wurden ausgewählte Nummern
+                            (Nr. 6, 8, 9) des <em>Freischütz</em> in Kooperation mit der Hochschule für Musik
+                            Detmold und dem Tonmeisterinstitut der Hochschule in einem komplexen Aufnahmeverfahren
+                            eingespielt (vgl. den Bericht unter xxx), bei dem sowohl eine Gesamtabmischung als auch
+                            die Einzelabnahme der Stimmgruppen und Solisten erfolgte. Mit diesen Einzelspuren
+                            standen damit Referenz-Daten für eine spektrale Segmentierung der Gesamtmischung zur
+                            Verfügung, die wiederum eine Optimierung entsprechender Alogrithmen erlaubten.
+                            Langfristig ist daran gedacht, diese Erfahrungen zu nutzen, um auch mit historischen
+                            Einspielungen in Richtung vertikaler Segmentierungen zu experimentieren - etwa um
+                            bestimmte Instrumente oder Stimmen in einer solchen Aufnahme in einer Weise
+                            hervorzuheben, die Interpretationsvergleiche erleichtert. Um die Ergebnisse der
+                            Segmentierung verdeutlichen zu können, wurde ein <em>Multitrack</em>-Demonstrator
+                            entwickelt, mit dem der Nutzer Einzelstimmen aus dem Gesamtklang filtern kann und sich
+                            die Berücksichtigung von Parametern wie Trennschärfe und Laufzeitverschiebung bei der
+                            Bearbeitung der Daten demonstrieren lässt (vgl. dazu xxx.)</p>
+                        <p>Die Aufnahme diente jedoch nicht allein den Erlanger Projektpartnern, sondern erlaubte im
+                            Vorfeld der Einstudierung eine Diskussion über die Berücksichtigung von Eigenheiten und
+                            Varianten des Partiturtextes bei der Einrichtung der Orchesterstimmen.
+                            Selbstverständlich konnten mit dem großen Orchesterapparat Interpretationsalternativen
+                            auf der Basis von Unsicherheiten des Notentextes nur in begrenztem Maße während der
+                            Proben ausprobiert werden, dennoch führte dies zu einer Reihe - wenn auch mit äußerster
+                            Vorsicht zu beurteilender - interessanter Erkenntnisse. Einige wenige ausgewählte
+                            Passagen werden daher in <em>Freischütz Digital</em> präsentiert (vgl. xxx). Es ist zu
+                            hoffen, dass die Arbeit, die hier nur für die ausgewählten Nummern geleistet werden
+                            konnte, Folgen für spätere Auseinandersetzung mit den Notentexten des Gesamtwerks
+                            hat.</p>
+                        <p>Von besonderer Bedeutung ist diese Einspielung auch dadurch, dass alle Beteiligten bereit
+                            waren, die Daten zu dieser Aufnahme unentgeltlich für zukünftige wissenschaftliche
+                            Forschungen zur Verfügung zu stellen.</p> Die Einbeziehung historischer Aufnahmen des
+                        Werks war im Kontext des Projekts nur in exemplarischer Form möglich: Dank der Unterstützung
+                        durch die Eigentümer der Tonträger konnten einige Einspielungen der Nummern 6, 8 und 9 zur
+                        Demonstration eines - noch sehr rudimentären - Werkzeugs zum Vergleich von Interpretationen
+                        genutzt werden. Es handelt sich im einzelnen um folgende Einspielungen: 
+                        <ul>
+                            <li>Otto Ackermann (1951 - voraussichtlich)</li>
+                            <li>Wilhelm Furtwängler (1954)</li>
+                            <li>Erich Kleiber (1955, komplett)</li>
+                            <li>Eugen Jochum (1959)</li>
+                            <li>Carlos Kleiber (1973)</li>
+                            <li>Marek Janowski (1994)</li>
+                            <li>hinzu kommt die Aufnahme der HfM Detmold unter Karl-Heinz Bloemeke (2014)</li>
+                        </ul>
+                        <p>Auch in diesem Falle ging es lediglich um eine exemplarische Demonstration neuer
+                            Möglichkeiten des Interpretationsvergleichs; weitere Audio-Aufnahmen (u.a. aus dem
+                            Archiv der Stimmen der SLUB Dresden) sind im Abschnitt zur Frage der Appoggiaturen (vgl.
+                            xxx) referenziert. [übrigens könnten wir dort rechtlich unbehelligt auch Ausschnitte aus
+                            "normalen" Aufnahmen bringen, da es nur "Kurzzitate" wären]</p>
+                        
+                        <hr/>
+                        
+                        <h3 id="technik">6. Technische Voraussetzungen</h3>
+                        
+                        <hr/>
+                        
+                        <h3 id="präsentationskonzept">7. Präsentationskonzept</h3>
                     </div>
-                    <div class="span12">
-                        <h3>Technische Voraussetzungen</h3>
-                    </div>
-                    <div class="span12">
-                        <h3>Präsentationskonzept</h3>
-                    </div>
-                    <div class="span12">
-                        <h2>Projektverlauf</h2>
-                    </div>
-                  
-                    <div class="span12">
-                        <h3>Organisation</h3>
-                    </div>
-                    <div class="span12">
-                        <h3>Verlauf</h3>
-                    </div>
-                    <div class="span12">
-                        <h3>Schwierigkeiten</h3>
-                    </div>
+                    
             </div>
             
         </div>
@@ -425,6 +540,7 @@
 <script src="scripts/bootstrap.js"></script>
 <script src="scripts/bootswatch.js"></script>
 <script src="scripts/main.js"></script>
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
 
 </body>
 </html>

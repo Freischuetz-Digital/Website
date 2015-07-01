@@ -31,12 +31,38 @@ code {
 	line-height: 15px;
 }
 
+.content {
+    width:400px;
+    background-color:#F2F2F2;
+    float: right;
+    margin-left:20px;
+    margin-bottom:20px;
+    padding:15px;
+}
+
 .navbar .brand small {
     font-size: 80%;
 }
 
 #navbar {
-    margin-bottom: 20px;
+    margin-bottom: 2px;
+}
+
+ol {
+    counter-reset: item;
+}
+
+ol > li {
+    counter-increment: item;
+}
+
+ol ol > li {
+    display: block;
+}
+
+ol ol > li:before {
+    content: counters(item, ".") ". ";
+    margin-left: -20px;
 }
 
 .subcontent .span5 {

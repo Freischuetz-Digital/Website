@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        <title>Freischütz Digital</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content=""/>
+        <meta name="author" content="Daniel Röwenstrunk"/>
+        
+        <link rel="stylesheet" href="styles/bootstrap.css"/>
+        <link rel="stylesheet" href="styles/bootstrap-responsive.css"/>
+        <link href="styles/bootswatch.css" rel="stylesheet"/>
+        <link href="styles/freidi.css" rel="stylesheet"/>
+        <link href="styles/ptsans.css" rel="stylesheet"/>
+        
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="pix/freidi_icon_144.png"/>
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="pix/freidi_icon_114.png"/>
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="pix/freidi_icon_72.png"/>
+        <link rel="apple-touch-icon-precomposed" href="pix/freidi_icon_57.png"/>
+        <link rel="shortcut icon" href="pix/freidi_favicon.png"/>
+    </head>
+    <body data-spy="scroll" data-target="#navbar" data-offset="30">
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="brand" href="index.html">Freischütz<br/>
+                        <small>Digital</small>
+                    </a>
+                    <ul class="nav">
+                        <li>
+                            <a href="index.html">Projekt</a>
+                        </li>
+                        <li>
+                            <a href="/edition/">Edition</a>
+                        </li>
+                        <li>
+                            <a href="demos.html">Demonstratoren</a>
+                        </li>
+                        <li>
+                            <a href="documentation-start.html">Dokumentation</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+            
+
+<div id="content" class="container">
+    
+    <div id="figure-top" class="figure visible-desktop">
+        <img style="height: 330px;" src="" alt=""/>
+    </div>
+
+    
+    
+    <section id="imprint">
+        <div class="page-header">
+            <h1>Dokumentation</h1>
+        </div>
+        
+        <header id="overview" class="jumbotron subhead">
+            <div class="row" style="min-height: 0;">
+                <div class="span8">
+                    <!--<img style="margin: 40px 0 0 3px;" src="pix/Logo_greenInset.png"/>-->
+                </div>
+                <div class="span4"> </div>
+            </div>
+            <div id="navbar" class="subnav">
+                <ul class="nav nav-pills">
+                    <li id="nav_docu">
+                        <a href="documentation-start.html">Projekt</a>
+                    </li>
+                    <li id="nav_music">
+                        <a href="documentation-music.html">Musik</a>
+                    </li>
+                    <li id="nav_text">
+                        <a href="documentation-text.html">Text</a>
+                    </li>
+                    <li id="nav_audio">
+                        <a href="documentation-audio.html">Audio</a>
+                    </li>
+                    <li id="nav_demos">
+                        <a href="documentation-demos.html">Demonstratoren</a>
+                    </li>
+                    <li id="nav_edition">
+                        <a href="documentation-edition.html">Edition</a>
+                    </li>
+                    <li id="nav_verlauf">
+                        <a href="documentation-verlauf.html">Verlauf</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="backlink" style="display:none;">
+                <a href="#" onclick="nav_back(); false;">zurück</a>
+            </div>
+        </header>
+
+        
+        <div class="row" style="margin-bottom: 50px;">
+            
+            <div class="docu-project">
+                <div class="span12">
+                    <div class="content">
+                        <h4>Content</h4>
+                        <ol type="1">
+                            <li><a href="#dynamic-score">Dynamic Score Rendering</a></li>
+                            <li><a href="#annots">Visualising Score Annotations</a></li>
+                            <li><a href="#text-stages">Genetic Text Stages</a></li>
+                            <li><a href="#text-annots">Visualising Text Annotations</a></li>
+                            <li><a href="#text-variance">Visualising Text Variance</a></li>
+                            <li><a href="#network">"The Freischütz Network"</a></li>
+                            <li><a href="#score-following">Score Following</a></li>
+                            <li><a href="#multitrack">Multitrack Data Set</a></li>
+                            <li><a href="#microphone">Single Microphone Switcher</a></li>
+                            <li><a href="#instrumental">Instrumental Equalizer</a></li>
+                            
+                            
+                            
+                        </ol>
+                    </div>
+                    
+                    
+                    <h3 id="dynamic-score">1. Dynamic Score Rendering</h3>
+                    
+                    <hr/>
+                    
+                    <h3 id="annots">2. Visualising Score Annotations</h3>
+                    
+                    <hr/>
+                    
+                    <h3 id="text-stages">3. Genetic Text Stages</h3>
+                    <p>Die Anzeige der Textschichten ist (nur in den handschriftlichen Textbüchern mit mehreren
+                        Textschichten!) vom jeweiligen geöffneten Quellenfenster abrufbar.<br />Der vorliegende
+                        Demonstrator zeigt die Textschichten-Anzeige am Bsp. von Webers Handexemplars (KA-tx4).
+                        Hier lassen sich fünf verschiedene Textschichten voneinander unterscheiden:</p>
+                    <ol>
+                        <li>Textschicht: = Abschrift des Dresdner Kopisten 1 (Juni 1817)</li>
+                        <li>Textschicht: = Abschrift des Dresdner Kopisten 1 mit Korrekturen von Weber (Juni 1817
+                        bis UA 1821)</li>
+                        <li>Textschicht: = Abschrift des Dresdner Kopisten 1 mit Korrekturen von Weber und
+                        Korrekturen von fremder Hand (vermutlich UA 1821)</li>
+                        <li>Textschicht: = Abschrift des Dresdner Kopisten 1 mit Korrekturen von Weber, anonymen
+                        Korrekturen und Korrekturen von Dresdner Kopist 2 (Anfang 1822)</li>
+                        <li>Textschicht: = Abschrift des Dresdner Kopisten 1 mit Korrekturen von Weber, anonymen
+                        Korrekturen, Korrekturen von Dresdner Kopist 2 und Ergänzungen von Jähns (September
+                        1878)</li>
+                    </ol>
+                    <p>Die einzelnen Textschichten bauen aufeinander auf, d. h. z. B. in die Textschicht des
+                        Kopist 2 gehören alle Weberschen und alle anonymen Eingriffe, weil diese früher zu
+                        datieren sind und von Kopist 2, so er sie nicht wieder rückgängig machte,
+                        stillschweigend übernommen wurden.</p>
+                    <p>Alle fünf Textschichten sind im Menü jeweils
+                        einzeln über die die entsprechende Auswahl abrufbar. Die einzeln anwählbaren
+                        Textschichten zeigen das Libretto in der jeweils ausgewählten Textfassung als
+                        diplomatische Fließtext-Übertragung in s/w, ohne Hinweise auf textgenetische
+                        Entwicklung.<br />Diese kann im Menü über die Auswahl „Genese des Textes mit allen
+                        Zwischenständen“ angezeigt werden. Dabei erscheinen die fünf verschiedenen Textschichten
+                        in einer Ansicht zusammengefasst.</p>
+                    <p>Korrekturvorgänge der einzelnen Schichten sind folgendermaßen gekennzeichnet:
+                        <br />Zeilen, in denen sich in einer Schicht Korrekturen befinden, werden farbig
+                        markiert, wobei entweder das vorgegebene Farbkonzept genutzt oder aber auch beliebig
+                        ausgewählte Farben für die einzelnen Textschichten verwendet werden können. Alle
+                        inhaltlich zusammengehörigen Korrekturvorgänge werden innerhalb eines Rahmens
+                        zusammengefasst. Die angezeigten, verschiedenen Textschichten sind ein- und ausblendbar
+                        (ein- und auszuklappen?)</p>
+                        <ol>
+                            <li>Textschicht: Abschrift von Kopist1 (weiß)</li>
+                            <li>Textschicht: Abschrift von Kopist1 mit Korrekturen Webers (grün)</li>
+                            <li>Textschicht: Abschrift Kopist1 mit Korrekturen Webers und anonymen Korrekturen (gelb)</li>
+                            <li>Textschicht: Abschrift Kopist1 mit Korrekturen Webers, anonymen Korrekturen und
+                        Korrekturen von Kopist2 (rot)</li>
+                            <li>Textschicht: Abschrift Kopist1 mit Korrekturen
+                        Weber, anonymen Korrekturen, Korrekturen von Kopist1 und Ergänzungen von Jähns
+                        (braun)</li>
+                        </ol>
+                    <p>In den farbig markierten Zeilen werden die konkreten Bestandteile der Korrektur in etwas
+                        dunklerem Ton der ausgewählten Textschichten-Farbe hervorgehoben.<br />Verläuft eine
+                        Korrektur über mehrere Zeilen, werden dementsprechende größere Abschnitte in der jeweils
+                        ausgewählten Farbe markiert. Der Zeilenumbruch wird dabei ignoriert.<br />Die einzelnen
+                        Korrekturvorgänge sind innerhalb des Rahmens mit Zusatzinformationen versehen. Am
+                        Zeilenanfang erfolgt die Angabe der jeweiligen Textschicht, ergänzt durch das Kürzel für
+                        die Art des Vorgangs (+ für Ergänzung, - für Streichung, -/+ für Ersetzung). Mittels
+                        Tooltip können bei Bedarf ausführlichere Erläuterungen zur Art und Weise sowie zur
+                        Platzierung des Korrekturvorgangs abgerufen werden (was wurde von wem wo
+                        korrigiert?).</p>
+                    
+                    <hr/>
+                    
+                    <h3 id="text-annots">4. Visualising Text Annotations</h3>
+                    <p>Dieser Demonstrator veranschaulicht die Anzeige von Varianzen und Annotationen, speziell
+                        aus dem Einzelquellenfenster heraus (Bsp. Webers Handexemplar KA-tx4)</p>
+                    <p>Sowohl die Kommentarformen als auch die Varianzanzeige lassen sich dabei über das Menü
+                        ein- und ausblenden und werden rechts neben der Textübertragung und (bei verschiedenen
+                        Kommentarformen eine Stelle betreffend) entsprechend nebeneinander angezeigt.</p>
+                    <p>Die Varianzanzeige referenziert auf die Einträge in den szenenweise aufgebauten
+                        Core-Dateien [vgl. Dokumentation: Codierung der Varianzen]. <br />An den entsprechenden
+                        Stellen mit Varianz erscheint das Varianz-Symbol (Icon: code-fork 90° gedreht). Bei
+                        Berührung des Varianzsymbols öffnet sich ein Tooltip mit dem entsprechenden
+                        Varianz-Eintrag der Core-Datei, bei Anklicken ein Kommentarfenster mit dem
+                        entsprechenden Varianz-Eintrag mit Quellensigle und Bild.</p>
+                    <p>In der Überschrift wird die Klassifikation des Varianz-Eintrages definiert. Dabei sind
+                        folgende Kategorien möglich: Weglassung, Ergänzung, Ersetzung, Schreibung oder
+                        Umstellung. <br />Innerhalb eines Eintrages sind aber auch Kombinationen der Kategorien
+                        möglich.</p>
+                    <p>In dem erscheinenden Textfenster werden alle die entsprechende Stelle betreffenden
+                        Varianzen in tabellarischer Form aufgelistet. Unter der Quellensigle erscheint die
+                        Textvariante der entsprechenden Quelle. Gleiche Lesarten sind dabei in Gruppen
+                        zusammengefasst. <br />Es besteht außerdem die Möglichkeit, die Apparat-Einträge der
+                        Core-Dateien in xml-Version einzublenden.</p>
+                    <p>An den entsprechenden Stellen mit Kommentaren erscheinen Kommentarsymbole. <br />Die
+                        Annotationen beinhalten verschiedene Kommentarformen mit unterschiedlicher Symbolik:</p>
+                    <p>1. Icon comment-o = Einzelquellenkommentar<br />Dieser Kommentar stammt aus der
+                        entsprechenden xml-Datei der Quelle und beschreibt einen Sachverhalt, der nur die
+                        Einzelquelle betrifft.</p>
+                    <p>2. Icon comments-o = quellenübergreifender Kommentar<br />Dieser Kommentar stammt aus der
+                        Kommentar-Datei [zum Aufbau der Kommentardatei, vgl. Dokumentation: Zusätzliche
+                        Kommentare und weiterführende Links zur WeGA] und kommentiert Sachverhalte, die mehrere
+                        bzw. alle Quellen betreffen. Unter der Erläuterung der jeweiligen Problematik sind die
+                        Quellen aufgeführt, auf die sich der Kommentar bezieht.</p>
+                    <p>Darüber hinaus gibt es noch Kommentare, die sich auf Inhalt der Homepage der
+                        Carl-Maria-von-Weber-Gesamtausgabe (WeGA) beziehen. Spezielle Kommentare, die auf
+                        Tagebuch-Einträge verweisen, sind über das Symbol (Icon Buch) anwählbar. Bei Klicken auf
+                        das Symbol wird direkt auf die Seite der WeGA weitergeleitet.</p>
+                    
+                    <hr/>
+                    
+                    <h3 id="text-variance">5. Visualising Text Variance</h3>
+                    <p>Die Varianz-Anzeige kann auch noch mit Hilfe der synoptischen Darstellung zweier
+                        verschiedener Quellen wahrgenommen werden. Dabei besteht die Möglichkeit, zwei beliebige
+                        (authentische bzw. autorisierte) Quellen auszuwählen und in einem Quellenfenster
+                        synoptisch anzuzeigen. Dies ist aus der Einzelquelle heraus über die Ansicht „Synopse
+                        mit anderen Quellen“ möglich bzw. über ein allgemeines „Synopse-Fenster“ innerhalb der
+                        Libretto-Edition. <br />Der Demonstrator zeigt dies am Bsp. der Gegenüberstellung von
+                        Webers Handexemplar (KA-tx4) und der 2. Auflage von Kinds Textbuch (D-tx2). Die beiden
+                        Texte werden nebeneinander strukturiert angeordnet, d. h. Szenenüberschrift neben
+                        Szenenüberschrift, speaker neben speaker, paragraph neben paragraph, line neben
+                        line...<br />Die Foliierung von KA-tx4 erscheint links neben dem Text, die Paginierung
+                        von D-tx2 rechts neben dem Text.<br />Die mittels Core-Dateien erfassten Varianzen und
+                        die Kommentare können hier ebenfalls ein- und ausgeblendet werden und erscheinen in der
+                        Mitte zwischen den beiden Texten in drei Spalten. Einzelquellenkommentare sind der
+                        Spalte der jeweiligen Quelle eingeordnet (hier KA-tx4 links, D-tx2 rechts),
+                        quellenübergreifende Kommentare und Varianz-Anzeige in der Mittelspalte.
+                        <br />Kommentare mit dem Icon (zwei Noten) beziehen sich auf „abweichenden Text in
+                        Webers Partitur-Autograph“.</p>
+                    
+                    <hr/>
+                    
+                    <h3 id="network">6. "The Freischütz Network"</h3>
+                    <h4>Zugang zum Demonstrator</h4>
+                    <ol>
+                        <li>Im Navigator<br /> Im Navigator (Inhaltsverzeichnis) der Präsentationsoberfläche
+                            <em>Edirom online</em> wird unter dem Menüpunkt "Demonstatoren" der Eintrag
+                            “Freischütz Network” aufgelistet; per Klick auf den Eintrag wird der Demonstrator
+                            aufgerufen.</li>
+                        <li>In den einzelnen Quellenfenster<br />In den einzelnen Quellenfenster der für das
+                            Beziehungsgeflecht ausgewählten Quellen – Webers Handexemplar (KA-tx4), Kind-Druck
+                            (D-tx2) und die Refrenztexte –  ein Menüpunkt [in der oberen Leiste?] implementiert;
+                            mit Aktivierung des Menüpunktes wird in jeweiligen Quellentext unter der Ansicht
+                            “Text” die Schlagworte (Namen und Begriffe) einblendet. Ein weiterer Klick auf einen
+                            ausgewählten Begriff oder Namen ermöglicht den Zugang zu dem Demonstartor (Topic
+                            Map).</li>
+                    </ol>
+                    <h4>Aufbau des Demonstrators</h4>
+                    <h5>Topics</h5> 
+                    <p>Die einzelnen Topics
+                    (Schlagworte) erscheinen in alphabetischer Reihenfolge am linken Rand und können individuell
+                    - mittels Mouseklick - aufgerufen werden. Das Feld des einzelnen Wortes ist dann farblich
+                    markiert, wenn es ausgewählt wurde. Ein Suchfeld oberhalb der Liste ermöglicht ferner die
+                    gezielte Suche nach einem Begriff bzw. Schlagwort.<br />Der einzelne ausgewählte
+                    Topic-Eintrag nennt rechts neber der Liste den Begriffsname bzw. das gesuchte Schlagwort. </p>
+                        <ul>
+                        <li>Varianten<br />Unterhalb des Suchbegriffes erscheinen zudem (im helleren Farbton)
+                            weitere in den Texten herangezogene Formen des Begriffes wie lexikalische Varianten,
+                            Synonyme oder verschiedene Wortbildungen (Komposition, Konversion, Derivation)
+                            werden aufgelistet; Meronyme (Teil-Ganzes-Beziehungen) als auch Paraphrasierungen
+                            der einzelnen Begriffe können in den Texten ebenso auftreten und werden hier ebenso
+                            berücksichtigt.</li>
+                        <li>Kategorisierungen<br />In der Klammer direkt an dem Topic anschließend wird die
+                            Kategorie genannt, der das Topic zugeordnet ist. Mehrfachzuweisungen von
+                            Schlagwörtern zu Kategorien sind möglich. Alle Namen und Begriffe lassen sich
+                            folgenden Kategorisierungen zuordnen: <br />• Schauplatz<br />• Aktion,
+                            Handlung<br />• (reale) Person<br />• Name<br />• Rolle / fiktive Person <br />•
+                            Rollenbeschreibung<br />• Kreatur / Wesen <br />• Gebrauchsgegenstand <br />•
+                            Eigenschaft<br />• Schicksal</li>
+                    </ul>
+                    <h5>Visualisierung des Beziehungsgeflechts (Graph)</h5>
+                    <p>Im Graph wird das Beziehungsgeflecht der Begriffe visualisiert. Das angewählte Topic
+                        steht dabei mittig angeordnet, weiteren Knoten, die direkt und in erster Instanz mit der
+                        Topic assoziiert sind, werden, per Relationslinien mit dem Topic verbunden, angezeigt;
+                        unterhalb des Graph kann ferner unter dem Drop down Menü <em>Node distance</em> weitere
+                        assoziierte Begriffe der zweiten Instanz (Assoziationen der Knoten) im Graph aufgerufen
+                        werden. Die Knoten der Assoziationen zweiten Grades erscheinen dann in einem blasseren
+                        Farbton (grau). Assoziationen auf weiteren Ebenen werden der Übersichtlichkeit wegen
+                        nicht angezeigt.</p>
+                    <p>Die einzelnen Knoten können individuell gezogen und neu positioniert werden; diese
+                        Funktion erlaubt es, dass die Knoten dann an dem gewünschten Ort, an dem sie gezogen,
+                        haften bleiben und der Benutzer dadurch eine auch individuelle Darstellung des
+                        Beziehungsgeflecht erreichen kann.<br />Mit Doppelklick auf einen weiteren beliebigen
+                        Knoten rückt dieser in den Mittelpunkt und alle dessen Assoziationen in erster und ggf.
+                        zweiter Instanz werden angezeigt.</p>
+                    <h5>Instanzen und Relationen</h5>
+                    <p>Rechts des Graphen werden zu einem die weiteren mit dem aufgerufenen Schlagwort
+                        assoziierten Topics als auch die vorkommenden Relationen aufgelistet. Per Klick auf
+                        einem Topic oder ein Relationstyp wird dieser im Graph blau markiert.</p>
+                    <p>Begriffe und Namen stehen in unterschiedlichen Verhältnissen zueinander. Die
+                        Relationlinien zeigen ihre Relationsart, die farblich hervorgehoben werden können. Es
+                        werden folgende Relationen unterschieden:</p>
+                    <h6>Relationstypen</h6>
+                    <p>personelle Relationen:</p>
+                    <blockquote>
+                        <p>verwandt mit <br />befreundet mit <br />zugeneigt zu</p>
+                    </blockquote>
+                    <p>partizipielle Relation:</p>
+                    <blockquote>
+                        <p>teil von</p>
+                    </blockquote>
+                    <p>Zugehörigkeit:</p>
+                    <blockquote>
+                        <p>zugehören zu</p>
+                    </blockquote>
+                    <p>instrumentelle Relation:</p>
+                    <blockquote>
+                        <p>verwendet für</p>
+                    </blockquote>
+                    <p>Ähnlichkeiten:</p>
+                    <blockquote>
+                        <p>gleich wie <br />vergleichbar mit<br />ist</p>
+                    </blockquote>
+                    <h5>Fundstellen</h5>
+                    <p>Unter “Fundstellen” werden alle Textquellen in chronologischer Anordnung aufgelistet, die
+                        das Schlagwort, seine Varianten oder Entsprechungen beinhalten. Die einzelne aufgeführte
+                        Textquelle zeigt in einer Dropdown-Liste die Ausschnitte aller Textstellen d.h. Zeilen,
+                        in denen der Begriff steht. Von dieser Vorschau der Textstellen aus ist es möglich, das
+                        entsprechende Quellenfenster zu öffnen und direkt an die Textstellen der Quelle zu
+                        gelangen.<br />Zu den einzelnen Topic-Eintragungen sind in einzelnen Fällen unter
+                        “Glossar“ spezifische Erklärungen und Kommentare verfasst. Sie erläutern den Volks- oder
+                        Aberglauben, der mit dem jeweiligen Begriff verbunden ist.</p>
+                    
+                    <hr/>
+                    
+                    <h3 id="score-following">7. Score Following</h3>
+                    
+                    <hr/>
+                    
+                    <h3 id="multitrack">8. Multitrack Data Set</h3>
+                    
+                    <hr/>
+                    
+                    <h3 id="microphone">9. Single Microphone Switcher</h3>
+                    
+                    <hr/>
+                    
+                    <h3 id="instrumental">10. Instrumental Equalizer</h3>
+                    
+            </div>
+            
+        </div>
+        </div>
+    </section>
+    
+    <div id="footer" style="padding-top: 5px; text-align: center; background-color: #EEEEEE; background-image: -moz-linear-gradient(center top , #F5F5F5 0%, #EEEEEE 100%);     background-repeat: repeat-x;     border: 1px solid #E5E5E5;     border-radius: 4px 4px 4px 4px;     height: 24px;     margin-bottom: 20px;     margin-top: 40px;     width: 100%;"><a style="margin-right: 6px;" href="imprint.html">Impressum</a> · <a style="margin-left: 8px;" href="contact.html">Kontakt</a></div>
+</div>
+
+
+<script src="scripts/jquery.min.js"></script>
+
+<script src="scripts/bootstrap.js"></script>
+<script src="scripts/bootswatch.js"></script>
+<script src="scripts/main.js"></script>
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+</body>
+</html>
