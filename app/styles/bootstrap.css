@@ -971,7 +971,7 @@ address {
 
 code,
 pre {
-  padding: 0 3px 2px;
+  padding: 3px 3px 2px;
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
   font-size: 13px;
   color: #434848;
@@ -981,7 +981,7 @@ pre {
 }
 
 code {
-  padding: 2px 4px;
+  padding: 10px;
   color: #d14;
   /*white-space: nowrap;*/
   background-color: #f7f7f9;

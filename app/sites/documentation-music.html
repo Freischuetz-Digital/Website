@@ -115,16 +115,17 @@
 						entsprechenden Quellen hergestellt:</p>
 					<pre class="prettyprint">
 						<code>
-	                        &lt;!-- Datei core.xml: --&gt;
-	                        &lt;app&gt;
-	                        &lt;rdg source="#A #KA1"&gt;
-	                        &lt;note pname="c"/&gt;
-	                        &lt;/rdg&gt;
-	                        &lt;rdg source="#KA2"&gt;
-	                        &lt;note pname="d"/&gt;
-	                        &lt;/rdg&gt;
-	                        &lt;/app&gt;
-	                        &lt;!-- Dieses stark vereinfachte Beispiel besagt, dass die Quellen A und KA1 eine Note "c" wiedergeben, während in Quelle KA2 ein "d" steht. --&gt;
+&lt;!-- Datei core.xml: --&gt;
+&lt;app&gt;
+    &lt;rdg source="#A #KA1"&gt;
+        &lt;note pname="c"/&gt;
+    &lt;/rdg&gt;
+    &lt;rdg source="#KA2"&gt;
+        &lt;note pname="d"/&gt;
+    &lt;/rdg&gt;
+&lt;/app&gt;
+&lt;!-- Dieses stark vereinfachte Beispiel besagt, dass die Quellen A und KA1 eine Note "c" wiedergeben, während in Quelle KA2 ein "d" steht. --&gt;
+
 	                    </code>
 					</pre>
 					<p>Um die so zu erfassenden Abweichungen zwischen den Quellen auf
@@ -141,14 +142,14 @@
 						dieses Konzept wie folgt verdeutlichen:</p>
 					<pre class="prettyprint">
 						<code>
-	                        &lt;!-- Datei core.xml: --&gt;
-	                        &lt;note xml:id="qwert" pname="c" oct="4" dur="4"/&gt;
+&lt;!-- Datei core.xml: --&gt;
+&lt;note xml:id="qwert" pname="c" oct="4" dur="4"/&gt;
 	                        
-	                        &lt;!-- Datei sourceA.xml: --&gt;
-	                        &lt;note xml:id="asdfg" sameas="core.xml#qwert" stem.dir="up"/&gt;
+&lt;!-- Datei sourceA.xml: --&gt;
+&lt;note xml:id="asdfg" sameas="core.xml#qwert" stem.dir="up"/&gt;
 	                        
-	                        &lt;!-- Datei sourceKA1.xml: --&gt;
-	                        &lt;note xml:id="yxcvb" sameas="core.xml#qwert" stem.dir="down"/&gt;
+&lt;!-- Datei sourceKA1.xml: --&gt;
+&lt;note xml:id="yxcvb" sameas="core.xml#qwert" stem.dir="down"/&gt;
 						</code>
                     </pre>
 					<p>In der Core-Datei wird die Note als "c" in der vierten Oktave (also im
@@ -170,18 +171,19 @@
 							in der Quellen-Datei mit angegeben)</strong></p>
 					<pre class="prettyprint">
 						<code>
-	                        &lt;!-- Datei source.xml: --&gt;
-	                        &lt;choice&gt;
-	                          &lt;orig&gt;
-	                            &lt;mRpt/&gt;
-	                          &lt;/orig&gt;
-	                          &lt;reg&gt;
-	                            &lt;note sameas="core.xml#…"/&gt;
-	                            &lt;note sameas="core.xml#…"/&gt;
-	                            &lt;note sameas="core.xml#…"/&gt;
-	                            &lt;note sameas="core.xml#…"/&gt;
-	                          &lt;/reg&gt;
-	                        &lt;/choice&gt;
+&lt;!-- Datei source.xml: --&gt;
+&lt;choice&gt;
+    &lt;orig&gt;
+        &lt;mRpt/&gt;
+    &lt;/orig&gt;
+    &lt;reg&gt;
+        &lt;note sameas="core.xml#…"/&gt;
+        &lt;note sameas="core.xml#…"/&gt;
+        &lt;note sameas="core.xml#…"/&gt;
+        &lt;note sameas="core.xml#…"/&gt;
+    &lt;/reg&gt;
+&lt;/choice&gt;
+
 						</code>
                     </pre>
 					<p>Die Codierung gibt an, dass in der Quelle ein Taktwiederholungszeichen steht,
@@ -190,24 +192,24 @@
 						Noten mit ihren Vorlagen verknüpft:</p>
 					<pre class="prettyprint">
 						<code>
-	                        &lt;!-- Datei core.xml, Takt n: --&gt;
-	                        &lt;note xml:id="c1" dur="1"/&gt;
-	                        
-	                        &lt;!-- Datei core.xml, Takt n+1: --&gt;
-	                        &lt;note xml:id="c2" dur="1"/&gt;
-	                        
-	                        &lt;!-- Datei source.xml, Takt n: --&gt;
-	                        &lt;note xml:id="n1" sameas="core.xml#c1/&gt;
-	                        
-	                        &lt;!-- Datei source.xml, Takt n+1: --&gt;
-	                        &lt;choice&gt;
-	                          &lt;orig&gt;
-	                            &lt;mRpt/&gt;
-	                          &lt;/orig&gt;
-	                          &lt;reg&gt;
-	                            &lt;note xml:id="n2" corresp="#n1" sameas="core.xml#c2"/&gt;
-	                          &lt;/reg&gt;
-	                        &lt;/choice&gt;
+&lt;!-- Datei core.xml, Takt n: --&gt;
+&lt;note xml:id="c1" dur="1"/&gt;
+
+&lt;!-- Datei core.xml, Takt n+1: --&gt;
+&lt;note xml:id="c2" dur="1"/&gt;
+
+&lt;!-- Datei source.xml, Takt n: --&gt;
+&lt;note xml:id="n1" sameas="core.xml#c1"/&gt;
+
+&lt;!-- Datei source.xml, Takt n+1: --&gt;
+&lt;choice&gt;
+    &lt;orig&gt;
+        &lt;mRpt/&gt;
+    &lt;/orig&gt;
+    &lt;reg&gt;
+        &lt;note xml:id="n2" corresp="#n1" sameas="core.xml#c2"/&gt;
+    &lt;/reg&gt;
+&lt;/choice&gt;
 						</code>
                     </pre>
 					<p>Damit zeigt sich, dass die Kombination von Kurzschreibweisen sowie Aufteilung
