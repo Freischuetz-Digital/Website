@@ -99,67 +99,1224 @@
                     <div class="content">
                         <h4>Content</h4>
                         <ol type="1">
-                            <li><a href="#vorbemerkung">Vorbemerkung</a></li>
-                            <li><a href="#aufnahmen">Aufnahmen des Freischütz'</a></li>
-                            <li><a href="#audio-annotation">Audio Annotation</a></li>
+                            <li><a href="#introduction">Introduction</a></li>
+                            <li><a href="#musicalsources">Musical Sources</a></li>
+                            <li><a href="#tracksegmentation">Track Segmentation</a></li>
+                            <li><a href="#musicsynchronization">Music Synchronization</a></li>
+                            <li><a href="#dialogue">Dialogue and Singing Voice Detection</a></li>
+                            <li><a href="#processing">Processing of Multitrack Recordings</a></li>
+                            <li><a href="#references">References</a></li>
                         </ol>
                     </div>
                     
                     
-                    <h3 id="vorbemerkung">1. Vorbemerkung</h3>
+                    <h3 id="introduction">Introduction</h3>
+<!--l. 126--><p class="noindent" >Significant digitization efforts have resulted in large music collections, which
+comprise music-related documents of various types and formats including text,
+symbolic data, audio, image, and video. For example, in the case of an opera,
+there typically exist digitized versions of the libretto, different editions of the
+musical score, as well as a large number of performances available as audio and
+video recordings. In the field of music information retrieval (MIR), great efforts
+are directed towards the development of technologies that allow users to access
+and explore music in all its different facets. For example, during playback of a CD
+recording, a digital music player may present the corresponding musical score
+while highlighting the current playback position within the score. On demand,
+additional information about the performance, the instrumentation, the
+melody, or other musical attributes may be automatically presented to
+the listener. A suitable user interface displays the musical score or the
+structure of the current piece of music, which allows the user to directly jump
+to any part within the recording without tedious fast-forwarding and
+rewinding.
+</p><!--l. 143--><p class="indent" >   The project &#8220;Freischütz Digital&#8221; offered an interdisciplinary platform for
+musicologists and computer scientists to jointly develop and introduce
+computer-based methods that enhance human involvement with music. The opera
+&#8220;Der Freischütz&#8221; by Carl Maria von Weber served as an example scenario. This
+work plays a central role in the Western music literature and is of high relevance
+for musicological studies. Also, this opera was chosen because of its rich body of
+available sources&#8212;including different versions of the musical score, the libretto,
+and audio recordings. One goal of the project was to explore techniques for
+establishing a virtual archive of relevant digitized objects, including symbolic
+representations of the autograph score and other musical sources (encoded in
+MEI<span class="footnote-mark"><a 
+href="2015_FreiDiDoku_Audio2.html#fn1x0"><sup class="textsuperscript">1</sup></a></span><a 
+ id="x1-1001f1"></a> ),
+transcriptions and facsimiles of libretti and other textual sources (encoded in
+TEI<span class="footnote-mark"><a 
+href="2015_FreiDiDoku_Audio3.html#fn2x0"><sup class="textsuperscript">2</sup></a></span><a 
+ id="x1-1002f2"></a> )
+as well as (multitrack) audio recordings of the opera. A more abstract goal within
+the Computational Humanities was to gain a better understanding of how
+                                                                          
+
+                                                                          
+automated methods may support the work of a musicologist beyond the
+development of tools for mere data digitization, restoration, management, and
+access.
+</p><!--l. 165--><p class="indent" >   While computer-aided music research relied in earlier times primarily on
+symbolic representations of the musical score, the focus of recent research efforts
+has shifted towards the processing and analysis of various types of music
+representations including text, audio, and video&#x00A0;<span class="cite">[<a 
+href="#XLiemMET11_NeedMIR_ACM-MM-MIRUM">14</a>,&#x00A0;<a 
+href="#XMuellerGS12_MultimodalMusicProcessing_DagstuhlFU">18</a>]</span>. One particular challenge
+of the project was to investigate how automated methods and computer-based
+interfaces may help to coordinate the multiple information sources. While our
+project partners focused on the encoding and processing of text- and score-based
+representations, our main objective was to research on ways that improve the
+access to audio-based material. To this end, we applied techniques from signal
+processing and information retrieval to automatically process the music
+recordings.
+</p><!--l. 177--><p class="indent" >   Having a specific focus on the audio domain, we report on our investigations,
+results, challenges, and experiences within the Freischütz project. Instead of
+discussing technical details, our goal is to give an intuitive introduction to the
+various audio processing tasks that have played an important role in the project.
+Furthermore, we highlight various challenges that arise when (even established)
+techniques are applied to real-world scenarios.
+</p><!--l. 217--><p class="indent" >   In the following, we first give an overview of the various types of data
+sources that played a role in the Freischütz project, where we have a
+particular focus on the audio material (Section&#x00A0;<a 
+href="#x1-20002">2<!--tex4ht:ref: sec:data --></a>). Then, we discuss various
+audio processing tasks including music segmentation (Section&#x00A0;<a 
+href="#x1-30003">3<!--tex4ht:ref: sec:seg --></a>), music
+synchronization (Section&#x00A0;<a 
+href="#x1-40004">4<!--tex4ht:ref: sec:sync --></a>), voice detection (Section&#x00A0;<a 
+href="#x1-50005">5<!--tex4ht:ref: sec:voice --></a>), and interference
+reduction in multitrack recordings (Section&#x00A0;<a 
+href="#x1-60006">6<!--tex4ht:ref: sec:multitrack --></a>). For each task, we explain the
+relation to the Freischütz project, describe the algorithmic approaches
+applied, discuss their benefits and limitations, and summarize the main
+experimental results. Parts of this article are based on the authors&#8217; publications
+<span class="cite">[<a 
+href="#XDittmarLPMW15_SingingVoice_ISMIR">3</a>,&#x00A0;<a 
+href="#XDittmarPM15_SingingVoice_DAGA">4</a>,&#x00A0;<a 
+href="#XMuellerPBV13_FreischuetzDigital_WIAMIS">20</a>,&#x00A0;<a 
+href="#XPraetzlichBLM15_KAMIR_ICASSP">22</a>,&#x00A0;<a 
+href="#XPraetzlichM13_ReferenceBasedSegmentation_ISMIR">23</a>,&#x00A0;<a 
+href="#XPraetzlichM14_AudioTrackSeg_ISMIR">24</a>,&#x00A0;<a 
+href="#XRoewenstrunkPBMSV15_WeberOper_DBSK">26</a>]</span>, which also contain further details and references to
+related work.
+</p>
+                    <h3 id="musicalsources"> Musical Sources</h3>
+<!--l. 249--><p class="noindent" >Music is complex and manifested in many different formats and modalities&#x00A0;<span class="cite">[<a 
+href="#XLiemMET11_NeedMIR_ACM-MM-MIRUM">14</a>,&#x00A0;<a 
+href="#XMuellerGS12_MultimodalMusicProcessing_DagstuhlFU">18</a>]</span>
+(see Figure&#x00A0;<a 
+href="#x1-20021">1<!--tex4ht:ref: figure:data --></a>). Taking the opera &#8220;Der Freischütz&#8221; as an example, we encounter a
+wide variety of multimedia representations, including <span 
+class="cmti-12">textual </span>representations in
+form of the libretto (text of the opera), <span 
+class="cmti-12">symbolic </span>representations (musical score),
+<span 
+class="cmti-12">acoustic </span>representations (audio recordings), and <span 
+class="cmti-12">visual </span>representations (video
+                                                                          
+
+                                                                          
+recordings). In the following, we give some background information on &#8220;Der
+Freischütz&#8221; while discussing how different music representations naturally
+appear in various formats and multiple versions in the context of this
+opera.
+</p><!--l. 262--><p class="indent" >   Composed by Carl Maria von Weber, &#8220;Der Freischütz&#8221; is a German romantic
+opera (premiere in 1821), which plays a key role in musicological and historical
+opera studies. The overture is followed by 16 numbers in the form of the German
+&#8220;Singspiel,&#8221; where the music is interspersed with spoken dialogues&#x00A0;<span class="cite">[<a 
+href="#XWarrack76_Weber_book">32</a>]</span>. This kind
+of modular structure allows an opera director for transposing, exchanging, and
+omitting individual numbers, which has led to many different versions and
+performances.
+</p><!--l. 271--><p class="indent" >   As for text-based documents, there are detailed accounts on Friedrich Kind&#8217;s
+libretto and its underlying plot, which is based on an old German folk legend
+(e.g., <span class="cite">[<a 
+href="#XSchreiter07_FreischuetzLibretto_book">29</a>]</span>). Since its premiere, the libretto has undergone many changes that were
+introduced by Kind, not to speak of individual changes made by opera
+directors. Furthermore, there are versions of the opera in other languages
+such as French, Russian, or Italian being based on translated versions of
+the libretto. Finally, there exists a rich body of literature on the opera&#8217;s
+reception.
+</p><!--l. 280--><p class="indent" >   On the side of the musical score, there exists a wide range of different sources
+for the opera. For example, variations have resulted from copying and editing the
+original autograph score. Changes were not only made by Weber himself, but
+also by copyists who added further performance instructions and other
+details to clarify Weber&#8217;s intention. A scholarly-critical edition of Weber&#8217;s
+work<span class="footnote-mark"><a 
+href="2015_FreiDiDoku_Audio4.html#fn3x0"><sup class="textsuperscript">3</sup></a></span><a 
+ id="x1-2001f3"></a> 
+keeps track and discusses these variations. The recent Music Encoding
+Initiative (MEI) aims at developing representations and tools to make such
+enriched score material digitally accessible. Furthermore, there are various
+derivatives and arrangements of the opera such as piano transcriptions (e. g., by
+Liszt) or composed variants of the originally spoken dialogues (e. g., by
+Berlioz).
+</p>
+   <hr class="figure" /><div class="figure" 
+>
+                                                                          
+
+                                                                          
+<a 
+ id="x1-20021"></a>
+                                                                          
+
+                                                                          
+
+<!--l. 294--><p class="noindent" ><img 
+src="pix/figure_data.png" alt="pict"  
+ />
+<br /> </p><div class="caption" 
+><span class="id">Figure&#x00A0;1: </span><span  
+class="content">Music-related information in multiple modalities illustrated by
+means of the opera &#8220;Der Freischütz&#8221; by Carl Maria von Weber.</span></div><!--tex4ht:label?: x1-20021 -->
+                                                                          
+
+                                                                          
+   </div><hr class="endfigure" />
+<!--l. 302--><p class="indent" >   As mentioned above, our main focus of this article is the audio domain. Also
+for this domain, the opera &#8220;Der Freischütz&#8221; offers a rich body of available
+sources including a large number of recorded performances by various
+orchestras and soloists. For example, the catalogue of the German National
+Library<span class="footnote-mark"><a 
+href="2015_FreiDiDoku_Audio5.html#fn4x0"><sup class="textsuperscript">4</sup></a></span><a 
+ id="x1-2003f4"></a> 
+lists 1200 entries for sound carriers containing at least one musical number of the
+opera. More than 42 complete recordings have been published and, surely, there
+still exist many more versions in matters of radio and TV broadcasts. The opera
+covers a wide range of musical material including arias, duets, trios, and
+instrumental pieces. Some of the melodic and harmonic material of the numbers is
+already introduced in the overture. Furthermore, there are numbers containing
+repetitions of musical parts or verses of songs. The various performances may
+reveal substantial differences not only because of the above mentioned variations
+in the score and libretto, but also because a conductor or producer may take the
+artistic freedom to deviate substantially from what is specified in the
+musical score. Besides differences in the number of played repetitions,
+further deviations include omissions of entire numbers as well as significant
+variations in the spoken dialogues. Apart from such structural deviations,
+audio recordings of the opera usually differ in their overall length, sound
+quality, language, and many other aspects. For example, the available
+recordings show a high variability in their duration, which can be explained by
+significant tempo differences and also by omissions of material. In particular
+historic recordings may be of poor acoustic quality due to noise, recording
+artifacts, or tuning issues (also partly resulting from the digitization process).
+Working out and understanding the variations and inconsistencies within
+and across the different sources was a major tasked we tackled in this
+project.
+</p>
+   <h3 class="sectionHead"><span class="titlemark">3   </span> <a 
+ id="x1-30003"></a>Track Segmentation</h3>
+<!--l. 339--><p class="noindent" >A first audio processing task that emerged in the Freischütz project concerns the
+automated segmentation of all available audio recordings of the opera in a
+consistent way. As said, the opera &#8220;Der Freischütz&#8221; is a number opera starting
+with an overture followed by 16 numbers, which are interspersed by spoken text
+(dialogues). When looking at the audio material that originates from CD
+                                                                          
+
+                                                                          
+recordings, the subdivision into CD tracks yields a natural segmentation of the
+recorded performances. In practice, however, the track segmentations turn out to
+be rather inconsistent. For example, for 23 different Freischütz recordings,
+Figure&#x00A0;<a 
+href="#x1-30012">2<!--tex4ht:ref: figure:audioSegmentation --></a>a shows the track segmentations, which vary between 17 and 41 CD
+tracks per version. In some recordings, each number of the opera was put into a
+separate CD track, whereas in others the numbers were divided into music and
+dialogue tracks, and sometimes the remaining music tracks were even further
+subdivided. In addition, the CD tracks are often poorly annotated; the metadata
+may be inconsistent, erroneous, or not available. For digitized material from old
+sound carriers (such as shellac, LP, or tape recordings), there may not even exist
+a meaningful segmentation of the audio material. In order to compare
+semantically corresponding parts in different versions of the opera, a consistent
+segmentation is needed. In the context of the Freischütz project, such a
+segmentation was a fundamental requirement for further analysis and
+processing steps such as the computation of linking structures across
+different musical sources, including sheet music and audio material (see
+Section&#x00A0;<a 
+href="#x1-40004">4<!--tex4ht:ref: sec:sync --></a>).
+</p>
+   <hr class="figure" /><div class="figure" 
+>
+                                                                          
+
+                                                                          
+<a 
+ id="x1-30012"></a>
+                                                                          
+
+                                                                          
+
+<!--l. 368--><p class="noindent" ><img 
+src="pix/figure_audioSegmentation.png" alt="pict"  
+ />
+<br /> </p><div class="caption" 
+><span class="id">Figure&#x00A0;2: </span><span  
+class="content">Segmentation of 23 different versions of &#8220;Der Freischütz&#8221; obtained
+from commercial CD recordings. <span 
+class="cmbx-12">(a) </span>Segmentation according to the original
+CD tracks. <span 
+class="cmbx-12">(b) </span>Segmentation according to a reference segmentation specified
+by a musicologist. The reference segmentation includes 38 musical sections
+as well as 16 spoken dialogue sections (gray). </span></div><!--tex4ht:label?: x1-30012 -->
+                                                                          
+
+                                                                          
+   </div><hr class="endfigure" />
+<!--l. 381--><p class="indent" >   In&#x00A0;<span class="cite">[<a 
+href="#XPraetzlichM13_ReferenceBasedSegmentation_ISMIR">23</a>]</span>, we presented a reference-based audio segmentation approach,
+which we now describe in more detail. In our scenario, we assumed that a
+musicologist may be interested in a specific segmentation of the opera. Therefore,
+as input of our algorithm, the user may specify a segmentation of the
+opera by manually annotating the desired segment boundaries within a
+musical score (or another music representation). This annotation is also
+referred to as <span 
+class="cmti-12">reference segmentation</span>. For example, in our experiments, a
+musicologist divided the opera into 38 musical segments and 16 dialogue
+segments&#8212;a segmentation that further refines the overture and the 16
+numbers of the opera. Our procedure aims at automatically transferring this
+reference segmentation onto all available recordings of the opera. The
+desired result of such a segmentation for 23 Freischütz versions is shown in
+Figure&#x00A0;<a 
+href="#x1-30012">2<!--tex4ht:ref: figure:audioSegmentation --></a>b.
+</p><!--l. 395--><p class="indent" >   As it turned out, the task is more complex as one may think at first
+glance due to significant acoustic and structural variations across the
+various recordings. As our main contributions in&#x00A0;<span class="cite">[<a 
+href="#XPraetzlichM13_ReferenceBasedSegmentation_ISMIR">23</a>]</span>, we applied and
+adjusted existing synchronization and matching procedures to realize an
+automated reference-based segmentation procedure. The second and even
+more important goal of our investigations was to highlight the benefits
+and limitations of automated procedures within a challenging real-world
+application scenario. As one main result, we presented an automated procedure
+that could achieve a segmentation accuracy of nearly 95% with regard
+to a suitable evaluation measure. Our approach showed a high degree
+of robustness to performance variations (tempo, instrumentation, etc.)
+and poor recording conditions. Among others, we discussed strategies for
+handling tuning deviations and structural inconsistencies. In particular, short
+segments proved to be problematic in the presence of structural and acoustic
+variations.
+</p>
+   <hr class="figure" /><div class="figure" 
+>
+                                                                          
+
+                                                                          
+<a 
+ id="x1-30023"></a>
+                                                                          
+
+                                                                          
+
+<!--l. 414--><p class="noindent" ><img 
+src="pix/figure_abridgedVersion.png" alt="pict"  
+ />
+<br /> </p><div class="caption" 
+><span class="id">Figure&#x00A0;3: </span><span  
+class="content"><span 
+class="cmbx-12">(a) </span>Visualization of relative lengths of the segments occuring
+in abridged versions compared to the reference version <span 
+class="cmtt-12">Kle1973</span>. Similar to
+Figure&#x00A0;<a 
+href="#x1-30012">2<!--tex4ht:ref: figure:audioSegmentation --></a>, the gray segments indicate dialogues, whereas the colored segments
+correspond to musical parts. <span 
+class="cmbx-12">(b) </span>Illustration of the frame-level segmentation
+pipeline for abridged versions. </span></div><!--tex4ht:label?: x1-30023 -->
+                                                                          
+
+                                                                          
+   </div><hr class="endfigure" />
+<!--l. 424--><p class="indent" >   Another major challenge that turned out in our investigations is the existence
+of arranged and abridged versions of the opera. In general, large-scale musical
+works may require a huge number of performing musicians. Therefore,
+such works have often been arranged for smaller ensembles or reduced for
+piano. Furthermore, performances of operas may have a duration of up
+to several hours. Weber&#8217;s opera &#8220;Der Freischütz,&#8221; for example, has an
+average duration of more than two hours. For such large-scale musical
+works, one often finds abridged versions. These versions usually present
+the most important material of a musical work in a strongly shortened
+and structurally modified form. Typically, these structural modifications
+include omissions of repetitions and other &#8220;non-essential&#8221; musical passages.
+Abridged versions were quite common in the early recording days due to
+duration constraints of the sound carriers. For example, the opera &#8220;Der
+Freischütz&#8221; would have filled 18 shellac discs. More recently, abridged
+versions or excerpts of a musical work can often be found as bonus tracks on
+CDs.
+</p><!--l. 439--><p class="indent" >   In our first approach&#x00A0;<span class="cite">[<a 
+href="#XPraetzlichM13_ReferenceBasedSegmentation_ISMIR">23</a>]</span> as described above, one main assumption was that a
+given reference segment either appears more or less in the same form in the
+unknown version or is omitted completely. In abridged versions of an opera,
+however, this assumption is often invalid. Such versions strongly deviate from
+the original by omitting material on different scales, ranging from the
+omission of several musical measures up to entire parts (see Figure&#x00A0;<a 
+href="#x1-30023">3<!--tex4ht:ref: figure:abridgedVersion --></a>a).
+For example, given a segment in a reference version, one may no longer
+find the start or ending sections of this segment in an unknown version,
+but only an intermediate section. In&#x00A0;<span class="cite">[<a 
+href="#XPraetzlichM14_AudioTrackSeg_ISMIR">24</a>]</span>, we addressed the problem of
+transferring a labeled reference segmentation onto an unknown version in the
+case of abridged versions. Instead of using a segment-based procedure
+as in&#x00A0;<span class="cite">[<a 
+href="#XPraetzlichM13_ReferenceBasedSegmentation_ISMIR">23</a>]</span>, we applied a more flexible frame-level matching procedure.
+Here, a frame refers to a short audio excerpt on which a suitable audio
+feature is derived. As illustrated by Figure&#x00A0;<a 
+href="#x1-30023">3<!--tex4ht:ref: figure:abridgedVersion --></a>b, the idea is to establish
+correspondences between frames of a reference version and frames of an
+unknown version. The labeled segment information of the reference version
+is then transferred to the unknown version only for frames for which a
+correspondence has been established. Such a frame-level procedure is more
+flexible than a segment-level procedure. However, on the downside, it is less
+robust. As a main contribution of&#x00A0;<span class="cite">[<a 
+href="#XPraetzlichM14_AudioTrackSeg_ISMIR">24</a>]</span>, we showed how to stabilize the
+robustness of the frame-level matching approach while preserving most of its
+flexibility.
+</p><!--l. 463--><p class="indent" >   In conclusion, our investigations showed that automated procedures
+may yield segmentation results with an accuracy of over 90%, even for
+                                                                          
+
+                                                                          
+versions with strong structural and acoustic variations. Still, for certain
+applications, segmentation errors in the order of 5% to 10% may not be
+acceptable. Here, we could demonstrate that automated procedures may still
+prove useful in semiautomatic approaches that also involve some manual
+intervention.
+</p>
+   <h3 class="sectionHead"><span class="titlemark">4   </span> <a 
+ id="x1-40004"></a>Music Synchronization</h3>
+<!--l. 486--><p class="noindent" >A central task in the Freischütz project was to link the different information
+sources such as a given musical score and the many available audio recordings by
+developing and adapting synchronization techniques. Generally speaking, the goal
+of music synchronization is to identify and establish links between semantically
+corresponding events that occur in different versions and representations
+<span class="cite">[<a 
+href="#XDammFTCKM12_DML_IJDL">2</a>,&#x00A0;<a 
+href="#XEwertMG09_HighResAudioSync_ICASSP">5</a>,&#x00A0;<a 
+href="#XFujiharaG12_LyricsAudio_DagstuhlFU">6</a>,&#x00A0;<a 
+href="#XHuDT03_audiomatching_WASPAA">9</a>,&#x00A0;<a 
+href="#XJoderER11_ConditionalRandomFieldSync_TASLP">10</a>]</span>. There are many different synchronization scenarios possible
+depending on the type and nature of the different data sources. For example, in
+the Freischütz project, there are different versions of the musical score and the
+libretto (both available as scans and symbolic encodings), as well as a
+multitude of audio recordings. In <span 
+class="cmti-12">SheetMusic&#8211;Audio synchronization</span>, the
+task is to link regions of a scanned image (given in pixel coordinates)
+to semantically corresponding time positions within an audio recording
+(specified on a physical time axis given in seconds). In <span 
+class="cmti-12">SymbolicScore&#8211;Audio</span>
+<span 
+class="cmti-12">synchronization</span>, the goal is to link time positions in a symbolic score
+representation (specified on a musical time axis given in measures) with
+corresponding time positions of an audio recording (see Figure&#x00A0;<a 
+href="#x1-40014">4<!--tex4ht:ref: fig:syncMeasures --></a>). Similarly, in
+<span 
+class="cmti-12">Audio&#8211;Audio synchronization</span>, the goal is to time align two different audio
+recordings of a piece of music.
+</p><!--l. 511--><p class="indent" >   Two versions of the same piece of music can be rather different. For example,
+directly comparing a representation of the musical score (that may be given as an
+XML file) with an audio recording (whose waveform is a sequence of numbers that
+encode air pressure changes) is hardly possible. In basically all synchronization
+scenarios, one first needs to transform the given versions into suitable mid-level
+feature representations that facilitate a direct comparison. The symbolic score, for
+example, is first transformed into a piano-roll like representation only
+retaining the notes&#8217; start times, durations, and pitches. Subsequently,
+all occurring pitches are further reduced to the twelve pitch classes (by
+ignoring octave information). As a result, one obtains a sequence of so-called
+<span 
+class="cmti-12">pitch class profiles </span>(often also called <span 
+class="cmti-12">chroma features</span>), indicating which
+pitch classes are active at a given point in time. Such features are well
+suited to characterize the melodic and harmonic progression of music.
+                                                                          
+
+                                                                          
+Similarly, an audio recording can be transformed into a sequence of chroma
+features by first transforming it into a time-frequency representation. From
+this representation, a chroma representation can be derived by grouping
+frequencies that belong to the same pitch class, see <span class="cite">[<a 
+href="#XGomez06_PhD">7</a>,&#x00A0;<a 
+href="#XMueller07_InformationRetrieval_SPRINGER">17</a>]</span> for details.
+After transforming both, the score and audio version, into chroma-based
+representations, the two resulting sequences can be directly compared
+using standard alignment techniques&#x00A0;<span class="cite">[<a 
+href="#XMueller07_InformationRetrieval_SPRINGER">17</a>]</span>. In the same fashion, one may
+also align two audio recordings of the same piece of music (Audio-Audio
+synchronization). Note that this is by far not trivial, since different music
+recordings may vary significantly with regard to tempo, tuning, dynamics, or
+instrumentation.
+</p>
+   <hr class="figure" /><div class="figure" 
+>
+                                                                          
+
+                                                                          
+<a 
+ id="x1-40014"></a>
+                                                                          
+
+                                                                          
+
+<!--l. 546--><p class="noindent" ><img 
+src="pix/figure_syncMeasure.png" alt="pict"  
+ />
+<br /> </p><div class="caption" 
+><span class="id">Figure&#x00A0;4: </span><span  
+class="content"> Measure-wise alignment between a sheet music representation and
+an audio recording. The links are indicated by the bidirectional red arrows. </span></div><!--tex4ht:label?: x1-40014 -->
+                                                                          
+
+                                                                          
+   </div><hr class="endfigure" />
+<!--l. 555--><p class="indent" >   Having established linking structures between musical score and available audio versions,
+one can listen to an audio recording while having the current position in the musical score
+highlighted.<span class="footnote-mark"><a 
+href="2015_FreiDiDoku_Audio6.html#fn5x0"><sup class="textsuperscript">5</sup></a></span><a 
+ id="x1-4002f5"></a> 
+Also, it is possible to use the score as an aid to navigate within an audio version
+and vice versa. Furthermore, one can use the alignment to seamlessly switch
+between different recordings, thus making it easier to compare different
+performances.
+</p><!--l. 568--><p class="indent" >   One particular challenge in the Freischütz project are structural variations as
+discussed in Section&#x00A0;<a 
+href="#x1-30003">3<!--tex4ht:ref: sec:seg --></a>. In the presence of such variations, the synchronization
+task may not even be well-defined. Our idea for synchronizing the different
+versions of &#8220;Der Freischütz&#8221; was to first use the segmentation techniques from
+Section&#x00A0;<a 
+href="#x1-30003">3<!--tex4ht:ref: sec:seg --></a> in order to identify semantically corresponding parts between the
+versions to be aligned. This reduces the synchronization problem into smaller
+subproblems, as only the semantically corresponding parts are synchronized in the
+subsequent step (instead of the whole opera recordings). Furthermore, since these
+parts usually have a duration of less then ten minutes, the synchronization
+procedure becomes computationally feasible even when being computed at a high
+temporal resolution.
+</p><!--l. 585--><p class="indent" >   In the case that a reliable prior segmentation is not available, one has to
+find strategies to compute the alignment even for entire recordings. For
+example, to synchronize two complete Freischütz recordings, one has to
+deal with roughly five hours of audio material, leading to computational
+challenges with regard to memory requirements and running time. As one
+technical contribution within the Freischütz project, we extended an existing
+multiscale alignment technique that uses an alignment on a coarse resolution
+to constrain an alignment on a finer grained resolution&#x00A0;<span class="cite">[<a 
+href="#XMuellerMK06_MsDTW_ISMIR">19</a>,&#x00A0;<a 
+href="#XSalvadorC04_fastDTW">27</a>]</span>. In our
+modified approach, we proceed in a block-by-block fashion, where an
+additional block size parameter is introduced to explicitly control the memory
+requirements. In our experiments, we found that a maximum block size of
+about eight megabytes is sufficient to yield the same alignment result as a
+synchronization algorithm without these restrictions. Similar to previously
+introduced multiscale alignment strategies, our novel procedure drastically
+reduces the memory requirements and runtimes. In contrast to the previous
+approach&#x00A0;<span class="cite">[<a 
+href="#XMuellerMK06_MsDTW_ISMIR">19</a>]</span>, our block-by-block processing strategy allows for an explicit
+control over the required memory while being easy to implement. Furthermore,
+the block-by-block processing allows for a parallel implementation of the
+                                                                          
+
+                                                                          
+procedure.
+</p><!--l. 620--><p class="indent" >   From a practical perspective, one challenge in the Freischütz project was the
+handling of the many different formats used to encode symbolic music
+representations. In view of the alignment task, as mentioned above, we needed to
+convert the score representation into a piano-roll like representation which can
+easily be derived from a MIDI file. In the project, the encoding of the score
+representations started with the creation of scores in the commercial music
+notation software &#8220;Finale.&#8221; The proprietary file format was then exported into
+MusicXML, which is a more universal format for storing music files and sharing
+them between different music notation applications. To account for the
+needs of critical music editions, the score files were further converted into
+the MEI format which was also chosen to exchange score data within
+the project. Being a rather new format, only a small number of tools
+were available for generating, editing, and processing MEI documents.
+Governed by the limited availability of conversion tools, we exported the
+MEI files into a JSON representation, which could then be converted
+into a MIDI representation. Only at the end of the project, we realized
+that the MIDI export could have been directly obtained by conversion
+from the original Finale files. From this &#8220;detour&#8221; we have learned the
+lesson that there is no format that serves equally well for all purposes.
+Moreover, the decision for a common file format should be made under careful
+consideration of the availability and maturity of editing and processing
+tools.
+</p><!--l. 654--><p class="indent" >   Even though such experiences are sometimes frustrating, we are convinced
+that the exploration of novel formats as well as the adaption and development of
+suitable tools has been one major scientific contribution of the Freischütz
+project.
+</p>
+   <h3 class="sectionHead"><span class="titlemark">5   </span> <a 
+ id="x1-50005"></a>Dialogue and Singing Voice Detection</h3>
+   <hr class="figure" /><div class="figure" 
+>
+                                                                          
+
+                                                                          
+<a 
+ id="x1-50015"></a>
+                                                                          
+
+                                                                          
+
+<!--l. 725--><p class="noindent" ><img 
+src="pix/figure_voiceStructure.png" alt="pict"  
+ />
+<br />  </p><div class="caption" 
+><span class="id">Figure&#x00A0;5:  </span><span  
+class="content">Different  representations  of  the  song  &#8220;Hier  im  ird&#8217;schen
+Jammerthal&#8221; (No.&#x00A0;4) of &#8220;Der Freischütz.&#8221; <span 
+class="cmbx-12">(a)</span>&#x00A0;Score representation. In this
+song,  after  an  intro  (red),  the  repeated  verses  (yellow)  are  interleaved
+with  spoken  dialogues  (blue).  According  to  the  score,  there  are  three
+verses.  <span 
+class="cmbx-12">(b)</span>&#x00A0;Waveform  of  a  recorded  performance  conducted  by  Carlos
+Kleiber. The performance follows the structure specified by the above score.
+<span 
+class="cmbx-12">(c)</span>&#x00A0;Waveform of a recorded performance conducted by Otto Ackermann.
+In this performance, the structure deviates from the score by omitting the
+second dialogue and the third verse as well as by drastically shortening the
+final dialogue.  </span></div><!--tex4ht:label?: x1-50015 -->
+                                                                          
+
+                                                                          
+   </div><hr class="endfigure" />
+<!--l. 740--><p class="indent" >   As explained in Section&#x00A0;<a 
+href="#x1-20002">2<!--tex4ht:ref: sec:data --></a>, the opera &#8220;Der Freischütz&#8221; consists of musical
+numbers that are interspersed with dialogues. These spoken dialogues constitute
+an important part of the opera as they convey the story line. In view of the
+segmentation and synchronization tasks, knowing the dialogue sections of an
+opera&#8217;s recording are important cues. This is illustrated by Figure&#x00A0;<a 
+href="#x1-50015">5<!--tex4ht:ref: figure:voiceStructure --></a>, which
+shows various representations of the song &#8220;Hier im ird&#8217;schen Jammerthal&#8221;
+(No.&#x00A0;4). This song consists of an intro (only orchestra) and three verses
+with different lyrics, but with the same underlying music (notated as
+repetitions). After each verse, there is a dialogue section. While it is trivial to
+identify the dialogue sections and the musical structure in a sheet music
+representation of the song (Figure&#x00A0;<a 
+href="#x1-50015">5<!--tex4ht:ref: figure:voiceStructure --></a>a), this becomes a much harder problem when
+considering audio recordings of a performance. While the Kleiber recording
+(Figure&#x00A0;<a 
+href="#x1-50015">5<!--tex4ht:ref: figure:voiceStructure --></a>b) follows the structure as specified in the score, there are omissions in
+the Ackermann recording (Figure&#x00A0;<a 
+href="#x1-50015">5<!--tex4ht:ref: figure:voiceStructure --></a>c). Knowing the dialogue sections,
+these structural differences between the two recordings can be understood
+immediately.
+</p><!--l. 761--><p class="indent" >   In audio signal processing, the task of discriminating between speech
+and music signals is a well-studied problem&#x00A0;<span class="cite">[<a 
+href="#XSaunders96_SpeechMusicDiscrimination_ICASSP">28</a>,&#x00A0;<a 
+href="#XSonnleitnerNW12_SpeechDetection_DAFX">30</a>]</span>. Most procedures
+for speech/music discrimination use machine learning techniques that
+automatically learn a model from example inputs (i.e., audio material
+labeled as speech and audio material labeled as music) in order to make
+data-driven predictions or decisions for unknown audio material&#x00A0;<span class="cite">[<a 
+href="#XBishop06_PatternRecognition_Book">1</a>]</span>. The task of
+speech/music discrimination is an important step for automated speech
+recognition and general multimedia applications. Within the Freischütz
+project, we have applied and adapted existing speech/music classification
+approaches to support our segmentation (Section&#x00A0;<a 
+href="#x1-30003">3<!--tex4ht:ref: sec:seg --></a>) and synchronization
+approaches (Section&#x00A0;<a 
+href="#x1-40004">4<!--tex4ht:ref: sec:sync --></a>). Within our opera scenario, it is beneficial to
+also consider additional classes that correspond to applause and passages
+of silence. Such extensions have also been discussed extensively in the
+literature&#x00A0;<span class="cite">[<a 
+href="#XPatsisV08_SpeechMusicGarbage_DEXA">21</a>]</span>.
+</p>
+   <hr class="figure" /><div class="figure" 
+>
+                                                                          
+
+                                                                          
+<a 
+ id="x1-50026"></a>
+                                                                          
+
+                                                                          
+
+<!--l. 781--><p class="noindent" ><img 
+src="pix/figure_singDetection.png" alt="pict"  
+ />
+<br /> </p><div class="caption" 
+><span class="id">Figure&#x00A0;6:  </span><span  
+class="content">  Illustration  of  the  singing  voice  detection  task.  <span 
+class="cmbx-12">(a)</span>&#x00A0;  Score
+representations  of  measures  7  to  12  of  the  song  &#8220;Wie  nahte  mir  der
+Schlummer&#8221;  (No.&#x00A0;8)  of  &#8220;Der  Freischütz.&#8221;  The  singing  voice  sections
+are  highlighted  in  light  red.  <span 
+class="cmbx-12">(b)</span>&#x00A0;Waveform  of  a  recorded  performance.
+<span 
+class="cmbx-12">(c)</span>&#x00A0;Decision function (black curve) of an automated classifier. The function
+should assume large values (close to one) for time points with singing voice
+and small values (close to zero) otherwise. The final decision is derived from
+the curve by using a suitable threshold (dashed horizontal line). The bottom
+of  the  pix  shows  the  classification  result  of  the  automated  procedure
+(black) and the manually annotated segments (light red). </span></div><!--tex4ht:label?: x1-50026 -->
+                                                                          
+
+                                                                          
+   </div><hr class="endfigure" />
+<!--l. 800--><p class="indent" >   A classification task related to speech/music discrimination is referred to
+<span 
+class="cmti-12">singing voice detection</span>, where the objective is to automatically segment a given
+music recording into vocal (where one or more singers are active) and non-vocal
+(only accompaniment or silence) sections&#x00A0;<span class="cite">[<a 
+href="#XLehnerWS14_SingingVoice_ICASSP">13</a>,&#x00A0;<a 
+href="#XMauchFYG11_VocalDetect_ISMIR">16</a>,&#x00A0;<a 
+href="#XRamonaRD08_VocalDetect_ICASSP">25</a>]</span>. Due to the huge variety of
+singing voice characteristics as well as the simultaneous presence of other pitched
+musical instruments in the accompaniment, singing voice detection is generally
+considered a much harder problem than speech/music discrimination. For
+example, the singing voice may reveal complex temporal-spectral patterns, e.g., as
+a result of vibrato (frequency and amplitude modulations). Also, singing often
+exhibits a high dynamic range such as soft passages in a lullaby sung in
+pianissimo or dramatic passages sung by some heroic tenor. Furthermore,
+many other instruments with similar acoustic characteristics may interfere
+with the singing voice. This happens especially when the melody lines
+played by orchestral instruments are similar to the ones of the singing
+voice.
+</p><!--l. 821--><p class="indent" >   Technically similar to speech/music discrimination, most approaches for
+singing voice detection build upon extracting a set of suitable audio features
+and subsequently applying machine learning in the classification stage,
+see&#x00A0;<span class="cite">[<a 
+href="#XLehnerWS14_SingingVoice_ICASSP">13</a>,&#x00A0;<a 
+href="#XMauchFYG11_VocalDetect_ISMIR">16</a>,&#x00A0;<a 
+href="#XRamonaRD08_VocalDetect_ICASSP">25</a>]</span>. These approaches need extensive training material that reflects
+the acoustic variance of the classes to be learned. In particular, we used a
+state-of-the-art singing voice detection system that was originally introduced
+in&#x00A0;<span class="cite">[<a 
+href="#XLehnerWS14_SingingVoice_ICASSP">13</a>]</span>. This approach employs a classification scheme known as random forests to
+derive a time-dependent decision function (see Figure&#x00A0;<a 
+href="#x1-50026">6<!--tex4ht:ref: figure:singDetection --></a>c). The idea is that the
+decision function should assume large values close to one for time points with
+singing voice (vocal class) and small values close to zero otherwise (non-vocal
+class). In order to binarize the decision function, it is compared to a suitable
+threshold: Only time instances where the decision function exceeds the threshold
+are classified as vocal.
+</p><!--l. 843--><p class="indent" >   In particular for popular music, annotated datasets for training and evaluation
+of singing voice detection algorithms are publicly available&#x00A0;<span class="cite">[<a 
+href="#XRamonaRD08_VocalDetect_ICASSP">25</a>]</span>. In the context of
+the Freischütz project, we looked at the singing voice detection problem for the
+case of classical opera recordings. Not surprising, first experiments showed
+that a straightforward application of previous approaches (trained on
+popular music) typically lead to poor classification results when directly
+applied to classical music. In&#x00A0;<span class="cite">[<a 
+href="#XDittmarLPMW15_SingingVoice_ISMIR">3</a>,&#x00A0;<a 
+href="#XDittmarPM15_SingingVoice_DAGA">4</a>]</span>, we proposed various modifications of
+the system described in&#x00A0;<span class="cite">[<a 
+href="#XLehnerWS14_SingingVoice_ICASSP">13</a>]</span>. As one contribution, we proposed novel
+audio features that extend a feature set previously used for popular music
+recordings. Then, we described a bootstrapping procedure that helps to
+improve the results in the case that the training data does not match the
+unknown audio material to be classified. The main idea is to start with a
+                                                                          
+
+                                                                          
+classifier based on some initial training data set to compute a first decision
+function. Then, the audio frames that correspond to the largest values of this
+function are used to re-train the classifier. Our experiments showed that this
+adaptive classifier yields significant improvements for the singing voice
+detection task. As a final contribution, we showed that a cross-version
+approach, where one exploits the availability of different recordings of
+the same piece of music, can help to stabilize the detection results even
+further.
+                                                                          
+
+                                                                          
+                                                                          
+
+                                                                          
+</p>
+   <h3 class="sectionHead"><span class="titlemark">6   </span> <a 
+ id="x1-60006"></a>Processing of Multitrack Recordings</h3>
+<!--l. 878--><p class="noindent" >In the Freischütz project, a professional recording of No.&#x00A0;6 (duet), No.&#x00A0;8
+(aria), No.&#x00A0;9 (trio) of &#8220;Der Freischütz&#8221; was produced in cooperation with
+Tonmeister students from the Erich-Thienhaus-Institute (ETI) in Detmold.
+The main purpose for the recording sessions was to produce royalty free
+audio material that can be used for demonstration and testing purposes.
+Furthermore, it was a great opportunity for us to learn about recording
+techniques and production processes. The generated audio material contains
+multitrack recordings of the raw microphone signals (one audio track for each
+microphone) as well as stereo mixes of specific instrument sections and a
+professionally produced stereo mix of the whole orchestra. Additionally,
+several variants of the musical score that are relevant for the scholarly
+edition were recorded to illustrate how these variants sound in an actual
+performance&#x00A0;<span class="cite">[<a 
+href="#XKepperSV14_Freischuetz_EDITIO">11</a>]</span>.<span class="footnote-mark"><a 
+href="2015_FreiDiDoku_Audio7.html#fn6x0"><sup class="textsuperscript">6</sup></a></span><a 
+ id="x1-6001f6"></a> 
+</p><hr class="figure" /><div class="figure" 
+>
+                                                                          
+
+                                                                          
+<a 
+ id="x1-60027"></a>
+                                                                          
+
+                                                                          
+
+<!--l. 900--><p class="noindent" ><img 
+src="pix/figure_orchestra.png" alt="pict"  
+ />  <img 
+src="pix/figure_ochestraMics.png" alt="pict"  
+ />
+<br /> </p><div class="caption" 
+><span class="id">Figure&#x00A0;7: </span><span  
+class="content"> Recording setup used in the Freischütz project. <span 
+class="cmbx-12">(a) </span>Seating plan
+(German/European  style).  <span 
+class="cmbx-12">(b) </span>Setup  of  the  25  microphones  used  in  the
+recordings, involving two main microphones for recording a stereo image and
+at least one spot microphone for each instrument section. For each string
+section, a spot microphone at the front (Nf) and at the rear (Nr) position was
+used. Additionally, clip microphones (C) were used for principal musicians of
+the string sections. </span></div><!--tex4ht:label?: x1-60027 -->
+                                                                          
+
+                                                                          
+   </div><hr class="endfigure" />
+<!--l. 916--><p class="indent" >   Orchestra recordings typically involve a huge number of musicians and
+different instruments. Figure&#x00A0;<a 
+href="#x1-60027">7<!--tex4ht:ref: figure:orchestra --></a>a shows the orchestra&#8217;s seating plan, which
+indicates where each voice (instrument section or singer) was positioned in the
+room. The seating plan also reflects the number of musicians that were
+playing in each instrument section. Overall, 44 musicians were involved
+in the recording session. For large-scale ensembles such as orchestras,
+interaction between the musicians is very important. For example, each
+instrument section has a principal musician who leads the other musicians of
+the section. To make this interaction possible, the different voices are
+usually recorded in the same room simultaneously. Figure&#x00A0;<a 
+href="#x1-60027">7<!--tex4ht:ref: figure:orchestra --></a>b shows the
+microphones used for the different voices and their relative position in the
+room.<span class="footnote-mark"><a 
+href="2015_FreiDiDoku_Audio8.html#fn7x0"><sup class="textsuperscript">7</sup></a></span><a 
+ id="x1-6003f7"></a> 
+Two main microphones were used for recording a stereo image of the sound in the
+room. For capturing the sound of individual voices, at least one additional spot
+microphone was positioned close to each voice. For some of the instrument
+sections, additional spot microphones were used, see Figure&#x00A0;<a 
+href="#x1-60027">7<!--tex4ht:ref: figure:orchestra --></a>b. The first violin
+section, for example, was recorded with three microphones: one at the front
+position, one at the rear position, and a clip microphone attached to the
+principal musician&#8217;s instrument. The audio tracks recorded by the spot
+microphones allow a sound engineer to balance out the volume of the
+different voices in the mixing process. Usually, a voice is captured by
+its spot microphones before it arrives at the main microphones which
+are positioned further away. Therefore, it is important to compensate
+for different runtimes by delaying the spot microphones such that their
+signals are synchronized to the main microphones. This avoids unwanted
+reverberation or artifacts (caused by phase interference) in the mixing process.
+Furthermore, individual equalizers are applied to each of the microphones
+to suppress frequencies that are outside of the range of their associated
+voice.
+</p><!--l. 961--><p class="indent" >   In such a recording setup, a piece of music is usually recorded in several takes.
+A take refers to a preliminary recording of a section, that typically covers
+a few musical measures up to the whole piece. An audio engineer then
+merges the best combination of takes for the final production. This is
+done by fading from one take into another at suitable positions in the
+audio tracks. The merged takes are then used to produce a stereo
+                                                                          
+
+                                                                          
+mixture.<span class="footnote-mark"><a 
+href="2015_FreiDiDoku_Audio9.html#fn8x0"><sup class="textsuperscript">8</sup></a></span><a 
+ id="x1-6004f8"></a> 
+In our case, additional stereo mixes that emphasize different aspects of the piece
+of music were produced. First, a stereo mixture including all voices and
+microphones was produced. This is the kind of mixture one usually finds in
+professionally produced CD recordings. For demonstration purposes, additional
+stereo mixtures were produced for each individual voice (see Figure&#x00A0;<a 
+href="#x1-60027">7<!--tex4ht:ref: figure:orchestra --></a>a), as well as
+for instrument groups including the woodwinds (bassoon, flute, clarinet,
+oboe), the strings (violin 1, violin 2, viola, cello, double bass), and the
+singers.
+</p><!--l. 987--><p class="indent" >   In a typical professional setup, the recording room is equipped with
+sound absorbing materials and acoustic shields to isolate all the voices
+as much as possible. However, complete acoustic isolation between the
+voices is often not possible. In practice and as depicted in Figure&#x00A0;<a 
+href="#x1-60058">8<!--tex4ht:ref: figure:bleedingReduction --></a>a, each
+microphone not only records sound from its dedicated voice, but also from all
+others in the room. This results in recordings that do not feature isolated
+signals, but rather mixtures of a predominant voice with all others being
+audible through what is referred to as <span 
+class="cmti-12">interference</span>, <span 
+class="cmti-12">bleeding</span>, <span 
+class="cmti-12">crosstalk</span>, or
+<span 
+class="cmti-12">leakage</span>. Such interferences are annoying in practice for several reasons.
+First, interferences greatly reduce the mixing possibilities for a sound
+engineer, and second, they prevent the removal or isolation of a voice from
+the recording, which may be desirable, e.g.&#x00A0;for pedagogical reasons or
+&#8220;music minus one&#8221; applications (mixtures where a particular voice has been
+removed). An important question thus arises: is it possible to reduce or
+remove these interferences to get clean, isolated voice signals? Interference
+Reduction is closely related to the problem of audio source separation, in
+which the objective is to separate a sound mixture into its constituent
+components&#x00A0;<span class="cite">[<a 
+href="#XVincentBGB14_SourceSep_IEEE-SPM">31</a>]</span>. Audio source separation in general is a very difficult problem
+where performance is highly dependent on the signals considered. However, recent
+studies demonstrate that separation methods can be very effective if prior
+information about the signals is available (see e.g.&#x00A0;<span class="cite">[<a 
+href="#XLiutkusDDR13_InformedSourceSep_WIAMIS">15</a>]</span> and references therein).
+</p><hr class="figure" /><div class="figure" 
+>
+                                                                          
+
+                                                                          
+<a 
+ id="x1-60058"></a>
+                                                                          
+
+                                                                          
+
+<!--l. 1004--><p class="noindent" ><img 
+src="pix/figure_bleedingReduction.png" alt="pict"  
+ />
+<br /> </p><div class="caption" 
+><span class="id">Figure&#x00A0;8: </span><span  
+class="content"> <span 
+class="cmbx-12">(a) </span>Illustration of interference problem in a recording with three
+voices (violin section, bass, singing voice). A solid line (red) indicates that a
+voice is associated to a microphone, a dashed line (gray) indicates interference
+from another voice into a microphone. Each voice is associated with at least
+one  of  the  microphone  channels.  <span 
+class="cmbx-12">(b) </span>Interference  reduced  version  of  the
+singing voice signal.</span></div><!--tex4ht:label?: x1-60058 -->
+                                                                          
+
+                                                                          
+   </div><hr class="endfigure" />
+<!--l. 1015--><p class="indent" >   In&#x00A0;<span class="cite">[<a 
+href="#XPraetzlichBLM15_KAMIR_ICASSP">22</a>]</span>, we presented a method that aims to reduce inferences in multitrack
+recordings to recover only the isolated voices. In our approach, similar to <span class="cite">[<a 
+href="#XKokkinisRM12_MultiChannelLeakageSuppression_IEEE-TASLP">12</a>]</span>, we
+exploit the fact that each voice can be assumed to be predominant in its dedicated
+microphones. Our method iteratively estimates both the time-frequency
+content of each voice and the corresponding strength in each microphone
+signal. With this information, we build a filter that strongly reduces the
+interferences. Figure&#x00A0;<a 
+href="#x1-60058">8<!--tex4ht:ref: figure:bleedingReduction --></a>b shows an example of an interference reduced version of
+the singing voice signal from Figure&#x00A0;<a 
+href="#x1-60058">8<!--tex4ht:ref: figure:bleedingReduction --></a>a. Especially in the middle of the
+corresponding waveforms, it is easy to spot differences. In this region,
+there was no singing voice in the recording. Hence, the recorded signal in
+this region originated entirely from interference of other instrumental
+voices.
+</p><!--l. 1031--><p class="indent" >   In the Freischütz project, we processed the multitrack
+recordings of the opera to reduce the interferences in the spot
+microphones.<span class="footnote-mark"><a 
+href="2015_FreiDiDoku_Audio10.html#fn9x0"><sup class="textsuperscript">9</sup></a></span><a 
+ id="x1-6006f9"></a> 
+Although the effectiveness of our method has been shown in listening tests, such
+processings still go along with artifacts that are audible when listening to each
+interference reduced microphone signal separately. Nevertheless, when using the
+signals in a mixture, these artifacts are usually not audible as long as not too
+many voices are drastically lowered or raised in volume. This makes the method
+applicable in tools like an instrument equalizer where the volume of each voice can
+be changed separately without affecting the volume of other voices. For example,
+when studying a specific melody line of the violins and the flutes, an instrument
+equalizer enables a user to raise the volume for these two voices and to lower it for
+the others.
+</p>
+   <h3 class="likesectionHead"><a 
+ id="x1-70006"></a>References</h3>
+<!--l. 1--><p class="noindent" >
+     </p><div class="thebibliography">
+     <p class="bibitem" ><span class="biblabel">
+  [1]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XBishop06_PatternRecognition_Book"></a>Christopher&#x00A0;M. Bishop.  <span 
+class="cmti-12">Pattern recognition and machine learning</span>.
+     Springer, New York, 2006.
+     </p>
+                                                                          
+
+                                                                          
+     <p class="bibitem" ><span class="biblabel">
+  [2]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XDammFTCKM12_DML_IJDL"></a>David   Damm,   Christian   Fremerey,   Verena   Thomas,   Michael
+     Clausen, Frank Kurth, and Meinard Müller. A digital library framework
+     for  heterogeneous  music  collections:  from  document  acquisition  to
+     cross-modal  interaction.   <span 
+class="cmti-12">International  Journal  on  Digital  Libraries:</span>
+     <span 
+class="cmti-12">Special Issue on Music Digital Libraries</span>, 12(2-3):53&#8211;71, 2012.
+     </p>
+     <p class="bibitem" ><span class="biblabel">
+  [3]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XDittmarLPMW15_SingingVoice_ISMIR"></a>Christian Dittmar, Bernhard Lehner, Thomas Prätzlich, Meinard
+     Müller, and Gerhard Widmer.  Cross-version singing voice detection in
+     classical opera recordings.  In <span 
+class="cmti-12">Proceedings of the International Society</span>
+     <span 
+class="cmti-12">for Music Information Retrieval Conference (ISMIR)</span>, Malaga, Spain,
+     October 2015.
+     </p>
+     <p class="bibitem" ><span class="biblabel">
+  [4]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XDittmarPM15_SingingVoice_DAGA"></a>Christian Dittmar, Thomas Prätzlich, and Meinard Müller. Towards
+     cross-version singing voice detection. In <span 
+class="cmti-12">Proceedings of the Jahrestagung</span>
+     <span 
+class="cmti-12">f</span><span 
+class="cmti-12">ür Akustik (DAGA)</span>, Nuremberg, Germany, March 2015.
+     </p>
+     <p class="bibitem" ><span class="biblabel">
+  [5]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XEwertMG09_HighResAudioSync_ICASSP"></a>Sebastian  Ewert,  Meinard  Müller,  and  Peter  Grosche.     High
+     resolution  audio  synchronization  using  chroma  onset  features.    In
+     <span 
+class="cmti-12">Proceedings of the IEEE International Conference on Acoustics, Speech,</span>
+     <span 
+class="cmti-12">and  Signal  Processing  (ICASSP)</span>,  pages  1869&#8211;1872,  Taipei,  Taiwan,
+     2009.
+     </p>
+     <p class="bibitem" ><span class="biblabel">
+  [6]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XFujiharaG12_LyricsAudio_DagstuhlFU"></a>Hiromasa Fujihara and Masataka Goto.  Lyrics-to-audio alignment
+     and  its  application.      In  Meinard  Müller,  Masataka  Goto,  and
+     Markus  Schedl,  editors,  <span 
+class="cmti-12">Multimodal  Music  Processing</span>,  volume&#x00A0;3  of
+     <span 
+class="cmti-12">Dagstuhl Follow-Ups</span>, pages 23&#8211;36. Schloss Dagstuhl&#8211;Leibniz-Zentrum
+     für Informatik, Dagstuhl, Germany, 2012.
+     </p>
+     <p class="bibitem" ><span class="biblabel">
+  [7]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XGomez06_PhD"></a>Emilia Gómez.   <span 
+class="cmti-12">Tonal Description of Music Audio Signals</span>.   PhD
+     thesis, UPF Barcelona, 2006.
+                                                                          
+
+                                                                          
+     </p>
+     <p class="bibitem" ><span class="biblabel">
+  [8]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XHankinsonRF11_MEI_ISMIR"></a>Andrew Hankinson, Perry Roland, and Ichiro Fujinaga.  The music
+     encoding initiative as a document-encoding framework.  In <span 
+class="cmti-12">Proceedings</span>
+     <span 
+class="cmti-12">of the International Society for Music Information Retrieval Conference</span>
+     <span 
+class="cmti-12">(ISMIR)</span>, pages 293&#8211;298, Miami, Florida, USA, 2011.
+     </p>
+     <p class="bibitem" ><span class="biblabel">
+  [9]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XHuDT03_audiomatching_WASPAA"></a>Ning Hu, Roger&#x00A0;B. Dannenberg, and George Tzanetakis. Polyphonic
+     audio matching and alignment for music retrieval.  In <span 
+class="cmti-12">Proceedings of</span>
+     <span 
+class="cmti-12">the IEEE Workshop on Applications of Signal Processing to Audio and</span>
+     <span 
+class="cmti-12">Acoustics (WASPAA)</span>, New Paltz, NY, USA, 2003.
+     </p>
+     <p class="bibitem" ><span class="biblabel">
+ [10]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XJoderER11_ConditionalRandomFieldSync_TASLP"></a>Cyril Joder, Slim Essid, and Gaël Richard.  A conditional random
+     field  framework  for  robust  and  scalable  audio-to-score  matching.
+     <span 
+class="cmti-12">IEEE  Transactions  on  Audio,  Speech,  and  Language  Processing</span>,
+     19(8):2385&#8211;2397, 2011.
+     </p>
+     <p class="bibitem" ><span class="biblabel">
+ [11]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XKepperSV14_Freischuetz_EDITIO"></a>Johannes Kepper, Solveig Schreiter, and Joachim Veit.  Freischütz
+     analog oder digital&#8211;editionsformen im spannungsfeld von wissenschaft
+     und  praxis.    In  <span 
+class="cmti-12">Internationales  Jahrbuch  f</span><span 
+class="cmti-12">ür  Editionswissenschaft</span>,
+     volume&#x00A0;28, 2014.
+     </p>
+     <p class="bibitem" ><span class="biblabel">
+ [12]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XKokkinisRM12_MultiChannelLeakageSuppression_IEEE-TASLP"></a>Elias&#x00A0;K.  Kokkinis,  Joshua&#x00A0;D.  Reiss,  and  John  Mourjopoulos.
+     A   Wiener   filter   approach   to   microphone   leakage   reduction   in
+     close-microphone applications. <span 
+class="cmti-12">IEEE Transactions on Audio, Speech and</span>
+     <span 
+class="cmti-12">Language Processing</span>, 20(3):767&#8211;779, 2012.
+     </p>
+     <p class="bibitem" ><span class="biblabel">
+ [13]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XLehnerWS14_SingingVoice_ICASSP"></a>Bernhard Lehner, Gerhard Widmer, and Reinhard Sonnleitner. On
+     the reduction of false positives in singing voice detection. In <span 
+class="cmti-12">Proceedings</span>
+     <span 
+class="cmti-12">of the IEEE International Conference on Acoustics, Speech, and Signal</span>
+     <span 
+class="cmti-12">Processing (ICASSP)</span>, pages 7480&#8211;7484, Florence, Italy, 2014.
+                                                                          
+
+                                                                          
+     </p>
+     <p class="bibitem" ><span class="biblabel">
+ [14]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XLiemMET11_NeedMIR_ACM-MM-MIRUM"></a>Cynthia   C.&#x00A0;S.   Liem,   Meinard   Müller,   Douglas   Eck,   George
+     Tzanetakis, and Alan Hanjalic. The need for music information retrieval
+     with user-centered and multimodal strategies.   In <span 
+class="cmti-12">Proceedings of the</span>
+     <span 
+class="cmti-12">International  ACM  Workshop  on  Music  Information  Retrieval  with</span>
+     <span 
+class="cmti-12">User-centered and Multimodal Strategies (MIRUM)</span>, pages 1&#8211;6, 2011.
+     </p>
+     <p class="bibitem" ><span class="biblabel">
+ [15]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XLiutkusDDR13_InformedSourceSep_WIAMIS"></a>Antoine  Liutkus,  Jean-Louis  Durrieu,  Laurent  Daudet,  and  Gaël
+     Richard.    An  overview  of  informed  audio  source  separation.    In
+     <span 
+class="cmti-12">Proceedings of the International Workshop on Image and Audio Analysis</span>
+     <span 
+class="cmti-12">for Multimedia Interactive Services (WIAMIS)</span>, pages 1&#8211;4, Paris, France,
+     2013.
+     </p>
+     <p class="bibitem" ><span class="biblabel">
+ [16]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XMauchFYG11_VocalDetect_ISMIR"></a>Matthias  Mauch,  Hiromasa  Fujihara,  Kazuyoshii  Yoshii,  and
+     Masataka Goto. Timbre and melody features for the recognition of vocal
+     activity and instrumental solos in polyphonic music.  In <span 
+class="cmti-12">Proceedings of</span>
+     <span 
+class="cmti-12">the International Conference on Music Information Retrieval (ISMIR)</span>,
+     pages 233&#8211;238, Miami, Florida, USA, 2011.
+     </p>
+     <p class="bibitem" ><span class="biblabel">
+ [17]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XMueller07_InformationRetrieval_SPRINGER"></a>Meinard  Müller.    <span 
+class="cmti-12">Information  Retrieval  for  Music  and  Motion</span>.
+     Springer Verlag, 2007.
+     </p>
+     <p class="bibitem" ><span class="biblabel">
+ [18]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XMuellerGS12_MultimodalMusicProcessing_DagstuhlFU"></a>Meinard  Müller,  Masataka  Goto,  and  Markus  Schedl,  editors.
+     <span 
+class="cmti-12">Multimodal Music Processing</span>, volume&#x00A0;3 of <span 
+class="cmti-12">Dagstuhl Follow-Ups</span>. Schloss
+     Dagstuhl - Leibniz-Zentrum für Informatik, Germany, 2012.
+     </p>
+     <p class="bibitem" ><span class="biblabel">
+ [19]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XMuellerMK06_MsDTW_ISMIR"></a>Meinard Müller, Henning Mattes, and Frank Kurth.   An efficient
+     multiscale  approach  to  audio  synchronization.     In  <span 
+class="cmti-12">Proceedings  of</span>
+     <span 
+class="cmti-12">the International Society for Music Information Retrieval Conference</span>
+     <span 
+class="cmti-12">(ISMIR)</span>, pages 192&#8211;197, Victoria, Canada, 2006.
+                                                                          
+
+                                                                          
+     </p>
+     <p class="bibitem" ><span class="biblabel">
+ [20]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XMuellerPBV13_FreischuetzDigital_WIAMIS"></a>Meinard Müller, Thomas Prätzlich, Benjamin Bohl, and Joachim
+     Veit.   Freischütz  Digital:  a  multimodal  scenario  for  informed  music
+     processing. In <span 
+class="cmti-12">Proceedings of the International Workshop on Image and</span>
+     <span 
+class="cmti-12">Audio Analysis for Multimedia Interactive Services (WIAMIS)</span>, pages
+     1&#8211;4, Paris, France, 2013.
+     </p>
+     <p class="bibitem" ><span class="biblabel">
+ [21]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XPatsisV08_SpeechMusicGarbage_DEXA"></a>Yorgos            Patsis            and            Werner            Verhelst.
+     A speech/music/silence/garbage/ classifier for searching and indexing
+     broadcast news material. In <span 
+class="cmti-12">International Conference on Database and</span>
+     <span 
+class="cmti-12">Expert Systems Application (DEXA)</span>, pages 585&#8211;589, Turin, Italy, 2008.
+     </p>
+     <p class="bibitem" ><span class="biblabel">
+ [22]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XPraetzlichBLM15_KAMIR_ICASSP"></a>Thomas Prätzlich, Rachel Bittner, Antoine Liutkus, and Meinard
+     Müller.     Kernel  additive  modeling  for  interference  reduction  in
+     multi-channel   music   recordings.      In   <span 
+class="cmti-12">Proceedings  of  the  IEEE</span>
+     <span 
+class="cmti-12">International Conference on Acoustics, Speech, and Signal Processing</span>
+     <span 
+class="cmti-12">(ICASSP)</span>, 2015.
+     </p>
+     <p class="bibitem" ><span class="biblabel">
+ [23]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XPraetzlichM13_ReferenceBasedSegmentation_ISMIR"></a>Thomas Prätzlich and Meinard Müller.  Freischütz Digital: a case
+     study for reference-based audio segmentation of operas. In <span 
+class="cmti-12">Proceedings of</span>
+     <span 
+class="cmti-12">the International Conference on Music Information Retrieval (ISMIR)</span>,
+     pages 589&#8211;594, Curitiba, Brazil, 2013.
+     </p>
+     <p class="bibitem" ><span class="biblabel">
+ [24]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XPraetzlichM14_AudioTrackSeg_ISMIR"></a>Thomas   Prätzlich   and   Meinard   Müller.      Frame-level   audio
+     segmentation  for  abridged  musical  works.     In  <span 
+class="cmti-12">Proceedings  of  the</span>
+     <span 
+class="cmti-12">International  Society  for  Music  Information  Retrieval  Conference</span>
+     <span 
+class="cmti-12">(ISMIR)</span>, pages 307&#8211;312, Taipei, Taiwan, 2014.
+     </p>
+     <p class="bibitem" ><span class="biblabel">
+ [25]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XRamonaRD08_VocalDetect_ICASSP"></a>Mathieu  Ramona,  Gäel  Richard,  and  Bertrand  David.    Vocal
+                                                                          
+
+                                                                          
+     detection in music with support vector machines.   In <span 
+class="cmti-12">Proceedings of</span>
+     <span 
+class="cmti-12">the IEEE International Conference on Acoustics, Speech, and Signal</span>
+     <span 
+class="cmti-12">Processing (ICASSP)</span>, pages 1885&#8211;1888, Las Vegas, Nevada, USA, 2008.
+     </p>
+     <p class="bibitem" ><span class="biblabel">
+ [26]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XRoewenstrunkPBMSV15_WeberOper_DBSK"></a>Daniel             Röwenstrunk,             Thomas             Prätzlich,
+     Thomas Betzwieser, Meinard Müller, Gerd Szwillus, and Joachim Veit.
+     Das Gesamtkunstwerk Oper aus Datensicht &#8211; Aspekte des Umgangs mit
+     einer heterogenen Datenlage im BMBF-Projekt &#8220;Freischütz Digital&#8221;.
+     <span 
+class="cmti-12">Datenbank-Spektrum</span>, 15(1):65&#8211;72, 2015.
+     </p>
+     <p class="bibitem" ><span class="biblabel">
+ [27]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XSalvadorC04_fastDTW"></a>S.&#x00A0;Salvador and P.&#x00A0;Chan. FastDTW: Toward accurate dynamic time
+     warping in linear time and space. In <span 
+class="cmti-12">Proceedings of the KDD Workshop</span>
+     <span 
+class="cmti-12">on Mining Temporal and Sequential Data</span>, 2004.
+     </p>
+     <p class="bibitem" ><span class="biblabel">
+ [28]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XSaunders96_SpeechMusicDiscrimination_ICASSP"></a>John Saunders. Real-time discrimination of broadcast speech/music.
+     In  <span 
+class="cmti-12">Proceedings  of  the  IEEE  International  Conference  on  Acoustics,</span>
+     <span 
+class="cmti-12">Speech  and  Signal  Processing  (ICASSP)</span>,  volume&#x00A0;2,  pages  993&#8211;996.
+     IEEE, 1996.
+     </p>
+     <p class="bibitem" ><span class="biblabel">
+ [29]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XSchreiter07_FreischuetzLibretto_book"></a>Solveig Schreiter.  <span 
+class="cmti-12">Friedrich Kind &amp; Carl Maria von Weber - Der</span>
+     <span 
+class="cmti-12">Freisch</span><span 
+class="cmti-12">ütz. Kritische Textbuch-Edition</span>. Allitera Verlag, 2007.
+     </p>
+     <p class="bibitem" ><span class="biblabel">
+ [30]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XSonnleitnerNW12_SpeechDetection_DAFX"></a>Reinhard Sonnleitner, Bernhard Niedermayer, Gerhard Widmer, and
+     Jan Schlüter. A simple and effective spectral feature for speech detection
+     in mixed audio signals.  In <span 
+class="cmti-12">Proceedings of the International Conference</span>
+     <span 
+class="cmti-12">on Digital Audio Effects (DAFx)</span>, 2012.
+     </p>
+     <p class="bibitem" ><span class="biblabel">
+ [31]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XVincentBGB14_SourceSep_IEEE-SPM"></a>Emmanuel Vincent, Nancy Bertin, Rémi Gribonval, and Frédéric
+     Bimbot.  From blind to guided audio source separation: How models
+                                                                          
+
+                                                                          
+     and side information can improve the separation of sound. <span 
+class="cmti-12">IEEE Signal</span>
+     <span 
+class="cmti-12">Processing Magazine</span>, 31(3):107&#8211;115, 2014.
+     </p>
+     <p class="bibitem" ><span class="biblabel">
+ [32]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XWarrack76_Weber_book"></a>John Warrack. <span 
+class="cmti-12">Carl Maria von Weber</span>. Cambridge University Press,
+     1976.
                     
-                    <p>In der Auseinandersetzung mit Wierings <em>Multidimensional Model</em>, das im Sinne
-                        eines kritischen Archivs eine dichte Verknüpfung und Annotierung von Quellen
-                        unterschiedlicher medialer Ausprägung vorsieht, ist ein wichtiger Aspekt für
-                        <em>FreiDi</em> der erstmalige Einbezug von Audio-Daten in den Kontext einer
-                        <em>Digitalen Edition</em> (Detmold). Hierfür werden Algorithmen zur automatisierten
-                        Audiosegmentierung eingesetzt und entwickelt (Erlangen).<br />Dem Projekt liegen zum
-                        internen Gebrauch insgesamt XY veröffentlichte Tonaufnahmen vor. In den meisten Fällen
-                        handelt es sich dabei um Gesamtaufnahmen, vereinzelt jedoch auch um Kurzfassungen oder
-                        Auszüge. Ergänzt wird dieses Material von den im Rahmen von <em>FreiDi</em>
-                        angefertigten Tonaufnahmen der Nummern 6, 8 und 9, die, unter besonderer
-                        Berücksichtigung weiterführender Forschungsfragen, neben einer herkömmlichen
-                        Stereo-Mischung, auch in Sumbixen und als Einzelspuren von Instrumentengruppen und
-                        Einzelstimmen vorliegen (Für detaillierte Informationen zur Einspielung
-                        siehe auch: <a class="external"
-                            href="http://www.freischuetz-digital.de/audio-recording-2013.html"
-                            >http://www.freischuetz-digital.de/audio-recording-2013.html</a> Für einen Bericht
-                        zu deren Fertigstellung siehe auch: <a class="external"
-                            href="http://www.freischuetz-digital.de/audio-production-2014.html"
-                            >http://www.freischuetz-digital.de/audio-production-2014.html</a>).</p>
-                    <h3 id="aufnahmen">2. Aufnahmen des Freischütz'</h3>
-                    <p>Die Audioufnahmen werden alle in WAV Dateien konvertiert. <br />Dabei ist es unerheblich,
-                        von was für einem Datenträger die Aufnahme stammt.<br />Bei den Aufnahmen ist davon
-                        auszugehen, dass sie nicht einheitlich segmentiert sind.<br />Daher ist muss eine
-                        einheitliche Segmentierung festgelegt werden, um die Aufnahmen vergleichen zu
-                        können.</p>
-                    <h4>Rip-Prozess</h4>
-                    <ul>
-                        <li>CD Aufnahmen wurden mit dem Programm <em>Exact Audio Copy (Vgl. <a class="external"
-                            href="http://www.exactaudiocopy.de">http://www.exactaudiocopy.de</a>)</em> gerippt.</li>
-                        <li>Metadaten zu den CD's (Künstler etc) und ursprüngliche Trackaufteilung werden in MEI
-                            kodiert.</li>
-                        <li>Zahl der aufbereiteten Aufnahmen: 23 Komplettaufnahmen und 5 Kurzversionen.</li>
-                        <li>Dialoge</li>
-                    </ul>
-                    <h3 id="audio-annotation">3. Audio Annotation (Erlangen)</h3>
-                    <p>Zu den Aufnahmen liegen die ursprüngliche und die neue Segmentierung vor.</p>
-                    <ul>
-                        <li>Synchronisation: Auf den vorsegmentierten Daten werden die Segmente verschiedener
-                            Aufnahmen und Notentextcodierungen miteinander verknüpft. Dazu kommen
-                            Synchronisationsverfahren zum Einsatz.</li>
-                    </ul>
-                    <ul>
-                        <li>Vertaktung: Um in den Audiodaten navigieren, Annotationen aus Notentexten zu
-                            übertragen 
-                            <ul>
-                                <li>automatisch: durch Synchronisationsverfahren</li>
-                                <li>manuell: Zur manuellen Vertaktung wird die Software Sonic Visualiser
-                                    verwendet (Vgl. <a class="external"
-                                        href="http://www.sonicvisualiser.org">http://www.sonicvisualiser.org</a>).</li>
-                            </ul>
-                        </li>
-                    </ul>
+                   
                     
                 </div>
             </div>
