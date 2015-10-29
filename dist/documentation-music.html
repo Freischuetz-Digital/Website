@@ -194,8 +194,7 @@
 						erfasst, d.h. es werden lokal auf die variante Stelle begrenzt die beiden
 						(ggf. auch mehr) alternativen Lesarten codiert und ein Bezug zu den
 						entsprechenden Quellen hergestellt:</p>
-					<pre class="prettyprint">
-<code>&lt;!-- Datei core.xml: --&gt;
+					<pre class="prettyprint"><code>&lt;!-- Datei core.xml: --&gt;
 &lt;app&gt;
     &lt;rdg source="#A #KA1"&gt;
         &lt;note pname="c"/&gt;
@@ -204,8 +203,7 @@
         &lt;note pname="d"/&gt;
     &lt;/rdg&gt;
 &lt;/app&gt;
-&lt;!-- Dieses stark vereinfachte Beispiel besagt, dass die Quellen A und KA1 eine Note "c" wiedergeben, während in Quelle KA2 ein "d" steht. --&gt;</code>
-					</pre>
+&lt;!-- Dieses stark vereinfachte Beispiel besagt, dass die Quellen A und KA1 eine Note "c" wiedergeben, während in Quelle KA2 ein "d" steht. --&gt;</code></pre>
 					<p>Um die so zu erfassenden Abweichungen zwischen den Quellen auf
 						aussagekräftige Unterschiede zu beschränken, werden in der Core-Datei
 						lediglich die wichtigsten Parameter des Notentextes erfasst. Damit ist
@@ -218,18 +216,14 @@
 						die entsprechende Stelle Core-Datei verzichtet. Am <strong>(JV:
 							einfachen)</strong> Beispiel der Richtung eines Notenhalses lässt sich
 						dieses Konzept wie folgt verdeutlichen:</p>
-					<pre class="prettyprint">
-						<code>
-&lt;!-- Datei core.xml: --&gt;
+					<pre class="prettyprint"><code>&lt;!-- Datei core.xml: --&gt;
 &lt;note xml:id="qwert" pname="c" oct="4" dur="4"/&gt;
 	                        
 &lt;!-- Datei sourceA.xml: --&gt;
 &lt;note xml:id="asdfg" sameas="core.xml#qwert" stem.dir="up"/&gt;
 	                        
 &lt;!-- Datei sourceKA1.xml: --&gt;
-&lt;note xml:id="yxcvb" sameas="core.xml#qwert" stem.dir="down"/&gt;
-						</code>
-                    </pre>
+&lt;note xml:id="yxcvb" sameas="core.xml#qwert" stem.dir="down"/&gt;</code></pre>
 					<p>In der Core-Datei wird die Note als "c" in der vierten Oktave (also im
 						deutschen ein eingestrichenes C, i.e. c') mit der Dauer einer Viertel
 						erfasst. Die Codierung der Quelle nimmt ausdrücklich Bezug auf diese Note
@@ -247,9 +241,7 @@
 						Abbreviaturen werden dann innerhalb der Quellen-Datei aufgelöst: <strong>(JV
 							besser?: werden dann zusätzlich in der aufgelösten Form als Alternative
 							in der Quellen-Datei mit angegeben)</strong></p>
-					<pre class="prettyprint">
-						<code>
-&lt;!-- Datei source.xml: --&gt;
+					<pre class="prettyprint"><code>&lt;!-- Datei source.xml: --&gt;
 &lt;choice&gt;
     &lt;orig&gt;
         &lt;mRpt/&gt;
@@ -260,17 +252,12 @@
         &lt;note sameas="core.xml#…"/&gt;
         &lt;note sameas="core.xml#…"/&gt;
     &lt;/reg&gt;
-&lt;/choice&gt;
-
-						</code>
-                    </pre>
+&lt;/choice&gt;</code></pre>
 					<p>Die Codierung gibt an, dass in der Quelle ein Taktwiederholungszeichen steht,
 						welches in vier Noten aufzulösen ist. Diese vier Noten werden dann wie
 						gehabt mit der Core-Datei verknüpft. Zusätzlich werden sämtliche aufgelösten
 						Noten mit ihren Vorlagen verknüpft:</p>
-					<pre class="prettyprint">
-						<code>
-&lt;!-- Datei core.xml, Takt n: --&gt;
+					<pre class="prettyprint"><code>&lt;!-- Datei core.xml, Takt n: --&gt;
 &lt;note xml:id="c1" dur="1"/&gt;
 
 &lt;!-- Datei core.xml, Takt n+1: --&gt;
@@ -287,9 +274,7 @@
     &lt;reg&gt;
         &lt;note xml:id="n2" corresp="#n1" sameas="core.xml#c2"/&gt;
     &lt;/reg&gt;
-&lt;/choice&gt;
-						</code>
-                    </pre>
+&lt;/choice&gt;</code></pre>
 					<p>Damit zeigt sich, dass die Kombination von Kurzschreibweisen sowie Aufteilung
 						von Core- und Quellen-Dateien bereits in einem solch trivialen Fall zu
 						erheblichem Markup mit einer Vielzahl von Querverweisen führt. Diese
@@ -527,9 +512,7 @@
 						Sachverhalte mit diesem als <em>control event</em> angelegten Element
 						erfasst werden können. Der einfache Fall einer Taktwiederholung wird damit
 						wie folgt beschrieben:</p>
-					<pre class="prettyprint"><code> 
-                        &lt;cpMark staff="5" tstamp="1" tstamp2="0m+4" ref.offset="-1m+1" ref.offset2="0m+4"&gt;//&lt;/cpMark&gt;
-              		</code></pre>
+					<pre class="prettyprint"><code>&lt;cpMark staff="5" tstamp="1" tstamp2="0m+4" ref.offset="-1m+1" ref.offset2="0m+4"&gt;//&lt;/cpMark&gt;</code></pre>
 					<p>Das @ref.offset-Attribut gibt hier an, wie weit nach vorne der zu kopierende
 						Ausschnitt zu finden ist (im vorhergehenden Takt = "-1m", dort auf Zählzeit
 						1 "+1"). Die Länge des zu kopierenden Abschnitts wird über das
@@ -538,9 +521,7 @@
 						kopierenden Abschnitts angegeben wird.</p>
 					<p>Colla-parte-Anweisungen werden mit dem gleichen Element, aber anderen
 						Attributen angegeben:</p>
-					<pre class="prettyprint"><code>
-                        &lt;cpMark staff="5" tstamp="1" tstamp2="0m+4" ref.staff="12" dis="8" dis.place="above"&gt;c.B.in 8va&lt;/cpMark&gt;
-                    </code></pre>
+					<pre class="prettyprint"><code>&lt;cpMark staff="5" tstamp="1" tstamp2="0m+4" ref.staff="12" dis="8" dis.place="above"&gt;c.B.in 8va&lt;/cpMark&gt;</code></pre>
 					<p>In dieser Codierung wird beschrieben, dass staff/@n=5 von Zählzeit 1 bis 4
 						nach oben oktaviert mit staff/@n=12 geführt werden soll. Die in den Quellen
 						vorgefundenen Kurzschreibweisen können dabei als Inhalt des
