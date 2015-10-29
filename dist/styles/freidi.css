@@ -40,6 +40,12 @@ code {
     padding:15px;
 }
 
+img {
+    vertical-align:central;
+    margin:auto;
+    
+}
+
 .navbar .brand small {
     font-size: 80%;
 }

@@ -46,12 +46,18 @@
             
 
 <div id="content" class="container">
-    
+
+    <div id="figure-top" class="figure visible-desktop">
+        <img style="height: 330px;" src="" alt=""/>
+    </div>
+
+
+
     <section id="imprint">
         <div class="page-header">
             <h1>Dokumentation</h1>
         </div>
-        
+
         <header id="overview" class="jumbotron subhead">
             <div class="row" style="min-height: 0;">
                 <div class="span8">
@@ -89,40 +95,63 @@
             </div>
         </header>
 
-        
+
         <div class="row" style="margin-bottom: 50px;">
-            
+
             <div class="docu-project">
                 <div class="span12">
+                    <!-- Hier ist das Inhaltsverzeichnis mit den Links zu den jeweiligen Stellen im Text -->
                     <div class="content">
                         <h4>Content</h4>
                         <ol type="1">
-                            <li><a href="#zusammenführung">Zusammenführung</a></li>
-                            <li><a href="#varianz">Varianz</a></li>
-                            <li><a href="#benutzerinteraktion">Benutzerinteraktion</a></li>
+                            <li><a href="#section1">Section 1</a></li>
+                            <li><a href="#section2">Section 2</a></li>
+                            <li><a href="#section3">Section 3</a></li>
+                            <ol>
+                                <li><a href="#subsection1">Subsection 1</a></li>
+                                <li><a href="#subsection2">Subsection 2</a></li>
+                            </ol>
+                            <li><a href="#section4">Section 4</a></li>
+                            <li><a href="#section5">Section 5</a></li>
+                            <li><a href="#section6">Section 6</a></li>
                         </ol>
                     </div>
+                    <!-- Hier beginnt der Fließtext -->
+                    <h3 id="section1">Section 1</h3>
+                    <p></p>
                     
-                    
-                    <h3 id="zusammenführung">1. Zusammenführung</h3>
+                    <!-- Vor einer neuen Sektion kommt immer ein horizontaler Strich -->
+                    <hr/>
+                    <h3 id="section2">Section 2</h3>
+                    <p></p>
                     
                     <hr/>
-                    
-                    <h3 id="varianz">2. Varianz</h3>
+                    <h3 id="section3">Section 3</h3>
+                    <h4 id="subsection1">Subsection 1</h4>
+                    <p></p>
+                    <h4 id="subsection2">Subsection 2</h4>
+                    <p></p>
                     
                     <hr/>
+                    <h3 id="section4">Section 4</h3>
+                    <p></p>
                     
-                    <h3 id="benutzerinteraktion">3. Benutzerinteraktion</h3>
+                    <hr/>
+                    <h3 id="section5">Section 5</h3>
+                    <p></p>
                     
+                    <hr/>
+                    <h3 id="section6">Section 6</h3>
+                    <p></p>
                 </div>
+
             </div>
-            
+
         </div>
     </section>
-    
+
     <div id="footer" style="padding-top: 5px; text-align: center; background-color: #EEEEEE; background-image: -moz-linear-gradient(center top , #F5F5F5 0%, #EEEEEE 100%);     background-repeat: repeat-x;     border: 1px solid #E5E5E5;     border-radius: 4px 4px 4px 4px;     height: 24px;     margin-bottom: 20px;     margin-top: 40px;     width: 100%;"><a style="margin-right: 6px;" href="imprint.html">Impressum</a> · <a style="margin-left: 8px;" href="contact.html">Kontakt</a></div>
 </div>
-
 
 <script src="scripts/jquery.min.js"></script>
 
