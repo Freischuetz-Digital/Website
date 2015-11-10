@@ -10,6 +10,9 @@ table {
 
 table, tr, td {
     border: 1px solid black;
+    padding: 4px;
+    margin-bottom: 15px;
+    margin-top: 15px;
 }
 
 code {
@@ -38,6 +41,12 @@ code {
     margin-left:20px;
     margin-bottom:20px;
     padding:15px;
+}
+
+img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;   
 }
 
 .navbar .brand small {
@@ -123,4 +132,17 @@ q:before{
 
 q:after{
     content:'«';
+}
+
+pre.prettyprint {
+    padding: 10px !important;
+}
+
+blockquote p {
+  font-size: 12px;
+  }
+  
+pre {
+  font-size: 12px;
+  line-height: 15px !important;
 }
