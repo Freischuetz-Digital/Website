@@ -2,6 +2,23 @@ body{
     padding-top:60px; /* 60px to make the container go all the way to the bottom of the topbar */
     font-family: "PT Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table, tr, td {
+    border: 1px solid black;
+    padding: 4px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+code {
+    background:white;
+    
+}
       
 .hero-unit {
 	padding: 30px !important;
@@ -17,12 +34,44 @@ body{
 	line-height: 15px;
 }
 
+.content {
+    width:400px;
+    background-color:#F2F2F2;
+    float: right;
+    margin-left:20px;
+    margin-bottom:20px;
+    padding:15px;
+}
+
+img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;   
+}
+
 .navbar .brand small {
     font-size: 80%;
 }
 
 #navbar {
-    margin-bottom: 20px;
+    margin-bottom: 2px;
+}
+
+ol {
+    counter-reset: item;
+}
+
+ol > li {
+    counter-increment: item;
+}
+
+ol ol > li {
+    display: block;
+}
+
+ol ol > li:before {
+    content: counters(item, ".") ". ";
+    margin-left: -20px;
 }
 
 .subcontent .span5 {
@@ -83,4 +132,17 @@ q:before{
 
 q:after{
     content:'«';
+}
+
+pre.prettyprint {
+    padding: 10px !important;
+}
+
+blockquote p {
+  font-size: 12px;
+  }
+  
+pre {
+  font-size: 12px;
+  line-height: 15px !important;
 }
