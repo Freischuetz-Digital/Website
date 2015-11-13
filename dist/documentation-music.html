@@ -148,7 +148,7 @@
 						Codierungen werden horizontal auf Taktebene bzw. vertikal für jedes einzelne
 						Notensystem mit den zugehörigen Faksimiles vernüpft, untereinander aber auf
 						Ebene des einzelnen Zeichens miteinander in Beziehung gesetzt. Dabei findet
-						keine Wertung <strong>(JV: findet zunächst keine Bewertung)</strong> der
+						findet keine Wertung der
 						Quellen statt, die zu einer unterschiedlichen Handhabung führen würde
 						– spätere Abschriften und Drucke werden in gleicher Tiefe erschlossen wie
 						Webers Autograph.</p>
@@ -161,14 +161,13 @@
 						verglichen werden? Hier bietet gerade der <em>Freischütz</em> interessante
 						Auswertungsmöglichkeiten, da von zwei Kopisten mehrere Abschriften
 						vorliegen, so dass Untersuchungen etwa zur Auflösung von Kurzschreibweisen
-						durch den Vergleich mehrerer Abschriften eines Kopisten neue Tiefe bekommen
-						können. <strong>(JV, besser: besonders komfortabel durchgeführt werden
-							können ?)</strong></p>
+						durch den Vergleich mehrerer Abschriften eines Kopisten besonders komfortabel durchgeführt werden
+							können und neue Erkenntnisse erwarten lassen.</p>
 					<p>Im Gegensatz zu herkömmlichen Editionskonzepten verzichtet Freischütz Digital
-						bewusst auf die Erstellung eines <strong>Edierten Textes</strong>.
-							<strong>(JV: , denn das eigentliche Ziel der Edition ist die
+						bewusst auf die Erstellung eines <strong>Edierten Textes</strong>, 
+							denn das eigentliche Ziel der Edition ist die
 							Dokumentation der Textentwicklung – auch jenseits der Kontrolle durch
-							dessen ursprünglichen Autor)</strong></p>
+							dessen ursprünglichen Autor.</p>
 
 					<hr/>
 
@@ -209,8 +208,8 @@
 						vorwiegend graphischen Aspekte des Notentextes beschrieben werden. Um eine
 						Dopplung der Informationen zu vermeiden, wird in diesen Dateien jedoch auf
 						die Codierung der substantiellen Informationen zugunsten eines Verweises auf
-						die entsprechende Stelle Core-Datei verzichtet. Am <strong>(JV:
-							einfachen)</strong> Beispiel der Richtung eines Notenhalses lässt sich
+						die entsprechende Stelle Core-Datei verzichtet. Am 
+							simplen Beispiel der Richtung eines Notenhalses lässt sich
 						dieses Konzept wie folgt verdeutlichen:</p>
 					<pre class="prettyprint"><code>&lt;!-- Datei core.xml: --&gt;
 &lt;note xml:id="qwert" pname="c" oct="4" dur="4"/&gt;
@@ -225,8 +224,8 @@
 						erfasst. Die Codierung der Quelle nimmt ausdrücklich Bezug auf diese Note
 						und ergänzt die Information, dass der Hals der Note nach oben (Quelle A)
 						bzw. unten (Quelle KA1) gerichtet ist. Damit wird deutlich, wie inhaltlich
-						unwichtigere Abweichungen in die Codierungen der Quellen ausgelagert werden
-							<strong>(JV: können)</strong>, ohne in der Core-Datei ein separates
+						unwichtigere Abweichungen in die Codierungen der Quellen ausgelagert 
+						werden können, ohne in der Core-Datei ein separates
 						&lt;app&gt; zu erfordern.</p>
 					<p>Für analytische Zwecke reichen die Informationen der Core-Datei i.d.R. aus,
 						für eine (annähernd) diplomatische Wiedergabe wird jedoch die Kombination
@@ -234,9 +233,8 @@
 						Kurzschreibweisen erfasst, d.h. es werden dort Taktwiederholungskürzel,
 						colla-parte-Anweisungen, Tremolo-Spielweisen und sonstige Faulenzer so
 						wiedergegeben, wie sie in der Quelle notiert sind. Diese individuellen
-						Abbreviaturen werden dann innerhalb der Quellen-Datei aufgelöst: <strong>(JV
-							besser?: werden dann zusätzlich in der aufgelösten Form als Alternative
-							in der Quellen-Datei mit angegeben)</strong></p>
+						Abbreviaturen werden dann zusätzlich in der aufgelösten Form als Alternative
+							in der Quellen-Datei mit angegeben:</p>
 					<pre class="prettyprint"><code>&lt;!-- Datei source.xml: --&gt;
 &lt;choice&gt;
     &lt;orig&gt;
@@ -274,9 +272,9 @@
 					<p>Damit zeigt sich, dass die Kombination von Kurzschreibweisen sowie Aufteilung
 						von Core- und Quellen-Dateien bereits in einem solch trivialen Fall zu
 						erheblichem Markup mit einer Vielzahl von Querverweisen führt. Diese
-							<em>Komplexität</em> bedingt sich <strong>(JV: entsteht aus?)</strong>
+							<em>Komplexität</em> entsteht aus 
 						aus den Anforderungen an die Codierung und ließe sich auch durch andere
-						Codierungskonzepte nicht <strong>(JV: nicht grundsätzlich? )</strong>
+						Codierungskonzepte nicht grundsätzlich 
 						ändern. Der wesentliche Vorteil des <em>Core</em>-Modells ist eine recht
 						saubere Trennung von "inhaltlichem Kern" der Quellen sowie der graphischen
 						Ausprägungen der einzelnen Quellen, die eine Identifizierung der inhaltlich
@@ -333,9 +331,8 @@
 					<p>Als Grundlage der Codierungen der Notentexte dienen im Fall des Freischütz
 						mit Finale erstellte MusicXML-Dateien, die in Kooperation mit der
 						Carl-Maria-von-Weber-Gesamtausgabe (WeGA) entstanden sind und dort als
-						Roh-Vorlage für die Arbeit am edierten Text der Ausgabe dienen <strong>(JV
-							als Klammer: (der edierte Texte der WeGA wird später mit dem Programm
-							Score erstellt)</strong>. Diese Dateien folgen im Wesentlichen Webers
+						Roh-Vorlage für die Arbeit am edierten Text der Ausgabe dienen (der edierte Texte der WeGA wird später mit dem Programm
+							Score erstellt). Diese Dateien folgen im Wesentlichen Webers
 						Autograph, lösen aber sämtliche Kurzschreibweisen auf und enthalten bereits
 						erste editorische Ergänzungen. Nach dem Export nach MusicXML werden sie mit
 						dem von Seiten der MusicXML-Community bereitgestellten XSLT von partwise
@@ -366,8 +363,7 @@
 						dann durch zwei weitere, nach Bedarf einzusetzende XSLTs
 							(<strong>recountMeasures.xsl</strong> und
 							<strong>moveCoreRefs.xsl</strong>) eine Konkordanz der Quellen auf
-						Taktebene sicherzustellen. Dabei besteht <strong>(JV: entsteht?)</strong>
-						diese Konkordanz zu diesem Zeitpunkt nur durch den Gebrauch der gleichen
+						Taktebene sicherzustellen. Dabei entsteht diese Konkordanz zu diesem Zeitpunkt nur durch den Gebrauch der gleichen
 						Taktzahlen.</p>
 					<h4>Include Music in Core</h4>
 					<p>In diesem Schritt werden die beiden bis dahin separaten Datengrundlagen – die
@@ -446,7 +442,7 @@
 					<h4>PMD PitchProof</h4>
 					<p>Für diesen Schritt wurde ein webbasiertes Werkzeug entworfen und umgesetzt,
 						welches im Wesentlichen zum Korrekturlesen von Tonhöhen und -dauern
-						eingesetzt wird. [@Anna: Gibt es hier nciht schon Texte, und vor allem auch
+						eingesetzt wird. [@Anna: Gibt es hier nicht schon Texte, und vor allem auch
 						Abbildungen?].</p>
 					<p>Am Ende dieses Arbeitsschrittes entsprechen die Codierungen hinsichtlich der
 						Noten, Pausen und "Leerstellen" den jeweiligen Quellen.</p>
