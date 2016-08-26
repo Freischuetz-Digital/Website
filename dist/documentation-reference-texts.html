@@ -131,9 +131,14 @@
 									<li>
 										<a href="#auswahl-intertexte">Auswahl der Referenzen</a>
 									</li>
-									<li>
+								</ol>
+									<ol>
+										<li>
 										<a href="#topicmap">Topic Map</a>
 									</li>
+										<li>
+											<a href="#aufbau_xtm">Zum Aufbau der <em>Freischütz Digital</em>-XTM</a>
+										</li>
 									<li>
 										<a href="#rezeptionsgeschichte">Rezeptionsgeschichte</a>
 									</li>
@@ -385,7 +390,7 @@
 						und deren Beziehung zueinander als auch intertextuell zwischen den
 						Librettotexten und ihren Referenzen umfassend definiert. (Zur
 						Visualisierung der Topic Map siehe auch <a href="/exist/apps/topicMapViz/index.html" target="_blank">"The Freischütz Network"</a>)</p>
-					<h4>2.1 Zum Aufbau der <em>Freischütz Digital</em>-XTM</h4>
+					<h4 id="aufbau_xtm">2.1 Zum Aufbau der <em>Freischütz Digital</em>-XTM</h4>
 					<h5>Topic</h5>
 					<p>Die einzelnen Namen und Begriffen werden als sog. Topics in der XTM
 						festgehalten. Der Topic-Eintrag erhält eine Identifikation (@id), nennt den
@@ -641,265 +646,9 @@
 						Bsp. für "Ahnenbild" in Presse: A031341, A030957, A030456, A030323, A030275, A030798, A030125; für Briefe und TB könnte man "Wolfsschlucht" nehmen -->
 					<hr/>
 					<h3 id="codierungsrichtlinien">3. Codierungsrichtlinien</h3>
-					<h4>Vorbemerkungen</h4>
-						<p>Zu den Codierungsrichtlinien vgl. <a type="internal" href="documentation-libretti.html#codierungsrichlinien"></a></p>
+						<p>Zu den Codierungsrichtlinien vgl. <a type="internal" href="documentation-libretti.html#codierungsrichlinien">Dokumentation zum Libretto, Abschnitt "Codierungsrichtlinien".</a></p>
 					</p>
 					
-					<h3 id="topicmap">4. Topic Map</h3>
-					<p>Anhand der <em>Freischütz</em>-Libretti und seiner Referenzen wurden Namen und Begriffe
-						und deren Varianten oder Entsprechungen ausgewählt und in allen Texten
-						aufgespürt; in den XML-Codierungen zweier Librettotexte – Handexemplar
-						Webers (KA-tx4) und Kind-Druck (D-tx2) – und in deren Referenztexten ([siehe
-						Tabelle]) sind diese Schlagworte ausgezeichnet und mit einem identifizierenden Bezeichner (ID)
-						versehen, die auf eine externe, separat von allen Texten geführte Topic Map
-						verweist.</p>
-					<p>Mit Hilfe des standardisierten Datenformats der XML Topic Maps (XTM 2.0; <a
-						class="external" href="http://www.isotopicmaps.org/sam/sam-xtm/"
-						>http://www.isotopicmaps.org/sam/sam-xtm/</a>) werden die einzelnen
-						Namen und Begriffe systematisch in der Topic Map festgehalten, kategorisiert
-						und deren Beziehung zueinander als auch intertextuell zwischen den
-						Librettotexten und ihren Referenzen umfassend definiert. (Zur
-						Visualisierung der Topic Map siehe auch <a href="/exist/apps/topicMapViz/index.html" target="_blank">"The Freischütz Network"</a>)</p>
-					<h4>Zum Aufbau der <em>Freischütz Digital</em>-XTM</h4>
-					<h5>Topic</h5>
-					<p>Die einzelnen Namen und Begriffen werden als sog. Topics in der XTM
-						festgehalten. Der Topic-Eintrag erhält eine Identifikation (@id), nennt den
-						Namen des Schlagwortes, ferner seine in den Texten vorkommenden Varianten,
-						und listet alle Fundstellen in den entsprechenden Texten auf:</p>
-					<ul>
-						<li>&lt;instanceOf/&gt; gibt die Kategorie des Eintrags an; Mehrfach-Zuweisungen (zu
-							unterschiedlichen Kategorien) sind möglich. Die einzelnen Kategorisierungen werden
-							wiederum als eigene Topic-Einträge in der XTM definiert (siehe auch weiter unten unter Topic-Kategorien)</li>
-						<li>unter &lt;name/&gt; werden sowohl Schlagwort (&lt;value/&gt;) als auch mit &lt;variant/&gt;
-							seine Varianten aufgelistet</li>
-						<li>unter &lt;occurrence/&gt; werden alle Fundstellen des Schlagwortes und die Fundstellen seiner Varianten aufgelistet und mit
-							einem @ref und dem Topic-Identifier direkt auf alle Fundstellen in der
-							Quelle verwiesen.</li>
-						<!-- noch unklar formuliert: Alle Fundstellen des Haupt-Name oder auch seiner Varianten?, deutlich machen -->
-					</ul>
-					<h5>Beispiel für einen einfachen Namen ("Agathe"):</h5>
-					<pre class="prettyprint"><code>&lt;topic id="agathe"&gt;
-    &lt;instanceOf&gt;
-        &lt;topicRef href="#name"/&gt;
-        &lt;topicRef href="#role"/&gt;
-    &lt;/instanceOf&gt;
-    &lt;name&gt;
-        &lt;value&gt;Agathe&lt;/value&gt;
-        &lt;variant&gt;
-            &lt;scope&gt;
-                &lt;topicRef href="#sort"/&gt;
-            &lt;/scope&gt;
-            &lt;resourceData&gt;Agathe&lt;/resourceData&gt;
-        &lt;/variant&gt;
-    &lt;/name&gt;
-    &lt;occurrence&gt;
-        &lt;type&gt;
-            &lt;topicRef href="http://www.topicmaps.org/xtm/1.0/core.xtm#occurrence"/&gt;
-        &lt;/type&gt;
-        &lt;resourceRef href="freidi-referenceSource_RD-tx14.xml#agathe"/&gt;
-    &lt;/occurrence&gt;
-    &lt;occurrence&gt;
-        &lt;type&gt;
-            &lt;topicRef href="http://www.topicmaps.org/xtm/1.0/core.xtm#occurrence"/&gt;
-        &lt;/type&gt;
-        &lt;resourceRef href="freidi-librettoSource_KA-tx4.xml#agathe"/&gt;
-    &lt;/occurrence&gt;
-    &lt;occurrence&gt;
-        &lt;type&gt;
-            &lt;topicRef href="http://www.topicmaps.org/xtm/1.0/core.xtm#occurrence"/&gt;
-        &lt;/type&gt;
-        &lt;resourceRef href="freidi-librettoSource_D-tx2.xml#agathe"/&gt;
-    &lt;/occurrence&gt;
-&lt;/topic&gt;</code></pre>
-					<h5> Beispiel für ein Begriff ("Bild") mit Varianten:</h5>
-					<pre class="prettyprint"><code>&lt;topic id="bild"&gt;
-    &lt;instanceOf&gt;
-        &lt;topicRef href="#object-of-use"/&gt;
-        &lt;topicRef href="#action"/&gt;
-    &lt;/instanceOf&gt;
-    &lt;name&gt;
-        &lt;value&gt;Ahnenbild&lt;/value&gt;
-        &lt;variant&gt;
-            &lt;scope&gt;
-                &lt;topicRef href="#sort"/&gt;
-            &lt;/scope&gt;
-            &lt;resourceData&gt;Ahnenbild&lt;/resourceData&gt;
-        &lt;/variant&gt;
-        &lt;variant&gt;
-            &lt;scope&gt;
-                &lt;topicRef href="#formation"/&gt;
-            &lt;/scope&gt;
-            &lt;resourceData&gt;Bild&lt;/resourceData&gt;
-        &lt;/variant&gt;
-        &lt;variant&gt;
-            &lt;scope&gt;
-                &lt;topicRef href="#formation"/&gt;
-            &lt;/scope&gt;
-            &lt;resourceData&gt;herabstürzendes Ahnenbild&lt;/resourceData&gt;
-        &lt;/variant&gt;
-        &lt;variant&gt;
-            &lt;scope&gt;
-                &lt;topicRef href="#formation"/&gt;
-            &lt;/scope&gt;
-            &lt;resourceData&gt;Kuno’s Bild&lt;/resourceData&gt;
-        &lt;/variant&gt;
-        &lt;variant&gt;
-            &lt;scope&gt;
-                &lt;topicRef href="#formation"/&gt;
-            &lt;/scope&gt;
-            &lt;resourceData&gt;Bild eines alten Jägers&lt;/resourceData&gt;
-        &lt;/variant&gt;
-    &lt;/name&gt;
-    &lt;occurrence&gt;
-        &lt;type&gt;
-            &lt;topicRef href="http://www.topicmaps.org/xtm/1.0/core.xtm#occurrence"/&gt;
-        &lt;/type&gt;
-        &lt;resourceRef href="FreiDi_TopicMap_Handbuch.xml#bild"/&gt;
-    &lt;/occurrence&gt;
-    &lt;occurrence&gt;
-        &lt;type&gt;
-            &lt;topicRef href="http://www.topicmaps.org/xtm/1.0/core.xtm#occurrence"/&gt;
-        &lt;/type&gt;
-        &lt;resourceRef href="freidi-referenceSource_RD-tx7.xml#bild"/&gt;
-    &lt;/occurrence&gt;
-    &lt;occurrence&gt;
-        &lt;type&gt;
-            &lt;topicRef href="http://www.topicmaps.org/xtm/1.0/core.xtm#occurrence"/&gt;
-        &lt;/type&gt;
-        &lt;resourceRef href="freidi-referenceSource_RMs-tx8.xml#bild"/&gt;
-    &lt;/occurrence&gt;
-    &lt;occurrence&gt;
-        &lt;type&gt;
-            &lt;topicRef href="http://www.topicmaps.org/xtm/1.0/core.xtm#occurrence"/&gt;
-        &lt;/type&gt;
-        &lt;resourceRef href="freidi-referenceSource_RMs-tx9.xml#bild"/&gt;
-    &lt;/occurrence&gt;
-    &lt;occurrence&gt;
-        &lt;type&gt;
-            &lt;topicRef href="http://www.topicmaps.org/xtm/1.0/core.xtm#occurrence"/&gt;
-        &lt;/type&gt;
-        &lt;resourceRef href="freidi-referenceSource_RMs-tx10.xml#bild"/&gt;
-    &lt;/occurrence&gt;
-    &lt;occurrence&gt;
-        &lt;type&gt;
-            &lt;topicRef href="http://www.topicmaps.org/xtm/1.0/core.xtm#occurrence"/&gt;
-        &lt;/type&gt;
-        &lt;resourceRef href="freidi-referenceSource_RMs-tx11.xml#bild"/&gt;
-    &lt;/occurrence&gt;
-    &lt;occurrence&gt;
-        &lt;type&gt;
-            &lt;topicRef href="http://www.topicmaps.org/xtm/1.0/core.xtm#occurrence"/&gt;
-        &lt;/type&gt;
-        &lt;resourceRef href="freidi-librettoSource_KA-tx4.xml#bild"/&gt;
-    &lt;/occurrence&gt;
-    &lt;occurrence&gt;
-        &lt;type&gt;
-            &lt;topicRef href="http://www.topicmaps.org/xtm/1.0/core.xtm#occurrence"/&gt;
-        &lt;/type&gt;
-        &lt;resourceRef href="freidi-librettoSource_D-tx2.xml#bild"/&gt;
-    &lt;/occurrence&gt;
-&lt;/topic&gt;</code></pre>
-					<h5>Topic-Kategorien:</h5>
-					<p>Die Kategorien, zu denen die Topic-Einträge zugeordnet werden können, werden
-						als Topic-Eintragungen zu Beginn der XTM definiert (siehe auch unter Demonstratoren: 6. "The Freischütz Network" / Topics [Link zu freischuetz-digital.de/doku/documentation-demos.html]) Namen und Begriffe lassen sich folgenden Kategorisierungen zuordnen: 
-						<p><li>Schauplatz</li>
-							<li>Aktion, Handlung</li>
-							<li>(reale) Person</li>
-							<li>Name</li>
-							<li>Rolle / fiktive Person</li>
-							<li>Rollenbeschreibung</li>
-							<li>Kreatur / Wesen</li>
-							<li>Gebrauchsgegenstand</li>
-							<li>Eigenschaft</li>
-							<li>Schicksal</li></p>
-					</p>
-					<h5>Beispiel:</h5>
-					<pre class="prettyprint"><code>&lt;topic id="role"&gt;
-    &lt;baseName&gt;
-        &lt;baseNameString&gt;Rolle&lt;/baseNameString&gt;
-    &lt;/baseName&gt;
-&lt;/topic&gt;</code></pre>
-					<h5>Kategorisierung der Varianten</h5>
-					<p>Mit welchen Varianten die einzelnen Schlagworte (Topics) in den Texten
-						auftreten können, wird in der Topic Map festgehalten und 
-						kategorisiert. Die Kategorien der Varianten werden wiederum als
-						Topic-Eintragungen definiert.</p>
-					<h5>Beispiel:</h5>
-					<pre class="prettyprint"><code>&lt;topic id="synonym"&gt;
-    &lt;baseName&gt;
-        &lt;baseNameString&gt;Synonym&lt;/baseNameString&gt;
-    &lt;/baseName&gt;
-&lt;/topic&gt;</code></pre>
-					<h5>Relationen</h5>
-					<p>In der Topic Map wird werden alle Relationen der einzelnen zueinander
-						assoziierten Topics (Begriffe und Namen) in &lt;associations/&gt; definiert.
-						Dabei können die Topics in unterschiedlichen Verhältnissen zueinander stehen, die wiederum als
-						eigene Topic-Eintragungen definiert sind; siehe <a href="#relationstypen">Relationstypen</a>. 
-						Im vorliegenden Beispiel werden "Myrte" und "Kranz" auf diese Weise in Beziehung gesetzt und verdeutlicht, dass Myrte ein Teil des Kranzes ist.</p>
-					<h5>Beispiel Relationen:</h5>
-					<pre class="prettyprint"><code>&lt;association&gt;
-    &lt;instanceOf&gt;
-        &lt;topicRef xlink:href="#part-of"/&gt;
-    &lt;/instanceOf&gt;
-    &lt;member&gt;
-        &lt;roleSpec&gt;
-            &lt;topicRef xlink:href="#object-of-use"/&gt;
-        &lt;/roleSpec&gt;
-        &lt;topicRef xlink:href="#myrte"/&gt;
-    &lt;/member&gt;
-    &lt;member&gt;
-        &lt;roleSpec&gt;
-            &lt;topicRef xlink:href="#object-of-use"/&gt;
-        &lt;/roleSpec&gt;
-        &lt;topicRef xlink:href="#kranz"/&gt;
-    &lt;/member&gt;
-&lt;/association&gt;</code></pre>
-					<h5 id="relationstypen">Relationstypen (association types)</h5>
-					<p>Die Relationen der einzelnen Topics zueinander werden wiederum als
-						Topic-Eintragungen definiert (siehe auch unter Demonstratoren: 6. "The Freischütz Network" / Instanzen und Relationen [Link zu freischuetz-digital.de/doku/documentation-demos.html])	Es werden folgende Relationen unterschieden:
-						<p>personelle Relationen:</p>
-						<blockquote>
-							<p>verwandt mit</p>
-							<p>befreundet mit</p>
-							<p>zugeneigt zu</p>
-						</blockquote>
-						<p>partizipielle Relation:</p>
-						<blockquote>
-							<p>teil von</p>
-						</blockquote>
-						<p>Zugehörigkeit:</p>
-						<blockquote>
-							<p>zugehören zu</p>
-						</blockquote>
-						<p>instrumentelle Relation:</p>
-						<blockquote>
-							<p>verwendet für</p>
-						</blockquote>
-						<p>Ähnlichkeiten:</p>
-						<blockquote>
-							<p>gleich wie </p>
-							<p>vergleichbar mit</p>
-							<p>ist</p>
-						</blockquote>
-						<p>Gegensätzlichkeit:</p>
-						<blockquote>
-							<p>im Gegensatz zu</p>
-						</blockquote>
-						<p>Ausführung:</p>
-						<blockquote>
-							<p>ausgeführt von</p>
-						</blockquote>
-						<p>Erleben:</p>
-						<blockquote>
-							<p>erleben</p>
-							<p>erfahren</p>
-						</blockquote>
-						<h5>Beispiel Relationstypen:</h5>
-						<pre class="prettyprint"><code>&lt;topic id="part-of"&gt;
-    &lt;baseName&gt;
-        &lt;baseNameString&gt;teil von&lt;/baseNameString&gt;
-    &lt;/baseName&gt;
-&lt;/topic&gt;</code></pre></p>
 				</div>
 
 			</div>
