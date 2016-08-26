@@ -1,6 +1,6 @@
 	<section id="documentation-reference-texts">
 		<div class="page-header">
-			<h1>Dokumentation</h1>
+			<h1>Dokumentation zu den Referenztexten</h1>
 		</div>
 
 		<!-- include "_nav-docu.html" -->
@@ -32,8 +32,8 @@
 							</li>
 						</ol>
 					</div>
-					<h3 id="intertexte">Intertexte: Librettistische Referenzpunkte</h3>
-					<h4 id="vorbemerkung-intertexte">1. Vorbemerkung und Auswahl der Textquellen
+					<h3 id="intertexte">1. Intertexte: Librettistische Referenzpunkte</h3>
+					<h4 id="vorbemerkung-intertexte">1.1 Vorbemerkung und Auswahl der Textquellen
 						(Referenzen)</h4>
 					<p>Die Geschichte des Freischützen ist nicht erst durch Friedrich Kinds und Carl
 						Maria von Webers Libretto <em>Der Freischütz</em> bekannt. Die Volkssage um
@@ -84,7 +84,7 @@
 						Wolfsschluchtszene gehören neben dem Akt des Kugelgusses selbst demnach:
 						Wald, Nacht, Glockenschlag, wildes Heer, Eule, Rabe, Kreis, Hirschfänger,
 						Jäger, Werkzeug für den Kugelguss etc.]</p>
-						<h4 id="auswahl-intertexte">2.2 Auswahl der Referenzen</h4>
+						<h4 id="auswahl-intertexte">1.2 Auswahl der Referenzen</h4>
 					<p>Im Projekt <em>Freischütz Digital</em> werden zusätzlich zu den
 						<em>Freischütz</em>-Libretti exemplarisch weitere Textquellen einbezogen, die zeitnah
 						und hinsichtlich ihrer Motive, Themen und Dramencharaktere eng in
@@ -261,7 +261,7 @@
 						RD-tx5 (<em>Das Schloß Aklam</em>), RD-tx6 (<em>Die Bilder der Ahnen</em>) und RMs-tx11 (<em>Der
 						Freischütz oder Die Schreckensnacht am Kreuzwege</em>) ohne Visualisierung und ohne Abbildungen nur in ihren XML-Codierung und
 						für die Topic Map aufbereitet bereitgestellt (und in dieser Form ins TextGrid Repository integriert).</p><!-- Bitte kontrollieren, ob die Aussage jetzt so stimmt, JV ; ja stimmt, JS-->
-					<h4 id="topicmap">2.3 Topic Map</h4>
+					<h3 id="topicmap">2. Topic Map</h3>
 					<p>Anhand der <em>Freischütz</em>-Libretti und seiner Referenzen wurden Namen und Begriffe
 						und deren Varianten oder Entsprechungen ausgewählt und in allen Texten
 						aufgespürt; in den XML-Codierungen zweier Librettotexte – Handexemplar
@@ -276,7 +276,7 @@
 						und deren Beziehung zueinander als auch intertextuell zwischen den
 						Librettotexten und ihren Referenzen umfassend definiert. (Zur
 						Visualisierung der Topic Map siehe auch <a href="/exist/apps/topicMapViz/index.html" target="_blank">"The Freischütz Network"</a>)</p>
-					<h4>Zum Aufbau der <em>Freischütz Digital</em>-XTM</h4>
+					<h4>2.1 Zum Aufbau der <em>Freischütz Digital</em>-XTM</h4>
 					<h5>Topic</h5>
 					<p>Die einzelnen Namen und Begriffen werden als sog. Topics in der XTM
 						festgehalten. Der Topic-Eintrag erhält eine Identifikation (@id), nennt den
@@ -516,7 +516,7 @@
         &lt;baseNameString&gt;teil von&lt;/baseNameString&gt;
     &lt;/baseName&gt;
 &lt;/topic&gt;</code></pre>
-					<h4 id="rezeptionsgeschichte">2.4 Rezeptionsgeschichte</h4>
+					<h4 id="rezeptionsgeschichte">2.2 Rezeptionsgeschichte</h4>
 					<p>Im Hinblick auf Aspekte der Rezeptionsgeschichte können in der Edition weitere Texte wie
 						Aufführungsbesprechungen, Korrespondenzen, Tagebücher u.a., in denen ebenso Motive und
 						Begriffe der Freischütz-Geschichten erwähnt sind, einbezogen werden. Solche Texte werden z.B. im
@@ -533,164 +533,264 @@
 					<hr/>
 					<h3 id="codierungsrichtlinien">3. Codierungsrichtlinien</h3>
 					<h4>Vorbemerkungen</h4>
-					<p>Die Editionsrichtlinien der Libretto-Gruppe des Projektes <em>Freischütz
-						Digital</em> orientieren sich an den Editionsrichtlinien der
-						<em>Carl-Maria-von-Weber-Gesamtausgabe – Digitale Edition</em> (s. <a
-							class="external"
-							href="http://www.weber-gesamtausgabe.de/de/Editionsrichtlinien"
-							>http://www.weber-gesamtausgabe.de/de/Editionsrichtlinien</a>) sowie an
-						den Guidelines der Text-Encoding-Initiative (TEI) in der Version P5 (s. <a class="external" href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/index.html">
-							TEI-Guidelines</a>). Die
-						Codierungsrichtlinien beziehen sich sowohl auf die Primärquellen zum
-						Libretto als auch auf die Referenzquellen der Edition. Speziell auf die
-						Referenzquellen bezogene Sachverhalte werden entsprechend erläutert. Zu
-						beachten ist, dass die umfassendste Information sich stets im codierten Text
-						selbst findet, d.h. das Rendering der codierten Texte in
-						„menschenlesbarer“ Form (d.h. die HTML-Darstellung) in der Regel die Informationen nur in reduzierter
-						oder „aufbereiteter“ Form enthält, d.h. in gefilterter und neu geordneter
-						Gestalt.</p>
-					<h4>Grundsätze der Textübertragung und -darstellung</h4>
-					<h4>Strukturierung</h4>
-					<p>Alle XML-Dokumente bestehen aus zwei Bereichen: den <em>Metadaten</em> (Informationen
-						zur Datei und ihren Inhalten) sowie dem eigentlichen <em>Textkorpus</em>. Der
-						Textkorpus wiederum (= &lt;text/&gt;) ist unterteilt in einen Bereich der
-						dem Libretto vorgelagerten Informationen wie Vorsatzblätter, Titelblätter
-						und Personenverzeichnis (= &lt;front/&gt;) sowie den „reinen“ Librettotext
-						(= &lt;body/&gt;). Die Textauszeichnung erfolgt TEI-spezifisch nach formalen
-						und inhaltlichen Aspekten. Mithilfe der TEI-spezifischen Auszeichnung wird
-						versucht, die Struktur der einzelnen Quellen ihrem äußeren Erscheinungsbild
-						gemäß festzuhalten. Angestrebt ist die diplomatische Übernahme der Vorlagen
-						(unter Einschluss der originalen Orthographie und Zeichensetzung). Erfasst
-						wird die Grobstruktur der Texte (&lt;body/&gt;) mittels Akt- und
-						Szeneneinteilungen (= &lt;div/&gt; type=“act“ und &lt;div/&gt;
-						type=“scene“). Die Feinstruktur wird durch die Markierung der Dramatis
-						personae (&lt;speaker/&gt;), der Paragraphen (&lt;p/&gt;) als Kennzeichen von Dialogtexten,
-						und der Verszeilen (&lt;l/&gt; bzw. &lt;lg/&gt;) und Bühnenanweisungen
-						(&lt;stage/&gt;) vorgenommen. Die Platzierung der Textabschnitte wird
-						durch Attribute (@rend="left", "center" bzw. "right", @rend="indent" usw.) [Anm.: Das vorgesetzte @ ist ein Kennzeichen für Attribute.]
-						gekennzeichnet. Die v. a. in den handschriftlichen Primärquellen zum Libretto
-						mitunter inkonsequent durchgeführten Einzüge von Dialog- oder Verszeilen
-						werden in der Textübertragung vereinheitlicht dargestellt bzw. teilweise
-						vernachlässigt. Seitenumbrüche werden durch das Element &lt;pb/&gt; mit
-						Angabe der Seitenzahl bzw. Blattzählung (Zählattribut @n="1v" usw.) vermerkt
-						(Paginierung und Foliierung entsprechend der Quelle). Der originale
-						Zeilenfall wird durch das Element &lt;lb/&gt; am Zeilenanfang erfasst (der
-						meist vorherrschende Blocksatz wird in der Textübertragung dagegen
-						vernachlässigt).</p>
-					<h4>Metadaten</h4>
-					<p>Die Strukturierung der Metadaten erfolgt im &lt;teiHeader/&gt;. Der
-						&lt;teiHeader/&gt; ist untergliedert in die drei Bereiche: &lt;fileDesc/&gt;,
-						&lt;profileDesc/&gt; und &lt;revisionDesc/&gt;. Die &lt;fileDesc/&gt; ist
-						eine inhaltliche Beschreibung des vorliegenden Datensatzes (Titelei,
-						Zugänglichkeit, Quellenbeschreibung – &lt;sourceDesc/&gt; usw.). In der
-						&lt;profileDesc/&gt; folgen Angaben zum (historischen) „Profil“ des Textes
-						(Entstehung, Datierung, Textsorte, Sprache usw.). Die &lt;revisionDesc/&gt;
-						beinhaltet Angaben zu Überarbeitung des vorliegenden Datensatzes
-						(Dokumentation der Änderungen).</p>
-					<h4>Rahmenangaben (Deklaration der Datei)</h4>
-					<p>Die erste Zeile eines xml-Dokuments enthält Angaben zur XML-Version und zur
-						verwendeten Zeichencodierung, die zweite Zeile den Verweis auf das der Datei
-						zugrunde liegende Schema. Schließlich identifiziert die dritte Zeile den
-						Text als TEI-Dokument (mit Angabe des entsprechenden Namensraumes) und
-						vergibt eine eindeutige Identifikationsnummer (xml:id) für dieses
-						Dokument.</p>
-					<!-- Als Beispiel eine Kopfcodierung hier so angeben, JV -->
-					<h4>Wiedergabe der handschriftlichen Texte</h4>
-					<p>Faulenzerstriche (auch Geminationsstriche / Verdoppelungsstriche) werden
-						stillschweigend in doppelte Buchstaben aufgelöst (im Fall von nachträglich
-						ergänzten Faulenzerstrichen wird der zweite der Konsonanten als &lt;add&gt;
-						definiert). Trennungs- bzw. Bindestriche beim Zeilenwechsel werden nicht
-						übernommen (der vorhandene Trennungsstrich wird nur innerhalb des
-						&lt;lb&gt;-Elements durch &lt;lb @break=“no“ @rend=“-“&gt; definiert). Hoch-
-						oder Tiefstellung von Textteilen, Unterstreichung usw. wird in der Codierung
-						jeweils explizit kenntlich gemacht (&lt;hi rend=“superscript“/&gt;, &lt;hi
-						rend=“subscript“/&gt;, &lt;hi rend=“underline“ n=“1“/&gt; usw.). Groß- und Kleinschreibung
-						wird getreu der Vorlage wiedergegeben (auch bei Verwendung von
-						Großbuchstaben innerhalb zusammengeschriebener Worte). Schreibversehen oder
-						Druckfehler werden in der Regel entsprechend der Quelle übernommen und durch
-						das Element &lt;sic/&gt; markiert. Korrigiert der Herausgeber wird dies mit dem
-						&lt;sic/&gt;-Element kombiniert  
-						(Kennzeichnung der originalen Schreibung mittels &lt;sic/&gt;-Element,
-						Korrektur durch &lt;corr/&gt;; beides in ein &lt;choice/&gt;-Element
-						eingeschlossen). Lateinisch geschriebene Textteile innerhalb eines in
-						Kurrentschrift geschriebenen Textes werden mit Hilfe des Elements
-						&lt;hi/&gt; (highlighted) und dem Attribut @rend="latintype" gekennzeichnet
-						(Darstellung im angezeigten Text erfolgt in der Regel durch kursive im
-						Unterschied zu gerader Schrifttype). Verwendete Klammerungszeichen „/:“ bzw.
-						„:/“ wurden unverändert übernommen. Satzzeichen werden original übernommen;
-						in besonderen Ausnahmefällen kann ein vom Hg. ergänztes Zeichen in der Form
-						&lt;supplied&gt;,&lt;/supplied&gt; eingefügt werden. Herausgeber-Eingriffe
-						erfolgten sparsam (mittels &lt;supplied/&gt;).</p>
-					<p>Bei Zeilen oder Zeileneinheiten innerhalb von Absätzen (&lt;p/&gt;), die von zwei oder mehreren
-						Personen in den Quellen geteilt werden (in der Regel als Kennzeichen von simultanem Sprechen), wird deren Zusammengehörigkeit
-						durch &lt;seg part="I"&gt; &lt;seg part="M"&gt; und &lt;seg part="F"&gt;
-						gekennzeichnet.</p>
-					<h4>Übertragung der gedruckten Texte</h4>
-					<p>Bei den gedruckten Texten erfolgte die Wiedergabe von verschiedenen
-						Schriftarten durch die Kennzeichnung als &lt;hi rend=“antiqua“&gt;, &lt;hi rend=“bold“&gt;, &lt;hi rend=“spaced_out&gt; usw.).
-						Originale Fußnoten/Anmerkungen werden durch die kombinierten Elemente &lt;ref/&gt;
-						(referencing string) und &lt;footnote/&gt; wiedergegeben.</p>
-					<!-- hier am besten ein Beispiel! -->
-					<h4>Umgang mit Texteingriffen (Spuren der Textgenese)</h4>
-					<p>Streichungen von Worten oder Absätzen werden durch das Element &lt;del/&gt;
-						(deleted) gekennzeichnet, die Form der Streichung wird durch das Attribut
-						@rend (rendition) angegeben (@rend="strikethrough") bzw. durch das Attribut
-						@hand für den jeweils identifizierten Schreiber näher spezifiziert.
-						Nachträgliche Einfügungen werden mit dem Element &lt;add/&gt; (addition)
-						vermerkt (der Ort der Einfügung wird mit Hilfe des Attributs @rend bezeichnet:
-						"inline", "margin", "above" (the line), "below" (the line), "top" bzw.
-						"bottom" und ebenfalls der Angabe des Schreibers. Größere Abschnitte von
-						Streichungen werden mit dem Element &lt;delSpan/&gt;, strukturübergreifende
-						Ergänzungen mit Hilfe von &lt;addSpan/&gt; gekennzeichnet und dann ebenfalls
-						mit den nötigen Attributen versehen. Das Ende der einzelnen Streichungen
-						bzw. Ergänzungen markiert in diesem Fall das Element &lt;anchor/&gt;. Korrekturen des
-						Autors bzw. eines Schreibers werden als Substitutionsprozess innerhalb des
-						Elements &lt;subst/&gt; dargestellt (in der Regel aus zwei Teilen: dem
-						Löschungsvorgang (durch Streichen, Überschreiben o.ä.) und der Ergänzung des
-						neuen Textes (durch Einfügen, Überschreiben o.a.), also eine Kombination von &lt;del/&gt; und
-						&lt;add/&gt;. Überschreibungen werden ebenso als Substitutionsvorgang
-						gekennzeichnet, bei dem das Löschen durch "Überschreiben" geschieht und die
-						Ergänzung "inline" erfolgt. Unleserliches wird mit Herausgeberzusätzen
-						(Bsp.: &lt;damage
-						agent="water"&gt;&lt;unclear&gt;...&lt;/unclear&gt;&lt;/damage&gt;) oder
-						komplett Unleserliches mittels &lt;gap/&gt; wiedergegeben.</p>
-					<p>
-						<ins>zusätzlich in den Referenzquellen:</ins>
+						<p>Zu den Codierungsrichtlinien vgl. <a type="internal" href="documentation-libretti.html#codierungsrichlinien"></a></p>
 					</p>
-					<p>Sind die verschiedenen Eingriffe (Streichungen und Ergänzungen) in
-						verschiedenen Schreibfarben vorgenommen und der jeweilige Schreiber ist
-						unbekannt, werden die verschiedenen Schreibfarben in der Kodierung
-						gekennzeichnet als @type="ink" für Eingriffe mit Tinte, @type="pencil" für
-						Eingriffe mit Bleistift und @type="redpencil" für Eingriffe mit Rötel.</p>
-					<h4>Auszeichnung von Textinhalten</h4>
-					<p>Die Auszeichnung der Rollennamen erfolgt direkt mittels &lt;name/&gt; und
-						&lt;rs type=“name“/&gt; oder mit Hilfe des allgemeineren Verweis-Elements
-						&lt;rs/&gt; ("referencing string"), wobei im Attribut die Art des Ziels
-						näher bezeichnet wird: &lt;rs type="person"/&gt;.</p>
-					<h4>Kommentationsformen</h4>
-					<p>Editorische Kommentare werden durch das Element &lt;note/&gt; erfasst,
-						das durch das Attribut @type näher spezifiziert werden kann: Mögliche
-						&lt;note/&gt; Attribute sind: @commentary: betrifft Erläuterungen von
-						Sachverhalten, die ohne Erläuterung nicht unmittelbar verständlich sind,
-						@textConst: Textkonstitution; bezieht sich auf Bemerkungen zu formalen Besonderheiten der
-						Quelle sowie @definition: umfasst reine Worterklärungen oder
-						Begriffserläuterungen.</p>
-					<h4>Topic Map</h4>
-					<p>Um das Beziehungsgeflecht von Motiven, Begriffen und Namen zu gewährleisten,
-						ist eine Auszeichnung der jeweiligen Schlagworte in den Texten notwendig.
-						Die Verschlagwortung der Texte erfolgt in den XML-Kodierungen mit
-						&lt;name/&gt; für Namen und mit &lt;rs/&gt; für Begriffe, die jeweils mit
-						einem @key-Attribut und mit einer Identifikation versehen sind, die wiederum
-						auf eine externe, separat von allen Texten geführte Topic Map verweist.</p>
-					<h4>Auszeichnung von Textzitaten</h4>
-					<p>Die Auszeichnung von verbalen Zitaten aus externen Texten oder innerhalb der
-						Textedition erfolgt durch &lt;cit/&gt;, und untergliedert sich weiter in
-						&lt;quote/&gt; für das eigentliche Zitat und in &lt;bibl/&gt; mit der
-						bibliographischen Angabe der Herkunft des Zitates. Werden die zitierten
-						Textzeilen oder -passagen unverändert aus der Zitatquelle übernommen, wird
-						das &lt;cit/&gt; mit @type="true" gekennzeichnet, ist das Zitat abgeändert,
-						wird das &lt;cit/&gt; mit @type="modified" gekennzeichnet.</p>
-					<hr/></p>
+					
+					<h3 id="topicmap">4. Topic Map</h3>
+					<p>Anhand der <em>Freischütz</em>-Libretti und seiner Referenzen wurden Namen und Begriffe
+						und deren Varianten oder Entsprechungen ausgewählt und in allen Texten
+						aufgespürt; in den XML-Codierungen zweier Librettotexte – Handexemplar
+						Webers (KA-tx4) und Kind-Druck (D-tx2) – und in deren Referenztexten ([siehe
+						Tabelle]) sind diese Schlagworte ausgezeichnet und mit einem identifizierenden Bezeichner (ID)
+						versehen, die auf eine externe, separat von allen Texten geführte Topic Map
+						verweist.</p>
+					<p>Mit Hilfe des standardisierten Datenformats der XML Topic Maps (XTM 2.0; <a
+						class="external" href="http://www.isotopicmaps.org/sam/sam-xtm/"
+						>http://www.isotopicmaps.org/sam/sam-xtm/</a>) werden die einzelnen
+						Namen und Begriffe systematisch in der Topic Map festgehalten, kategorisiert
+						und deren Beziehung zueinander als auch intertextuell zwischen den
+						Librettotexten und ihren Referenzen umfassend definiert. (Zur
+						Visualisierung der Topic Map siehe auch <a href="/exist/apps/topicMapViz/index.html" target="_blank">"The Freischütz Network"</a>)</p>
+					<h4>Zum Aufbau der <em>Freischütz Digital</em>-XTM</h4>
+					<h5>Topic</h5>
+					<p>Die einzelnen Namen und Begriffen werden als sog. Topics in der XTM
+						festgehalten. Der Topic-Eintrag erhält eine Identifikation (@id), nennt den
+						Namen des Schlagwortes, ferner seine in den Texten vorkommenden Varianten,
+						und listet alle Fundstellen in den entsprechenden Texten auf:</p>
+					<ul>
+						<li>&lt;instanceOf/&gt; gibt die Kategorie des Eintrags an; Mehrfach-Zuweisungen (zu
+							unterschiedlichen Kategorien) sind möglich. Die einzelnen Kategorisierungen werden
+							wiederum als eigene Topic-Einträge in der XTM definiert (siehe auch weiter unten unter Topic-Kategorien)</li>
+						<li>unter &lt;name/&gt; werden sowohl Schlagwort (&lt;value/&gt;) als auch mit &lt;variant/&gt;
+							seine Varianten aufgelistet</li>
+						<li>unter &lt;occurrence/&gt; werden alle Fundstellen des Schlagwortes und die Fundstellen seiner Varianten aufgelistet und mit
+							einem @ref und dem Topic-Identifier direkt auf alle Fundstellen in der
+							Quelle verwiesen.</li>
+						<!-- noch unklar formuliert: Alle Fundstellen des Haupt-Name oder auch seiner Varianten?, deutlich machen -->
+					</ul>
+					<h5>Beispiel für einen einfachen Namen ("Agathe"):</h5>
+					<pre class="prettyprint"><code>&lt;topic id="agathe"&gt;
+    &lt;instanceOf&gt;
+        &lt;topicRef href="#name"/&gt;
+        &lt;topicRef href="#role"/&gt;
+    &lt;/instanceOf&gt;
+    &lt;name&gt;
+        &lt;value&gt;Agathe&lt;/value&gt;
+        &lt;variant&gt;
+            &lt;scope&gt;
+                &lt;topicRef href="#sort"/&gt;
+            &lt;/scope&gt;
+            &lt;resourceData&gt;Agathe&lt;/resourceData&gt;
+        &lt;/variant&gt;
+    &lt;/name&gt;
+    &lt;occurrence&gt;
+        &lt;type&gt;
+            &lt;topicRef href="http://www.topicmaps.org/xtm/1.0/core.xtm#occurrence"/&gt;
+        &lt;/type&gt;
+        &lt;resourceRef href="freidi-referenceSource_RD-tx14.xml#agathe"/&gt;
+    &lt;/occurrence&gt;
+    &lt;occurrence&gt;
+        &lt;type&gt;
+            &lt;topicRef href="http://www.topicmaps.org/xtm/1.0/core.xtm#occurrence"/&gt;
+        &lt;/type&gt;
+        &lt;resourceRef href="freidi-librettoSource_KA-tx4.xml#agathe"/&gt;
+    &lt;/occurrence&gt;
+    &lt;occurrence&gt;
+        &lt;type&gt;
+            &lt;topicRef href="http://www.topicmaps.org/xtm/1.0/core.xtm#occurrence"/&gt;
+        &lt;/type&gt;
+        &lt;resourceRef href="freidi-librettoSource_D-tx2.xml#agathe"/&gt;
+    &lt;/occurrence&gt;
+&lt;/topic&gt;</code></pre>
+					<h5> Beispiel für ein Begriff ("Bild") mit Varianten:</h5>
+					<pre class="prettyprint"><code>&lt;topic id="bild"&gt;
+    &lt;instanceOf&gt;
+        &lt;topicRef href="#object-of-use"/&gt;
+        &lt;topicRef href="#action"/&gt;
+    &lt;/instanceOf&gt;
+    &lt;name&gt;
+        &lt;value&gt;Ahnenbild&lt;/value&gt;
+        &lt;variant&gt;
+            &lt;scope&gt;
+                &lt;topicRef href="#sort"/&gt;
+            &lt;/scope&gt;
+            &lt;resourceData&gt;Ahnenbild&lt;/resourceData&gt;
+        &lt;/variant&gt;
+        &lt;variant&gt;
+            &lt;scope&gt;
+                &lt;topicRef href="#formation"/&gt;
+            &lt;/scope&gt;
+            &lt;resourceData&gt;Bild&lt;/resourceData&gt;
+        &lt;/variant&gt;
+        &lt;variant&gt;
+            &lt;scope&gt;
+                &lt;topicRef href="#formation"/&gt;
+            &lt;/scope&gt;
+            &lt;resourceData&gt;herabstürzendes Ahnenbild&lt;/resourceData&gt;
+        &lt;/variant&gt;
+        &lt;variant&gt;
+            &lt;scope&gt;
+                &lt;topicRef href="#formation"/&gt;
+            &lt;/scope&gt;
+            &lt;resourceData&gt;Kuno’s Bild&lt;/resourceData&gt;
+        &lt;/variant&gt;
+        &lt;variant&gt;
+            &lt;scope&gt;
+                &lt;topicRef href="#formation"/&gt;
+            &lt;/scope&gt;
+            &lt;resourceData&gt;Bild eines alten Jägers&lt;/resourceData&gt;
+        &lt;/variant&gt;
+    &lt;/name&gt;
+    &lt;occurrence&gt;
+        &lt;type&gt;
+            &lt;topicRef href="http://www.topicmaps.org/xtm/1.0/core.xtm#occurrence"/&gt;
+        &lt;/type&gt;
+        &lt;resourceRef href="FreiDi_TopicMap_Handbuch.xml#bild"/&gt;
+    &lt;/occurrence&gt;
+    &lt;occurrence&gt;
+        &lt;type&gt;
+            &lt;topicRef href="http://www.topicmaps.org/xtm/1.0/core.xtm#occurrence"/&gt;
+        &lt;/type&gt;
+        &lt;resourceRef href="freidi-referenceSource_RD-tx7.xml#bild"/&gt;
+    &lt;/occurrence&gt;
+    &lt;occurrence&gt;
+        &lt;type&gt;
+            &lt;topicRef href="http://www.topicmaps.org/xtm/1.0/core.xtm#occurrence"/&gt;
+        &lt;/type&gt;
+        &lt;resourceRef href="freidi-referenceSource_RMs-tx8.xml#bild"/&gt;
+    &lt;/occurrence&gt;
+    &lt;occurrence&gt;
+        &lt;type&gt;
+            &lt;topicRef href="http://www.topicmaps.org/xtm/1.0/core.xtm#occurrence"/&gt;
+        &lt;/type&gt;
+        &lt;resourceRef href="freidi-referenceSource_RMs-tx9.xml#bild"/&gt;
+    &lt;/occurrence&gt;
+    &lt;occurrence&gt;
+        &lt;type&gt;
+            &lt;topicRef href="http://www.topicmaps.org/xtm/1.0/core.xtm#occurrence"/&gt;
+        &lt;/type&gt;
+        &lt;resourceRef href="freidi-referenceSource_RMs-tx10.xml#bild"/&gt;
+    &lt;/occurrence&gt;
+    &lt;occurrence&gt;
+        &lt;type&gt;
+            &lt;topicRef href="http://www.topicmaps.org/xtm/1.0/core.xtm#occurrence"/&gt;
+        &lt;/type&gt;
+        &lt;resourceRef href="freidi-referenceSource_RMs-tx11.xml#bild"/&gt;
+    &lt;/occurrence&gt;
+    &lt;occurrence&gt;
+        &lt;type&gt;
+            &lt;topicRef href="http://www.topicmaps.org/xtm/1.0/core.xtm#occurrence"/&gt;
+        &lt;/type&gt;
+        &lt;resourceRef href="freidi-librettoSource_KA-tx4.xml#bild"/&gt;
+    &lt;/occurrence&gt;
+    &lt;occurrence&gt;
+        &lt;type&gt;
+            &lt;topicRef href="http://www.topicmaps.org/xtm/1.0/core.xtm#occurrence"/&gt;
+        &lt;/type&gt;
+        &lt;resourceRef href="freidi-librettoSource_D-tx2.xml#bild"/&gt;
+    &lt;/occurrence&gt;
+&lt;/topic&gt;</code></pre>
+					<h5>Topic-Kategorien:</h5>
+					<p>Die Kategorien, zu denen die Topic-Einträge zugeordnet werden können, werden
+						als Topic-Eintragungen zu Beginn der XTM definiert (siehe auch unter Demonstratoren: 6. "The Freischütz Network" / Topics [Link zu freischuetz-digital.de/doku/documentation-demos.html]) Namen und Begriffe lassen sich folgenden Kategorisierungen zuordnen: 
+						<p><li>Schauplatz</li>
+							<li>Aktion, Handlung</li>
+							<li>(reale) Person</li>
+							<li>Name</li>
+							<li>Rolle / fiktive Person</li>
+							<li>Rollenbeschreibung</li>
+							<li>Kreatur / Wesen</li>
+							<li>Gebrauchsgegenstand</li>
+							<li>Eigenschaft</li>
+							<li>Schicksal</li></p>
+					</p>
+					<h5>Beispiel:</h5>
+					<pre class="prettyprint"><code>&lt;topic id="role"&gt;
+    &lt;baseName&gt;
+        &lt;baseNameString&gt;Rolle&lt;/baseNameString&gt;
+    &lt;/baseName&gt;
+&lt;/topic&gt;</code></pre>
+					<h5>Kategorisierung der Varianten</h5>
+					<p>Mit welchen Varianten die einzelnen Schlagworte (Topics) in den Texten
+						auftreten können, wird in der Topic Map festgehalten und 
+						kategorisiert. Die Kategorien der Varianten werden wiederum als
+						Topic-Eintragungen definiert.</p>
+					<h5>Beispiel:</h5>
+					<pre class="prettyprint"><code>&lt;topic id="synonym"&gt;
+    &lt;baseName&gt;
+        &lt;baseNameString&gt;Synonym&lt;/baseNameString&gt;
+    &lt;/baseName&gt;
+&lt;/topic&gt;</code></pre>
+					<h5>Relationen</h5>
+					<p>In der Topic Map wird werden alle Relationen der einzelnen zueinander
+						assoziierten Topics (Begriffe und Namen) in &lt;associations/&gt; definiert.
+						Dabei können die Topics in unterschiedlichen Verhältnissen zueinander stehen, die wiederum als
+						eigene Topic-Eintragungen definiert sind; siehe <a href="#relationstypen">Relationstypen</a>. 
+						Im vorliegenden Beispiel werden "Myrte" und "Kranz" auf diese Weise in Beziehung gesetzt und verdeutlicht, dass Myrte ein Teil des Kranzes ist.</p>
+					<h5>Beispiel Relationen:</h5>
+					<pre class="prettyprint"><code>&lt;association&gt;
+    &lt;instanceOf&gt;
+        &lt;topicRef xlink:href="#part-of"/&gt;
+    &lt;/instanceOf&gt;
+    &lt;member&gt;
+        &lt;roleSpec&gt;
+            &lt;topicRef xlink:href="#object-of-use"/&gt;
+        &lt;/roleSpec&gt;
+        &lt;topicRef xlink:href="#myrte"/&gt;
+    &lt;/member&gt;
+    &lt;member&gt;
+        &lt;roleSpec&gt;
+            &lt;topicRef xlink:href="#object-of-use"/&gt;
+        &lt;/roleSpec&gt;
+        &lt;topicRef xlink:href="#kranz"/&gt;
+    &lt;/member&gt;
+&lt;/association&gt;</code></pre>
+					<h5 id="relationstypen">Relationstypen (association types)</h5>
+					<p>Die Relationen der einzelnen Topics zueinander werden wiederum als
+						Topic-Eintragungen definiert (siehe auch unter Demonstratoren: 6. "The Freischütz Network" / Instanzen und Relationen [Link zu freischuetz-digital.de/doku/documentation-demos.html])	Es werden folgende Relationen unterschieden:
+						<p>personelle Relationen:</p>
+						<blockquote>
+							<p>verwandt mit</p>
+							<p>befreundet mit</p>
+							<p>zugeneigt zu</p>
+						</blockquote>
+						<p>partizipielle Relation:</p>
+						<blockquote>
+							<p>teil von</p>
+						</blockquote>
+						<p>Zugehörigkeit:</p>
+						<blockquote>
+							<p>zugehören zu</p>
+						</blockquote>
+						<p>instrumentelle Relation:</p>
+						<blockquote>
+							<p>verwendet für</p>
+						</blockquote>
+						<p>Ähnlichkeiten:</p>
+						<blockquote>
+							<p>gleich wie </p>
+							<p>vergleichbar mit</p>
+							<p>ist</p>
+						</blockquote>
+						<p>Gegensätzlichkeit:</p>
+						<blockquote>
+							<p>im Gegensatz zu</p>
+						</blockquote>
+						<p>Ausführung:</p>
+						<blockquote>
+							<p>ausgeführt von</p>
+						</blockquote>
+						<p>Erleben:</p>
+						<blockquote>
+							<p>erleben</p>
+							<p>erfahren</p>
+						</blockquote>
+						<h5>Beispiel Relationstypen:</h5>
+						<pre class="prettyprint"><code>&lt;topic id="part-of"&gt;
+    &lt;baseName&gt;
+        &lt;baseNameString&gt;teil von&lt;/baseNameString&gt;
+    &lt;/baseName&gt;
+&lt;/topic&gt;</code></pre></p>
 				</div>
 
 			</div>
