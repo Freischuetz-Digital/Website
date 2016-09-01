@@ -1,167 +1,407 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <title>Freischütz Digital</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <meta name="description" content=""/>
-        <meta name="author" content="Daniel Röwenstrunk"/>
-        
-        <link rel="stylesheet" href="styles/bootstrap.css"/>
-        <link rel="stylesheet" href="styles/bootstrap-responsive.css"/>
-        <link href="styles/bootswatch.css" rel="stylesheet"/>
-        <link href="styles/freidi.css" rel="stylesheet"/>
-        <link href="styles/ptsans.css" rel="stylesheet"/>
-        
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="pix/freidi_icon_144.png"/>
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="pix/freidi_icon_114.png"/>
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="pix/freidi_icon_72.png"/>
-        <link rel="apple-touch-icon-precomposed" href="pix/freidi_icon_57.png"/>
-        <link rel="shortcut icon" href="pix/freidi_favicon.png"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="" />
+        <meta name="author" content="Daniel Röwenstrunk" />
+
+        <link rel="stylesheet" href="styles/bootstrap.css" />
+        <link rel="stylesheet" href="styles/bootstrap-responsive.css" />
+        <link href="styles/bootswatch.css" rel="stylesheet" />
+        <link href="styles/freidi.css" rel="stylesheet" />
+        <link href="styles/ptsans.css" rel="stylesheet" />
+
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="pix/freidi_icon_144.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="pix/freidi_icon_114.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="pix/freidi_icon_72.png" />
+        <link rel="apple-touch-icon-precomposed" href="pix/freidi_icon_57.png" />
+        <link rel="shortcut icon" href="pix/freidi_favicon.png" />
     </head>
-    <body data-spy="scroll" data-target="#navbar" data-offset="30">
-        <div class="navbar navbar-fixed-top">
-            <div class="navbar-inner">
-                <div class="container">
-                    <a class="brand" href="index.html">Freischütz<br/>
-                        <small>Digital</small>
-                    </a>
-                    <ul class="nav">
-                        <li>
-                            <a href="index.html">Projekt</a>
+    <body>
+        <div id="content" class="container">
+            <div id="figure-top" class="figure visible-desktop">
+                <img style="height: 330px;" src="" alt="" />
+            </div>
+            <header id="overview" class="jumbotron subhead">
+                <div class="row" style="min-height: 0;">
+                    <div class="span8">
+                        <img style="margin: 40px 0 0 3px;" src="pix/Logo_greenInset.png" />
+                    </div>
+                    <div class="span4"> </div>
+                </div>
+                <div id="navbar" class="subnav">
+                    <ul class="nav nav-pills">
+                        <li id="nav_freidi" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">Freischütz Digital <span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="index.html">Ziele des Projekts</a></li>
+                                <li><a href="work-packages.html">Arbeitspakete</a></li>
+                                <li><a href="locations.html">Institutionen</a></li>
+                                <li><a href="team.html">Mitarbeiter</a></li>
+                                <li><a href="process.html">Projektverlauf</a></li>
+                            </ul>
                         </li>
-                        <li>
-                            <a href="/edition/">Edition</a>
+                        <li id="nav_edition">
+                            <a href="edition.html">Edirom Online</a>
                         </li>
-                        <li>
-                            <a href="demos.html">Demonstratoren</a>
+                        <li id="nav_data-tools" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">Daten und Werkzeuge <span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="data-and-tools.html">Überblick</a></li>
+                                <li><a href="data.html">Daten</a></li>
+                                <li><a href="tools.html">Werkzeuge</a></li>
+                                <li><a href="licences.html">Lizenzen</a></li>
+                            </ul>
                         </li>
-                        <li>
-                            <a href="documentation.html">Dokumentation</a>
+                        <li id="nav_demos" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">Demonstratoren <span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="demos.html">Überblick</a></li>
+                                <li><a href="demo-dynamic-score-rendering.html">Dynamische Partituranzeige</a></li>
+                                <li><a href="demo-genetic-text-stages.html">Textschichten-Anzeige</a></li>
+                                <li><a href="demo-visualising-text-annotations.html">Anmerkungs-Anzeige (Einzelquelle)</a></li>
+                                <li><a href="demo-visualising-text-variance.html">Textvarianz-Anzeige (Quellenübergreifend)</a></li>
+                                <li><a href="demo-the-freischuetz-network.html">Das Freischütz Netzwerk (Topic Map)</a></li>
+                                <li><a href="demo-sync-player.html">Synchro-Player</a></li>
+                                <li><a href="demo-multitrack-data-set.html">Multitrack Dataset</a></li>
+                                <li><a href="demo-single-microphone-switcher.html">Single Microphone Switcher</a></li>
+                                <li><a href="demo-instrument-equalizer.html">Instrument Equalizer</a></li>
+                            </ul>
+                        </li>
+                        <li id="nav_documentation" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">Dokumentation <span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="documentation.html">Überblick</a></li>
+                                <li><a href="documentation-music.html">Notentext</a></li>
+                                <li><a href="documentation-libretti.html">Libretto</a></li>
+                                <li><a href="documentation-reference-texts.html">Referenztexte</a></li>
+                                <li><a href="documentation-audio.html">Audio</a></li>
+                            </ul>
+                        </li>
+                        <li id="nav_publications" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">Publikationen &amp;
+                                Vorträge <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="publications.html">Publikationen</a></li>
+                                <li><a href="talks.html">Vorträge</a></li>
+                                <li><a href="events.html">Veranstaltungen</a></li>
+                                <li><a href="meetings.html">Treffen</a></li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
-            </div>
-        </div>
+                <div id="backlink" style="display:none;">
+                    <a href="#" onclick="nav_back(); false;">zurück</a>
+                </div>
+            </header>
             
-
-<div id="content" class="container">
-    
-    <div id="figure-top" class="figure visible-desktop">
-        <img style="height: 330px;" src="" alt=""/>
+            
+            <section id="demos">
+    <div class="page-header">
+        <h1>Demonstratoren</h1>
     </div>
 
-    <section id="demos">
-        <div class="page-header">
-            <h1>Demonstratoren</h1>
-        </div>
-        
-        
-        <div class="row">
-            <div class="span12">
-                <p>Um den innovativen Ansatz des Freischütz besser demonstrieren und nach außen hin sichtbar zu machen, wurden
-            innerhalb verschiedener Projektgruppen Demonstratoren programmiert, die das Potential der digitalen Musikedition verdeutlichen sollen.
-            Auf diesen Seiten finden sich folgende Demonstratoren:</p>
+
+    <div class="row">
+        <div class="span12">
+            <p>Um den innovativen Ansatz des Projekts <em>Freischütz Digital</em> besser demonstrieren und nach außen hin
+                sichtbar machen zu können, wurden innerhalb verschiedener Projektgruppen sog. <em>Demonstratoren</em>
+                programmiert, die das Potential der digitalen Musikedition durch eine entsprechende Veranschaulichung auf der Basis der codierten Daten verdeutlichen sollen. Auf
+                diesen Seiten finden sich folgende Demonstratoren:</p>
             <ul>
                 <h3>Musik</h3>
                 <li>
-                    <h4><a href="demos/dynamicScoreRendering/index.html" target="_blank">Dynamic Score Rendering</a></h4>
+                    <h4>
+                        <a href="/demos/dynamicScoreRendering/index.html" target="_blank">Dynamic
+                            Score Rendering</a>
+                    </h4>
+                </li>
+                <div class="row-fluid">
+                    <div class="span5">
+                        <img class="img-polaroid" title="Dynamic Score Rendering" alt="Dynamic Score Rendering" src="pix/edirom_dynamic_score_rendering.png"/>
+                        <p style="font-size: 0.8em; margin-top: 5px; padding-left: 2px;">
+                            Demonstrator: Dynamic Score Rendering
+                        </p>
+                    </div>
+                    <div class="span7">
                     <p>Der Demonstrator hat folgende Features:</p>
-                        <p><ul>
-                        <li>Anpassen der darzustellenden Systeme</li>
-                        <li>Paralleles Rendering mehrerer Sätze</li>
-                        <li>Auflösung von Kurzschreibweisen (Notat vs. Spieltext)</li>
-                        <li>Hervorhebungen von vorkonfigurierten Phänomenen</li>
-                        <li>XPath-basierte Hervorhebung</li>
-                    </ul></p>
-                    <p>Beschreibung und Erklärung finden sich in der <a href="documentation-demos.html#dynamic-score">Dokumentation</a></p>
-                </li>
-<!--                <li>
-                    <a href="">Visualising Score Annotations</a>
-                    <p></p>
-                </li>-->
+                    <p>
+                        <ul>
+                            <li>Anpassen der darzustellenden Systeme (Auswahl von Partitursystemen)</li>
+                            <li>Paralleles Rendering mehrerer Sätze</li>
+                            <li>Auflösung von Kurzschreibweisen (originales Notat vs. Spieltext)</li>
+                            <li>Hervorhebungen von vorkonfigurierten Phänomenen</li>
+                            <li>XPath-basierte Hervorhebung von Details</li>
+                        </ul>
+                    </p>
+                    <p>Mit einem Klick auf den Titel gelangen Sie direkt zu dem Demonstrator, den Sie auch innerhalb der Edirom online unter "Musikedition: Edition" aufrufen können.</p>
+                        <p>Eine nähere Beschreibung der Features findet sich unter dem Menüpunkt "Demonstratoren: 
+                            <a href="demo-dynamic-score-rendering.html">Dynamic Score Rendering</a>"</p>
+                </div>
+                </div>
                 <hr/>
-                <h3>Text</h3>
+                <h3>Text</h3><!-- ab hier versucht nach div noch den div class span7 eingefügt -->
+                
+                        <li>
+                    <h4>
+                        <a href="/demos/libretto/index.html#geneticTextStages" target="_blank"
+                            >Genetic Text Stages</a>
+                    </h4>
+                        </li>
+                <div class="row-fluid">
+                    <div class="span5">
+                        <img class="img-polaroid" title="Genetic Text Stages" alt="Genetic Text Stages" src="pix/text_genetic_stages.png"/>
+                        <p style="font-size: 0.8em; margin-top: 5px; padding-left: 2px;">
+                            Demonstrator: Genetic Text Stages
+                        </p>
+                    </div>
+                    <div class="span7">
+                    <p>Der Demonstrator hat folgende Features (die nur in den handschriftlichen Textquellen verfügbar sind)</p>
+                    <p>
+                        <ul>
+                            <li>Über ein Menü einzeln anwählbare Textschichten</li>
+                            <li>Eine Zusammenfassung aller Textschichten in einer Ansicht</li>
+                            <li>Konkrete Angaben zu Schreibern, zur Art des Korrekturvorgangs und zu den Inhalten der Korrektur</li>
+                        </ul>
+                    </p>
+                    <p>Der Demonstrator zeigt die fünf verschiedenen Textschichten am Bsp. von
+                        Webers Handexemplar (KA-tx4). Zur genaueren Beschreibung und Erklärung der Funktionsweise vgl.
+                            <a href="demo-genetic-text-stages.html">Erläuterungen zur Textschichten-Anzeige</a>.</p>
+                        <p>Vgl. auch den entsprechenden Abschnitt in der <a href="documentation-libretti.html#textschichten_einzelquelle">Dokumentation</a>.</p>
+                    </div>
+                </div>
                 <li>
-                    <h4><a href="demos/libretto/index.html#geneticTextStages" target="_blank">Genetic Text Stages</a></h4>
-                            <p>Der Demonstrator zeigt die fünf verschiedenen Textschichten am Bsp. von Webers Handexemplar (KA-tx4).
-                                Beschreibung und Erklärung finden sich in der <a href="documentation-demos.html#text-stages">Dokumentation</a>.</p>
+                    <h4>
+                        <a href="/demos/libretto/index.html#vizTextAnnotations" target="_blank"
+                            >Visualising Text Annotations</a>
+                    </h4>
                 </li>
+                <div class="row-fluid">
+                    <div class="span5">
+                        <img class="img-polaroid" title="Visualising Text Annotations" alt="Visualising Text Annotations" src="pix/text_visualising_annotations.png"/>
+                        <p style="font-size: 0.8em; margin-top: 5px; padding-left: 2px;">
+                            Demonstrator: Visualising Text Annotations
+                        </p>
+                    </div>
+                    <div class="span7">
+                    <p>Dieser Demonstrator hat folgenden Funktionsumfang:</p>
+                    <p>
+                        <ul>
+                            <li>Anzeige von Varianz über einen Tooltip (Varianzsymbol)</li>
+                            <li>Anzeige von Varianz in einem separaten Fenster (Angeklicktes Varianzsymbol) mit Erläuterungen zum Inhalt</li>
+                            <li>Anzeige verschiedenartigster Annotationen über einen Tooltip (mit Annotationssymbol): Einzelstellenkommentare, quellenübergreifende Kommentare usw.</li>
+                            <li>Verlinkungen zur Homepage der Carl-Maria-von-Weber-Gesamtausgabe (WeGA)</li>
+                        </ul>
+                    </p>
+                    <p>Dieser Demonstrator veranschaulicht die Anzeige von Varianzen und
+                        Annotationen, speziell aus dem Einzelquellenfenster heraus (Bsp. Webers
+                        Handexemplar KA-tx4). Zu einer ausführlicheren Beschreibung vgl. die 
+                        <a href="demo-visualising-text-annotations.html">Erläuterungen zu den Anmerkungen</a>.</p>
+                        <p>Vgl. auch den entsprechenden Abschnitt in der <a href="documentation-libretti.html#text-annots">Dokumentation</a>.</p>
+                    </div>
+                </div>
                 <li>
-                    <h4><a href="demos/libretto/index.html#vizTextAnnotations" target="_blank">Visualising Text Annotations</a></h4>
-                    <p>Dieser Demonstrator veranschaulicht die Anzeige von Varianzen und Annotationen, speziell
-                        aus dem Einzelquellenfenster heraus (Bsp. Webers Handexemplar KA-tx4). Es befindet sich eine ausführliche Beschreibung
-                        in der <a href="documentation-demos.html#text-annots">Dokumentation</a>.</p>
+                    <h4>
+                        <a href="/demos/libretto/index.html#vizTextVariance" target="_blank"
+                            >Visualising Text Variance</a>
+                    </h4>
                 </li>
+                <div class="row-fluid">
+                    <div class="span5">
+                        <img class="img-polaroid" title="Visualising Text Variance" alt="Visualising Text Varaince" src="pix/text_visualising_variance.png"/>
+                        <p style="font-size: 0.8em; margin-top: 5px; padding-left: 2px;">
+                            Demonstrator: Visualising Text Variance
+                        </p>
+                    </div>
+                    <div class="span7">
+                    <p>Der auf alle Textquellen anwendbare Demonstrator bietet folgende Möglichkeiten:</p>
+                    <p>
+                        <ul>
+                            <li>eine synoptische Anzeige zweier beliebig ausgewählter Textquellen</li>
+                            <li>die optionale Anzeige von Varianz und Annotationen (vgl. den Demonstrator: Visualising Text Annotations)</li>
+                        </ul>
+                    </p>
+                    <p>Bei diesem Demonstrator besteht die Möglichkeit, zwei beliebige (authentische
+                        bzw. autorisierte) Quellen auszuwählen und in einem Quellenfenster
+                        synoptisch anzuzeigen. Nähere Informationen zur Funktionsweise dieses Demonstrator sind in den <a
+                            href="demo-visualising-text-variance.html">Erläuterungen zur Textvarianz</a> zu
+                        finden.</p>
+                        <p>Vgl. auch den entsprechenden Abschnitt in der <a
+                            href="documentation-libretti.html#text-variance">Dokumentation</a>.</p>
+                    </div>
+                </div>
                 <li>
-                    <h4><a href="demos/libretto/index.html#vizTextVariance" target="_blank">Visualising Text Variance</a></h4>
-                    <p>Bei diesem Demonstrator besteht die Möglichkeit, zwei beliebige
-                        (authentische bzw. autorisierte) Quellen auszuwählen und in einem Quellenfenster
-                        synoptisch anzuzeigen. Erläuterungen zu diesem Demonstrator sind in der <a href="documentation-demos.html#text-variance">Dokumentation</a> zu finden.</p>
+                    <h4>
+                        <a href="/exist/apps/topicMapViz/index.html" target="_blank">"The Freischütz
+                            Network"</a>
+                    </h4>
                 </li>
-                <li>
-                    <h4><a href="/exist/apps/topicMapViz/index.html" target="_blank">"The Freischütz Network"</a></h4>
-                    <p>Mit Hilfe von Topic Maps versucht dieser Demonstrator Verknüpfung innerhalb des Freischütz' und der Libretti
-                        aufzuzeigen. Ebenfalls findet sich hierzu ein ausführlicher Text in der <a href="documentation-demos.html#network">Dokumentation</a>.</p>
-                </li>
+                <div class="row-fluid">
+                    <div class="span5">
+                        <img class="img-polaroid" title="Das Freischütz Netzwerk" alt="Freischütz Netzwerk" src="pix/text_topic_map_Viz.png"/>
+                        <p style="font-size: 0.8em; margin-top: 5px; padding-left: 2px;">
+                            Demonstrator: Das Freischütz Netzwerk
+                        </p>
+                    </div>
+                    <div class="span7">
+                        <p>Die Veranschaulichung der Textanalyse mittels Topic Maps erlaubt folgende Darstellungen</p>
+                        <p>
+                            <ul>
+                            <li>Eine Darstellung des Begriffsfelds, in dem die jeweils vordefinierten Begriffe aus den Libretto-Quellen und den Referenztexten vorkommen</li>
+                            <li>Die Anzeige der verwandten Topics und der Art der Relationen zwischen den Topics</li>
+                            <li>Eine Anzeige der jeweiligen Fundstellen für die Begriffe in den Texten</li>
+                            <li>Eine Verlinkung zu den Texten innerhalb der Edirom (z.Zt. noch global)</li>
+                            <li>In einigen Fällen wird in ein Glossar mit einer Definition des Begriffs angeboten</li>
+                        </ul>
+                        </p>
+                    <p>Mit Hilfe von Topic Maps versucht dieser Demonstrator begriffliche Verknüpfungen innerhalb
+                        des <em>Freischütz</em>, der Libretti und Referenztexte aufzuzeigen und damit auf mögliche inhaltliche Verbindungen zwischen den Texten hinzuweisen. Eine ausführlichere Erläuterung hierzu
+                        findet sich in der <a href="demo-the-freischuetz-network.html"
+                            >genaueren Beschreibung des Topic-Map-Demonstrators</a>.</p>
+                    </div>
+                </div>
                 <hr/>
                 <h3>Audio</h3>
                 <li>
-                    <h4><a href="http://freischuetz-digital.de/demos/syncPlayer/index.html" target="_blank">syncPlayer</a></h4>
+                    <h4>
+                        <a href="http://freischuetz-digital.de/demos/syncPlayer/index.html"
+                            target="_blank">syncPlayer</a>
+                    </h4>
+                </li>
+                <div class="row-fluid">
+                    <div class="span5">
+                        <img class="img-polaroid" title="Synch-Player Demo" alt="Synch-Player Demo" src="pix/music_synch_player_demo.png"/>
+                        <p style="font-size: 0.8em; margin-top: 5px; padding-left: 2px;">
+                            Demonstrator: Synchron-Player
+                        </p>
+                    </div>
+                    <div class="span7">
                     <p>Der Demonstrator hat folgende Features:</p>
-                        <p><ul>
-                        <li>Digitales Facsimile automatisch synchron zur Audiowidergabe blättern</li>
-                        <li>Hervorhebung des im Audio gespielten Taktes im Rendering der Noten</li>
-                        <li>Unmittelbares Umschalten zwischen Audio unterschiedlicher Interpretationen ermöglicht Interpretationsvergleich</li>
-                        <li>Stichworte: score following, music synchronisation</li>
-                    </ul></p>
-                    <p>Beschreibung und Erklärung finden sich in der <a href="documentation-demos.html#syncPlayer">Dokumentation</a>.</p>
-                </li>
+                    <p>
+                        <ul>
+                            <li>Digitales Facsimile automatisch synchron zur Audiowidergabe
+                                blättern</li>
+                            <li>Hervorhebung des im Audio gespielten Taktes im Rendering der
+                                Noten</li>
+                            <li>Unmittelbares Umschalten zwischen Audio unterschiedlicher
+                                Interpretationen ermöglicht Interpretationsvergleich</li>
+                            <li>Stichworte: score following, music synchronisation</li>
+                        </ul>
+                    </p>
+                    <p>Eine genauere Beschreibung der Funktionen findet sich in den <a
+                            href="demo-sync-player.html">Erläuterungen zum Sync-Player</a>.</p>
+                    </div>
+                </div>
                 <li>
-                    <h4><a href="https://www.audiolabs-erlangen.de/resources/MIR/FreiDi-MultitrackDataset/" target="_blank">Multitrack Data Set</a></h4>
-                    <p>Within the Freischütz Digital project, three numbers (No. 6, 8, and 9) of the opera "Der Freischütz" 
-                        have been produced by the Erich-Thienhaus-Institute (HfM Detmold). The main purpose for the recording 
-                        sessions was to produce royalty free audio material that can be used for demonstration and research purposes. 
-                        The recording was carried out by the Tonmeister students Stefan Antonin (No. 6), Florian Bitzer (No. 8), 
-                        and Matthias Kieslich (No. 9) under the supervision of Prof. Dipl-Tonm. Bernhard Güttler, and Prof. Dipl-Tonm. 
-                        Michael Sandner. Besides a professional stereo mix of the three numbers, the dataset provides the raw multitrack 
-                        recordings from the individual microphones as well as individual group mixes that emphasize different voices 
-                        or instrument sections.</p>
+                    <h4>
+                        <a
+                            href="https://www.audiolabs-erlangen.de/resources/MIR/FreiDi-MultitrackDataset/"
+                            target="_blank">Multitrack Data Set</a>
+                    </h4>
                 </li>
+                <div class="row-fluid">
+                    <div class="span5">
+                        <img class="img-polaroid" title="Multitrack Data Set" alt="Multitrack Data Set" src="pix/music_multi_track_dataset.png"/>
+                        <p style="font-size: 0.8em; margin-top: 5px; padding-left: 2px;">
+                            Demonstrator: Multitrack Data Set
+                        </p>
+                    </div>
+                    <div class="span7">
+                    <p>Within the Freischütz Digital project, three numbers (No. 6, 8, and 9) of the
+                        opera "Der Freischütz" have been produced by the Erich-Thienhaus-Institute
+                        (HfM Detmold). The main purpose for the recording sessions was to produce
+                        royalty free audio material that can be used for demonstration and research
+                        purposes. The recording was carried out by the Tonmeister students Stefan
+                        Antonin (No. 6), Florian Bitzer (No. 8), and Matthias Kieslich (No. 9) under
+                        the supervision of Prof. Dipl-Tonm. Bernhard Güttler, and Prof. Dipl-Tonm.
+                        Michael Sandner. Besides a professional stereo mix of the three numbers, the
+                        dataset provides the raw multitrack recordings from the individual
+                        microphones as well as individual group mixes that emphasize different
+                        voices or instrument sections.</p>
+                        <p>Direkt zum Demonstrator mit entsprechenden Erläuterungen: <a
+                            href="https://www.audiolabs-erlangen.de/resources/MIR/FreiDi-MultitrackDataset/"
+                            target="_blank">Multitrack Data Set</a></p>
+                </div>
+                </div>
                 <li>
-                    <h4><a href="https://www.audiolabs-erlangen.de/resources/MIR/FreiDi-MicSwitcher/" target="_blank">Single Microphone Switcher</a></h4>
-                    <p>The Single Microphone Switcher is a demo for exploring the recordings of the individual microphones used 
-                        in the Freischütz Multitrack Dataset recordings. It sketches how the microphones were positioned in the room. 
-                        The interface provides the possibility to listen to the individual microphone recordings. Furthermore, 
-                        the instrument activation matrix, provides a visualization that shows which instruments are currently 
-                        active (black) or inactive (white) at the current playback position.</p>
+                    <h4>
+                        <a
+                            href="https://www.audiolabs-erlangen.de/resources/MIR/FreiDi-MicSwitcher/"
+                            target="_blank">Single Microphone Switcher</a>
+                    </h4>
                 </li>
+                <div class="row-fluid">
+                    <div class="span5">
+                        <img class="img-polaroid" title="Single Microphone Switcher" alt="Single Microphone Switcher" src="pix/music_single_microphon_switcher.png"/>
+                        <p style="font-size: 0.8em; margin-top: 5px; padding-left: 2px;">
+                            Demonstrator: Single Microphone Switcher
+                        </p>
+                    </div>
+                    <div class="span7">
+                    <p>The Single Microphone Switcher is a demo for exploring the recordings of the
+                        individual microphones used in the Freischütz Multitrack Dataset recordings.
+                        It sketches how the microphones were positioned in the room. The interface
+                        provides the possibility to listen to the individual microphone recordings.
+                        Furthermore, the instrument activation matrix, provides a visualization that
+                        shows which instruments are currently active (black) or inactive (white) at
+                        the current playback position.</p>
+                        <p>Direkt zum Demonstrator mit entsprechenden Erläuterungen: <a
+                            href="https://www.audiolabs-erlangen.de/resources/MIR/FreiDi-MicSwitcher/"
+                            target="_blank">Single Microphone Switcher</a></p>
+                </div>
+                </div>
                 <li>
-                    <h4><a href="https://www.audiolabs-erlangen.de/resources/MIR/FreiDi-InstrumentEqualizer/" target="_blank">Instrument Equalizer</a></h4>
-                    <p>An instrument equalizer provides the possibility to adjust the volume of an individual instrument in a 
-                        recording without affecting the volume of the other instruments.</p>
+                    <h4>
+                        <a
+                            href="https://www.audiolabs-erlangen.de/resources/MIR/FreiDi-InstrumentEqualizer/"
+                            target="_blank">Instrument Equalizer</a>
+                    </h4>
                 </li>
+                <div class="row-fluid">
+                    <div class="span5">
+                        <img class="img-polaroid" title="Instrument Equalizer" alt="Instrument Equalizer" src="pix/music_instrument_equalizer.png"/>
+                        <p style="font-size: 0.8em; margin-top: 5px; padding-left: 2px;">
+                            Demonstrator: Instrument Equalizer
+                        </p>
+                    </div>
+                    <div class="span7">
+                    <p>An instrument equalizer provides the possibility to adjust the volume of an
+                        individual instrument in a recording without affecting the volume of the
+                        other instruments.</p>
+                        <p>Direkt zum Demonstrator mit entsprechenden Erläuterungen: <a
+                            href="https://www.audiolabs-erlangen.de/resources/MIR/FreiDi-InstrumentEqualizer/"
+                            target="_blank">Instrument Equalizer</a></p>
+                </div>
+                </div>
             </ul>
-            </div>
-            
-            
         </div>
-    </section>
-    
-    <div id="footer" style="padding-top: 5px; text-align: center; background-color: #EEEEEE; background-image: -moz-linear-gradient(center top , #F5F5F5 0%, #EEEEEE 100%);     background-repeat: repeat-x;     border: 1px solid #E5E5E5;     border-radius: 4px 4px 4px 4px;     height: 24px;     margin-bottom: 20px;     margin-top: 40px;     width: 100%;"><a style="margin-right: 6px;" href="imprint.html">Impressum</a> · <a style="margin-left: 8px;" href="contact.html">Kontakt</a></div>
-</div>
-
-<!--<script type="text/javascript">
-    window.activeNavLink = 'nav-demos';
-</script>-->
 
 
-<script src="scripts/jquery.min.js"></script>
+    </div>
 
-<script src="scripts/bootstrap.js"></script>
-<script src="scripts/bootswatch.js"></script>
-<script src="scripts/main.js"></script>
-<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <script type="text/javascript"> window.activeNavLink = 'nav_demos'; </script>
+</section>
 
-</body>
+
+            <div id="footer"
+                style="padding-top: 5px; text-align: center; background-color: #EEEEEE; background-image: -moz-linear-gradient(center top , #F5F5F5 0%, #EEEEEE 100%);     background-repeat: repeat-x;     border: 1px solid #E5E5E5;     border-radius: 4px 4px 4px 4px;     height: 24px;     margin-bottom: 20px;     margin-top: 40px;     width: 100%;"
+                    ><a style="margin-right: 6px;" href="imprint.html">Impressum</a> · <a
+                    style="margin-left: 8px;" href="contact.html">Kontakt</a></div>
+        </div>
+        <script src="scripts/jquery-1.12.3.min.js"></script>
+        <script src="scripts/bootstrap.js"></script>
+        <script src="scripts/main.js"></script>
+        <script src="scripts/run_prettify.js"></script>
+    </body>
 </html>

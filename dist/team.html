@@ -1,97 +1,115 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <title>Freischütz Digital</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <meta name="description" content=""/>
-        <meta name="author" content="Daniel Röwenstrunk"/>
-        
-        <link rel="stylesheet" href="styles/bootstrap.css"/>
-        <link rel="stylesheet" href="styles/bootstrap-responsive.css"/>
-        <link href="styles/bootswatch.css" rel="stylesheet"/>
-        <link href="styles/freidi.css" rel="stylesheet"/>
-        <link href="styles/ptsans.css" rel="stylesheet"/>
-        
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="pix/freidi_icon_144.png"/>
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="pix/freidi_icon_114.png"/>
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="pix/freidi_icon_72.png"/>
-        <link rel="apple-touch-icon-precomposed" href="pix/freidi_icon_57.png"/>
-        <link rel="shortcut icon" href="pix/freidi_favicon.png"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="" />
+        <meta name="author" content="Daniel Röwenstrunk" />
+
+        <link rel="stylesheet" href="styles/bootstrap.css" />
+        <link rel="stylesheet" href="styles/bootstrap-responsive.css" />
+        <link href="styles/bootswatch.css" rel="stylesheet" />
+        <link href="styles/freidi.css" rel="stylesheet" />
+        <link href="styles/ptsans.css" rel="stylesheet" />
+
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="pix/freidi_icon_144.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="pix/freidi_icon_114.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="pix/freidi_icon_72.png" />
+        <link rel="apple-touch-icon-precomposed" href="pix/freidi_icon_57.png" />
+        <link rel="shortcut icon" href="pix/freidi_favicon.png" />
     </head>
-    <body data-spy="scroll" data-target="#navbar" data-offset="30">
-        <div class="navbar navbar-fixed-top">
-            <div class="navbar-inner">
-                <div class="container">
-                    <a class="brand" href="index.html">Freischütz<br/>
-                        <small>Digital</small>
-                    </a>
-                    <ul class="nav">
-                        <li>
-                            <a href="index.html">Projekt</a>
+    <body>
+        <div id="content" class="container">
+            <div id="figure-top" class="figure visible-desktop">
+                <img style="height: 330px;" src="" alt="" />
+            </div>
+            <header id="overview" class="jumbotron subhead">
+                <div class="row" style="min-height: 0;">
+                    <div class="span8">
+                        <img style="margin: 40px 0 0 3px;" src="pix/Logo_greenInset.png" />
+                    </div>
+                    <div class="span4"> </div>
+                </div>
+                <div id="navbar" class="subnav">
+                    <ul class="nav nav-pills">
+                        <li id="nav_freidi" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">Freischütz Digital <span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="index.html">Ziele des Projekts</a></li>
+                                <li><a href="work-packages.html">Arbeitspakete</a></li>
+                                <li><a href="locations.html">Institutionen</a></li>
+                                <li><a href="team.html">Mitarbeiter</a></li>
+                                <li><a href="process.html">Projektverlauf</a></li>
+                            </ul>
                         </li>
-                        <li>
-                            <a href="/edition/">Edition</a>
+                        <li id="nav_edition">
+                            <a href="edition.html">Edirom Online</a>
                         </li>
-                        <li>
-                            <a href="demos.html">Demonstratoren</a>
+                        <li id="nav_data-tools" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">Daten und Werkzeuge <span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="data-and-tools.html">Überblick</a></li>
+                                <li><a href="data.html">Daten</a></li>
+                                <li><a href="tools.html">Werkzeuge</a></li>
+                                <li><a href="licences.html">Lizenzen</a></li>
+                            </ul>
                         </li>
-                        <li>
-                            <a href="documentation.html">Dokumentation</a>
+                        <li id="nav_demos" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">Demonstratoren <span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="demos.html">Überblick</a></li>
+                                <li><a href="demo-dynamic-score-rendering.html">Dynamische Partituranzeige</a></li>
+                                <li><a href="demo-genetic-text-stages.html">Textschichten-Anzeige</a></li>
+                                <li><a href="demo-visualising-text-annotations.html">Anmerkungs-Anzeige (Einzelquelle)</a></li>
+                                <li><a href="demo-visualising-text-variance.html">Textvarianz-Anzeige (Quellenübergreifend)</a></li>
+                                <li><a href="demo-the-freischuetz-network.html">Das Freischütz Netzwerk (Topic Map)</a></li>
+                                <li><a href="demo-sync-player.html">Synchro-Player</a></li>
+                                <li><a href="demo-multitrack-data-set.html">Multitrack Dataset</a></li>
+                                <li><a href="demo-single-microphone-switcher.html">Single Microphone Switcher</a></li>
+                                <li><a href="demo-instrument-equalizer.html">Instrument Equalizer</a></li>
+                            </ul>
+                        </li>
+                        <li id="nav_documentation" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">Dokumentation <span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="documentation.html">Überblick</a></li>
+                                <li><a href="documentation-music.html">Notentext</a></li>
+                                <li><a href="documentation-libretti.html">Libretto</a></li>
+                                <li><a href="documentation-reference-texts.html">Referenztexte</a></li>
+                                <li><a href="documentation-audio.html">Audio</a></li>
+                            </ul>
+                        </li>
+                        <li id="nav_publications" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">Publikationen &amp;
+                                Vorträge <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="publications.html">Publikationen</a></li>
+                                <li><a href="talks.html">Vorträge</a></li>
+                                <li><a href="events.html">Veranstaltungen</a></li>
+                                <li><a href="meetings.html">Treffen</a></li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
-            </div>
-        </div>
+                <div id="backlink" style="display:none;">
+                    <a href="#" onclick="nav_back(); false;">zurück</a>
+                </div>
+            </header>
             
-
-<div id="content" class="container">
-    
-    <div id="figure-top" class="figure visible-desktop">
-        <img style="height: 330px;" src="" alt=""/>
-    </div>
-
-    <header id="overview" class="jumbotron subhead">
-        <div class="row" style="min-height: 0;">
-            <div class="span8">
-                <img style="margin: 40px 0 0 3px;" src="pix/Logo_greenInset.png"/>
-            </div>
-            <div class="span4"> </div>
-        </div>
-        <div id="navbar" class="subnav">
-            <ul class="nav nav-pills">
-                <li id="nav_home">
-                    <a href="index.html">Startseite</a>
-                </li>
-                <li id="nav_work">
-                    <a href="work-packages.html">Arbeitspakete</a>
-                </li>
-                <li id="nav_loc">
-                    <a href="locations.html">Standorte</a>
-                </li>
-                <li id="nav_team">
-                    <a href="team.html">Mitarbeiter</a>
-                </li>
-                <li id="nav_events">
-                    <a href="events.html">Veranstaltungen</a>
-                </li>
-                <li id="nav_publications">
-                    <a href="publications.html">Publikationen &amp; Vorträge</a>
-                </li>
-                <li id="nav_releases">
-                    <a href="releases.html">Versionen der Edition</a>
-                </li>
-            </ul>
-        </div>
-        <div id="backlink" style="display:none;">
-            <a href="#" onclick="nav_back(); false;">zurück</a>
-        </div>
-    </header>
-
-    
-    <section id="team">
+            
+                <section id="team">
         <div class="page-header">
-            <h1>Mitarbeiter</h1>
+            <h1>Mitarbeiter des BMBF-Projekts</h1>
         </div>
         <div class="row">
             <div class="span6">
@@ -145,7 +163,7 @@
                         <p>Prof. Szwillus promovierte 1984 und habilitierte sich 1990 an der Universität
                             Dortmund. zum Wintersemester 1990/91 wechselte er an die Universität
                             Paderborn.</p>
-                        <p>Neben seiner intensiven Forschungstätigkeit seiner Arbeitsgruppe
+                        <p>Neben seiner intensiven Forschungstätigkeit innerhalb der von ihm geleiteten Arbeitsgruppe
                             <em>Mensch-Computer-Interaktion und Softwaretechnologie</em>, die sich
                             mit verschiedenen Aspekten der Gestaltung und Entwicklung von
                             Mensch-Computer-Schnittstellen, dabei insbesondere mit Modellierungsaspekten
@@ -153,7 +171,7 @@
                             stellvertretender Sprecher der GI-Fachgruppe INSYDE zum Thema <em>Methoden
                                 und Werkzeuge zur Entwicklung interaktiver Systeme</em> und im
                             Herausgeberteam der Zeitschrift i-com des GI-Fachbereichs
-                            <em>Mensch-Computer-Interaktion</em>. Er ist Mitglied der ACM und des
+                            <em>Mensch-Computer-Interaktion</em> tätig. Er ist Mitglied der ACM und des
                             German Chapters of the ACM sowie von SIGCHI, der Fachgruppe
                             <em>Computer-Human-Interaction</em> innerhalb der ACM.</p>
                         <address><strong>Gerd Szwillus</strong><br/><a href="mailto:szwillus@upb.de">szwillus@upb.de</a></address>
@@ -167,7 +185,7 @@
                         <p>Joachim Veit ist Editionsleiter der Carl-Maria-von-Weber-Gesamtausgabe und
                             betreut die am Musikwissenschaftlichen Seminar Detmold/Paderborn ansässigen
                             digitalen Projekte. Dazu gehörten in den vergangenen Jahren das DFG-Projekt
-                            „Edirom“, die Detmolder Teilprojekte von TextGrid und DARIAH-DE (beide BMBF)
+                            „Edirom“, die Detmolder Teilprojekte von TextGrid und DARIAH-DE (beide getragen vom BMBF)
                             sowie das DFG/NEH-Projekt zur Förderung der Music-Encoding Initative MEI. Er
                             koordiniert gegenwärtig auch das FreiDi-Projekt.</p>
                         <p>Veit hat neben etlichen eigenen Editionen zahlreiche Beiträge zu Themen der
@@ -176,7 +194,7 @@
                         <p>Er ist Mitglied des Advisory Boards der Digitalen Mozartedition Salzburg, des
                             Editorial Boards von OPERA und des Danish Centre for Music Publication in
                             Kopenhagen. Seit 2012 gehört er als Gründungsmitglied dem Vorstand des
-                            Vereins Digital Humanities im deutschsprachigen Raum (DHd) an.</p>
+                            Verbands Digital Humanities im deutschsprachigen Raum (DHd) an.</p>
                         <address><strong>Joachim Veit</strong><br/><a href="mailto:jveit@mail.uni-paderborn.de">jveit@mail.uni-paderborn.de</a></address>
                     </div>
                 </div>
@@ -192,7 +210,7 @@
                             SAE in Frankfurt am Main und München, studierte er Musikwissenschaft an der
                             Julius-Maximilians-Universität Würzburg. Bereits in seiner Magisterarbeit zu
                             "Kombinatorik als Methode der Komposition. Studien zu Francesco Geminianis
-                            »Guida Armonica o Dizionario Armonico.«" beschäftigte Bohl sich mit
+                            »Guida Armonica o Dizionario Armonico«" beschäftigte Bohl sich mit
                             digitaler Edition. Von 2009 bis 2012 war er als wissenschaftlicher
                             Mitarbeiter im DFG-Projekt Digitale Musikedition (Edirom) tätig.</p>
                         <p>Seine Forschungsinteressen liegen in den Bereichen digitale Edition von Musik
@@ -211,7 +229,7 @@
                                                        Musikwissenschaft und Geschichte an der Universität Paderborn. Im Oktober 2013 schloss er sein 
                                                         Studium im Master Musikwissenschaft mit Studien zur Alltagsgeschichte der Musik ab.
                                                         Von 2009 bis 2013 arbeitete er als studentische Hilfskraft sowie von 2013 bis 2014 als Wissenschaftliche Hilfskraft am Musikwissenschaftlichen Seminar Detmold/Paderborn.
-                                                        In dieser Funktion unterstützte er Frau Prof. Dr. Grotjahn bei der Mitherausgabe der Musikforschung sowie im Projekt Alltagsgeschichte der Musik.
+                                                        In dieser Funktion unterstützte er Prof. Dr. Rebecca Grotjahn bei der Mitherausgabe der Musikforschung sowie im Projekt Alltagsgeschichte der Musik.
                                                     </p>
                                                     <p>Seit September 2014 arbeitet er als freiberuflicher Musikwissenschaftler und ist als Wissenschaftlicher Mitarbeiter für das BMBF-Projekt Freischütz Digital tätig.</p>
                                                     <address style="clear:both; margin-top: 30px;"><strong>Joachim Iffland</strong><br/><a href="mailto:Joachim.Iffland@uni-paderborn.de>">Joachim.Iffland@uni-paderborn.de</a></address>
@@ -226,7 +244,7 @@
                         <p>studierte Musikwissenschaft sowie Medienwissenschaft mit Schwerpunkt
                             Medieninformatik an der Universität Paderborn. Promovierte 2009 mit einer
                             Arbeit zum Thema "Musikedition im Zeichen neuer Medien – Historische
-                            Entwicklung und gegenwärtige Perspektiven musikalischer Gesamtausgaben". Er
+                            Entwicklung und gegenwärtige Perspektiven musikalischer Gesamtausgaben" (gedruckt Norderstedt 2011). Er
                             beschäftigt sich seit 2003 im Rahmen verschiedener Projekte mit digitaler
                             Musikedition und Fragen der Codierung von Musiknotation. Kepper ist
                             Mitherausgeber der MEI Guidelines und fungiert als Projektleiter des von DFG
@@ -246,7 +264,7 @@
                             absolvierte sie ein Praktikum mit den Schwerpunkten Musikcodierung,
                             Validierung der Codierungen und Organisation der <em>Music Encoding
                                 Conference</em> 2013.</p>
-                        <p>Seit April 2014 ist Komprecht wissenschaftliche Mitarbeiterin im Projekt.</p>
+                        <p>Seit April 2014 ist Anna Komprecht wissenschaftliche Mitarbeiterin im Projekt.</p>
                         <address><strong>Anna Maria Komprecht</strong><br/><a href="mailto:komprecht@edirom.de">komprecht@edirom.de</a></address>
                     </div>
                 </div>
@@ -294,7 +312,7 @@
                         title="Elena Schilke"/>
                         <p>Elena Schilke studierte an der Hochschule für Kultur und Kunst Miass Blasinstrumente und Blasorchesterleitung. 
                         2007 schloss sie ihr Studium im Studiengang Informatik mit Nebenfach Musik an der Universität Paderborn ab. 
-                        Nach dem Studium war sie bei einem Softwareunternehmen als Development Ingenieur beschäftigt.</p>
+                        Nach dem Studium war sie mehrere Jahre bei einem Softwareunternehmen als Development Ingenieur beschäftigt.</p>
                         <p>Seit Anfang 2015 ist sie im Projekt als wissenschaftliche Mitarbeiterin tätig.</p>
                     <address style="clear:both; margin-top: 30px;"><strong>Elena Schilke</strong><br/><a href="mailto:eschilke@mail.uni-paderborn.de>">eschilke@mail.uni-paderborn.de</a></address>
                 </div>
@@ -338,7 +356,7 @@
                             Bergen/Norwegen; seit 2009 wissenschaftliche Mitarbeiterin im Projekt „OPERA
                             - Spektrum des europäischen Musiktheaters in Einzeleditionen“ der Akademie
                             der Wissenschaften und der Literatur (Mainz), und seit 2013
-                            wissenschaftliche Mitarbeiterin im BMBF-Projekt <em>Freischütz
+                            Wissenschaftliche Mitarbeiterin im BMBF-Projekt <em>Freischütz
                                 Digital</em>.</p>
                         <address><strong>Janette Seuffert</strong><br/><a href="mailto:seuffert@em.uni-frankfurt.de">seuffert@em.uni-frankfurt.de</a></address>
                     </div>
@@ -365,23 +383,22 @@
                 </div>
             </div>
         </div>
+
+        <script type="text/javascript">
+            window.activeNavLink = 'nav_freidi';
+        </script>
+        
     </section>
-    
-    
-    <div id="footer" style="padding-top: 5px; text-align: center; background-color: #EEEEEE; background-image: -moz-linear-gradient(center top , #F5F5F5 0%, #EEEEEE 100%);     background-repeat: repeat-x;     border: 1px solid #E5E5E5;     border-radius: 4px 4px 4px 4px;     height: 24px;     margin-bottom: 20px;     margin-top: 40px;     width: 100%;"><a style="margin-right: 6px;" href="imprint.html">Impressum</a> · <a style="margin-left: 8px;" href="contact.html">Kontakt</a></div>
-</div>
-
-<script type="text/javascript">
-    window.activeNavLink = 'nav_team';
-</script>
 
 
-<script src="scripts/jquery.min.js"></script>
-
-<script src="scripts/bootstrap.js"></script>
-<script src="scripts/bootswatch.js"></script>
-<script src="scripts/main.js"></script>
-<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
-
-</body>
+            <div id="footer"
+                style="padding-top: 5px; text-align: center; background-color: #EEEEEE; background-image: -moz-linear-gradient(center top , #F5F5F5 0%, #EEEEEE 100%);     background-repeat: repeat-x;     border: 1px solid #E5E5E5;     border-radius: 4px 4px 4px 4px;     height: 24px;     margin-bottom: 20px;     margin-top: 40px;     width: 100%;"
+                    ><a style="margin-right: 6px;" href="imprint.html">Impressum</a> · <a
+                    style="margin-left: 8px;" href="contact.html">Kontakt</a></div>
+        </div>
+        <script src="scripts/jquery-1.12.3.min.js"></script>
+        <script src="scripts/bootstrap.js"></script>
+        <script src="scripts/main.js"></script>
+        <script src="scripts/run_prettify.js"></script>
+    </body>
 </html>

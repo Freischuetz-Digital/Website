@@ -1,130 +1,177 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <title>Freischütz Digital</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <meta name="description" content=""/>
-        <meta name="author" content="Daniel Röwenstrunk"/>
-        
-        <link rel="stylesheet" href="styles/bootstrap.css"/>
-        <link rel="stylesheet" href="styles/bootstrap-responsive.css"/>
-        <link href="styles/bootswatch.css" rel="stylesheet"/>
-        <link href="styles/freidi.css" rel="stylesheet"/>
-        <link href="styles/ptsans.css" rel="stylesheet"/>
-        
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="pix/freidi_icon_144.png"/>
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="pix/freidi_icon_114.png"/>
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="pix/freidi_icon_72.png"/>
-        <link rel="apple-touch-icon-precomposed" href="pix/freidi_icon_57.png"/>
-        <link rel="shortcut icon" href="pix/freidi_favicon.png"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="" />
+        <meta name="author" content="Daniel Röwenstrunk" />
+
+        <link rel="stylesheet" href="styles/bootstrap.css" />
+        <link rel="stylesheet" href="styles/bootstrap-responsive.css" />
+        <link href="styles/bootswatch.css" rel="stylesheet" />
+        <link href="styles/freidi.css" rel="stylesheet" />
+        <link href="styles/ptsans.css" rel="stylesheet" />
+
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="pix/freidi_icon_144.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="pix/freidi_icon_114.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="pix/freidi_icon_72.png" />
+        <link rel="apple-touch-icon-precomposed" href="pix/freidi_icon_57.png" />
+        <link rel="shortcut icon" href="pix/freidi_favicon.png" />
     </head>
-    <body data-spy="scroll" data-target="#navbar" data-offset="30">
-        <div class="navbar navbar-fixed-top">
-            <div class="navbar-inner">
-                <div class="container">
-                    <a class="brand" href="index.html">Freischütz<br/>
-                        <small>Digital</small>
-                    </a>
-                    <ul class="nav">
-                        <li>
-                            <a href="index.html">Projekt</a>
+    <body>
+        <div id="content" class="container">
+            <div id="figure-top" class="figure visible-desktop">
+                <img style="height: 330px;" src="" alt="" />
+            </div>
+            <header id="overview" class="jumbotron subhead">
+                <div class="row" style="min-height: 0;">
+                    <div class="span8">
+                        <img style="margin: 40px 0 0 3px;" src="pix/Logo_greenInset.png" />
+                    </div>
+                    <div class="span4"> </div>
+                </div>
+                <div id="navbar" class="subnav">
+                    <ul class="nav nav-pills">
+                        <li id="nav_freidi" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">Freischütz Digital <span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="index.html">Ziele des Projekts</a></li>
+                                <li><a href="work-packages.html">Arbeitspakete</a></li>
+                                <li><a href="locations.html">Institutionen</a></li>
+                                <li><a href="team.html">Mitarbeiter</a></li>
+                                <li><a href="process.html">Projektverlauf</a></li>
+                            </ul>
                         </li>
-                        <li>
-                            <a href="/edition/">Edition</a>
+                        <li id="nav_edition">
+                            <a href="edition.html">Edirom Online</a>
                         </li>
-                        <li>
-                            <a href="demos.html">Demonstratoren</a>
+                        <li id="nav_data-tools" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">Daten und Werkzeuge <span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="data-and-tools.html">Überblick</a></li>
+                                <li><a href="data.html">Daten</a></li>
+                                <li><a href="tools.html">Werkzeuge</a></li>
+                                <li><a href="licences.html">Lizenzen</a></li>
+                            </ul>
                         </li>
-                        <li>
-                            <a href="documentation.html">Dokumentation</a>
+                        <li id="nav_demos" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">Demonstratoren <span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="demos.html">Überblick</a></li>
+                                <li><a href="demo-dynamic-score-rendering.html">Dynamische Partituranzeige</a></li>
+                                <li><a href="demo-genetic-text-stages.html">Textschichten-Anzeige</a></li>
+                                <li><a href="demo-visualising-text-annotations.html">Anmerkungs-Anzeige (Einzelquelle)</a></li>
+                                <li><a href="demo-visualising-text-variance.html">Textvarianz-Anzeige (Quellenübergreifend)</a></li>
+                                <li><a href="demo-the-freischuetz-network.html">Das Freischütz Netzwerk (Topic Map)</a></li>
+                                <li><a href="demo-sync-player.html">Synchro-Player</a></li>
+                                <li><a href="demo-multitrack-data-set.html">Multitrack Dataset</a></li>
+                                <li><a href="demo-single-microphone-switcher.html">Single Microphone Switcher</a></li>
+                                <li><a href="demo-instrument-equalizer.html">Instrument Equalizer</a></li>
+                            </ul>
+                        </li>
+                        <li id="nav_documentation" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">Dokumentation <span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="documentation.html">Überblick</a></li>
+                                <li><a href="documentation-music.html">Notentext</a></li>
+                                <li><a href="documentation-libretti.html">Libretto</a></li>
+                                <li><a href="documentation-reference-texts.html">Referenztexte</a></li>
+                                <li><a href="documentation-audio.html">Audio</a></li>
+                            </ul>
+                        </li>
+                        <li id="nav_publications" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">Publikationen &amp;
+                                Vorträge <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="publications.html">Publikationen</a></li>
+                                <li><a href="talks.html">Vorträge</a></li>
+                                <li><a href="events.html">Veranstaltungen</a></li>
+                                <li><a href="meetings.html">Treffen</a></li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
-            </div>
-        </div>
+                <div id="backlink" style="display:none;">
+                    <a href="#" onclick="nav_back(); false;">zurück</a>
+                </div>
+            </header>
             
-
-<div id="content" class="container">
-    
-    <div id="figure-top" class="figure visible-desktop">
-        <img style="height: 330px;" src="" alt=""/>
+            
+                
+<section id="home">
+    <div class="page-header">
+        <h1>Freischütz Digital</h1>
     </div>
-
-    <header id="overview" class="jumbotron subhead">
-        <div class="row" style="min-height: 0;">
-            <div class="span8">
-                <img style="margin: 40px 0 0 3px;" src="pix/Logo_greenInset.png"/>
+    <div class="row">
+        <div class="span8">
+            <p>Das vom Bundesministerium für Bildung und Forschung (BMBF) geförderte Projekt
+                “Freischütz Digital – Paradigmatische Umsetzung eines genuin digitalen
+                Editionskonzepts” war ein gemeinschaftliches Projekt der Goethe-Universität
+                Frankfurt, der International Audio Laboratories Erlangen und der Universität
+                Paderborn, letztere übernahm dabei die Gesamtkoordination.</p>
+            <p>Im Anschluss an den Entwurf eines an Frans Wierings <em>Multidimensional Model</em>
+                angelehnten Konzepts genuin digitaler Musikeditionen sollte am Beispiel von Webers
+                <em>Freischütz</em> ein proof of concept sowohl für die Möglichkeiten neuartiger
+                Editionsmethoden als auch damit verbundener neuer Fragestellungen geliefert werden.
+                In den von vier Projektpartnern gemeinsam bearbeiteten sechs Arbeitspaketen standen
+                die graphische, logische und die akustische (bzw. performative) Domäne des Werks im
+                Zentrum. Zugleich wurde auf eine umfassende und detaillierte Kontextualisierung der
+                Daten und die dafür notwendigen formalisierten Verknüpfungskonzepte Wert gelegt. Da
+                erstmals der Musik-Codierungsstandard MEI für ein umfangreiches Werk der Common
+                Western Notation angewendet und mit einer TEI-Codierung der Textanteile verbunden
+                wurde, eröffneten sich für das Prozessieren, Anreichern und Wiederverwenden der Daten
+                völlig neue Möglichkeiten. Mit der Exploration der Möglichkeiten zur Verknüpfung mit
+                Audio-Aufnahmen und deren Segmentierung versuchte das Projekt im
+                akustischen Bereich zur Lösung generischer Fragestellungen beizutragen, mit der
+                Demonstration des Potentials seines neuartigen digitalen Editionsmodells die
+                Diskussion über künftige Editionsformen zu befördern und mit exemplarischen
+                Untersuchungen zum Aspekt der Varianz weitere Grundlagenforschungen anzuregen.</p>
+            <p>Das Projekt wollte also weniger fertige Ergebnisse vorlegen als Möglichkeiten aufzeigen und 
+                neue Zugangsformen befördern. Damit hängt zusammen, dass die vorliegende Präsentation nicht statisch
+                einen mit dem offiziellen Ende der Förderung im Oktober 2015 erreichten Stand wiedergibt, 
+                sondern – soweit dies durch entsprechende Zuarbeiten umsetzbar ist – dynamisch weiterentwickelt wird. Letztlich 
+                ist zu hoffen, dass Erweiterungen und Verbesserungen oder auf den frei veröffentlichten Daten aufsetzende
+                Anschlussforschungen künftig durch gezielte Einzelförderungen (auch im Umfeld akademischer Ausbildung) erfolgen können. 
+                In diesem Sinne versteht sich <em>Freischütz Digital</em> einerseits als Dokumentation des abgeschlossenen BMBF-Projekts, 
+                andererseits aber als weiterhin offene Plattform, deren Initiatoren sich über Rückmeldungen und Anregungen freuen.
+            </p>
+        </div>
+        <div class="span4">
+            <div>
+                <div style="text-align: center; margin: 0 auto; width: 260px;">
+                    <img src="pix/BMBF_RGB_Gef_L.jpg"
+                        alt="Gefördert vom Bundesministerium für Bildung und Forschung"
+                        title="Gefördert vom BMBF"/>
+                    <p style="text-align: center;">Förderkennzeichen 01UG1239A bis C</p>
+                </div>
             </div>
-            <div class="span4"> </div>
         </div>
-        <div id="navbar" class="subnav">
-            <ul class="nav nav-pills">
-                <li id="nav_home">
-                    <a href="index.html">Startseite</a>
-                </li>
-                <li id="nav_work">
-                    <a href="work-packages.html">Arbeitspakete</a>
-                </li>
-                <li id="nav_loc">
-                    <a href="locations.html">Standorte</a>
-                </li>
-                <li id="nav_team">
-                    <a href="team.html">Mitarbeiter</a>
-                </li>
-                <li id="nav_events">
-                    <a href="events.html">Veranstaltungen</a>
-                </li>
-                <li id="nav_publications">
-                    <a href="publications.html">Publikationen &amp; Vorträge</a>
-                </li>
-                <li id="nav_releases">
-                    <a href="releases.html">Versionen der Edition</a>
-                </li>
-            </ul>
-        </div>
-        <div id="backlink" style="display:none;">
-            <a href="#" onclick="nav_back(); false;">zurück</a>
-        </div>
-    </header>
-
-    
-    <section id="home"><div class="page-header"><h1>Freischütz Digital</h1></div><div class="row"><div class="span8"><p>Das vom Bundesministerium für Bildung und Forschung (BMBF) geförderte Projekt
-        “Freischütz Digital – Paradigmatische Umsetzung eines genuin digitalen
-        Editionskonzepts” ist ein gemeinschaftliches Projekt der Goethe-Universität
-        Frankfurt, der International Audio Laboratories Erlangen und der Universität
-        Paderborn, letztere übernimmt dabei die Gesamtkoordination.</p><p>Im Anschluss an den Entwurf eines an Frans Wierings <em>Multidimensional Model</em>
-            angelehnten Konzepts genuin digitaler Musikeditionen soll am Beispiel von Webers
-            Freischütz ein proof of concept sowohl für die Möglichkeiten neuartiger
-            Editionsmethoden als auch damit verbundener neuer Fragestellungen geliefert werden.
-            In den von vier Projektpartnern gemeinsam bearbeiteten sechs Arbeitspaketen stehen
-            die graphische, logische und die akustische (bzw. performative) Domäne des Werks im
-            Zentrum. Zugleich wird auf eine umfassende und detaillierte Kontextualisierung der
-            Daten und die dafür notwendigen formalisierten Verknüpfungskonzepte Wert gelegt. Da
-            erstmals der Musik-Codierungsstandard MEI für ein umfangreiches Werk der Common
-            Western Notation angewendet und mit einer TEI-Codierung der Textanteile verbunden
-            wird, eröffnen sich für das Prozessieren, Anreichern und Wiederverwenden der Daten
-            völlig neue Möglichkeiten. Mit der Exploration der Möglichkeiten zur Verknüpfung mit
-            Audio- (und ggf. Video-)Aufnahmen und deren Segmentierung wird das Projekt im
-            akustischen Bereich zur Lösung generischer Fragestellungen beitragen, mit der
-            Demonstration des Potentials seines neuartigen digitalen Editionsmodells die
-            Diskussion über künftige Editionsformen befördern und mit exemplarischen
-            Untersuchungen zum Aspekt der Varianz weitere Grundlagenforschungen anregen.</p></div><div class="span4"><div><div style="text-align: center; margin: 0 auto; width: 260px;"><img src="pix/BMBF_RGB_Gef_L.jpg" alt="Gefördert vom Bundesministerium für Bildung und Forschung" title="Gefördert vom BMBF"/><p style="text-align: center;">Förderkennzeichen 01UG1239A bis C</p></div></div></div></div></section>
-    
-    <div id="footer" style="padding-top: 5px; text-align: center; background-color: #EEEEEE; background-image: -moz-linear-gradient(center top , #F5F5F5 0%, #EEEEEE 100%);     background-repeat: repeat-x;     border: 1px solid #E5E5E5;     border-radius: 4px 4px 4px 4px;     height: 24px;     margin-bottom: 20px;     margin-top: 40px;     width: 100%;"><a style="margin-right: 6px;" href="imprint.html">Impressum</a> · <a style="margin-left: 8px;" href="contact.html">Kontakt</a></div>
     </div>
-
+    
     <script type="text/javascript">
-        window.activeNavLink = 'nav_home';
+        window.activeNavLink = 'nav_freidi';
     </script>
+</section>
 
 
-<script src="scripts/jquery.min.js"></script>
-
-<script src="scripts/bootstrap.js"></script>
-<script src="scripts/bootswatch.js"></script>
-<script src="scripts/main.js"></script>
-<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
-
-</body>
+            <div id="footer"
+                style="padding-top: 5px; text-align: center; background-color: #EEEEEE; background-image: -moz-linear-gradient(center top , #F5F5F5 0%, #EEEEEE 100%);     background-repeat: repeat-x;     border: 1px solid #E5E5E5;     border-radius: 4px 4px 4px 4px;     height: 24px;     margin-bottom: 20px;     margin-top: 40px;     width: 100%;"
+                    ><a style="margin-right: 6px;" href="imprint.html">Impressum</a> · <a
+                    style="margin-left: 8px;" href="contact.html">Kontakt</a></div>
+        </div>
+        <script src="scripts/jquery-1.12.3.min.js"></script>
+        <script src="scripts/bootstrap.js"></script>
+        <script src="scripts/main.js"></script>
+        <script src="scripts/run_prettify.js"></script>
+    </body>
 </html>

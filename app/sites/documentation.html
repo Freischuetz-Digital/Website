@@ -1,82 +1,448 @@
-<!-- include "_htmlstart.html" -->
-
-<div id="content" class="container">
-
-    <!-- include "_dude.html" -->
-
-
     <section id="imprint">
         <div class="page-header">
-            <h1><a href="documentation.html">Dokumentation</a></h1>
+            <h1>Dokumentation – Überblick</h1>
         </div>
-
+        
         <!-- include "_nav-docu.html" -->
-
+        
         <div class="row" style="margin-bottom: 50px;">
-
+            
             <div class="docu-project">
-                <div class="span12">
-                    <h3>Übersicht</h3>
-    
-                    <p>Die Dokumentation des digitalen Forschungsprojekts Freischütz Digital besteht aus mehreren Bereichen. 
-                    Es finden sich Informationen zur Ausgangslage des Projekts und zu den einzelnen Bestandteilen der Edition
-                    sowie Erläuterungen und Beschreibungen zu den verschiedenen Projektbestandteilen.</p>
-                    <p>Die Dokumentation gliedert sich in sieben Bereiche, die teils für sich stehen, teils aufeinander aufbauen und somit voneinander abhängen.
-                        Folgende Bereiche sind ausführlich beschrieben:
+                    <div class="span12">
+                        <div class="content">
+                            <h4>Content</h4>
+                            <ol type="1">
+                                <li><a href="#übergreifende_aspekte">1. Arbeitspaket-übergreifende Aspekte</a></li>
+                                <li><a href="#inhalte">Inhalte – Objekte – Daten: Grundlegendes zur Konzeption der Arbeitspakete</a>
+                                    <ol>
+                                        <li><a href="#notentexte">Notentexte</a>
+                                            <ol>
+                                                <li><a href="#faksimiles">Faksimiles</a></li>
+                                                <li><a href="#codierung">Codierungen der Notentexte</a></li>
+                                            </ol>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li><a href="#textteile-a">Textteile - Teil A: Eigene Arbeitsbereiche des Projekts</a>
+                                    <ol>
+                                        <li><a href="#libretto">Zum Libretto des Freischütz</a></li>
+                                        <li><a href="#referenztexte">Referenztexte des <em>Freischütz</em>-Librettos</a></li>
+                                    </ol>
+                                </li>
+                                <li><a href="#textteile-b">Textteile - Teil B: Integration der digitalen Textanteile der WeGA</a></li>
+                                <li><a href="#audio">Audio-Anteile</a></li>
+                                <li><a href="#technik">Technische Voraussetzungen</a></li>
+                                <li><a href="#präsentationskonzept">Präsentationskonzept</a></li>
+                            </ol>
+                        </div>
+                        
+                        <!-- Stand: 2016-07-31, geringfügig überarbeitet und den Rückblick eingefügt ve -->
+                        <div>
+                            <h3 id="ueberblick-aps">Überblick über die Arbeitspakete</h3>
+                            <p>Die folgende Übersicht entspricht dem ursprünglichen Konzept bei Beginn des Projekts. In Klammer sind die jeweils zuständigen <a href="locations.html">Projektpartner</a> angegeben (Ffm = Institut für Musikwissenschaft, Goethe-Universität Frankfurt/Main, ER = International Audio Laboratories Erlangen, DT/PB = Musikwissenschaftliches Seminar Detmold/Paderborn und Institut für Informatik der Universität Paderborn):</p>
+                            <ul>
+                                <li>AP 1: Aufbau der Datenbasis
+                                    <ul>
+                                     <li>AP !.1: Adapltion und Integration der <em>Freischütz</em>-Daten (DT)</li>
+                                    <li>AP 1.2: Digitalisierung von Tonaufnahmen (DT, ER)</li>
+                                    <li>AP 1.3: Codierung der Notentexte (DT)</li>
+                                    <li>AP 1.4: Anbindung <em>Edirom</em>-Werkzeuge an das <em>TextGrid</em>-Repository (PB)</li>
+                                    </ul>
+                                </li>
+                                <li>AP 2: Aufbereitung akustischer Bestandteile
+                                    <ul>
+                                        <li>AP 2.1: Synchronisation von Codierung und Tonaufnahme (ER)</li>
+                                    <li>AP 2.2: Einspielung ausgewählter Nummern (DT)</li>
+                                    <li>AP 2.4: Synchronisationsbasierte zeitliche und spektrale Segmentierung von Tonaufnahmen (ER)</li>
+                                    <li>AP 1.3: Integration von Audioelementen in die Präesentationssoftware (PB)</li>
+                                    </ul>
+                                </li>
+                                <li>AP 3. Freischütz-Edition
+                                    <ul>
+                                        <li>AP 3.1: Modell Digitale Edition (DT/PB)</li>
+                                    <li>AP 3.2: Erarbeitung der digitalen Edition (DT)</li>
+                                    <li>AP 3.3: Verknüpfung von Partitur und Libretto (Viglianti)</li>
+                                    <li>AP 3.4: Anpassung und Erweiterung der Software (PB)</li>
+                                    </ul>
+                                </li>
+                                <li>AP 4: Libretto-Edition und Intertexte
+                                    <ul>
+                                        <li>AP 4.1: Textgenetische Edition des Librettos (Ffm)</li>
+                                    <li>AP 4.2: Intertexte I: Librettistische Referenzpunkte (Ffm)</li>
+                                    <li>AP 4.3: Intertexte II: Werk-Rezeption (Ffm)</li>
+                                    <li>AP 4.1: Anpassung und Erweiterung der Software (PB)</li>
+                                    </ul>
+                                </li>
+                                <li>AP 5: Integration der Benutzerinteraktion
+                                </li>
+                                <li>AP 6: Varianz als Demonstrationsbeispiel für nachnutzende Forschungsfragen
+                                    <ul>
+                                        <li>AP 6.1: Umgang mit Varianz der Schriftlichkeit (DT)</li>
+                                    <li>AP 6.2: Interpretationsvergleich anhand von Aufführungsmaterialien (Ffm)</li>
+                                    <li>AP 6.3: Interpretationsvergleich textuelle und akustische Varianz (Ffm/DT/ER)</li>
+                                    <li>AP 6.4: Technische Umsetzung der modular einzubindenden Forschungsergebnisse (PB)</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                        <h3 id="übergreifende_aspekte">Arbeitspaket-übergreifende Aspekte</h3>
+                        <p>Inwieweit verändern die Möglichkeiten digitaler Medien unsere Konzepte musikalischer
+                            Edition und wie könnte – vor dem Hintergrund des heutigen Stands der Technik – eine
+                            solche Edition aussehen, wenn sie von Anfang an als digitale geplant wird? Welche Veränderungen
+                            ergeben sich bei den Arbeitsabläufen? Was ist bei der Planung solcher Projekte zu beachten?<br/>Das
+                            Projekt <em>Freischütz Digital</em> entstand vor dem Hintergrund solcher
+                            Fragestellungen, stützte sich aber von Anfang an auf ein bereits skizziertes Modell
+                            digitaler Musikedition, das Frans Wiering 2009 veröffentlicht hatte. Sein
+                            Entwurf eines <em><a href="https://books.google.de/books?isbn=1317094654">Multidimensional Model</a></em> löst die traditionelle Vorstellung einer
+                            Edition auf und überführt diese in eine Art "Archiv" unterschiedlichster Daten, in dem
+                            nicht nur Notentexte und Faksimiles, sondern weitere Texte und Annotationen, Audio- und
+                            Videosequenzen sowie Codierungsformen für Text oder Musik in Beziehung gesetzt werden
+                            und innerhalb dieses virtuellen Raumes individuelle Zugänge der Nutzer erlauben. Folgt
+                            man einem solchen Modell, spielen zahlreiche Aspekte eine Rolle, die in traditionellen
+                            Editionen ausgeklammert bleiben (müssen).</p>
+                        <p>Um die Unterschiede zwischen traditionellen Editionen und künftigen digitalen
+                            Möglichkeiten zu demonstrieren, bot Carl Maria von Webers Erfolgsoper <em>Der Freischütz</em> ideale
+                            Voraussetzungen. Dies gilt für die Fülle und Vielfalt der im Umfeld dieses zentralen
+                            Werks der Operngeschichte des 19. Jahrhunderts überlieferten Objekte (Noten, Texte,
+                            Audio), außerdem wirkte sich die gleichzeitige Entstehung der "analogen" Edition des
+                            Werks, die im Rahmen der Weber-Gesamtausgabe (WeGA) erarbeitet wird, günstig aus, da
+                            beide Unternehmen somit auf derselben Quellenbasis aufbauen und ihre unterschiedlichen
+                            Zielsetzungen im direkten Vergleich präzisieren konnten. Zudem stellten die schon
+                            vorhandenen digitalen Anteile der WeGA im Bereich der Texte (Briefe, Tagebücher,
+                            Schriften, Aufführungsbesprechungen, vgl. <a target="_blank" href="http://www.weber-gesamtausgabe.de">www.weber-gesamtausgabe.de</a>) sicher,
+                            dass der Kontext des Werkes ohne erheblichen Aufwand in einer ungewöhnlichen Breite
+                            einbezogen werden kann. Schließlich hat die Entwicklung der <em>Edirom</em>-Software
+                            (im Rahmen eines mehrjährigen, ursprünglich von Arbeiten der WeGA ausgehenden
+                            <a href="www.edirom.de/edirom-projekt/">DFG-Projekts</a>) erst die Voraussetzungen für die Umsetzung der im Projekt zu entwickelnden
+                            Ideen geschaffen.</p> Im Hinblick auf das <em>Multidimensional Model</em> war von Anfang
+                        an klar, dass das Werk im Projekt aus unterschiedlichen Perspektiven – und nicht nur
+                        den traditionellen editorischen – in den Blick genommen werden sollte. Die beteiligten
+                        Projektpartner brachten daher je eigene Schwerpunkte in die Arbeit ein: 
                         <ul>
-                            <li id="nav_docu">
-                                <a href="documentation-start.html">Projekt</a>
-                                <p>Hier werden allgemeine Informationen zu den Inhalten und Daten des Projekts geliefert. 
-                                    Unter anderem werden die technischen Mittel sowie das Präsentationskonzept beschrieben.</p>
-                            </li>
-                            <li id="nav_music">
-                                <a href="documentation-music.html">Musik</a>
-                                <p>Die Musikedition des Freischütz' erfolgte anhand eines neuen Codierungsmodells, das in dieser Sektion beschrieben wird.
-                                Zusätzlich finden sich hier Informationen zum Gebrauch von Standards und der Entwicklung von Tools.</p>
-                            </li>
-                            <li id="nav_text">
-                                <a href="documentation-text.html">Text</a>
-                                <p>Die Textedition besteht aus zwei Teilen: der Edition des Librettos und der Edition von verschiedenen Referenztexten.
-                                In der Dokumentation werden die Ausgangslage, Herangehensweise und die Ergebnisse der Forschung ausführlich beschrieben.</p>
-                            </li>
-                            <li id="nav_audio">
-                                <a href="documentation-audio.html">Audio</a>
-                                <p>Im Bereich Audio des Projekts wurde vor allem zur Segmentierung von Tracks geforscht.
-                                Die Dokumentation gibt hier in englisch Auskunft über die Forschungsergebnisse.</p>
-                            </li>
-                            <li id="nav_demos">
-                                <a href="documentation-demos.html">Demonstratoren</a>
-                                <p>Um die Forschungsergebnisse digital repräsentieren zu können, wurden verschiedene Demonstratoren programmiert, die das Potenzial der
-                                digitalen Edition und die Verknüpfung der verschiedenen Domänen darlegen.</p>
-                            </li>
-                            <li id="nav_edition">
-                                <a href="documentation-edition.html">Edition</a>
-                                <p>Hier finden sich allgemeine Informationen zur Edition, also zur Verknüpfung der drei Teile Musik, Text und Audio.</p>
-                            </li>
-                            <li id="nav_verlauf">
-                                <a href="documentation-verlauf.html">Verlauf</a>
-                                <p>Eine Aufschlüsselung der Projektorganisation sowie der verschiedenen Herangehensweisen an ein digitales Forschungsprojekt aber auch die Problematiken werden hier erläutert.</p>
-                            </li>
+                            <li>An der Universität Frankfurt (in der Anfangsphase Universität Bayreuth) standen
+                                Fragen zur <strong>Genese und Überlieferung des Textbuchs</strong> sowie hierauf bezogener
+                               <strong> Referenztexte</strong> im Mittelpunkt.</li>
+                            <li>Die Projektpartner von den International Audio Laboratories Erlangen (einer
+                                gemeinsamen Einrichtung des Fraunhofer-Instituts und der Universität Erlangen)
+                                beschäftigten sich mit der Aufarbeitung unterschiedlicher <strong>Audioaspekte</strong>.</li>
+                            <li>Am Musikwissenschaftlichen Seminar Detmold/Paderborn wurden die <strong>Codierungen der
+                                Notentexte</strong> erstellt und neue Formen von "<strong>Edition</strong>" und <strong>Annotationen</strong> erprobt. Zugleich
+                                war Detmold/Paderborn für die Koordination aller Arbeiten verantwortlich.</li>
+                            <li>Die Universität Paderborn war zuständig für Fragen der <strong>Softwareentwicklung</strong>, der
+                                Benutzeroberfläche und der Integration von Benutzerinteraktionen.</li>
                         </ul>
-                    </p>
-                    <p>Die Ausgangslage, Vorgehensweise und Ergebnisse, die in der Dokumentation präsentiert werden, sind durch Links
-                        mit der Edition, den Quellen und den jeweiligen Demonstratoren verknüpft. Es ist somit die Möglichkeit gegeben zwischen den verschiedenen Teilen
-                        hin- und herzuspringen.
-                    </p>
-                    <hr/>
-                    <h3>GitHub</h3>
-                    <p>Viele technische Teile des Projekts wurden in eigenen Branches programmiert und können zum Nachvollziehen und zur Weiternutzung nach Open Source-Grundsätzen direkt bei <a href="https://github.com/Freischuetz-Digital">GitHub</a> abgerufen werden.
-                        Hier finden Sie neben dem projektspezifischen Fork der <a href="https://github.com/Edirom/Edirom-Online">Edirom</a>-Software, verschiedenen Tools und Demonstratoren, die vorliegende Webseite, die auf den Mechanismen von <a href="http://gruntjs.com/">GRUNT</a> und <a href="http://bower.io/">Bower</a> basiert.</p>
-                    <p>Die Arbeit mit XML-Dateien erfolgte im projektspezifischen Subversion.</p>
-                    <hr/>
-                    <h3>Fragen</h3>
-                    <p>Sollten Fragen zur Dokumentation oder allgemein zum Forschungsprojekt auftauchen, stehen die <a href="team.html">Mitarbeiter</a> jederzeit zur Verfügung.</p>
-                </div>
-
+                        <p>Der erstmalige Versuch, sich einem solchen umfangreichen Werk mit genuin digitalen
+                            Editionskonzepten zu nähern, führte – wie kaum anders zu erwarten – zu einer Vielzahl
+                            unerwarteter kleinerer und größerer Schwierigkeiten, die im Rahmen des begrenzt zur
+                            Verfügung stehenden Bearbeitungszeitraums zur Modifikation mancher vielleicht doch allzu
+                            leichtfertig formulierten Zielsetzung führten. Der Aufwand, den ein solches Pilotprojekt
+                            gerade im Hinblick auf den neuartigen und unerprobten Umgang mit den Daten treiben muss,
+                            war besonders im Bereich der tiefenerschließenden musikalischen oder kombinierten Text-
+                            und Musik-Daten erheblich größer als erwartet. Es ist zu hoffen, dass mit den vor diesem
+                            Hintergrund als Hilfen für den Nutzer entwickelten Tools und mit der vorliegenden
+                            Dokumentation neuen Editionsunternehmungen ein kritischer Leitfaden an die Hand gegeben
+                            werden kann, um rascher zu vergleichbaren Ergebnissen zu kommen (und sich noch weiter
+                            von den überkommenen Vorstellungen des Buches zu entfernen als uns dies gelungen ist).
+                            Daher waren dem Projekt von Anfang an die grundlegende Unterstützung editorischer Arbeit
+                            und das beispielhafte Aufzeigen neuer Möglichkeiten sowie die Entwicklung generischer
+                            Lösungen wichtiger als eine Vollständigkeit der eigenen "Edition", die in dieser
+                            Hinsicht an vielen Stellen eher als Demonstrationsobjekt benutzt wurde, auch wenn dabei
+                            im Sinne eines traditionellen Editionskonzepts gelegentlich eher von einem <em>misuse</em> von Daten
+                            gesprochen werden könnte. Insbesondere für das Konzept der Varianz im Bereich des
+                            Notentextes wurden in diesem Kontext Lösungen entwickelt, die sich bei anderen Werken
+                            sicherlich fruchtbringender anwenden lassen als bei dem, in der Überlieferung
+                            weitgehend stabilen Notentext des <em>Freischütz</em> (sieht man von den sekundären Parametern des Notentextes
+                            einmal ab, auf die daher hier ein besonderes Schwergewicht gelegt wurde).</p>
+                        <p>Der problemorientierte Ansatz des Projekts und die wechselnden Perspektiven auf den
+                            Gegenstand führten dazu, dass über die softwaretechnisch umgesetzten Lösungen hinaus
+                            viele Konzepte zunächst nur in Form sogenannter <a href="demos.html" target="_blank">Demonstratoren</a> vorgestellt werden
+                            können und die Dokumentation der Entwicklungen, aber auch speziell die Beschreibung der
+                            aufgetauchten Probleme bzw. das Aufzeigen künftiger Lösungswege eine wichtige Rolle
+                            spielen. Insofern sollte das Projekt nicht nur in seiner momentanen (sicherlich
+                            defizitären) äußeren Erscheinungsform, sondern vor allem auf der Basis der in
+                            unterschiedlichen Bereichen für weitere Forschungsarbeiten zur Verfügung gestellten
+                            Daten und der dokumentierten Workflows als eine Art "work in progress" wahrgenommen werden. Denn "paradigmatisch" ist
+                            <em>Freischütz Digital</em> aus heutiger Sicht vor allem dadurch, dass in allen
+                            Teilen des Projekts etablierte Standards benutzt und die Ergebnisse der Community ebenso frei zur
+                            Verfügung gestellt werden, um darauf aufbauende oder daran anknüpfende neue Forschungen
+                            zu ermöglichen – also den Gegenstand für die Forschung zu öffnen und nicht abschließende
+                            oder gar im doppelten Wortsinne abgeschlossene Ergebnisse zu liefern. Insofern ist das Projekt 
+                            nur ein kleiner Beitrag auf dem Weg zu neuen kooperativen Forschungsformen.</p>
+                            
+                            <h4>Arbeitspakete übergreifende Aspekte im kritischen Rückblick</h4>
+                            <p>Bereits das erste Konsortialtreffen in Detmold Anfang Oktober 2012 verdeutlichte die Notwendigkeit eines kontinuierlichen intensiven Austauschs zwischen den beteiligten Projektpartnern, der nicht nur durch insgesamt sechs Konsortialtreffen, sondern auch durch zehn weitere Treffen in kleineren Gruppierungen befördert wurde. Der Bedarf an möglichst effektiver Kommunikation, der auch durch eine gemeinsame online-Projektdokumentation (Redmine) unterstützt wurde, stieg in der zweiten Hälfte des Projektverlaufs deutlich an und wurde mit der Konzeption einer gemeinsamen Plattform für die Veröffentlichung der Ergebnisse nochmals höher, so dass die Mitarbeiterinnen und Mitarbeiter schließlich regelmäßige zweiwöchige Skype-Sitzungen etablierten, die häufig im Anschluss an die gemeinsame große Besprechung bzw. auch zwischenzeitlich in reduzierten Zusammensetzungen fortgesetzt wurden. Im Rückblick ist festzuhalten, dass das gegenseitige Verständnis für die Fragestellungen und Probleme der Projektpartner erst allmählich etabliert werden konnte und gerade die komplexen Codierungsprobleme im Text- und Musikbereich und die damit zusammenhängenden Darstellungsprobleme nicht von Anfang an für beide Seiten einsichtig waren. Hier zeigte sich ein Problem, das die Digital Humanities generell betrifft: Methoden und Denkweisen von Informatik und Geisteswissenschaften bedürfen in ihrer Unterschiedlichkeit jeweils eines längeren Lernprozesses auf der je anderen Seite. Das Konzept, nach einem ersten Austausch zwischen beiden Bereichen zunächst Entwicklungen in den verschiedenen Arbeitspaketen weitgehend unabhängig voranzutreiben und z.B. bei der Codierung spätere Darstellungsfragen auszuklammern – wie eigentlich nach der Philosophie der XML-Sprachen gefordert – funktioniert angesichts der Komplexität der Gegenstände nur sehr eingeschränkt. Die vieldiskutierten Probleme überlappender Hierarchien etwa verursachen bei der Codierung textgenetischer Sachverhalte in den Libretti selbst bei einem sauberen inhaltlichen Konzept nachträglich demjenigen Kopfschmerzen, der die vielen Einzel- bzw. Sonderfälle in eine einheitliche Darstellung überführen soll.</p>
+                            <p>Zu den wertvollsten Erfahrungen gehörte daher, dass beide Seiten – in diesem Falle Geisteswissenschaftler und Informatiker – die Konzepte von Anfang an gemeinsam entwickeln und die jeweiligen Folgen von Entscheidungen auf beiden Seiten reflektiert werden müssen. Wenn inhaltlich adäquate Codierungen schwieriger Sachverhalte hohen Darstellungsaufwand implizieren, kann dies dazu führen, dass Codierungen in einer Weise angepasst werden müssen, die einen Kompromiss zwischen den inhaltlichen Anforderungen und ihrer Umsetzbarkeit bedeuten – dies gilt in noch höherem Maße für die Musikcodierung. Es geht dabei keinesfalls um eine Reduktion der vom Gegenstand erforderten Komplexität, sondern darum, dass frühzeitig detaillierte Codierungsrichtlinien festgelegt werden sollten, um die Vielzahl von Möglichkeiten zur Erfassung gleicher Sachverhalte, die sowohl MEI als auch TEI bietet, zu beschränken, da diese Vielfalt für eine maschinelle Bearbeitung große Hürden aufrichtet. Beide Seiten müssen daher die Anforderungen der je anderen genau kennen, und von Anfang an empfiehlt sich ein sehr enges Zusammenarbeiten. Da hinsichtlich der Text- und Musikcodierung im FreiDi-Projekt zudem die informatische Kompetenz an einem Ort konzentriert war, erwies sich die Notwendigkeit eines intensiven Austauschs umso höher.</p> 
+                           <p>Aus diesen Erfahrungen heraus wird neuen digitalen Editionsprojekten dringlich geraten, <strong>die informatische Seite als wirklich integralen Bestandteil des Editionsunternehmens einzuplanen</strong> und den <strong>stetigen Austausch</strong> zwischen den Bereichen zu pflegen – bei keiner konzeptionellen Entscheidung auf einer Seite dürfen Vertreter der anderen fehlen. Detailliert organisierte Kommunikation und deren Dokumentation sind essentielle Voraussetzungen für die Durchführung eines solchen Vorhabens. 
+                            </p>
+                     
+                            <h4>Flexibilität in der Planung</h4>
+                            <p>Ein zweiter wichtiger genereller Punkt betrifft die Flexibilität, mit der ein solches Vorhaben auf neue Erkenntnisse oder Entwicklungen reagieren sollte. Dies sei an drei Punkten erläutert:</p> 
+                            <ul><li>In den Visionen, die das Projekt zu Beginn formuliert hatte und die als notwendige Voraussetzung für die Konzeption neuer Methoden und Features gelten müssen, war davon die Rede, dass die MEI-codierten Notentexte mit den Zeitpositionen der entsprechenden Audiodatenströme verbunden werden müssten, um eine <strong>neuartige Synchronisation von Notentext und Audio</strong> zu erreichen (vgl. AP 2.1). Daher war zunächst vorgesehen, dass die Erlanger Kollegen die Codierungen der Musikdaten aus Detmold übernehmen sollten, um ihre Arbeiten durchführen zu können, was zunächst aufgrund der aufwändigen Erstellung dieser Codierungen entsprechende Verzögerungen mit sich brachte. Es stellte sich dann aber heraus, dass die Experimente zur zeitlichen Segmentierung ebenso gut zunächst auf der Basis von MIDI-Daten stattfinden konnten, die aus den noch nicht in MEI überführten graphischen Notensatzdateien erzeugt worden waren, so dass eine Anbindung an MEI erst in einem zweiten Schritt notwendig wurde. </li>
+                                <li>Im Falle der <strong>Musikcodierung</strong> war das geforderte Maß an Flexibilität am höchsten. Bis dato war noch kein Musikwerk mit einem solchen Umfang in MEI vorgelegt worden. Die schiere Menge an eigentlich kaum noch als menschenlesbar zu bezeichnendem Code (allein das Autograph umfasst ca. 1,4 Millionen Zeilen MEI) erforderte neue Herangehensweisen, schon um diesen Code in irgendeiner Form kontrollieren zu können. Hierzu wurden in der mittleren Phase des Projekts eigene Korrekturlesewerkzeuge entwickelt, die dem zwischenzeitlich fast hoffnungslos erscheinenden Versuch, dieser Datenflut Herr zu werden, neue Perspektiven gaben. Diese Korrekturen waren aber auf eine „Verbildlichung“ des Codes, also eine Überführung in menschenlesbaren Notensatz angewiesen. Hierzu konnten in der Anfangsphase Darstellungsbibliotheken wie abcjs, VexFlow oder MEISE getestet und einbezogen werden, ohne dass diese Verfahren wirklich befriedigten. Als in der letzten Phase des Projekts die von Laurent Pugin publizierte Darstellungsbibliothek Verovio eine vielversprechende Umsetzung von MEI-Daten erkennen ließ, wurde in Absprache mit Pugin diese Bibliothek in die weiteren Darstellungsversuche übernommen und fest in die Edirom-Anzeige integriert. </li>
+                                    <li>Ein ähnlicher Wechsel betraf die <strong>Verwendung eines Bildservers</strong> in der <em>Edirom</em>: War über Jahre hinweg für die Anzeige Digilib verwendet worden, was bei großen Bildmengen (wie in Opern) immer wieder Performance-Probleme mit sich brachte, konnte im letzten Drittel des Projekts mit einer auf der Javascript-Library <em>Leaflet</em> basierenden sehr viel leistungsstärkeren Darstellung experimentiert werden, die erstmals auch ein Rendering isolierter Stellen ermöglichte. Diese Darstellung wurde gegen Ende von FreiDi noch als Alternative erarbeitet und wird für das Projekt nachträglich bereitgestellt.</li>
+                            </ul> 
+                    <p>Es erscheint wichtig, dass Projekte wie FreiDi die aktuellen Entwicklungen auf den einschlägigen Gebieten aktiv verfolgen und <strong>frühzeitig Technologie-Entscheidungen revidieren</strong>, um leistungsfähige neue Tools zu integrieren, ohne andererseits allzu früh auf eventuell nur kurzlebige Entwicklungen zu setzen. Dies setzt voraus, dass solche Projekte aktiv am Austausch innerhalb der Community beteiligt sind – was einer der Gründe dafür war, dass sich das Projekt um eine regelmäßige Teilnahme an wichtigen Konferenzen bemüht und durch Veröffentlichungen auf die eigenen Entwicklungen aufmerksam gemacht hat.</p>  
+                                <p>In dieser Hinsicht gab es also Abweichungen von den ursprünglich formulierten Vorgehensweisen oder Zielen, ein starres Festhalten an einmal Formuliertem hätte jedoch gegen den Geist des Projekts verstoßen und dazu beigetragen, die übergeordneten Ziele zu verfehlen.</p>
+                            <p>Dies gilt auch für Ziele im Bereich der <strong>Software-Entwicklung</strong>. Im Vordergrund standen nach den Vorgaben des Projekts prototypische Lösungen, auch wenn der dauerhafte Einsatz auf einer breiteren Quellenbasis oder die Übertragbarkeit auf andere Projekte – soweit möglich – zu berücksichtigen waren. Da aber das Aufzeigen neuer Möglichkeiten im Zweifelsfalle Vorrang haben sollte, hat sich das Projektteam (wie oben erwähnt) entschlossen, Teilbereiche durch die Entwicklung sogenannter <a href="demos.html" target="_blank">Demonstratoren</a> abzudecken. Diese zeigen neue Funktionen auf, ohne sie in Form fertiger, ohne Anpassung nutzbarer Softwarekomponenten vorzulegen. Wichtig sind in diesen Fällen die <strong>Perspektiven</strong>, die durch diese Demonstratoren aufgezeigt werden können, wünschenswert wäre allerdings die Bereitstellung entsprechender Entwicklerkapazitäten, denn erst die praktische Verfügbarkeit solcher Tools kann eine wirkliche Veränderung der Forschungsmethoden bewirken.</p>
+                            <h4>Dank</h4>
+                        <p>Diese Vorbemerkung zur Dokumentation kann nicht abgeschlossen werden ohne ein herzliches
+                            Wort des Dankes: Nur durch die Unterstützung zahlreicher Bibliotheken, Archive und
+                            Privatpersonen, die bereit waren, ihre Quellen in diesem Projekt der
+                            wissenschaftlichen Öffentlichkeit zur Verfügung zu stellen und durch die großzügige
+                            Erlaubnis von Tonträger-Firmen und Rundfunkanstalten, ihre Audio-Aufnahmen zu nutzen,
+                            konnte dieses Vorhaben verwirklicht werden. Ihnen allen sei auch an dieser Stelle
+                            herzlich gedankt!</p>
+                        </div>
+                            <hr/>
+                    <div>
+                        <h3 id="inhalte">2. Inhalte – Objekte – Daten: Grundlegendes zur Konzeption der Arbeitspakete</h3>
+                        <p>In den von den vier Projektpartnern gemeinsam bearbeiteten sechs Arbeitspaketen standen
+                            die graphische, logische und akustische (bzw. performative) Domäne des Werkes im
+                            Zentrum. Graphische und logische Domäne betreffen dabei sowohl die musikalischen als
+                            auch die textlichen Anteile der Edition. Im Folgenden werden die einzelnen Bestandteile
+                            der Edition kurz vorgestellt, nähere Erläuterungen finden sich dann in den jeweiligen Zugangsbereichen.</p>
+                        <h3 id="notentexte">2.1 Notentexte</h3>
+                        <h4 id="faksimiles">2.1.1 Faksimiles</h4> 
+                        <p>Die Überlieferung der musikalischen Anteile des <em>Freischütz</em> beginnt – sieht man von
+                            einigen marginalen, in diesem Kontext nicht berücksichtigten Skizzen ab – mit der
+                            autographen Partitur Webers und setzt sich dann zunächst in den 41 Abschriften fort, deren
+                            Herstellung bzw. Versand der Komponist zwischen November 1820 und April 1823 in seinem
+                            Ausgabenbuch dokumentiert hat. Hinzu kommt eine dort nicht vermerkte Abschrift für die
+                            Berliner Uraufführung. Von diesen von Weber autorisierten insgesamt 42 Abschriften lassen
+                            sich heute nur noch acht nachweisen, die von zwei der Hauptkopisten Webers angefertigt
+                            wurden. Diese Quellen sind sämtlich in <em>Edirom online</em> nunmmern- bzw. taktweise im Faksimile zugänglich. Zu einer Übersicht vgl. 
+                            Menüpunkt "Daten und Werkzeuge" bzw. in <em>Edirom online</em> die Rubrik Musikedition: Quellen.
+                            </p> 
+                        <p>Hinzu kommen (in Auswahl) einige gedruckte Quellen, beginnend mit dem von Weber betreuten Erstdruck des Klavierauszugs über die postum 1849
+                            publizierte Partituredition (in mehreren Auflagen) bis hin zum verbreiteten Peters-Druck (siehe Übersicht wie oben).
+                        </p>
+                        <p>Zur Erfassung dieser Objekte im Detail vgl. den Abschnitt "<a href="documentation-music.html#core-konzept" target="_blank">Das Core-Konzept</a>".</p>
+                        <h4 id="codierung">2.1.2 Codierungen der Notentexte</h4>
+                        <p>Eine durchgängige Codierung der Notentexte (als Implementierung der logischen Domäne) war
+                            für die Verknüpfung der unterschiedlichen Objekte innerhalb des Projekts von zentraler
+                            Bedeutung, zumal erst so die wirklichen Vorteile digitaler Editionen verdeutlicht werden
+                            können. Diese Codierung setzt sich dabei aus zwei Bestandteilen zusammen: In den
+                            sogenannten Metadaten werden wesentliche Teile der traditionellen Quellenbeschreibung in
+                            formalisierter Weise erfasst, während die Codierung der Notentexte selbst im Idealfall
+                            ein präzises Abbild des jeweiligen Quellenbefunds wiedergibt. Damit werden die
+                            Voraussetzungen für einen teilautomatischen Quellenvergleich, andererseits aber auch die
+                            Grundlagen für eine Dokumentation dieser Abweichungen in formalisierten Apparateinträgen
+                            geschaffen, die wiederum Voraussetzung für eine Darstellung von Varianten als bzw. 
+                            innerhalb von Notentext sind. Die Konzepte dieser Codierung, für die der Standard der
+                            Music Encoding Initative (MEI) verwendet wurde, sind im Abschnitt XXX erläutert.</p>
+                        <p>Im Rahmen der Arbeiten an den MEI-Codierungen und im Hinblick auf die Notwendigkeit,
+                            diese umfangreichen XML-Daten möglichst zeitsparend zu erstellen, korrekturzulesen und
+                            für die unterschiedlichsten Anforderungen aufzubereiten, mussten zahlreiche
+                            Transformationsszenarien konzipiert, erarbeitet und die Ergebnisse der erstellten
+                            XSLT-Skripte überprüft werden. Hierzu wurde eine stattliche Reihe neuer Tools
+                            entwickelt, die z.B. ein Korrekturlesen von Tonhöhen und -dauern, von Bogensetzungen,
+                            Dynamik, Artikulation u.a.m. ermöglichen und in ggf. adaptierter Form für andere
+                            Projekte bereitgestellt werden. Der außerordentlich komplexe Umgang mit den MEI-Daten wird deutlich im
+                            Kapitel "<a href="documentation-music.html#werkzeuge" target="_blank">Werkzeuge GitHub</a>", in dem die einzelnen Tools im Detail beschrieben
+                            sind.</p>
+                    </div>
+                        <hr/>
+                    <div>
+                        <h3 id="textteile-a">3. Textteile - Teil A: Eigene Arbeitsbereiche des Projekts</h3>
+                        <h4 id="libretto">3.1 Zum Libretto des Freischütz</h4>
+                        <p>Hinsichtlich der textlichen Quellen des Werkes kann beim <em>Freischütz</em> von einer
+                            idealen Quellenlage gesprochen werden: Nahezu alle wesentlichen Dokumente zur
+                            Entwicklung des Werktextes sind erhalten. Hinzu kommen eine frühe Textbuchkopie (noch
+                            vor der Uraufführung des Werkes) sowie die in mehreren Überarbeitungen vom Librettisten
+                            selbst publizierten Editionen. So war es ein Hauptanliegen dieses Moduls, die Textgenese
+                            des Werkes und die weitere Textentwicklung bis zum Tod des Librettisten Friedrich Kind
+                            1843 in der digitalen Edition nachvollziehbar zu machen. Voraussetzungen dafür und für
+                            eine weitere Verwendung der erstellten Daten war in diesem Falle die Codierung der Texte
+                            mit dem XML-Standard der Text Encoding Initiative (TEI).</p>
+                        <p>Zu einer Übersicht über die im Rahmen der Edition berücksichtigten handschriften und gedruckten Quellen zum Libretto
+                            vgl. den Menüpunkt Daten und Werkzeuge.</p>
+                        <p>Alle Übertragungen beruhen auf der Anwendung der Codierungsstandards der TEI. Da die
+                            handschriftlichen Quellen in sich jeweils vielfältige Überarbeitungsspuren zeigen, waren
+                            bei der Erfassung dieser Texte in TEI die unmittelbar auf den Entstehungsprozess des
+                            Textes bezogenen Nachträge und Revisionen innerhalb einer Handschrift von besonderem
+                            Interesse und wurden daher in der Präsentation mit einer eigenen Darstellungsform
+                            bedacht (vgl. hierzu die Beschreibung des Werkzeugs Genetic Text Stages –
+                            Textschichtenanzeige). Zugleich sind aber ebenso die auf den Entstehungsprozess
+                            bezogenen Unterschiede zwischen den (handschriftlichen) Textbüchern festzuhalten,
+                            andererseits aber auch Überlieferungsvarianten in den Kopien und gedruckten Textbüchern.
+                            Die Idee, angesichts der somit sehr komplexen Anforderungen an die Darstellung dieser
+                            unterschiedlichen, auf Entstehung und Überlieferung bezogenen Varianzen ein der
+                            Musikedition vergleichbares Konstrukt – eine Text-Core-Datei – zu entwerfen, lag nahe.
+                            Die Funktionsweise dieser Text-Core-Datei unterscheidet sich dennoch grundlegend von
+                            jener der Musik (vgl. dazu den Abschnitt <a href="documentation-libretti.html">Darstellung der Textgenese</a>).</p>
+                        <p>Es wäre im Kontext dieser Edition jedoch ein hybrides Unterfangen, sämtliche Varianten
+                            zwischen allen Quellen in entsprechenden Synopsen sichtbar zu machen (in Rahmen einer
+                            korpuslinguistischen Untersuchung wäre dies mit den vorliegenden Daten jedoch denkbar). Daher wurde
+                            auf eine Darstellung orthographischer Varianten verzichtet (die Orthographie der Quellen
+                            ist in den diplomatischen Übertragungen der Texte zugänglich - mit Ausnahme einiger
+                            weniger Eigenheiten der historischen Notierungsweisen) und lediglich (zugegebenermaßen
+                            subjektiv definierte) bedeutungstragende Varianten sind mit Hilfe der Core-Datei
+                            visualisiert. Die Möglichkeiten der Anzeige automatisierbarer Analysevorgänge wurden mit
+                            einzelnen Demonstratoren (siehe Varianz-Anzeige) verdeutlicht, eine umfangreichere Veranschaulichung
+                            muss späteren Projekten vorbehalten bleiben.</p>
+                        <p>Gleiches gilt für die komplexe Verknüpfung von Partitur und Libretto.</p>
+                        <h4 id="referenztexte">3.2 Referenztexte des <em>Freischütz</em>-Librettos</h4> 
+                        <p>In der Weber-Literatur hat es wiederholt Auseinandersetzungen über
+                        mögliche Vorbilder von Kinds Libretto bis hin zu direkten Plagiatvorwürfen gegeben. Dass
+                        das von August Apel und Friedrich Laun herausgegebene <em>Gespensterbuch</em> (Bd. 1,
+                        Leipzig 1810) Ausgangspunkt für mehrere Dramatisierungen des <em>Freischütz</em>-Stoffes
+                        war, ist dabei unbestritten. <em>Freischütz Digital</em> schafft die Voraussetzung zu einer
+                        umfassenden Auseinandersetzung mit der Frage der Abhängigkeiten von eventuellen Vorbildern
+                        bzw. versucht modellhaft, nicht nur motiv- und stoffgeschichtliche Zusammenhänge, sondern
+                        generell Interdependenzen der Texte sichtbar zu machen. Dabei beschränkt sich der Nachweis
+                        intertextueller Bezüge nicht auf die historisch <em>vor</em> diesem Libretto liegenden
+                        Referenzpunkte, sondern bezieht auch die Nachwirkung des Librettos (zumindest in Ansätzen)
+                        mit ein. Aus der Fülle der für beide Gesichtspunkte in Frage kommenden Texte wurde eine Reihe von 
+                        (überwiegend im Druck vorliegenden) ausgewählt und in Übertragung sowie nach Möglichkeit auch
+                        im Faksimile wiedergegeben. Einbezogen wurde auch Friedrich von Schillers <em>Wallenstein</em>-Trilogie, auf die sowohl in Kinds als auch in
+                            etlichen Referenztexten häufig Bezug genommen wird. Diese Texte konnten dem TextGrid-Repository entnommen werden.</p>
+                        <p>Um motivische Bezüge zwischen diesen – ebenfalls in diplomatischen Übertragungen im
+                            TEI-Standard vorgelegten – Texten rascher erfassen und damit überprüfen zu können, wurde
+                            die Technik der sogenannten "Topic Maps" eingesetzt (vgl. dazu die Erläuterungen unter
+                            ...), mit der gemeinsame Motive oder Topoi durch ad hoc erzeugte Grafiken visualisiert
+                            werden. Dies erlaubt auch bei unterschiedlicher verbaler oder orthographischer
+                            Bezeichnung der Gegenstände eine Veranschaulichung von Bezügen. Auch diese Möglichkeit konnte
+                            hier nur modellhaft vorgestellt werden (erfasst wurden Motive, Begriffe und Namen), es
+                            dürfte aber deutlich werden, dass es sich hier um ein mächtiges Werkzeug handelt, dessen
+                            Bedeutung zunimmt, wenn die unter 2.3 genannten Texte mit einbezogen werden.</p>
+                    </div>
+                        <hr/>
+                        
+                        <h3 id="textteile-b">4. Textteile - Teil B: Integration der digitalen Textanteile der WeGA</h3>
+                        <p>Webers Briefe, Tagebücher und Schriften werden in einer digitalen Edition der WeGA
+                            erarbeitet, die unter <a target="_blank" href="http://www.weber-gesamtausgabe.de">http://www.weber-gesamtausgabe.de</a> zur Verfügung steht. In diesen Ego-Dokumenten
+                            ist selbstverständlich auch die Entstehung des <em>Freischütz</em> und die Überlieferung
+                            zu Webers Lebzeiten dokumentiert. Auf dieser Website stehen darüber hinaus aber eine
+                            Vielzahl weiterer Informationen zur Verfügung: So biographische Daten zum Netzwerk der
+                            Personen, mit denen Weber in Kontakt stand, ferner Rezensionen publizierter Werke Webers
+                            und vor allem Besprechungen von Aufführungen seiner Werke (überwiegend zu Lebzeiten des
+                            Komponisten). Zum <em>Freischütz</em> sind dort gegenwärtig über 300 Besprechungen
+                            zugänglich. Diese Daten, die allesamt nach den Codierungsrichtlinien der TEI erfasst
+                            sind, stehen für das Projekt <em>Freischütz Digital</em> mit zur Verfügung und erweitern
+                            damit das Datenspektrum erheblich. Sämtliche Objekte dieser Website sind mit
+                            Identifieren (ID’s) versehen, so dass sie eindeutig referenzierbar sind.<br/> Auf einen eigenen
+                            Demonstrator, der die Verknüpfungsmöglichkeiten mit der Website der WeGA verdeutlich, 
+                            wurde wegen mangelnder personeller Ressourcen verzichtet; in den Texten zur Entstehung von Libretto
+                            und Musik sind entsprechende Verknüpfungen integriert, die momentan lediglich durch Öffnen
+                            neuer Fenster umgesetzt sind.</p>
+                        
+                        <hr/>
+                        
+                        <h3 id="audio">5. Audio-Anteile</h3>
+                        <p>Bei der Konzeption des Projekts war von Anfang an vorgesehen, die Audio-Domäne mit in die
+                            Arbeiten einzubeziehen, zeigt sich doch allein schon in den inzwischen über 50
+                            existierenden Tonaufnahmen der Oper, dass hier ein ideales Feld für
+                            Interpretationsforschungen zu bestellen ist, das in Verbindung mit den online
+                            zugänglichen Notentexten neue Erkenntnisformen möglich macht. Da die Projektpartner von
+                            den Audio Laboratories in Erlangen über entsprechende Erfahrungen verfügten, wurde als
+                            eines der Ziele die Synchronisation von Notencodierung und Tonaufnahmen vereinbart.
+                            Dabei ging es weniger um die Synchronisation selbst als um die Entwicklung
+                            halbautomatischer Verfahren zur horizontalen Segmentierung von Audio-Daten. Die
+                            Ergebnisse der modellhaften Versuche – die wesentlich zur Verbesserung der
+                            Segmentierungsalgorithmen führten – sind in der Dokumentation beschrieben, da sie für
+                            den Endnutzer des Projekts nicht unmittelbar sichtbar sind. Der Nutzer profitiert jedoch
+                            von diesen Verfahren insofern als mit dem Werkzeug <em>Score follows Audio</em> eine
+                            Parallelisierung von Notenbild und Audioaufnahme und der Einstieg in jedem beliebigen
+                            Takt der Nummern möglich ist.</p>
+                        <p>Um Experimente mit der Segmentierung nicht nur in der horizontalen, sondern auch in der
+                            vertikalen Zusammensetzung des Klangs vornehmen zu können, wurden ausgewählte Nummern
+                            (Nr. 6, 8, 9) des <em>Freischütz</em> in Kooperation mit der Hochschule für Musik
+                            Detmold und dem Tonmeisterinstitut der Hochschule in einem komplexen Aufnahmeverfahren
+                            eingespielt (vgl. den Bericht <a href="audio-production-2014.html" target="_blank">Abschluss der Audio-Produktion am ETI der HfM Detmold</a>), bei dem sowohl eine Gesamtabmischung als auch
+                            die Einzelabnahme der Stimmgruppen und Solisten erfolgte. Mit diesen Einzelspuren
+                            standen damit Referenz-Daten für eine spektrale Segmentierung der Gesamtmischung zur
+                            Verfügung, die wiederum eine Optimierung entsprechender Alogrithmen erlaubten.
+                            Langfristig ist daran gedacht, diese Erfahrungen zu nutzen, um auch mit historischen
+                            Einspielungen in Richtung vertikaler Segmentierungen zu experimentieren – etwa um
+                            bestimmte Instrumente oder Stimmen in einer solchen Aufnahme in einer Weise
+                            hervorzuheben, die Interpretationsvergleiche erleichtert. Um die Ergebnisse der
+                            Segmentierung verdeutlichen zu können, wurde ein <em>Multitrack</em>-Demonstrator
+                            entwickelt, mit dem der Nutzer Einzelstimmen aus dem Gesamtklang filtern kann und sich
+                            die Berücksichtigung von Parametern wie Trennschärfe und Laufzeitverschiebung bei der
+                            Bearbeitung der Daten demonstrieren lässt (vgl. dazu <a href="https://www.audiolabs-erlangen.de/resources/MIR/FreiDi-MultitrackDataset/" target="_blank">Multitrack Data Set</a>.)</p>
+                        <p>Die Aufnahme diente jedoch nicht allein den Forschungen der Erlanger Projektpartner, sondern erlaubte im
+                            Vorfeld der Einstudierung eine Diskussion über die Berücksichtigung von Eigenheiten und
+                            Varianten des Partiturtextes bei der Einrichtung der Orchesterstimmen.
+                            Selbstverständlich konnten mit dem großen Orchesterapparat Interpretationsalternativen
+                            auf der Basis von Unsicherheiten des Notentextes nur in begrenztem Maße während der
+                            Proben ausprobiert werden, dennoch führte dies zu einer Reihe – wenn auch mit äußerster
+                            Vorsicht zu beurteilender – interessanter Erkenntnisse. Einige wenige ausgewählte
+                            Passagen werden daher in <em>Freischütz Digital</em> präsentiert (vgl. <a href="audio-production-2014.html" target="_blank">Abschluss der Audio-Produktion am ETI der HfM Detmold</a>). Es ist zu
+                            hoffen, dass die Arbeit, die hier nur für die ausgewählten Nummern geleistet werden
+                            konnte, Folgen für spätere Auseinandersetzung mit den Notentexten des Gesamtwerks
+                            hat.</p>
+                        <p>Von besonderer Bedeutung ist diese Einspielung auch dadurch, dass alle Beteiligten bereit
+                            waren, die Daten zu dieser Aufnahme unentgeltlich für zukünftige wissenschaftliche
+                            Forschungen zur Verfügung zu stellen.</p> Die Einbeziehung historischer Aufnahmen des
+                        Werks war im Kontext des Projekts nur in exemplarischer Form möglich: Dank der Unterstützung
+                        durch die Eigentümer der Tonträger konnten einige Einspielungen der Nummern 6, 8 und 9 zur
+                        Demonstration eines – noch sehr rudimentären – Werkzeugs zum Vergleich von Interpretationen
+                        genutzt werden. Es handelt sich im einzelnen um folgende Einspielungen: 
+                        <ul>
+                            <li>Otto Ackermann (1951)</li> <!-- Hier noch direkte Danks und Links einbauen!! -->
+                            <li>Wilhelm Furtwängler (1954)</li>
+                            <li>Erich Kleiber (1955)</li>
+                            <li>Eugen Jochum (1959)</li>
+                            <li>Carlos Kleiber (1973)</li>
+                            <li>Marek Janowski (1994)</li>
+                            <li>Hinzu kommt die Aufnahme der HfM Detmold unter Karl-Heinz Bloemeke (2014)</li>
+                        </ul>
+                        <p>Auch in diesem Falle ging es lediglich um eine exemplarische Demonstration neuer
+                            Möglichkeiten des Interpretationsvergleichs; weitere Audio-Aufnahmen (u.a. aus dem
+                            Archiv der Stimmen der SLUB Dresden) sind im Abschnitt zur Frage der Appoggiaturen (Aufsatz in Vorbereitung) referenziert.</p>
+                        
+                        <hr/>
+                        
+                        <h3 id="technik">7. Technische Voraussetzungen</h3>
+                        <p>An technischen Voraussetzungen für die Durchführung des Projekts sind u.a. zu nennen:
+                        <ul>
+                            <li>die XML-Codierungsformate der Text Encoding Initiative TEI und der Music Encoding Initiative MEI: Während im Bereich von TEI Konzepte neben dem Rückgriff auf das Modul <a target="_blank" href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DR.html">Performance Texts</a> 
+                                insbesondere auch Konzepte zur Codierung textgenetischer Details herangezogen werden konnten (vgl. dazu in den Guidelines auch das Kapitel <a target="_blank" href="http://www.tei-c.org/release/doc/tei-p5-doc/de/html/PH.html">Representation of Primary Sources</a>), waren für die Musikcodierung neben dem aktuellen <a target="_blank" href="http://music-encoding.org/downloads/latest-release/">MEI-Release 2013</a> im Rahmen der auftretenden 
+                                Probleme kontinuierlich Absprachen mit der MEI-Community bzw. dem MEI-Technical-Team erforderlich. Die enge Zusammenarbeit zwischen Projekt und diesem Team führte zu einer Reihe von 
+                                konkreten Vorschlägen für das kommende Release von MEI. </li>
+                            <li>die akutelle Entwicklung der Edirom-Werkzeuge und speziell von <em>Edirom online</em>: Diese zunächst im Rahmen eines DFG-Projekts konzipierten Werkzeuge wurden in den vergangenen Jahren kontinuierlich weiterentwickelt und waren eine 
+                            wesentliche Voraussetzung für die Konzeption geeigneter Verarbeitungs- und Anzeigeformen.</li>
+                            <li>verschiedene Darstellungsbibliotheken zum Rendering der MEI-Daten, hierunter in besonderer Weise das von Laurent Pugin entwickelte <a href="http://www.verovio.org" target="_blank">Verovio</a>, das in der letzten Phase des Projekts in <em>Edirom online</em> integriert werden konnte. In 
+                            enger Absprache mit Pugin wurden von diesem einzelne, für FreiDi benötigte Features entwickelt und implementiert.</li>
+                            <li>[Weitere Voraussetzungn im engeren technischen Sinne werden an dieser Stelle ergänzt.]</li><!-- Hier müssten weitere Dinge genannt werden!! -->
+                        </ul>
+                        </p>
+                        <hr/>
+                        
+                        <h3 id="präsentationskonzept">8. Präsentationskonzept</h3>
+                        <p>Seit Beginn des Projekts wurde für die Präsentation der Projektergebnisse eine doppelte Strategie verfolgt: Neben das (hier zu beschreibende) Verfügbar-Machen der Ergebnisse über unterschiedliche Formen 
+                            von öffentlich zugänglichen Websiten bzw. Repositorien sollte als wichtige Ergänzung die Vermittlung an die wissenschaftliche Community über Vorträge, Aufsätze, Präsentationen, Poster oder Workshops treten, 
+                            denn Ziel des Projekts war nicht die Vorstellung fertiger Ergebnisse, sondern vor allem das Aufzeigen von neuen Möglichkeiten und die Anregung der Diskussion über geeignete neue Konzepte im digitalen Medium, verbunden mit der Förderung der Entwicklung 
+                            einschlägiger Workflows, der Optimierung notwendiger Standards und der Neu- oder Weiterentwicklung geeigneter Werkzeuge. Dies ist und bleibt eine zentrale Voraussetzung für das erfolgreiche 
+                        und nachhaltige Etablieren neuer Editionsformen und -techniken in unseren Fachdisziplinen. (Einen Überblick über die – fortzusetzenden – Aktivitäten auf diesem Feld gibt die FreiDi-Website unter 
+                            <a href="http://freischütz-digital.de/publications.html" target="_blank">Publikationen &amp; Vorträge</a>.)</p>
+                        <p>Da bislang keine Gesamtarchitektur für die eng verknüpfte Veröffentlichung von Ergebnissen aus den verschiedensten Teilbereichen existiert, eine solche aber in diesem Projekt auch nicht 
+                        umsetzbar war, sind die Ergebnisse in unterschiedlichster und möglichst flexibler Form zugänglich: 
+                        <ul>
+                            <li>Die größte Integrationsleistung ließ sich mit den Werkzeugen von <em>Edirom online</em> erreichen: Hier sind alle wichtigen Quellen und die meisten Visualisierungen unter einer 
+                            Oberfläche zusammengeführt: erläuternde Texte, sämtliche Digitalisate von Musik- und Textanteilen, Audio-Files, Annotationen und Metadaten. Darüber hinaus bietet diese Oberfläche einen gezielten Zugriff 
+                            auf die Datenbestände und eine Vielzahl von Kombinationsmöglichkeiten. So können in der Musik z.B. Einzelnummern oder Takte gezielt angewählt und mit anderen Quellen kollationiert oder in den handschriftlichen Libretti die Darstellungen nach 
+                            Textschichten zur besseren Identifikation von Nachträgen in den Handschriftenabbildungen benutzt werden. Auch das parallele Öffnen von Fenstern aus den Bereichen Werk, Musikedition, Texte, Referenztexte und Aufnahmen 
+                            trägt zur flexiblen Nutzbarkeit der Daten wesentlich bei. Schließlich sind in dieser Oberfläche auch Annotationen eingebunden, die sowohl interne Fenster in Musik oder Texten öffnen als auch die externen Seiten 
+                            der <a href="http://www.weber-gesamtausgabe.de" target="_blank">Weber-Gesamtausgabe</a> mit ihren umfangreichen Informationen zu Personen sowie den unterschiedlichsten Dokumentarten (Briefe, Tagebücher, Schriften, Aufführungsbesprechungen, Rezensionen usw.) anbinden. Selbst eine vorläufige 
+                                Darstellung des Notentextes mit Hilfe des Renderings der Bibliothek <a href="http://www.verovio.org" target="_blank">Verovio</a> ist für Webes Autograph und für die ausgewählten Nummern (6, 8, 9) über <em>Edirom online</em> möglich.</li>
+                            <li>Sämtliche Dokumentationen und die bestimmte Aspekte der Musik- und Textedition sowie des Umgangs mit den Audio-Daten illustrierenden Demonstratoren sind auf der Website des Projekts <a href="http://freischuetz-digital.de" target="_blank">Freischütz Digital</a> zugänglich. Dies soll verdeutlichen, dass es sich hier um Lösungen für spezielle Probleme handelt, deren komplette Umsetzung auf dem gesamten Datensatz im Rahmen des Projekts nicht mehr möglich war. 
+                            Allerdings handelt es sich dabei keinesfalls um bloße Mockups, sondern um auf den Daten aufsetzende Prototypen, deren durchgängige Anwendbarkeit gegenwärtig noch an der Diversität der Datenstrukturen bzw. dem notwendigen 
+                            Programmieraufwand scheitert. Die Lösungen sollten also in mit entsprechenden Kapazitäten ausgestatteten Projekten anwendbar sein.</li> 
+                            <li>Text-, Musik- und akustische Daten (in Form von XML-Daten bzw. Audio-Files) sind an mehreren Stellen zugänglich: Einerseits auf den GitHub-Seiten zu (<a href="https://github.com/Freischuetz-Digital" target="_blank">Freischuetz-Digital</a>, andererseits innerhalb des <a href="https://textgridrep.de" target="_blank">TextGrid-Repository</a>. Damit soll die Voraussetzung einer aktiven Nachnutzung der Daten 
+                            geschaffen werden.</li>
+                        </ul>
+                            Nähere Informationen zu den jeweiligen Bereichen siehe in den Unterrubriken dieser Dokumentationen, innerhalb der <em>Edirom-online</em> bzw. auf GitHub und im TextGridRepository.
+                        </p>
+                    </div>
+                    
             </div>
+            
         </div>
+        
+        <script type="text/javascript">
+            window.activeNavLink = 'nav_documentation';
+        </script>
+        
     </section>
-
-    <!-- include "_footer.html" -->
-</div>
-<!-- include "_htmlend.html" -->

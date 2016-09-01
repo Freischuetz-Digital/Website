@@ -1,90 +1,118 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <title>Freischütz Digital</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <meta name="description" content=""/>
-        <meta name="author" content="Daniel Röwenstrunk"/>
-        
-        <link rel="stylesheet" href="styles/bootstrap.css"/>
-        <link rel="stylesheet" href="styles/bootstrap-responsive.css"/>
-        <link href="styles/bootswatch.css" rel="stylesheet"/>
-        <link href="styles/freidi.css" rel="stylesheet"/>
-        <link href="styles/ptsans.css" rel="stylesheet"/>
-        
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="pix/freidi_icon_144.png"/>
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="pix/freidi_icon_114.png"/>
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="pix/freidi_icon_72.png"/>
-        <link rel="apple-touch-icon-precomposed" href="pix/freidi_icon_57.png"/>
-        <link rel="shortcut icon" href="pix/freidi_favicon.png"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="" />
+        <meta name="author" content="Daniel Röwenstrunk" />
+
+        <link rel="stylesheet" href="styles/bootstrap.css" />
+        <link rel="stylesheet" href="styles/bootstrap-responsive.css" />
+        <link href="styles/bootswatch.css" rel="stylesheet" />
+        <link href="styles/freidi.css" rel="stylesheet" />
+        <link href="styles/ptsans.css" rel="stylesheet" />
+
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="pix/freidi_icon_144.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="pix/freidi_icon_114.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="pix/freidi_icon_72.png" />
+        <link rel="apple-touch-icon-precomposed" href="pix/freidi_icon_57.png" />
+        <link rel="shortcut icon" href="pix/freidi_favicon.png" />
     </head>
-    <body data-spy="scroll" data-target="#navbar" data-offset="30">
-        <div class="navbar navbar-fixed-top">
-            <div class="navbar-inner">
-                <div class="container">
-                    <a class="brand" href="index.html">Freischütz<br/>
-                        <small>Digital</small>
-                    </a>
-                    <ul class="nav">
-                        <li>
-                            <a href="index.html">Projekt</a>
+    <body>
+        <div id="content" class="container">
+            <div id="figure-top" class="figure visible-desktop">
+                <img style="height: 330px;" src="" alt="" />
+            </div>
+            <header id="overview" class="jumbotron subhead">
+                <div class="row" style="min-height: 0;">
+                    <div class="span8">
+                        <img style="margin: 40px 0 0 3px;" src="pix/Logo_greenInset.png" />
+                    </div>
+                    <div class="span4"> </div>
+                </div>
+                <div id="navbar" class="subnav">
+                    <ul class="nav nav-pills">
+                        <li id="nav_freidi" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">Freischütz Digital <span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="index.html">Ziele des Projekts</a></li>
+                                <li><a href="work-packages.html">Arbeitspakete</a></li>
+                                <li><a href="locations.html">Institutionen</a></li>
+                                <li><a href="team.html">Mitarbeiter</a></li>
+                                <li><a href="process.html">Projektverlauf</a></li>
+                            </ul>
                         </li>
-                        <li>
-                            <a href="/edition/">Edition</a>
+                        <li id="nav_edition">
+                            <a href="edition.html">Edirom Online</a>
                         </li>
-                        <li>
-                            <a href="demos.html">Demonstratoren</a>
+                        <li id="nav_data-tools" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">Daten und Werkzeuge <span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="data-and-tools.html">Überblick</a></li>
+                                <li><a href="data.html">Daten</a></li>
+                                <li><a href="tools.html">Werkzeuge</a></li>
+                                <li><a href="licences.html">Lizenzen</a></li>
+                            </ul>
                         </li>
-                        <li>
-                            <a href="documentation.html">Dokumentation</a>
+                        <li id="nav_demos" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">Demonstratoren <span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="demos.html">Überblick</a></li>
+                                <li><a href="demo-dynamic-score-rendering.html">Dynamische Partituranzeige</a></li>
+                                <li><a href="demo-genetic-text-stages.html">Textschichten-Anzeige</a></li>
+                                <li><a href="demo-visualising-text-annotations.html">Anmerkungs-Anzeige (Einzelquelle)</a></li>
+                                <li><a href="demo-visualising-text-variance.html">Textvarianz-Anzeige (Quellenübergreifend)</a></li>
+                                <li><a href="demo-the-freischuetz-network.html">Das Freischütz Netzwerk (Topic Map)</a></li>
+                                <li><a href="demo-sync-player.html">Synchro-Player</a></li>
+                                <li><a href="demo-multitrack-data-set.html">Multitrack Dataset</a></li>
+                                <li><a href="demo-single-microphone-switcher.html">Single Microphone Switcher</a></li>
+                                <li><a href="demo-instrument-equalizer.html">Instrument Equalizer</a></li>
+                            </ul>
+                        </li>
+                        <li id="nav_documentation" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">Dokumentation <span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="documentation.html">Überblick</a></li>
+                                <li><a href="documentation-music.html">Notentext</a></li>
+                                <li><a href="documentation-libretti.html">Libretto</a></li>
+                                <li><a href="documentation-reference-texts.html">Referenztexte</a></li>
+                                <li><a href="documentation-audio.html">Audio</a></li>
+                            </ul>
+                        </li>
+                        <li id="nav_publications" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">Publikationen &amp;
+                                Vorträge <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="publications.html">Publikationen</a></li>
+                                <li><a href="talks.html">Vorträge</a></li>
+                                <li><a href="events.html">Veranstaltungen</a></li>
+                                <li><a href="meetings.html">Treffen</a></li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
-            </div>
-        </div>
+                <div id="backlink" style="display:none;">
+                    <a href="#" onclick="nav_back(); false;">zurück</a>
+                </div>
+            </header>
             
-
-<div id="content" class="container">
-
-    <section id="imprint">
+            
+                <section id="documentation-audio">
         <div class="page-header">
-            <h1><a href="documentation.html">Dokumentation</a></h1>
+            <h1>Dokumentation</h1>
         </div>
 
-        <header id="overview" class="jumbotron subhead">
-            <div class="row" style="min-height: 0;">
-            </div>
-            <div id="navbar" class="subnav">
-                <ul class="nav nav-pills">
-                    <li id="nav_docu">
-                        <a href="documentation-start.html">Projekt</a>
-                    </li>
-                    <li id="nav_music">
-                        <a href="documentation-music.html">Musik</a>
-                    </li>
-                    <li id="nav_text">
-                        <a href="documentation-text.html">Text</a>
-                    </li>
-                    <li id="nav_audio">
-                        <a href="documentation-audio.html">Audio</a>
-                    </li>
-                    <li id="nav_demos">
-                        <a href="documentation-demos.html">Demonstratoren</a>
-                    </li>
-                    <li id="nav_edition">
-                        <a href="documentation-edition.html">Edition</a>
-                    </li>
-                    <li id="nav_verlauf">
-                        <a href="documentation-verlauf.html">Verlauf</a>
-                    </li>
-                </ul>
-            </div>
-            <div id="backlink" style="display:none;">
-                <a href="#" onclick="nav_back(); false;">zurück</a>
-            </div>
-        </header>
-
+        <!-- include "_nav-docu.html" -->
 
         <div class="row" style="margin-bottom: 50px;">
 
@@ -291,7 +319,7 @@
                         particular historic recordings may be of poor acoustic quality due to noise,
                         recording artifacts, or tuning issues (also partly resulting from the
                         digitization process). Working out and understanding the variations and
-                        inconsistencies within and across the different sources was a major task
+                        inconsistencies within and across the different sources was a major tasked
                         we tackled in this project. </p>
                     <hr/>
                     <h3 id="tracksegmentation">3. Track Segmentation</h3>
@@ -895,14 +923,14 @@
                     <p id="fn2">2. TEI stands for the Text Encoding Initiative <a
                             href="http://www.tei-c.org/" class="url">http://www.tei-c.org/</a>
                         <a href="#ref2" title="Jump back to footnote 2 in the text.">↩</a></p>
-                    <p id="fn3">3. <a href="www.weber-gesamtausgabe.de/en/"
+                    <p id="fn3">3. <a href="http://www.weber-gesamtausgabe.de/en/"
                             >http://www.weber-gesamtausgabe.de/en/</a>
                         <a href="#ref3" title="Jump back to footnote 3 in the text.">↩</a></p>
                     <p id="fn4">4. <a href="http://www.dnb.de/EN/">http://www.dnb.de/EN/</a>
                         <a href="#ref4" title="Jump back to footnote 4 in the text.">↩</a></p>
                     <p id="fn5">5. A demonstration of such an interface can be found at <a
-                            href="http://freischuetz-digital.de/demos/scoreFollowsAudio/"
-                            class="url">http://freischuetz-digital.de/demos/scoreFollowsAudio/</a>
+                        href="http://freischuetz-digital.de/demos/syncPlayer/"
+                        class="url">http://freischuetz-digital.de/demos/syncPlayer/</a>
                         <a href="#ref5" title="Jump back to footnote 5 in the text.">↩</a></p>
                     <p id="fn6">6. The recordings are available for download at <a
                             href="http://audiolabs-erlangen.de/resources/MIR/FreiDi/MultitrackDataset/"
@@ -1101,17 +1129,22 @@
                 </div>
             </div>
         </div>
+        
+        <script type="text/javascript">
+            window.activeNavLink = 'nav_documentation';
+        </script>
+        
     </section>
 
-    <div id="footer" style="padding-top: 5px; text-align: center; background-color: #EEEEEE; background-image: -moz-linear-gradient(center top , #F5F5F5 0%, #EEEEEE 100%);     background-repeat: repeat-x;     border: 1px solid #E5E5E5;     border-radius: 4px 4px 4px 4px;     height: 24px;     margin-bottom: 20px;     margin-top: 40px;     width: 100%;"><a style="margin-right: 6px;" href="imprint.html">Impressum</a> · <a style="margin-left: 8px;" href="contact.html">Kontakt</a></div>
-</div>
 
-<script src="scripts/jquery.min.js"></script>
-
-<script src="scripts/bootstrap.js"></script>
-<script src="scripts/bootswatch.js"></script>
-<script src="scripts/main.js"></script>
-<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
-
-</body>
+            <div id="footer"
+                style="padding-top: 5px; text-align: center; background-color: #EEEEEE; background-image: -moz-linear-gradient(center top , #F5F5F5 0%, #EEEEEE 100%);     background-repeat: repeat-x;     border: 1px solid #E5E5E5;     border-radius: 4px 4px 4px 4px;     height: 24px;     margin-bottom: 20px;     margin-top: 40px;     width: 100%;"
+                    ><a style="margin-right: 6px;" href="imprint.html">Impressum</a> · <a
+                    style="margin-left: 8px;" href="contact.html">Kontakt</a></div>
+        </div>
+        <script src="scripts/jquery-1.12.3.min.js"></script>
+        <script src="scripts/bootstrap.js"></script>
+        <script src="scripts/main.js"></script>
+        <script src="scripts/run_prettify.js"></script>
+    </body>
 </html>

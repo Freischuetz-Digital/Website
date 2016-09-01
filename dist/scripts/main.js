@@ -8,7 +8,6 @@ if(window.backLink) {
     $('#backlink').show();
 }
 
-
 var dudes = [{height: '330px', src: 'pix/dudes/freidi_ottokar.png', alt: 'Freischütz Papiertheaterfigur: Ottokar'}, 
             {height: '330px', src: 'pix/dudes/freidi_samiel.png', alt: 'Freischütz Papiertheaterfigur: Samiel'},
             {height: '330px', src: 'pix/dudes/freidi_kuno.png', alt: 'Freischütz Papiertheaterfigur: Kuno'}];
@@ -24,4 +23,3 @@ function nav_back() {
         location.href = window.backLink;
     }
 }
-

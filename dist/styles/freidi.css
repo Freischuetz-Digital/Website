@@ -1,5 +1,4 @@
 body{
-    padding-top:60px; /* 60px to make the container go all the way to the bottom of the topbar */
     font-family: "PT Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
@@ -41,6 +40,10 @@ code {
     margin-left:20px;
     margin-bottom:20px;
     padding:15px;
+}
+
+div.subnav .nav > li.hover > a {
+    color: #000000;
 }
 
 img {
@@ -92,7 +95,7 @@ p {
 }
 
 section {
-    padding-top: 70px;
+    padding-top: 30px;
 }
 
 .figure {
@@ -102,7 +105,7 @@ section {
 #figure-top {
     position: absolute;
     right: 60px;
-    top: 100px;
+    top: 20px;
 }
 
 .noTopMargin {

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <project default="dist" name="freidi-website">
+    <property name="project.version" value="0.1"/>
+    <property name="project.app" value="freidi-website"/>
+     <property name="app.dir" value="app"/>
+     <property name="dist.dir" value="dist"/>
+    <tstamp/>
+    
+    <target name="clean">
+        <delete dir="${dist.dir}"/>
+    </target>
+    
+    <target name="dist" depends="clean">
+        
+        <mkdir dir="${dist.dir}"/>
+
+        <copydir src="${app.dir}" dest="${dist.dir}" excludes="**/sites/** **/templates/**"/>
+
+        <copy todir="${dist.dir}">
+            <fileset dir="${app.dir}/sites" includes="**/*.html"/>
+            <filterchain>
+                <concatfilter prepend="${app.dir}/templates/_htmlstart.html" append="${app.dir}/templates/_htmlend.html" />
+            </filterchain>
+        </copy>
+        
+    </target>
+    
+</project>
