@@ -49,3 +49,11 @@
 
 }
 
+@font-face {
+  font-family: 'musical-symbols';
+  src: url('../fonts/Bravura.eot');
+  src: local('☺'), url('../fonts/Bravura.woff') format('woff'), 
+        url('../fonts/Bravura.otf') format('opentype');
+        font-weight: normal;
+        font-style: normal;
+}

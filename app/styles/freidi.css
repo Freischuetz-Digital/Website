@@ -149,3 +149,8 @@ pre {
   font-size: 12px;
   line-height: 15px !important;
 }
+
+.musical-symbols {
+  font-family: musical-symbols;
+  vertical-align: middle;
+}
