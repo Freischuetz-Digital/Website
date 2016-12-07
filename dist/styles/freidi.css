@@ -152,6 +152,6 @@ pre {
 
 .musical-symbols {
   font-family: musical-symbols;
-  vertical-align: middle;
+  vertical-align: text-top;
   font-size: large;
 }
