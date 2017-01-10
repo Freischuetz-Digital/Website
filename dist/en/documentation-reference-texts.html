@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Freischütz Digital</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="" />
+        <meta name="author" content="Daniel Röwenstrunk" />
+
+        <link rel="stylesheet" href="../styles/bootstrap.css" />
+        <link rel="stylesheet" href="../styles/bootstrap-responsive.css" />
+        <link href="../styles/bootswatch.css" rel="stylesheet" />
+        <link href="../styles/freidi.css" rel="stylesheet" />
+        <link href="../styles/ptsans.css" rel="stylesheet" />
+
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../pix/freidi_icon_144.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../pix/freidi_icon_114.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../pix/freidi_icon_72.png" />
+        <link rel="apple-touch-icon-precomposed" href="../pix/freidi_icon_57.png" />
+        <link rel="shortcut icon" href="../pix/freidi_favicon.png" />
+    </head>
+    <body>
+        <div style="position: absolute; right:30px; top: 10px;"><a href="javascript:setLang('de')">DE</a> | <a href="javascript:setLang('en')">EN</a></div>
+        <div id="content" class="container">
+            <div id="figure-top" class="figure visible-desktop">
+                <img style="height: 330px;" src="" alt="" />
+            </div>
+            <header id="overview" class="jumbotron subhead">
+                <div class="row" style="min-height: 0;">
+                    <div class="span8">
+                        <img style="margin: 40px 0 0 3px;" src="../pix/Logo_greenInset.png" />
+                    </div>
+                    <div class="span4"> </div>
+                </div>
+                <div id="navbar" class="subnav">
+                    <ul class="nav nav-pills">
+                        <li id="nav_freidi" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">Freischütz Digital <span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="index.html">Project's Goals</a></li>
+                                <li><a href="work-packages.html">Work Packages</a></li>
+                                <li><a href="locations.html">Institutions</a></li>
+                                <li><a href="team.html">People</a></li>
+                                <li><a href="process.html">Project History</a></li>
+                            </ul>
+                        </li>
+                        <li id="nav_edition">
+                            <a href="edition.html">Edirom Online</a>
+                        </li>
+                        <li id="nav_data-tools" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">Data and Tools <span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="data-and-tools.html">Overview</a></li>
+                                <li><a href="data.html">Data</a></li>
+                                <li><a href="tools.html">Tools</a></li>
+                                <li><a href="licences.html">Licenses</a></li>
+                            </ul>
+                        </li>
+                        <li id="nav_demos" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">Demos <span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="demos.html">Overview</a></li>
+                                <li><a href="demo-dynamic-score-rendering.html">Dynamic Score</a></li>
+                                <li><a href="demo-genetic-text-stages.html">Text Layers</a></li>
+                                <li><a href="demo-visualising-text-annotations.html">Text Annotations</a></li>
+                                <li><a href="demo-visualising-text-variance.html">Text Variance</a></li>
+                                <li><a href="demo-the-freischuetz-network.html">"The Freischütz Network" (Topic Map)</a></li>
+                                <li><a href="demo-sync-player.html">Synchro-Player</a></li>
+                                <li><a href="demo-multitrack-data-set.html">Multitrack Dataset</a></li>
+                                <li><a href="demo-single-microphone-switcher.html">Single Microphone Switcher</a></li>
+                                <li><a href="demo-instrument-equalizer.html">Instrument Equalizer</a></li>
+                            </ul>
+                        </li>
+                        <li id="nav_documentation" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">Documentation <span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="documentation.html">Overview</a></li>
+                                <li><a href="documentation-music.html">Score</a></li>
+                                <li><a href="documentation-libretti.html">Libretto</a></li>
+                                <li><a href="documentation-reference-texts.html">Reference Texts</a></li>
+                                <li><a href="documentation-audio.html">Audio</a></li>
+                            </ul>
+                        </li>
+                        <li id="nav_publications" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">Publications &amp;
+                                Talks <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="publications.html">Publications</a></li>
+                                <li><a href="talks.html">Talks</a></li>
+                                <li><a href="events.html">Events</a></li>
+                                <li><a href="meetings.html">Meetings</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div id="backlink" style="display:none;">
+                    <a href="#" onclick="nav_back(); false;">zurück</a>
+                </div>
+            </header>
+            
+            
+            	<section id="documentation-reference-texts">
+		<div class="page-header">
+			<h1>Dokumentation zu den Referenztexten</h1>
+		</div>
+
+		<!-- include "_nav-docu.html" -->
+
+		<div class="row" style="margin-bottom: 50px;">
+
+			<div class="docu-project">
+				<div class="span12">
+					<div class="content">
+						<h4>Content</h4>
+						<ol type="1">
+							<li>
+								<a href="#intertexte">Intertexte: Librettistische Referenzpunkte</a>
+								<ol>
+									<li>
+										<a href="#vorbemerkung-intertexte">Vorbemerkung und Auswahl
+											der Textquellen (Referenzen)</a>
+									</li>
+									<li>
+										<a href="#auswahl-intertexte">Auswahl der Referenzen</a>
+									</li>
+									<li>
+										<a href="#tabelle-intertexte">Überblick der Textquellen (Referenzen) und ihre Siglen</a>
+									</li>
+									<li>
+										<a href="#codierung-intertexte">Codierung und Präsentation der Textquellen (Referenzen)</a>
+									</li>
+								</ol>
+							<li>
+								<a href="#topicmap">Topic Map</a>
+							</li>
+										<ol>
+											<li>
+											<a href="#aufbau_xtm">Zum Aufbau der <em>Freischütz Digital</em>-XTM</a>
+											</li>
+										</ol>
+							<li>
+								<a href="#rezeptionsgeschichte">Rezeptionsgeschichte</a>
+							</li>
+								<li>
+									<a href="#codierungsrichtlinien">Codierungsrichtlinien (Verweis)</a>
+								</li>
+							</li>
+						</ol>
+					</div>
+					<h3 id="intertexte">1. Intertexte: Librettistische Referenzpunkte</h3>
+					<h4 id="vorbemerkung-intertexte">1.1 Vorbemerkung und Auswahl der Textquellen
+						(Referenzen)</h4>
+					<p>Die Geschichte des Freischützen ist nicht erst durch Friedrich Kinds und Carl
+						Maria von Webers Libretto <em>Der Freischütz</em> bekannt. Die Volkssage um
+						den Freischützen, dessen Freikugeln und den Guss dieser Kugeln ist seit ihrer
+						Urversion in den 1730 gedruckten <em>Unterredungen von dem Reich der Geister
+							zwischen Andrenio und Pneumatophilo</em> mehrfach in verschiedenen
+						Varianten in der Literatur aufgenommen und verarbeitet worden. <br/>Der
+						Handlungskern der Sage berichtet von einem Mann (in früheren Varianten von
+						einem Amtsschreiber, in späteren Versionen von einem Jägerburschen), der
+						durch Verlockung eines Mittelsmanns und mit Hilfe des Teufels und böser
+						Mächte Freikugeln zur nächtlichen Stunde und mit allerlei Spuk gießt. Die
+						Freischütz-Sage wurde schnell um das Motiv der Liebe eines schuldbeladenen
+						Mannes zu einer reinen Jungfrau und – bei glücklichem Ausgang – dessen Erlösung
+						erweitert und durch verschiedene Motive der Phantastik und des
+						Aber- wie Volksglaubens als auch durch weitere Motive, die sich der
+						am Ende des 18. Jahrhunderts beliebten Topoi der Schauer- und Schicksalsromantik 
+						bedienen, angereichert. In den verschiedensten
+						<em>Freischütz</em>-Fassungen lassen sich im Wesentlichen folgende Motive
+						als Konstanten festgehalten:</p>
+					<ol>
+						<li>die Motive des Freischützen, der Freikugeln und des nächtlichen Kugelgusses
+							(mit Phantastik und Gespenstern wie z.B. dem Wilden Heer)</li>
+						<li>das Motiv des verpflichtenden Probeschusses seit Uraltväterzeiten </li>
+						<li>das Motiv des Weidmann-Setzens</li>
+						<li>das herabstürzende Ahnenbild </li>
+						<li>die Traum-Geschichte.</li>
+					</ol>
+					<p>Gerade mit den Motiven 2–5 tritt in der Freischützsage in den Augen vieler Rezipienten zusätzlich “das
+						Schicksalhafte als auch Ahnungsvolle der späteren Romantik" hervor.<a href="#fn5" id="ref5"><sup class="textsuperscript"
+							>5</sup></a></p>
+					<p>Neben dieser “Motivkonstanz” der Texte tritt auch immer wieder “ein Inventar
+						an stereotypen Requisiten und atmosphärischen Gestaltungsmittel[n]” auf;<a href="#fn6" id="ref6"><sup class="textsuperscript"
+							>6</sup></a>
+						diese Kennzeichen zählen unter
+						vielen andern zu den wiederkehrenden Eigenschaften von Schicksalsdramen des 19.
+						Jahrhunderts und finden sich ebenso in den Freischützlibretti und deren
+						Referenztexten.<br/>Im Projekt <em>Freischütz Digital</em> werden daher ganz
+						gezielt und punktuell einzelne charakteristische Begriffe und Namen aufgegriffen und über
+						verschiedene Texte hinweg verfolgt. So lassen sich Konstanz, Variation
+						(Synonyme, lexikalische Varianten, Namensänderungen) und damit Entwicklung
+						einzelner Motive und zwar bis auf Wortebene (Namen und Begriffe) hinab
+						verfolgen. Damit lässt sich eine granulare Sicht auf die Motive erreichen, und zwar auf die ausgewählten Begriffe und Namen, die in ihrer entscheidenden Konstellation und in ihren Relationen zu einander letztlich die Motive auszeichnen.<!-- Diese 2. Satzhälfte verstehe ich nicht, JV --><br/>[Beispiel "Kugelguss"-Szene: In der Waldeinsamkeit zur nächtlichen Geisterstunde bei Mondschein gießen zwei
+						junge Jägerburschen mit Hilfe von bösen Zaubermächten – personifiziert durch
+						einen schwarzen Jäger – die fatalen Freikugeln, für den Zweck, dem von einem
+						Jägerburschen zu leistenden Probeschuss zum Erfolg zu verhelfen. Während des
+						Gusses erleben die Jäger mancherlei Spuk und Geistererscheinungen. Zu den
+						Elementen und Gestaltungsmitteln der Kugelguss- oder späteren
+						Wolfsschluchtszene gehören neben dem Akt des Kugelgusses selbst demnach:
+						Wald, Nacht, Glockenschlag, wildes Heer, Eule, Rabe, Kreis, Hirschfänger,
+						Jäger, Werkzeug für den Kugelguss etc.]</p>
+						<h4 id="auswahl-intertexte">1.2 Auswahl der Referenzen</h4>
+					<p>Im Projekt <em>Freischütz Digital</em> werden zusätzlich zu den
+						<em>Freischütz</em>-Libretti exemplarisch weitere Textquellen einbezogen, die zeitnah
+						und hinsichtlich ihrer Motive, Themen und Dramencharaktere eng in
+						Zusammenhang mit den unter der Auswahl der Textquellen genannten
+						<em>Freischütz</em>-Librettoquellen stehen.<a href="#fn7" id="ref7"><sup class="textsuperscript"
+							>7</sup></a> 
+						Für <em>Freischütz Digital</em>
+						konnte nur eine Auswahl an Texten berücksichtigt werden, die jedoch
+						paradigmatisch für alle weiteren (zahlreichen) Texte des ausgehenden 18. und
+						beginnenden 19. Jahrhunderts stehen, die ein oder mehrere der hier zu beobachtenden Motive in verschiedenen
+						Varianten und Bearbeitungen enthalten.<br/>Gewählt wurden für das Projekt
+						hauptsächlich die Texte und Stoffvorlagen, in denen die unter der
+						<a href="#vorbemerkungen-libretto">Vorbemerkung</a> genannten Motive am zahlreichsten auftreten, die die
+						Stoffgeschichte am besten repräsentieren und die die sehr enge Abhängigkeit
+						des Kindschen <em>Freischütz</em>-Librettos zu seinen Stoffvorlagen verdeutlichen. (So
+						z.B. bezieht sich Friedrich Kind selbst auf die als Volkssage bezeichnete,
+						gleichnamige Stoffvorlage von August Apel von 1810)<a href="#fn8" id="ref8"><sup class="textsuperscript"
+							>8</sup></a> 
+						Desweiteren wird mit der Wallenstein Dramen-Trilogie mit den Teilen Wallenstein I, bestehend aus <em>Wallensteins Lager</em> und <em>Die Piccolomini</em>, und Wallenstein II, bestehend aus <em>Wallensteins Tod</em>, (entstanden 1796/99, Erstdruck: Tübingen (Cotta) 1800, zuvor einige Auszüge in Zeitschriften und Almanachen.) ein bedeutendes und Ende des 18. Jh. weithin bekanntes und viel rezipiertes Geschichtsdrama in die Edition mitaufgenommen und damit in den Kontext des Schicksaldramas mit einbezogen, auch aus dem Grund, dass zahlreiche Anspielungen in den  Referenzen auf die Wallenstein-Trilogie auch in Form von direkten und nur leicht abgewandelten Zitaten aus Wallenstein z. B. in der Freischützsage <em>Der Freischütz</em>, 1812, von Franz Xaver von Caspar zu finden sind. Die Zitate wurden in der Kodierung des <em>Der Freischütz</em> von Franz Xaver von Casper (1812) entsprechend ausgezeichnet und auf die entsprechenden Wallenstein-Textzeilen verlinkt. 
+						<br/> Die Wallenstein-Trilogie in XML-Kodierung (nach TEI) war bereits im TextGrid Repository  bereitgestellt; für die Edition wurde diese herangezogen und darin die einzelnen charakteristischen Begriffe und Namen aufgespürt und ausgezeichnet, um die Anbindung an die Topic Map zu gewährleisten.
+						</p>					
+						<h4 id="tabelle-intertexte">1.3 Überblick der Textquellen (Referenzen) und ihre Siglen</h4>
+					<p>Unter den berücksichtigten Referenzen sind
+						handschriftliche wie gedruckte Texte (die Kürzel der Siglen – angelehnt an
+						die Systematik der Libretti-Signaturen – bedeuten im Folgenden:
+							<strong>R</strong> = Referenztext, <strong>Ms</strong> = Manuskript,
+							<strong>D</strong> = Druck und <strong>tx</strong> = Text)
+						unterschiedlicher Gattungen wie Libretti, Dramen, Prosa berücksichtigt, die
+						dieses gemeinsame Beziehungsgeflecht von Begriffen und Themen teilen und die
+						eine Wiederkehr an Motiven und vergleichbaren
+						Personenkonstellationen erkennen lassen.</p>
+					<p>
+						<table>
+							<tr>
+								<th>Jahr</th>
+								<th>Titel</th>
+								<th>Autor</th>
+								<th>Signatur</th>
+								<th>Sigle</th>
+							</tr>
+							<tr>
+								<td>1729</td>
+								<td>Unterredungen von dem Reich der Geister […]</td>
+								<td>Otto von Graben zum Stein</td>
+								<td>D-Mbs, Phys.m. 289-1</td>
+								<td>RD-tx1</td>
+							</tr>
+							<tr>
+								<td>1792</td>
+								<td>Die Geisterinsel</td>
+								<td>Friedrich Kind</td>
+								<td>D-Mbs, P.o.germ. 714 c-1</td>
+								<td>RD-tx3</td>
+							</tr>
+								<tr>
+								<td>1800</td>
+								<td>Wallensteins Lager</td>
+								<td>Johann Christoph Friedrich von Schiller</td>
+									<td>textgrid:twxm.0 <!-- PID: hdl:11858/00-1734-0000-0004-C931-2 angeben?? -->(Friedrich Schiller: Sämtliche Werke, Auf Grund der Originaldrucke herausgegeben von Gerhard Fricke und Herbert G. Göpfert in Verbindung mit Herbert Stubenrauch, Band 1–5, 3. Auflage, München: Hanser, 1962.)</td>
+								<td>RD-tx15</td>
+							</tr>
+							<tr>
+								<td>1800</td>
+								<td>Die Piccolomini</td>
+								<td>Johann Christoph Friedrich von Schiller</td>
+								<td>textgrid:twxm.0 (Friedrich Schiller: Sämtliche Werke, Auf Grund der Originaldrucke herausgegeben von Gerhard Fricke und Herbert G. Göpfert in Verbindung mit Herbert Stubenrauch, Band 1–5, 3. Auflage, München: Hanser, 1962.)</td>
+								<td>RD-tx16</td>
+							</tr>
+							<tr>
+								<td>1800</td>
+								<td>Wallensteins Tod</td>
+								<td>Johann Christoph Friedrich von Schiller</td>
+								<td>textgrid:twxm.0 (Friedrich Schiller: Sämtliche Werke, Auf Grund der Originaldrucke herausgegeben von Gerhard Fricke und Herbert G. Göpfert in Verbindung mit Herbert Stubenrauch, Band 1–5, 3. Auflage, München: Hanser, 1962.)</td>
+								<td>RD-tx17</td>
+							</tr>
+							<tr>
+								<td>1803</td>
+								<td>Das Schloß Aklam</td>
+								<td>Friedrich Kind</td>
+								<td>A-Wn, Alt Mag 129376-A</td>
+								<td>RD-tx5</td>
+							</tr>
+							<tr>
+								<td>1805</td>
+								<td>Die Bilder der Ahnen</td>
+								<td>Johann August Apel</td>
+								<td>D-F, MPQ 110, F. 14087-14088</td>
+								<td>RD-tx6</td>
+							</tr>
+							<tr>
+								<td>1811</td>
+								<td>Gespensterbuch</td>
+								<td>Johann August Apel / Friedrich Laun</td>
+								<td>D-Mbs, P.o. germ. 45-1</td>
+								<td>RD-tx7</td>
+							</tr>
+							<tr>
+								<td>1812</td>
+								<td>Der Freischütz</td>
+								<td>Franz Xaver von Caspar</td>
+								<td>D-Msta, HV-MS 60</td>
+								<td>RMs-tx8</td>
+							</tr>
+							<tr>
+								<td>1813</td>
+								<td>Der Freischütz</td>
+								<td>Franz Xaver von Caspar</td>
+								<td>D-Sl, Cod. Don. 139</td>
+								<td>RMs-tx9</td>
+							</tr>
+							<tr>
+								<td>1816</td>
+								<td>Der Freischütz oder Die Schreckensnacht am Kreuzwege</td>
+								<td>Franz de Paula Roser / Joseph Alois Gleich</td>
+								<td>A-Wtm, Schw 161</td>
+								<td>RMs-tx10</td>
+							</tr>
+							<tr>
+								<td>1816</td>
+								<td>Der Freischütz oder Die Schreckensnacht am Kreuzwege</td>
+								<td>Franz de Paula Roser / Joseph Alois Gleich</td>
+								<td>A-Wtm,-Cth S 32</td>
+								<td>RMs-tx11</td>
+							</tr>
+							<tr>
+								<td>1819</td>
+								<td>Der schwarzbraune Jäger</td>
+								<td>W. A. Gerle</td>
+								<td>D-Mbs, 4° Per.7 pa-1819, 1</td>
+								<td>RD-tx12</td>
+							</tr>
+							<tr>
+								<td>1821</td>
+								<td>Der Freischütz</td>
+								<td>Franz Joseph Riesch</td>
+								<td>D-B, Yp 4803-1821, 1</td>
+								<td>RD-tx13</td>
+							</tr>
+							
+						<tr>
+								<td>1824</td>
+								<td>Samiel oder die Wunderpille</td>
+								<td>Franz Joseph Riesch</td>
+								<td>D-Mbs, Slg. Her 1513</td>
+								<td>RD-tx14</td>
+							</tr>
+							
+						</table><!-- Hier ggf. noch die Wallensteins und weitere Texte aufnehmen, JV -->
+					</p>					
+					<h4 id="codierung-referenzen">Codierung und Präsentation der Textquellen (Referenzen)</h4>
+					<p>Alle Textquellen (Referenzen) wurden in diplomatischer Übertragung unter
+						besonderer Berücksichtigung der formalen und strukturellen Aspekte erfasst
+						und nach den Standards der TEI (<em>Text Encoding Initiative</em>; <a
+							class="external" href="http://www.tei-c.org/">www.tei-c.org/</a>)
+						ausgezeichnet (vgl. <a href="documentation-libretti.html#codierung">Codierung und Visualisierung der Quellen</a>). Die
+						Transkriptionen orientieren sich daher an der Verfahrensweise wie sie bei
+						den Transkriptionen und der Codierung der Manuskripte und Drucke der
+						<em>Freischütz</em>-Libretti angewendet ist. <br/>Die Erfassungsrichtlinien für die
+						Textquellen (Referenzen) folgen demnach und nur mit äußerst wenigen
+						Ergänzungen und Abweichungen den generellen Editions- und Codierungsrichtlinien der
+						Textedition; siehe <a href="documentation-libretti.html#codierungsrichtlinien"> Editionsrichtlinien/Codierungsrichtlinien der
+						Textedition</a></p>
+					<p>Die Codierungen und Quellenbilder der Referenzen werden mit Hilfe der
+						Benutzeroberfläche <em>Edirom</em> präsentiert. Im
+						Edirom-Quellenfenster sind vier verschiedene Ansichten der Texte auswählbar:</p>
+					<ol>
+						<li> Metadaten (inkl. Quellenbeschreibung)</li>
+						<li> Text als Fließtext</li>
+						<li> seitenbasiertes Faksimile</li>
+						<li> seitenbasierte Gegenüberstellung Text – Faksimile</li>
+						<li> XML-Daten-Ansicht</li>
+					</ol>
+					<p>Unter den einbezogenen Referenzquellen (siehe Tabelle) werden die Texte
+						RD-tx5 (<em>Das Schloß Aklam</em>), RD-tx6 (<em>Die Bilder der Ahnen</em>) und RMs-tx11 (<em>Der
+						Freischütz oder Die Schreckensnacht am Kreuzwege</em>) ohne Visualisierung und ohne Abbildungen nur in ihren XML-Codierung und
+						für die Topic Map aufbereitet bereitgestellt (und in dieser Form ins TextGrid Repository integriert).
+					</p>
+					
+					<hr/>
+					
+					<h3 id="topicmap">2. Topic Map</h3>
+					<p>Anhand der <em>Freischütz</em>-Libretti und seiner Referenzen wurden Namen und Begriffe
+						und deren Varianten oder Entsprechungen ausgewählt und in allen Texten
+						aufgespürt; in den XML-Codierungen zweier Librettotexte – Handexemplar
+						Webers (KA-tx4) und Kind-Druck (D-tx2) – und in deren Referenztexten ([siehe
+						Tabelle]) sind diese Schlagworte ausgezeichnet und mit einem identifizierenden Bezeichner (ID)
+						versehen, die auf eine externe, separat von allen Texten geführte Topic Map
+						verweist.</p>
+					<p>Mit Hilfe des standardisierten Datenformats der XML Topic Maps (XTM 2.0; <a
+							class="external" href="http://www.isotopicmaps.org/sam/sam-xtm/"
+							>http://www.isotopicmaps.org/sam/sam-xtm/</a>) werden die einzelnen
+						Namen und Begriffe systematisch in der Topic Map festgehalten, kategorisiert
+						und deren Beziehung zueinander als auch intertextuell zwischen den
+						Librettotexten und ihren Referenzen umfassend definiert. (Zur
+						Visualisierung der Topic Map siehe auch <a href="/exist/apps/topicMapViz/index.html" target="_blank">"The Freischütz Network"</a>)</p>
+					<h4 id="aufbau_xtm">2.1 Zum Aufbau der <em>Freischütz Digital</em>-XTM</h4>
+					<h5>Topic</h5>
+					<p>Die einzelnen Namen und Begriffen werden als sog. Topics in der XTM
+						festgehalten. Der Topic-Eintrag erhält eine Identifikation (@id), nennt den
+						Namen des Schlagwortes, ferner seine in den Texten vorkommenden Varianten,
+						und listet alle Fundstellen in den entsprechenden Texten auf:</p>
+					<ul>
+						<li>&lt;instanceOf/&gt; gibt die Kategorie des Eintrags an; Mehrfach-Zuweisungen (zu
+							unterschiedlichen Kategorien) sind möglich. Die einzelnen Kategorisierungen werden
+							wiederum als eigene Topic-Einträge in der XTM definiert (siehe auch weiter unten unter Topic-Kategorien)</li>
+						<li>unter &lt;name/&gt; werden sowohl Schlagwort (&lt;value/&gt;) als auch mit &lt;variant/&gt;
+							seine Varianten aufgelistet</li>
+						<li>unter &lt;occurrence/&gt; werden alle Fundstellen des Schlagwortes und die Fundstellen seiner Varianten aufgelistet und mit
+							einem @ref und dem Topic-Identifier direkt auf alle Fundstellen in der
+							Quelle verwiesen.</li>
+							<!-- noch unklar formuliert: Alle Fundstellen des Haupt-Name oder auch seiner Varianten?, deutlich machen -->
+					</ul>
+					<h5>Beispiel für einen einfachen Namen ("Agathe"):</h5>
+					<pre class="prettyprint"><code>&lt;topic id="agathe"&gt;
+    &lt;instanceOf&gt;
+        &lt;topicRef href="#name"/&gt;
+        &lt;topicRef href="#role"/&gt;
+    &lt;/instanceOf&gt;
+    &lt;name&gt;
+        &lt;value&gt;Agathe&lt;/value&gt;
+        &lt;variant&gt;
+            &lt;scope&gt;
+                &lt;topicRef href="#sort"/&gt;
+            &lt;/scope&gt;
+            &lt;resourceData&gt;Agathe&lt;/resourceData&gt;
+        &lt;/variant&gt;
+    &lt;/name&gt;
+    &lt;occurrence&gt;
+        &lt;type&gt;
+            &lt;topicRef href="http://www.topicmaps.org/xtm/1.0/core.xtm#occurrence"/&gt;
+        &lt;/type&gt;
+        &lt;resourceRef href="freidi-referenceSource_RD-tx14.xml#agathe"/&gt;
+    &lt;/occurrence&gt;
+    &lt;occurrence&gt;
+        &lt;type&gt;
+            &lt;topicRef href="http://www.topicmaps.org/xtm/1.0/core.xtm#occurrence"/&gt;
+        &lt;/type&gt;
+        &lt;resourceRef href="freidi-librettoSource_KA-tx4.xml#agathe"/&gt;
+    &lt;/occurrence&gt;
+    &lt;occurrence&gt;
+        &lt;type&gt;
+            &lt;topicRef href="http://www.topicmaps.org/xtm/1.0/core.xtm#occurrence"/&gt;
+        &lt;/type&gt;
+        &lt;resourceRef href="freidi-librettoSource_D-tx2.xml#agathe"/&gt;
+    &lt;/occurrence&gt;
+&lt;/topic&gt;</code></pre>
+					<h5> Beispiel für ein Begriff ("Bild") mit Varianten:</h5>
+					<pre class="prettyprint"><code>&lt;topic id="bild"&gt;
+    &lt;instanceOf&gt;
+        &lt;topicRef href="#object-of-use"/&gt;
+        &lt;topicRef href="#action"/&gt;
+    &lt;/instanceOf&gt;
+    &lt;name&gt;
+        &lt;value&gt;Ahnenbild&lt;/value&gt;
+        &lt;variant&gt;
+            &lt;scope&gt;
+                &lt;topicRef href="#sort"/&gt;
+            &lt;/scope&gt;
+            &lt;resourceData&gt;Ahnenbild&lt;/resourceData&gt;
+        &lt;/variant&gt;
+        &lt;variant&gt;
+            &lt;scope&gt;
+                &lt;topicRef href="#formation"/&gt;
+            &lt;/scope&gt;
+            &lt;resourceData&gt;Bild&lt;/resourceData&gt;
+        &lt;/variant&gt;
+        &lt;variant&gt;
+            &lt;scope&gt;
+                &lt;topicRef href="#formation"/&gt;
+            &lt;/scope&gt;
+            &lt;resourceData&gt;herabstürzendes Ahnenbild&lt;/resourceData&gt;
+        &lt;/variant&gt;
+        &lt;variant&gt;
+            &lt;scope&gt;
+                &lt;topicRef href="#formation"/&gt;
+            &lt;/scope&gt;
+            &lt;resourceData&gt;Kuno’s Bild&lt;/resourceData&gt;
+        &lt;/variant&gt;
+        &lt;variant&gt;
+            &lt;scope&gt;
+                &lt;topicRef href="#formation"/&gt;
+            &lt;/scope&gt;
+            &lt;resourceData&gt;Bild eines alten Jägers&lt;/resourceData&gt;
+        &lt;/variant&gt;
+    &lt;/name&gt;
+    &lt;occurrence&gt;
+        &lt;type&gt;
+            &lt;topicRef href="http://www.topicmaps.org/xtm/1.0/core.xtm#occurrence"/&gt;
+        &lt;/type&gt;
+        &lt;resourceRef href="FreiDi_TopicMap_Handbuch.xml#bild"/&gt;
+    &lt;/occurrence&gt;
+    &lt;occurrence&gt;
+        &lt;type&gt;
+            &lt;topicRef href="http://www.topicmaps.org/xtm/1.0/core.xtm#occurrence"/&gt;
+        &lt;/type&gt;
+        &lt;resourceRef href="freidi-referenceSource_RD-tx7.xml#bild"/&gt;
+    &lt;/occurrence&gt;
+    &lt;occurrence&gt;
+        &lt;type&gt;
+            &lt;topicRef href="http://www.topicmaps.org/xtm/1.0/core.xtm#occurrence"/&gt;
+        &lt;/type&gt;
+        &lt;resourceRef href="freidi-referenceSource_RMs-tx8.xml#bild"/&gt;
+    &lt;/occurrence&gt;
+    &lt;occurrence&gt;
+        &lt;type&gt;
+            &lt;topicRef href="http://www.topicmaps.org/xtm/1.0/core.xtm#occurrence"/&gt;
+        &lt;/type&gt;
+        &lt;resourceRef href="freidi-referenceSource_RMs-tx9.xml#bild"/&gt;
+    &lt;/occurrence&gt;
+    &lt;occurrence&gt;
+        &lt;type&gt;
+            &lt;topicRef href="http://www.topicmaps.org/xtm/1.0/core.xtm#occurrence"/&gt;
+        &lt;/type&gt;
+        &lt;resourceRef href="freidi-referenceSource_RMs-tx10.xml#bild"/&gt;
+    &lt;/occurrence&gt;
+    &lt;occurrence&gt;
+        &lt;type&gt;
+            &lt;topicRef href="http://www.topicmaps.org/xtm/1.0/core.xtm#occurrence"/&gt;
+        &lt;/type&gt;
+        &lt;resourceRef href="freidi-referenceSource_RMs-tx11.xml#bild"/&gt;
+    &lt;/occurrence&gt;
+    &lt;occurrence&gt;
+        &lt;type&gt;
+            &lt;topicRef href="http://www.topicmaps.org/xtm/1.0/core.xtm#occurrence"/&gt;
+        &lt;/type&gt;
+        &lt;resourceRef href="freidi-librettoSource_KA-tx4.xml#bild"/&gt;
+    &lt;/occurrence&gt;
+    &lt;occurrence&gt;
+        &lt;type&gt;
+            &lt;topicRef href="http://www.topicmaps.org/xtm/1.0/core.xtm#occurrence"/&gt;
+        &lt;/type&gt;
+        &lt;resourceRef href="freidi-librettoSource_D-tx2.xml#bild"/&gt;
+    &lt;/occurrence&gt;
+&lt;/topic&gt;</code></pre>
+					<h5>Topic-Kategorien:</h5>
+					<p>Die Kategorien, zu denen die Topic-Einträge zugeordnet werden können, werden
+						als Topic-Eintragungen zu Beginn der XTM definiert; Namen und Begriffe lassen sich folgenden Kategorisierungen zuordnen: 
+						<p><li>Schauplatz</li>
+						<li>Aktion, Handlung</li>
+						<li>(reale) Person</li>
+						<li>Name</li>
+						<li>Rolle / fiktive Person</li>
+						<li>Rollenbeschreibung</li>
+						<li>Kreatur / Wesen</li>
+						<li>Gebrauchsgegenstand</li>
+						<li>Eigenschaft</li>
+						<li>Schicksal</li></p>
+						</p>
+					<h5>Beispiel:</h5>
+					<pre class="prettyprint"><code>&lt;topic id="role"&gt;
+    &lt;baseName&gt;
+        &lt;baseNameString&gt;Rolle&lt;/baseNameString&gt;
+    &lt;/baseName&gt;
+&lt;/topic&gt;</code></pre>
+					<h5>Kategorisierung der Varianten</h5>
+					<p>Mit welchen Varianten die einzelnen Schlagworte (Topics) in den Texten
+						auftreten können, wird in der Topic Map festgehalten und 
+						kategorisiert. Die Kategorien der Varianten werden wiederum als
+						Topic-Eintragungen definiert.</p>
+					<h5>Beispiel:</h5>
+					<pre class="prettyprint"><code>&lt;topic id="synonym"&gt;
+    &lt;baseName&gt;
+        &lt;baseNameString&gt;Synonym&lt;/baseNameString&gt;
+    &lt;/baseName&gt;
+&lt;/topic&gt;</code></pre>
+					<h5>Relationen</h5>
+					<p>In der Topic Map wird werden alle Relationen der einzelnen zueinander
+						assoziierten Topics (Begriffe und Namen) in &lt;associations/&gt; definiert.
+						Dabei können die Topics in unterschiedlichen Verhältnissen zueinander stehen, die wiederum als
+						eigene Topic-Eintragungen definiert sind; siehe <a href="#relationstypen">Relationstypen</a>. 
+						Im vorliegenden Beispiel werden "Myrte" und "Kranz" auf diese Weise in Beziehung gesetzt und verdeutlicht, dass Myrte ein Teil des Kranzes ist.</p>
+											<h5>Beispiel Relationen:</h5>
+					<pre class="prettyprint"><code>&lt;association&gt;
+    &lt;instanceOf&gt;
+        &lt;topicRef xlink:href="#part-of"/&gt;
+    &lt;/instanceOf&gt;
+    &lt;member&gt;
+        &lt;roleSpec&gt;
+            &lt;topicRef xlink:href="#object-of-use"/&gt;
+        &lt;/roleSpec&gt;
+        &lt;topicRef xlink:href="#myrte"/&gt;
+    &lt;/member&gt;
+    &lt;member&gt;
+        &lt;roleSpec&gt;
+            &lt;topicRef xlink:href="#object-of-use"/&gt;
+        &lt;/roleSpec&gt;
+        &lt;topicRef xlink:href="#kranz"/&gt;
+    &lt;/member&gt;
+&lt;/association&gt;</code></pre>
+					<h5 id="relationstypen">Relationstypen (association types)</h5>
+					<p>Die Relationen der einzelnen Topics zueinander werden wiederum als
+						Topic-Eintragungen definiert. Es werden folgende Relationen unterschieden:</p>
+						<p>personelle Relationen:</p>
+						<blockquote>
+							<p>verwandt mit</p>
+							<p>befreundet mit</p>
+							<p>zugeneigt zu</p>
+						</blockquote>
+						<p>partizipielle Relation:</p>
+						<blockquote>
+							<p>teil von</p>
+						</blockquote>
+						<p>Zugehörigkeit:</p>
+						<blockquote>
+							<p>zugehören zu</p>
+						</blockquote>
+						<p>instrumentelle Relation:</p>
+						<blockquote>
+							<p>verwendet für</p>
+						</blockquote>
+						<p>Ähnlichkeiten:</p>
+						<blockquote>
+							<p>gleich wie </p>
+							<p>vergleichbar mit</p>
+							<p>ist</p>
+						</blockquote>
+						<p>Gegensätzlichkeit:</p>
+						<blockquote>
+							<p>im Gegensatz zu</p>
+						</blockquote>
+						<p>Ausführung:</p>
+						<blockquote>
+							<p>ausgeführt von</p>
+						</blockquote>
+						<p>Erleben:</p>
+						<blockquote>
+							<p>erleben</p>
+							<p>erfahren</p>
+						</blockquote>
+					<h5>Beispiel Relationstypen:</h5>
+					<pre class="prettyprint"><code>&lt;topic id="part-of"&gt;
+    &lt;baseName&gt;
+        &lt;baseNameString&gt;teil von&lt;/baseNameString&gt;
+    &lt;/baseName&gt;
+&lt;/topic&gt;</code></pre>
+				</div>
+<div>				
+						<hr/>
+					<h3 id="rezeptionsgeschichte">3. Rezeptionsgeschichte</h3>
+					<p>Im Hinblick auf Aspekte der Rezeptionsgeschichte können in der Edition weitere Texte wie
+						Aufführungsbesprechungen, Korrespondenzen, Tagebücher u.a., in denen ebenso Motive und
+						Begriffe der Freischütz-Geschichten erwähnt sind, einbezogen werden. Solche Texte werden z.B. im
+						Rahmen der Weber-Gesamtausgabe (<a class="external"
+							href="http://www.weber-gesamtausgabe.de/de/Index"
+							>http://www.weber-gesamtausgabe.de/de/Index</a>) aufbereitet und online
+						zur Verfügung gestellt. Auf sie könnte, wie im nachfolgenden Beispiel am Beispiel des Begriffs "Wolfsschlucht" illustriert, ebenfalls mit Hilfe der Topic Map verwiesen werden, und
+						damit könnten extern verfügbare Texte in das Beziehungsgeflecht von Begriffen, Namen und Motiven einbezogen
+						werden. Dies gilt auch für weitere Texte außerhalb des hier erfassten Bereichs – Voraussetzung
+						ist lediglich eine entsprechende Indizierung nach den Vorgaben der Topic Map.</p>
+						<p>
+							<table>
+							<tr><td><img style="width: 300px; margin-right: 5px;" class="img-polaroid"
+								src="../pix/topicmap_reference_Wolfsschlucht.png"
+								alt="Topicmap, Begriff 'Wolfsschlucht'"
+								title="Topicmap, Begriff 'Wolfsschlucht'"/></td>
+							<td><img style="width: 400px; margin-right: 5px;" class="img-polaroid"
+								src="../pix/topicmap_reference_WeGA_01.png"
+								alt="WeGA Aufführungsbesprechungen: Vorkommen des Begriffs 'Wolfsschlucht'"
+								title="WeGA Aufführungsbesprechungen: Vorkommen des Begriffs 'Wolfsschlucht'"/></td>
+							<td><img style="width: 400px; margin-right: 5px;" class="img-polaroid"
+								src="../pix/topicmap_reference_WeGA_02.png"
+								alt="WeGA Aufführungsbesprechungen: Vorkommen des Begriffs 'Wolfsschlucht'"
+								title="WeGA Tagebuch: Vorkommen des Begriffs 'Wolfsschlucht'"/></td>
+							</tr>
+						</table>
+						</p>
+						<p> </p>
+					<!-- Dies als Kurzform: hier würde ich zwei Bilder einfügen, die einen Begriff in eurer TM zeigen und dann
+						darunter Textabbildungen packen, in denen die Begriffe auch markiert sind: 
+						Bsp. für "Ahnenbild" in Presse: A031341, A030957, A030456, A030323, A030275, A030798, A030125; für Briefe und TB könnte man "Wolfsschlucht" nehmen -->
+</div>
+	<hr/>
+<div>
+					<h3 id="codierungsrichtlinien">4. Codierungsrichtlinien</h3>
+						<p>Zu den Codierungsrichtlinien vgl. <a type="internal" href="documentation-libretti.html#codierungsrichlinien">Dokumentation zum Libretto, Abschnitt "Codierungsrichtlinien".</a></p>
+		
+				</div>
+
+			</div>
+		</div>
+	    
+	    <script type="text/javascript">
+	        window.activeNavLink = 'nav_documentation';
+	    </script>
+	</section>
+
+
+            <div id="footer"
+                style="padding-top: 5px; text-align: center; background-color: #EEEEEE; background-image: -moz-linear-gradient(center top , #F5F5F5 0%, #EEEEEE 100%);     background-repeat: repeat-x;     border: 1px solid #E5E5E5;     border-radius: 4px 4px 4px 4px;     height: 24px;     margin-bottom: 20px;     margin-top: 40px;     width: 100%;"
+                    ><a style="margin-right: 6px;" href="imprint.html">Imprint</a> · <a
+                        style="margin-left: 8px;" href="contact.html">Contact</a></div>
+        </div>
+        <script src="../scripts/jquery-1.12.3.min.js"></script>
+        <script src="../scripts/bootstrap.js"></script>
+        <script src="../scripts/main.js"></script>
+        <script src="../scripts/run_prettify.js"></script>
+    </body>
+</html>

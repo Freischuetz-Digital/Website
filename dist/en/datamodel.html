@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Freischütz Digital</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="" />
+        <meta name="author" content="Daniel Röwenstrunk" />
+
+        <link rel="stylesheet" href="../styles/bootstrap.css" />
+        <link rel="stylesheet" href="../styles/bootstrap-responsive.css" />
+        <link href="../styles/bootswatch.css" rel="stylesheet" />
+        <link href="../styles/freidi.css" rel="stylesheet" />
+        <link href="../styles/ptsans.css" rel="stylesheet" />
+
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../pix/freidi_icon_144.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../pix/freidi_icon_114.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../pix/freidi_icon_72.png" />
+        <link rel="apple-touch-icon-precomposed" href="../pix/freidi_icon_57.png" />
+        <link rel="shortcut icon" href="../pix/freidi_favicon.png" />
+    </head>
+    <body>
+        <div style="position: absolute; right:30px; top: 10px;"><a href="javascript:setLang('de')">DE</a> | <a href="javascript:setLang('en')">EN</a></div>
+        <div id="content" class="container">
+            <div id="figure-top" class="figure visible-desktop">
+                <img style="height: 330px;" src="" alt="" />
+            </div>
+            <header id="overview" class="jumbotron subhead">
+                <div class="row" style="min-height: 0;">
+                    <div class="span8">
+                        <img style="margin: 40px 0 0 3px;" src="../pix/Logo_greenInset.png" />
+                    </div>
+                    <div class="span4"> </div>
+                </div>
+                <div id="navbar" class="subnav">
+                    <ul class="nav nav-pills">
+                        <li id="nav_freidi" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">Freischütz Digital <span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="index.html">Project's Goals</a></li>
+                                <li><a href="work-packages.html">Work Packages</a></li>
+                                <li><a href="locations.html">Institutions</a></li>
+                                <li><a href="team.html">People</a></li>
+                                <li><a href="process.html">Project History</a></li>
+                            </ul>
+                        </li>
+                        <li id="nav_edition">
+                            <a href="edition.html">Edirom Online</a>
+                        </li>
+                        <li id="nav_data-tools" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">Data and Tools <span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="data-and-tools.html">Overview</a></li>
+                                <li><a href="data.html">Data</a></li>
+                                <li><a href="tools.html">Tools</a></li>
+                                <li><a href="licences.html">Licenses</a></li>
+                            </ul>
+                        </li>
+                        <li id="nav_demos" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">Demos <span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="demos.html">Overview</a></li>
+                                <li><a href="demo-dynamic-score-rendering.html">Dynamic Score</a></li>
+                                <li><a href="demo-genetic-text-stages.html">Text Layers</a></li>
+                                <li><a href="demo-visualising-text-annotations.html">Text Annotations</a></li>
+                                <li><a href="demo-visualising-text-variance.html">Text Variance</a></li>
+                                <li><a href="demo-the-freischuetz-network.html">"The Freischütz Network" (Topic Map)</a></li>
+                                <li><a href="demo-sync-player.html">Synchro-Player</a></li>
+                                <li><a href="demo-multitrack-data-set.html">Multitrack Dataset</a></li>
+                                <li><a href="demo-single-microphone-switcher.html">Single Microphone Switcher</a></li>
+                                <li><a href="demo-instrument-equalizer.html">Instrument Equalizer</a></li>
+                            </ul>
+                        </li>
+                        <li id="nav_documentation" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">Documentation <span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="documentation.html">Overview</a></li>
+                                <li><a href="documentation-music.html">Score</a></li>
+                                <li><a href="documentation-libretti.html">Libretto</a></li>
+                                <li><a href="documentation-reference-texts.html">Reference Texts</a></li>
+                                <li><a href="documentation-audio.html">Audio</a></li>
+                            </ul>
+                        </li>
+                        <li id="nav_publications" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">Publications &amp;
+                                Talks <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="publications.html">Publications</a></li>
+                                <li><a href="talks.html">Talks</a></li>
+                                <li><a href="events.html">Events</a></li>
+                                <li><a href="meetings.html">Meetings</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div id="backlink" style="display:none;">
+                    <a href="#" onclick="nav_back(); false;">zurück</a>
+                </div>
+            </header>
+            
+            
+                <section id="datamodel">
+        <div class="page-header">
+            <h1>Das <em>FreiDi</em>-Datenmodell</h1>
+            <h3>Juli 2014</h3>
+        </div>
+        <div class="row marginBottom30">
+            <div class="span12">
+                <h3>Einleitung</h3>
+                <p>Der folgende Text bietet eine erste Übersicht über das gegenwärtig in der Umsetzung
+                    befindliche Datenmodell von <em>Freischütz Digital</em>. Im vorliegenden ersten
+                    Release finden sich noch keine entsprechend ausgezeichneten Daten. Um etwaigen
+                    Änderungen am Konzept besser Rechnung tragen zu können, wurde auf die
+                    Berücksichtigung von Beispielen in dieser Einführung verzichtet. Dieser Text richtet
+                    sich ausdrücklich an Personen mit weitreichenden Kenntnissen im Bereich der
+                    Datenmodellierung bzw. Musikcodierung. Obwohl eine endgültige Evaluierung des
+                    gewählten Modells sicherlich erst mit Fertigstellung weiterer Codierungen möglich
+                    ist, soll dieser Text bereits einen Austausch über die zugrunde gelegten Konzepte
+                    ermöglichen. </p>
+                <p>Das Datenmodell von <em>Freischütz Digital</em> soll eine angemessene Codierung
+                    sowohl der Entwicklung des Werktextes in den überlieferten Quellen, aber auch der
+                    Ausprägungen des überlieferten Textes erlauben. Als angemessen ist dabei eine
+                    zumindest teilweise diplomatische Erfassung der Handschriftendetails zu verstehen:
+                    Während auf die Erfassung der präzisen Position einzelner Zeichen verzichtet wird,
+                    sollen vor allem unpräzise gesetzte Bögen, <em>crescendo</em>-Gabeln und ähnliche
+                    Zeichen, die individuelle Schreibart von Dynamikangaben sowie Artikulationszeichen
+                    wie Punkte und Striche möglichst getreu erfasst werden, um nachgelagerten
+                    Fragestellungen ein ausreichend detailliertes Datenmaterial zur Verfügung stellen zu
+                    können. <em>MEI</em> bietet grundsätzlich alle dafür erforderlichen Möglichkeiten.
+                    Angesichts der Vielzahl der zu kollationierenden Quellen erweist sich allerdings die
+                    regulär vorgesehene Verzeichnung von quellenübergreifender Varianz als unpraktisch,
+                    da bereits marginale Unterschiede etwa in der Platzierung eines Bogens zu einer
+                    „Verzweigung“ der Codierung im Sinne der <em>parallel segmentation</em>führen würde
+                    <button type="button" class="btn popover-dismiss btn-mini btn-tooltip"
+                        data-placement="right" data-toggle="popover"
+                        data-content="Das Konzept der &lt;em&gt;parallel                         segmentation&lt;/em&gt; wird u.a. beschrieben bei &lt;a                             href='http://www.tei-c.org/release/doc/tei-p5-doc/en/html/TC.html#TCAPPS'                         /&gt;. Zusammengefasst wird dabei in einer grundsätzlich sequentiellen Codierung                         ein Abschnitt markiert, für den zwei oder mehr gültige Alternativen vorgestellt                         werden. Aus strukturellen Gründen muss diese Verzweigung immer auf Element-Ebene                         stattfinden, auch wenn lediglich die Werte eines Attributes variieren."
+                        >*</button> Die Umsetzung des formulierten Anspruchs der Quellentreue würde
+                    somit zu stark redundanten Daten führen, deren Lesbarkeit zumindest für eine
+                    manuelle Bearbeitung erheblich eingeschränkt wäre. Die alternative Möglichkeit, alle
+                    Quellen nur für sich zu betrachten und in jeweils eigenen Dateien zu erfassen,
+                    bietet den Vorteil, in einer diplomatischen Codierung nur die Unsicherheiten eines
+                    einzigen Dokuments berücksichtigen zu müssen. Allerdings vergrößert sich bei diesem
+                    Ansatz das Problem der Redundanz, da alle gleichbleibenden Anteile für jede Quelle
+                    separat hinterlegt werden müssen. Da diese Daten erst über eine separate Konkordanz
+                    von außen inhaltlich verknüpft werden könnten <button type="button"
+                        class="btn popover-dismiss btn-mini btn-tooltip" data-placement="right"
+                        data-toggle="popover"
+                        data-content="Das                     dynamische Generieren einer solchen Konkordanz zur Laufzeit dürfte zwar möglich                     sein, ist aber aufgrund der Komplexität der Notation nicht effizient. Bereits                     das automatisierte Erstellen von Taktkonkordanzen erfordert Laufzeiten im                     zweistelligen Sekundenbereich – die im Projekt erwünschten Konkordanzen weisen                     allerdings eine erheblich höhere Auflösung bis hin zur Ebene einzelner Zeichen                     auf."
+                        >*</button></p>
+                <p>Dagegen nutzt das im Rahmen des Projekts entwickelte <em>Core</em> -Modell die
+                    jeweiligen Vorteile beider Verfahren und sucht durch die Aufteilung des gesamten
+                    Datensatzes in mehrere Dateien zugleich Redundanzen weitgehend zu umgehen.
+                    Zusätzlich integriert es durch eine – großenteils automatisierbare – Verlinkung eine
+                    Konkordanz der Daten, so dass eine Synopse von Differenzen im Werktext vor dem
+                    Hintergrund der gemeinsamen Codierung identischer Teile verbunden werden kann mit
+                    der Erfassung diplomatischer Aspekte der Einzelquellen. Im nachfolgenden Kapitel
+                    wird dieses <em>Core</em> -Modell ausführlich beschrieben und anschließend werden
+                    die im Rahmen von <em>Freischütz Digital</em> genutzten Arbeitsabläufe zur Umsetzung
+                    des Modells dokumentiert.</p>
+                <h3>Das <em>Core</em>-Modell</h3>
+                <p>Das <em>Core</em>-Modell sieht eine Aufteilung der Codierungen in mehrere Dateien
+                    vor:</p>
+                <p><em>1.</em> In der eigentlichen <em>Core</em>-Datei wird der "wesentliche" Notentext
+                    des betrachteten Werkes – hier Webers <em>Freischütz</em> – hinterlegt. Sie umfasst
+                    die gesamte Bandbreite der Überlieferung über alle betrachteten Quellen hinweg und
+                    ist insofern nicht mit einem herkömmlichen Edierten Text zu vergleichen. Die
+                    <em>Core</em>-Datei stellt die Summe aller – den jeweiligen Quellen zugeordneten
+                    – Lesarten und Varianten dar. Durch die strukturierte Erfassung der Unterschiede
+                    mittels des <em>MEI</em>-Moduls <b>critApp</b> hat die <em>Core</em>-Datei bereits
+                    editorischen Charakter.</p>
+                <p>Im <em>Core</em> werden dabei nur die wichtigsten Parameter des Notentextes
+                    hinterlegt, d.h. Tondauern und -höhen, aber auch Bögen und
+                    Artikulationsbezeichnungen. Allerdings werden diese in normalisierter bzw.
+                    nicht-diplomatischer Form codiert, d.h. es werden keine Angaben zu Halsrichtungen,
+                    individuellen Schreibweisen oder unpräzise gesetzten Zeichen hinterlegt. </p>
+                <p><em>2.</em> Für jede betrachtete Quelle wird zusätzlich eine separate
+                    <em>Source</em>-Datei angelegt, die sowohl das Dokument als solches (das Faksimile)
+                    als auch den zugehörigen und damit verknüpften codierten Werktext erfasst.
+                    Grundsätzlich wird zu jedem <b>mei:staff</b>-Element des codierten Werktextes der
+                    entsprechende Ausschnitt im Faksimile mit einem zugehörigen <b>mei:zone</b>-Element
+                    referenziert. Weitere Elemente wie Satzbezeichnungen oder andere textuelle
+                    Eintragungen (<b>mei:dir</b> etc.) können nach Bedarf mit entsprechenden
+                    Ausschnitten verknüpft werden.</p>
+                <p>Der Notentext selbst wird so wiedergegeben, wie er in der jeweils vorliegenden Quelle
+                    zu finden ist, d.h. es werden nur deren Varianten bzw. Lesarten codiert. Ziel dieser
+                    Codierung ist es, die Quelle möglichst getreu wiederzugeben, d.h. inklusive
+                    diplomatischer Details. Wie erwähnt, wird dabei zwar auf exakte graphische
+                    Platzierungen der Zeichen verzichtet, Positionierungen werden aber dann in der
+                    Codierung erfasst, wenn sie Unsicherheiten in der Interpretation hervorrufen – etwa
+                    im Fall von Bögen, die zwischen zwei denkbaren Noten beginnen bzw. enden (s.u.). </p>
+                <p>Damit liegen zunächst zwei, aus XML-Sicht vollständige <em>MEI</em>-Bäume vor, die
+                    jeweils komplette Codierungen einer Fassung bzw. der Gesamtsumme aller Fassungen
+                    enthalten. Um nun eine Redundanz der Daten zwischen <em>Core</em> und
+                    <em>Sources</em> zu vermeiden, werden in den <em>Sources</em> lediglich die
+                    diplomatisch bzw. typografisch relevanten Informationen abgelegt, also
+                    Halsrichtungen, Ausrichtung von Bögen etc., während die "wesentlichen" Bestandteile
+                    zunächst unberücksichtigt bleiben. Zusätzlich wird für <em>jedes</em>Element ein
+                    Verweis auf das jeweils entsprechende Objekt in der <em>Core</em>-Datei angelegt.
+                    Dazu wird das <em>MEI</em>-Attribut <b>@sameas</b>genutzt, es wird also eine
+                    Gleichheit der beiden Elemente konstatiert. In den <em>MEI</em>-Guidelines heisst es
+                    zu <b>@sameas</b>: „[it] points to an element that is the same as the current
+                    element but is not a literal copy of the current element.“<note xml:id="ftn3"
+                        place="foot" n="3">MEI Guidelines 2013 (v.2.1.0), S. 544</note> Eine
+                    vollständige Codierung des Notentexts einer Quelle erhält man erst, wenn man
+                    ausgehend von der zugehörigen <em>Source</em>-Datei sämtlichen
+                    <b>@sameas</b>-Verweisen folgt und die in der <em>Core</em>-Datei hinterlegten
+                    Attribute ergänzt. Damit werden die in der <em>Core</em>-Datei gespeicherten
+                    wesentlichen Parameter des Notentexts und die graphischen Ausprägungen des
+                    Notenbilds der Quelle zusammengeführt und können vollständig genutzt werden. Dieses
+                    Modell erfordert somit eine strukturelle Redundanz – jedes Notationselement wird in
+                    zwei Dateien erfasst, die erfassten Informationen sind allerdings klar zu
+                    unterscheiden, so dass jeder Aspekt jeweils nur an genau einer Stelle (und damit
+                    nicht redundant) hinterlegt wird. </p>
+                <p>Wesentliche Unterschiede der erfassten Texte lassen sich unmittelbar über
+                    <b>mei:app</b>-Elemente und ihre Kindknoten in der <em>Core</em>-Datei ablesen,
+                    während sich Unterschiede in den typographischen Details durch einen Abgleich der
+                    auf die gleiche Note verweisenden Elemente in den <em>Source</em>-Dateien
+                    untersuchen lassen. Die vorgenommene Differenzierung führt damit lediglich zu einer
+                    Priorisierung der wesentlichen Unterschiede, nicht zum Verzicht auf die Erfassung
+                    von in der Regel nachrangigen Unterschieden.</p>
+                <p>Eine Besonderheit ergibt sich dabei durch die häufig alternierende Notation von
+                    mehrfach besetzten Holzbläsern und anderen Instrumenten, die innerhalb eines Systems
+                    teils als zwei separate Stimmen, teils aber auch akkordisch notiert werden. Die
+                    Schreibweise dieser Systeme variiert häufig zwischen verschiedenen Quellen, ohne
+                    dass damit tatsächlich ein Bedeutungsunterschied zu konstatieren wäre. Im Rahmen von
+                    <em>Freischütz Digital</em> wird in den <em>Source</em>-Dateien der jeweilige
+                    Befund der Quelle wiedergegeben. In der <em>Core</em>-Datei wird dagegen eine
+                    normalisierte Form vorgehalten, bei der alle mehrfach besetzten Instrumente
+                    vollständig in einzelne Stimmen aufgeteilt sind, d.h. jede akkordische Schreibweise
+                    aufgelöst wird. Die Noten der einzelnen Quellen verweisen dann jeweils auf die ihnen
+                    zugehörige Töne, unabhängig vom in der Quelle zugeordneten <b>mei:layer</b>. Diese
+                    Form der Codierung, die u.U. keiner der vorhandenen Quellen entspricht, eignet sich
+                    aber als Vorlage für potentielle Stimmenauszüge. Dieser Zusatznutzen ist allerdings
+                    in erster Linie als Vorbereitung für spätere Projektphasen bzw. eine weiterführende
+                    Nutzung der Daten anzusehen.</p>
+                <h3>Behandlung von Korrekturen und anderen textgenetischen Prozessen</h3>
+                <p>Editorische Sachverhalten werden in den <em>Core</em>- und <em>Source</em>-Dateien
+                    durch die <em>MEI</em>-Module <b>editTrans</b> und <b>critApp</b> erfasst. Dabei
+                    können doppelte Codierungen entstehen, die aber durch ihre verschiedenen
+                    Perspektiven nicht als redundant zu verstehen sind.</p>
+                <p>Eine Korrektur wird innerhalb einer Quelle als <b>mei:subst</b> erfasst, mit den
+                    beiden Kindelementen <b>mei:del</b> und <b>mei:add</b>. In der <em>Core</em>-Datei
+                    wird derselbe Sachverhalt ebenfalls aufgeteilt, dort aber nicht in einem
+                    <b>mei:subst</b>, sondern in einem <b>mei:app</b> mit zwei
+                    <b>mei:rdg</b>-Kindelementen hinterlegt. Während in den Quellen so der prozesshafte
+                    Charakter der Ersetzung im Vordergrund steht, werden im <em>Core</em> alle
+                    Textschichten unabhängig von ihrer Herkunft aus einer bestimmten Quelle gleichartig
+                    behandelt. Im Falle solcher Eingriffe wird im Rahmen von <em>Freischütz Digital</em>
+                    abweichend von der gängigen editorischen Praxis versucht, zwei Stadien möglichst
+                    durchgängig für alle betrachteten Kopien zu erfassen: einerseits – wie gewohnt – die
+                    von Weber autorisierte Version des Textes (d.h. inklusive der von ihm vorgenommenen
+                    Änderungen am Text, die selbstverständlich als solche erfasst werden), andererseits
+                    aber auch der aktuelle Zustand der jeweiligen Quelle, dass heißt inklusive aller im
+                    Zuge von späteren Aufführungen oder anderen Gelegenheiten vorgenommenen
+                    Eintragungen, Streichungen oder sonstigen Anpassungen. Eine Binnen-Differenzierung
+                    dieser letztgenannten Eingriffe wird aufgrund der Zielsetzung von <em>Freischütz
+                        Digital</em> nicht vorgenommen; lediglich die genutzten Schreibmittel (und wo
+                    erfassbar Schreiber) werden separat erfasst. Eine Ausnahme bildet hier die Abschrift
+                    K<sup>A</sup><sub>2</sub>, deren teils mehrfache Umarbeitungsprozesse gut
+                    nachvollziehbar sind und die deshalb exemplarisch in einigen Sätzen nachgezeichnet
+                    werden sollen. Darüber hinaus ist für <em>Freischütz Digital</em> keine Erfassung
+                    von späteren Texteingriffen und -änderungen vorgesehen. </p>
+                <h3>Handhabung von ControlEvents, d.h. Bindebögen, Dynamikangaben etc.</h3>
+                <p>Während die Aufteilung der Informationen auf <em>Core</em>- und
+                    <em>Source</em>-Dateien im Fall von <em>Events</em>, also Noten, Pausen, Akkorden
+                    etc., meist zu einer einfachen 1:1-Entsprechung der jeweiligen Elemente führt, ist
+                    die Handhabung sogenannter <em>ControlEvents</em> je nach Situation deutlich
+                    komplexer und erfordert eine etwas andere Handhabung. Im einfachsten Fall handelt es
+                    sich z.B. um einen Bingebogen, dessen Anfang und Ende jeweils eindeutig und
+                    zweifelsfrei einer Note zugewiesen werden kann. In diesem Fall wird sowohl im
+                    <em>Core</em> als auch in den betreffenden <em>Source</em>-Dateien ein
+                    <b>mei:slur</b>-Element angelegt. In der <em>Core</em>-Datei werden nun Start-
+                    und Endnote des Bogens über Referenzen mittels der Attribute <b>@startid</b> und
+                    <b>@endid</b> hinterlegt, die jeweils die <b>@xml:id</b> der entsprechenden Note
+                    (bzw. des entsprechenden Akkords) referenzieren. In den <em>Sources</em>, welche
+                    wiederum über <b>@sameas</b> den Bezug zum <em>Core</em> herstellen, werden nun mit
+                    <b>@place</b> und <b>@curvedir</b> die Position des Bogens über bzw. unter dem
+                    System sowie dessen Richtung hinterlegt. Komplexer wird die Situation bei
+                    Bindebögen, deren Enden unpräzise platziert sind. Der Anspruch von <em>Freischütz
+                        Digital</em> ist es, die in den Quellen vorhandenen Unsicherheiten zu bewahren,
+                    also sowohl die exakte Position des Zeichens als auch sämtliche (unabhängig von der
+                    Berücksichtigung weiterer Quellen) daraus resultierenden denkbaren Interpretationen
+                    der Zuordnung, da sich nur unter Berücksichtigung dieser Unsicherheiten Kopierfehler
+                    auch auf ihre Ursachen hin untersuchen lassen. </p>
+                <p>In diesem Fall werden in der <em>Source</em>-Datei zunächst die Attribute
+                    <b>@tstamp</b> und / oder <b>@tstamp2</b> zugefügt, welche eine Zählzeit für
+                    Bogenanfang bzw. -ende angeben. Die dort einzutragenden Werte sind nicht absolut zu
+                    sehen und sollten gerade <em>nicht</em> den Zählzeiten vorhandener Noten entsprechen
+                    (in diesem Fall wäre ihre Erfassung obsolet), können aber z.B. eine Zuordnung des
+                    Bogens zum Taktstrich zwischen zwei Takten andeuten. Zusätzlich wird das
+                    entsprechend ausgezeichnete <b>mei:slur</b>-Element in ein <b>mei:orig</b>
+                    geschachtelt, welches wiederum durch ein <b>mei:choice</b> umschlossen wird. Dieses
+                    bekommt nun für jede gültige Interpretation des Bogens (also auch wenn der Befund
+                    lediglich eine einzige Interpretation zulässt) ein weiteres
+                    <b>mei:reg</b>-Kindelement, welches ein entsprechendes <b>mei:slur</b> enthält. Das
+                    den Befund wiedergebende <em>mei:slur</em> innerhalb des <b>mei:orig</b> enthält in
+                    diesem Fall <em>keinen</em> Verweis auf ein entsprechendes <b>mei:slur</b>-Element
+                    innerhalb der <em>Core</em>-Datei mittels <b>@sameas</b>. Vielmehr verweisen die in
+                    <b>mei:reg</b> hinterlegten <b>mei:slur</b> auf entsprechende Bindebögen in der
+                    <em>Core</em>-Datei, die dann wiederum über <b>@startid</b> und <b>@endid</b>
+                    eindeutige Zuordnungen zu den jeweiligen Noten herstellen. </p>
+                <p>Eine Gewichtung dieser Alternativen hinsichtlich ihrer Wahrscheinlichkeit erfolgt
+                    dabei nicht in der <em>Core</em>-Datei, sondern in der <b>mei:choice</b> innerhalb
+                    der zugehörigen <em>Source</em>-Datei. Die dort vorgehaltenen
+                    <b>mei:reg</b>-Elemente werden um das Element <b>@cert</b> (certainty) angereichert,
+                    für welches <em>MEI</em> die Werte „high“, „medium“, „low“ und „unknown“ vorgibt.
+                    Eine inhaltlich gerade noch zu vertretende Interpretation bekommt dabei den Wert
+                    „low“ zugewiesen. Ab dieser Wahrscheinlichkeit werden alle Interpretationen in
+                    gleicher Weise in den <em>Core</em> übernommen. Es können mehrere Interpretationen
+                    mit gleicher Wahrscheinlichkeit hinterlegt werden, also z.B. zwei als in gleicher
+                    Weise @cert=„medium“.</p>
+                <p>Allerdings führt dieses Modell dazu, dass in der <em>Core</em>-Datei ggf. zwei oder
+                    mehr unterschiedliche Interpretationen hinterlegt werden müssen, die aus nur einer
+                    Quelle stammen. In der <em>Core</em>-Datei werden solche Unterschiede grundsätzlich
+                    immer mittels <b>mei:app</b> bzw. darin liegender <b>mei:rdg</b>-Elemente erfasst.
+                    Diese <b>mei:rdg</b>-Elemente referenzieren über <b>@source</b> die Quelle, deren
+                    Text sie wiedergeben. Üblicherweise sieht <em>MEI</em> vor, dass jede Quelle in nur
+                    einem dieser <b>mei:rdg</b>-Elemente thematisiert wird. Eine weitere
+                    Binnendifferenzierung wird dann über <b>mei:choice</b>-Elemente innerhalb dieses
+                    einen <b>mei:rdg</b> vorgenommen. Allerdings würde die Anwendung dieses Modells das
+                    gesamte <em>Core</em>-Modell von <em>Freischütz Digital</em> ad absurdum führen, da
+                    auf diese Weise nicht mehr die Gemeinsamkeiten in der <em>Core</em>-Datei
+                    zusammengefasst werden, sondern eine exakte Wiedergabe der einzelnen Quellen bereits
+                    hier stattfinden müsste. Inhaltlich ist das oben skizzierte Verhalten – es gibt bei
+                    Bedarf mehrere <b>mei:rdg</b> pro Quelle – durchaus korrekt: Die Überlieferung des
+                    <em>Freischütz</em> bietet zwei Lesarten des Bogens, die aufgrund einer
+                    unpräzisen Schreibweise beide aus einer Quelle gelesen werden können.
+                    Selbstverständlich schließen sich diese gegenseitig aus (wie es für <b>mei:rdg</b>
+                    ohnehin definiert ist). Allerdings kann über diese Doppelerfassung gerade im Bezug
+                    zu anderen Quellen nachvollzogen werden, wie solche unpräzisen Schreibweisen zu
+                    Textfehlern (im weitesten Sinne des Wortes) führen, und damit letztlich die
+                    Filiation der Quellen besser nachvollzogen werden. Dennoch sei nochmals ausdrücklich
+                    darauf verwiesen, dass im Falle von mehreren <b>mei:rdg</b>, die (u.a.) auf die
+                    gleiche Quelle verweisen, sich diese Lesarten gegenseitig ausschließen und immer nur
+                    genau eine als gültig betrachtet werden kann. Nur so wird die wechselseitige
+                    Schachtelung von <b>mei:choice</b> bzw. <b>mei:app</b>-Elementen vermieden, wodurch
+                    die vorhandenen Textfassungen besser sichtbar bleiben, unabhängig von der sie
+                    jeweils enthaltenden Quelle. </p>
+            </div>
+        </div>
+        <script type="text/javascript">
+            window.activeNavLink = 'nav_publications';
+            window.backLink = 'publications.html';
+        </script>
+    </section>
+
+
+            <div id="footer"
+                style="padding-top: 5px; text-align: center; background-color: #EEEEEE; background-image: -moz-linear-gradient(center top , #F5F5F5 0%, #EEEEEE 100%);     background-repeat: repeat-x;     border: 1px solid #E5E5E5;     border-radius: 4px 4px 4px 4px;     height: 24px;     margin-bottom: 20px;     margin-top: 40px;     width: 100%;"
+                    ><a style="margin-right: 6px;" href="imprint.html">Imprint</a> · <a
+                        style="margin-left: 8px;" href="contact.html">Contact</a></div>
+        </div>
+        <script src="../scripts/jquery-1.12.3.min.js"></script>
+        <script src="../scripts/bootstrap.js"></script>
+        <script src="../scripts/main.js"></script>
+        <script src="../scripts/run_prettify.js"></script>
+    </body>
+</html>

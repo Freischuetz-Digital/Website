@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Freischütz Digital</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="" />
+        <meta name="author" content="Daniel Röwenstrunk" />
+
+        <link rel="stylesheet" href="../styles/bootstrap.css" />
+        <link rel="stylesheet" href="../styles/bootstrap-responsive.css" />
+        <link href="../styles/bootswatch.css" rel="stylesheet" />
+        <link href="../styles/freidi.css" rel="stylesheet" />
+        <link href="../styles/ptsans.css" rel="stylesheet" />
+
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../pix/freidi_icon_144.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../pix/freidi_icon_114.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../pix/freidi_icon_72.png" />
+        <link rel="apple-touch-icon-precomposed" href="../pix/freidi_icon_57.png" />
+        <link rel="shortcut icon" href="../pix/freidi_favicon.png" />
+    </head>
+    <body>
+        <div style="position: absolute; right:30px; top: 10px;"><a href="javascript:setLang('de')">DE</a> | <a href="javascript:setLang('en')">EN</a></div>
+        <div id="content" class="container">
+            <div id="figure-top" class="figure visible-desktop">
+                <img style="height: 330px;" src="" alt="" />
+            </div>
+            <header id="overview" class="jumbotron subhead">
+                <div class="row" style="min-height: 0;">
+                    <div class="span8">
+                        <img style="margin: 40px 0 0 3px;" src="../pix/Logo_greenInset.png" />
+                    </div>
+                    <div class="span4"> </div>
+                </div>
+                <div id="navbar" class="subnav">
+                    <ul class="nav nav-pills">
+                        <li id="nav_freidi" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">Freischütz Digital <span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="index.html">Project's Goals</a></li>
+                                <li><a href="work-packages.html">Work Packages</a></li>
+                                <li><a href="locations.html">Institutions</a></li>
+                                <li><a href="team.html">People</a></li>
+                                <li><a href="process.html">Project History</a></li>
+                            </ul>
+                        </li>
+                        <li id="nav_edition">
+                            <a href="edition.html">Edirom Online</a>
+                        </li>
+                        <li id="nav_data-tools" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">Data and Tools <span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="data-and-tools.html">Overview</a></li>
+                                <li><a href="data.html">Data</a></li>
+                                <li><a href="tools.html">Tools</a></li>
+                                <li><a href="licences.html">Licenses</a></li>
+                            </ul>
+                        </li>
+                        <li id="nav_demos" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">Demos <span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="demos.html">Overview</a></li>
+                                <li><a href="demo-dynamic-score-rendering.html">Dynamic Score</a></li>
+                                <li><a href="demo-genetic-text-stages.html">Text Layers</a></li>
+                                <li><a href="demo-visualising-text-annotations.html">Text Annotations</a></li>
+                                <li><a href="demo-visualising-text-variance.html">Text Variance</a></li>
+                                <li><a href="demo-the-freischuetz-network.html">"The Freischütz Network" (Topic Map)</a></li>
+                                <li><a href="demo-sync-player.html">Synchro-Player</a></li>
+                                <li><a href="demo-multitrack-data-set.html">Multitrack Dataset</a></li>
+                                <li><a href="demo-single-microphone-switcher.html">Single Microphone Switcher</a></li>
+                                <li><a href="demo-instrument-equalizer.html">Instrument Equalizer</a></li>
+                            </ul>
+                        </li>
+                        <li id="nav_documentation" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">Documentation <span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="documentation.html">Overview</a></li>
+                                <li><a href="documentation-music.html">Score</a></li>
+                                <li><a href="documentation-libretti.html">Libretto</a></li>
+                                <li><a href="documentation-reference-texts.html">Reference Texts</a></li>
+                                <li><a href="documentation-audio.html">Audio</a></li>
+                            </ul>
+                        </li>
+                        <li id="nav_publications" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">Publications &amp;
+                                Talks <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="publications.html">Publications</a></li>
+                                <li><a href="talks.html">Talks</a></li>
+                                <li><a href="events.html">Events</a></li>
+                                <li><a href="meetings.html">Meetings</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div id="backlink" style="display:none;">
+                    <a href="#" onclick="nav_back(); false;">zurück</a>
+                </div>
+            </header>
+            
+            
+                <section id="datamodel">
+        <div class="page-header">
+            <h1>Thomas Betzwieser: Überlegungen zu Arbeitspaket 6.2./6.3</h1>
+            <h3>September 2015</h3>
+            <p>(Auszeichnungen, Verlinkungen und Klangbeispiele ergänzt durch Mitra Behpoori, Maya Sampson und Sebastian Schlicht im Dezember 2016)</p>
+            <!-- Auszeichnungen, Verlinkungen und Integration mus. Zeichen durch Mitra Behpoori, Maya Sampson und Sebastian Schlicht -->
+        </div>
+        <div class="row marginBottom30">
+            <div class="span12">
+                <h3>Die <em>Freischütz</em>-Einspielung von Eugen Jochum: eine Interpretation und ihre Quellen</h3>
+                <p>Historische Aufführungsmateriale waren schon immer im Blickpunkt von musikalischen Editionen. 
+                    Vor allem im Bereich des Musiktheaters bildeten sie einen bedeutsamen Quellentypus, 
+                    den es neben Autograph und Partiturabschriften innerhalb einer kritischen Edition zu 
+                    berücksichtigen galt.<a href="#fn1" id="ref1"><sup class="textsuperscript"
+                        >1</sup></a> Allerdings mit einer wesentlichen Einschränkung: Dirigierpartituren, 
+                    Orchester- und Gesangsstimmen wurden in der Regel nur dann als (editionsrelevante) Quellen 
+                    herangezogen, wenn sich im Material eine irgendwie geartete Autorisierung seitens des 
+                    Komponisten verifizieren ließ. Inwieweit ein solches Material dann überhaupt in den 
+                    engeren Kreis des Quellenkorpus für die Edition einbezogen wird, ist stark von der 
+                    generellen Quellensituation abhängig.<a href="#fn2" id="ref2"><sup class="textsuperscript"
+                        >2</sup></a> Beim Vorliegen einer autographen ‚Vollpartitur‘ 
+                    rücken die Aufführungsmateriale oftmals sofort ins zweite Glied, werden also als sekundäre 
+                    oder tertiäre Quellen klassifiziert.</p>
+                <p>Ein ungewöhnlicher Fall liegt ohne Zweifel bei Carl Maria von Webers <em>Der Freischütz</em> vor. 
+                    Die Partiturabschriften, die für die verschiedensten Theater angefertigt wurden – und die 
+                    Basis für die vor Ort zu erstellenden Aufführungsmateriale abgaben – gingen gewissermaßen 
+                    durch Webers Hand. Mit anderen Worten: diese Partituren stehen letztlich alle dem Autograph 
+                    nahe, und sind damit autorisiert. Dies bringt den Forscher in die fast singuläre Situation, 
+                    die weiteren Schichten in diesen Abschriften verifizieren oder aber eine Filiation der daraus 
+                    generierten Materiale (Orchester- und Gesangstimmen, Soufflierbücher, etc.) ableiten zu können. 
+                    Diese handschriftlichen Materiale bilden somit die Basis für die musikalische 
+                    Interpretationsgeschichte des <em>Freischütz</em> im 19. Jahrhundert. Die Materiale haben durchgängig 
+                    eine „longue durée“, d.h. eine Ablösung durch gedruckte Partituren erfolgte in der Regel sehr 
+                    spät, insbesondere wenn die Partiturausgaben nicht auch von (gedruckten) Orchesterstimmen 
+                    begleitet wurden. Bis weit in die zweite Hälfte des 20. Jahrhunderts hinein wurden diese Materiale 
+                    in den jeweiligen Theatern aufbewahrt, bis sie dann – sofern noch vorhanden – an öffentliche 
+                    Bibliotheken übergeben wurden.<a href="#fn3" id="ref3"><sup class="textsuperscript"
+                        >3</sup></a> Erst durch Erschließung und Katalogisierung rückte dieser Quellentyp 
+                    auch ins weitere Bewusstsein der Forschung, wo er zuvor auf prominente Einzelbeispiele beschränkt blieb.</p>
+                <p>Im Rahmen der Interpretationsforschung bzw. des „performative turn“ in der Musikwissenschaft rücken 
+                    Aufführungsmateriale mehr und mehr ins Zentrum des Interesses. Die Perspektiven haben sich dabei 
+                    allerdings geändert: Wurde früher dieser Quellentyp vornehmlich konsultiert, um die ‚Manieren‘ von 
+                    Vokalsolisten rekonstruieren und evaluieren zu können – insbesondere unter den Auspizien historischer 
+                    Musikpraxis –, so gilt der Blick heute mehr und mehr der Aufführung und deren Interpretation also solcher. <a href="#fn4" id="ref4"><sup class="textsuperscript"
+                        >4</sup></a> 
+                    In ihrer Studie über die Einlagepraxis in der italienischen Oper der 19. Jahrhunderts spricht Hilary 
+                    Poriss<a href="#fn5" id="ref5"><sup class="textsuperscript"
+                        >5</sup></a> nicht von ungefähr von der „authority of performance“, was eben weit mehr impliziert als nur 
+                    eine Lizenz für eine individuelle ‚Sängerarie‘.</p>
+                <p>Im Bereich der musikalischen Interpretation innerhalb der Opernforschung hat sich die Perspektive 
+                    insofern verschoben, als der Fokus nicht mehr ausschließlich auf die vokale Seite gerichtet ist, 
+                    sondern mehr und mehr auch die Interpretation des Dirigenten, das heißt das ‚Konzept‘ der 
+                    Interpretation, Gegenstand der Betrachtung wird. Anders als das von bzw. für Sängerinnen und Sänger 
+                    annotierte (Stimmen-)Material, sind (zugängliche) annotierte Dirigierpartituren indes eher rar gesät. 
+                    Dies gilt umso mehr für den Versuch, eine solche annotierte Partitur mit einer spezifischen 
+                    Tonaufnahme desselben Interpreten zusammenzubringen. 
+                </p>
+            </div>
+            <div class="span12">
+                <p>Zu den wenigen Fällen, bei welchen eine solche ‚Engführung‘ möglich ist, zählt die Partitur von Webers 
+                    <em>Freischütz</em> aus dem Privatbesitz des Dirigenten Eugen Jochum (1902-1987), die sich heute im Nachlass-Fonds 
+                    in der Bayerischen Staatsbibliothek<a href="#fn6" id="ref6"><sup class="textsuperscript"
+                        >6</sup></a> befindet. Diese Partitur erlaubt nicht nur einen Einblick in die 
+                    Interpretation seitens des Notenmaterials, sondern mehr noch steht diese Quelle in unmittelbarer 
+                    Beziehung zu der Aufnahme, die Jochum Ende 1959 mit dem Sinfonie-Orchester des Bayerischen Rundfunks 
+                    im Auftrag der Deutschen Grammophon unternommen hat. Die vom Dirigenten reich annotierte Partitur<a href="#fn7" id="ref7"><sup class="textsuperscript"
+                        >7</sup></a> 
+                    basiert auf dem Peters-Partiturdruck mit einem auf dem Titelblatt angebrachten handschriftlichen 
+                    Besitzvermerk Jochums: <!-- Verlinkung mit Edirom --><a href="http://freischuetz-digital.de/edition/index.html?uri=xmldb:exist:///db/apps/contents/musicSources/freidi-musicSource_DJochum.xml#DJochum_surface5" target="_blank">Der Freischütz | Oper in 3 Akten | von | C. M. von WEBER. | Partitur. | 8449 | LEIPZIG | C. F. PETERS. [in der rechten oberen Ecke hss.:] Eugen Jochum 1935</a>
+                </p>
+                <p>Es handelt sich dabei um den seit dem Ende des 19. Jahrhunderts von C. F. Peters vertriebenen Partiturdruck
+                    (Pl.Nr. 8449, 203 Seiten), der erst 1926 von einer neuen Partiturausgabe von Kurt Soldan (nach dem Autograph) 
+                    bei der Edition Peters (Pl.Nr. 10513, 258 Seiten) abgelöst wurde.<a href="#fn8" id="ref8"><sup class="textsuperscript"
+                        >8</sup></a> Wie  
+                    <a href="http://freischuetz-digital.de/edition/index.html?uri=xmldb:exist:///db/apps/contents/musicSources/freidi-musicSource_DJochum.xml#DJochum_surface5" target="_blank">auf dem Titelblatt vermerkt war diese Partitur seit 1935 im Besitz von Eugen Jochum</a>. Die Annotationen sind teilweise in lateinischer Schrift, 
+                    längere Passagen aber immer in Stenographie, der sog. Gabelsberger Kurzschrift verfasst. (An dieser Stelle 
+                    sei Renate Ulm herzlich gedankt, ohne deren Transkriptionen mir viele Inhalte verborgen geblieben wären.) 
+                    Jochums Eintragungen – fast durchgängig mit Bleistift – spiegeln den Zeitraum von 1959 bis 1976 wider. 
+                    Dies bezeugt die minutiöse Dokumentation, die Jochum auf den <a href="http://freischuetz-digital.de/edition/index.html?uri=xmldb:exist:///db/apps/contents/musicSources/freidi-musicSource_DJochum.xml#DJochum_surface6" target="_blank">vorderen</a> und <a  href="http://freischuetz-digital.de/edition/index.html?uri=xmldb:exist:///db/apps/contents/musicSources/freidi-musicSource_DJochum.xml#DJochum_surface231" target="_blank">hinteren Vacat-Seiten</a> 
+                    (letztere auf der Umschlaginnenseite) angelegt hat: Jede Aufführung ist dort akribisch festgehalten, 
+                    mit Angaben der beteiligten Solisten und ggf. Kommentaren. Dies betrifft vor allem die Aufführungen an 
+                    der Deutschen Oper Berlin, die Jochum in der Zeit von 1966 bis 1976 musikalisch geleitet hat. Für die 
+                    Inszenierung zeichnete der damalige Intendant Gustav Rudolf Sellner verantwortlich. Auch Gastspiele sind 
+                    in der Aufführungsliste dokumentiert. Von der Berliner Inszenierung zeugen vor allem die eingehefteten 
+                    Dialoge (mit zahlreichen Strichen und Änderungen; vgl. z.B. <a href="http://freischuetz-digital.de/edition/index.html?uri=xmldb:exist:///db/apps/contents/musicSources/freidi-musicSource_DJochum.xml#DJochum_surface79" target="_blank">Dialog nach Nr. 4</a>), oder Notate wie „<a href="http://freischuetz-digital.de/edition/index.html?uri=xmldb:exist:///db/apps/contents/musicSources/freidi-musicSource_DJochum.xml#DJochum_mov1_measure74" target="_blank" >Berlin im Orchester</a>“ für die Bühnenmusik. 
+                    Ferner finden sich lokalspezifische  Besetzungsangaben, wie sie am Streichersystem zu Beginn der 
+                    Ännchen-Arie „Kommt ein schlanker Bursch gegangen“ anzutreffen sind: "<a target= "_blank" href="http://freischuetz-digital.de/edition/index.html?uri=xmldb:exist:///db/apps/contents/musicSources/freidi-musicSource_DJochum.xml#DJochum_mov7_measure1">Berlin 10/8/7/6/6</a>".
+                </p>
+                <p>Dass Jochum die Partitur jedoch schon früher in Gebrauch hatte, belegt der allererste Eintrag in der Aufführungsliste: 
+                    „<a href="http://freischuetz-digital.de/edition/index.html?uri=xmldb:exist:///db/apps/contents/musicSources/freidi-musicSource_DJochum.xml#DJochum_surface6" target="_blank">D[eutsche] Grammophon: 12. – 20[?].  XII.  59</a>“. Damit ist der Bezug dieser Partitur zu der 
+                Einspielung von Webers Oper, die Jochum mit dem Sinfonie-Orchester des Bayerischen Rundfunks Ende 1959 unternahm, 
+                eindeutig hergestellt. Auch wenn wir nicht wissen, von wann die einzelnen Annotationen stammen – eine ‚Filiation‘ 
+                der Schichten erweist sich als  unmöglich (und auch nicht nötig) –, so darf diese Partitur mit Fug und Recht als 
+                ein genuines Dokument der Interpretation des Dirigenten Eugen Jochum angesehen werden. Selbstredend vermag eine solche 
+                Quelle nicht die Interpretation ‚abzubilden‘, aber sie erlaubt wesentliche Einsichten in die künstlerische Intention 
+                des Interpreten. Im Verbund mit dem Tondokument lässt sich schließlich der interpretatorische Ansatz aus zwei 
+                unterschiedlichen Perspektiven nachvollziehen. Gerade die Möglichkeit einer Verkoppelung verschiedener 
+                Quellensorten vermag hier ein Koordinatensystem zu konstituieren, welches für die Interpretationsanalyse 
+                in besonderer Weise fruchtbar gemacht werden kann.
+                </p>
+                <p>Die Partitur enthält zunächst dirigententypische Eintragungen wie zusätzliche Ziffern für die Organisation 
+                    der Proben, zusätzlich eingetragene Instrumentennamen zur besseren Orientierung (vor allem am Beginn neuer Seiten), 
+                    ‚Verdoppelung‘ von dynamischen Angaben über die verschiedenen Instrumente hinweg; ferner Unterstreichungen von 
+                    Dynamik und Spielanweisungen, zusätzliche Nummerierung geteilter Instrumente, duplizierende Metrumangaben, usw. 
+                    Daneben finden sich aber an mehreren Stellen auch Fragen wie: <a href="http://freischuetz-digital.de/edition/index.html?uri=xmldb:exist:///db/apps/contents/musicSources/freidi-musicSource_DJochum.xml#DJochum_mov16_measure289" target="_blank">„Nur Vc oder mit Kontrabaß?“ (vgl. Nr. 16, T. 289, unter dem System der Bässe)</a>.
+                    Daneben stehen auch dynamische Modifikationen, die zwar prima vista wie eine ‚Nachkorrektur‘ aussehen, 
+                    aber mehr als Exklamation zu interpretieren sind, zum Beispiel bei der Chorpassage „Ha! das war sein 
+                    Gebet im Sterben!“ im Finale, wo Jochum in die Pianissimo-Stelle der Frauenstimmen in <a href="http://freischuetz-digital.de/edition/index.html?uri=xmldb:exist:///db/apps/contents/musicSources/freidi-musicSource_DJochum.xml#DJochum_mov16_measure111" target="_blank">Takt 111</a> <span class="musical-symbols">&#xE529;</span> <!-- pppp statt Seite 182 =208!mal Takt eingesetzt -->
+                    hineinschreibt (und zum ersten Akkord ein „<em>ten</em>[<em>uto</em>]“ ergänzt). Die Mehrzahl der 
+                    dynamischen Annotationen, die über die Weber’schen hinausgehen, tangiert die Klangbalance zwischen 
+                    Solisten und Orchester; zumeist sind es Reduktionen im Orchesterapparat (z.B. <span class="musical-symbols">&#xE52B;</span><!--statt: <em>pp</em> -->) bei entsprechender 
+                    Anpassung im Vokalpart (<span class="musical-symbols">&#xE52D;</span><!--statt: <em>mf</em> -->). 
+                </p>
+                <p>Vielschichtiger sind indes die dynamischen Binnendifferenzierungen, die Jochum über Vier- oder Achttaktgruppen 
+                    in seine Partitur sorgsam ‚einpflegte‘, um kurzzeitige Spannungsbögen aufzubauen. So verwandelt er 
+                    an vielen Stellen ein (sich in der gedruckten Partitur befindliches) <em>fortissimo</em> in ein <em>mezzoforte</em> 
+                    oder <em>piano</em>, und versieht dann die verbleibenden Takte bis zum Ende der Phrase mit einer <em>Crescendo</em>-Gabel 
+                    (z.B. im Finale <a href="http://freischuetz-digital.de/edition/index.html?uri=xmldb:exist:///db/apps/contents/musicSources/freidi-musicSource_DJochum.xml#DJochum_mov16_measure111" target="_blank">Nr. 16, T. 105-111</a>). Anders als von  Weber notiert, crescendiert das 
+                    Orchester damit nicht vom <em>forte</em> zum <em>fortissimo</em>, sondern aus dem <em>piano</em> heraus. Der Kontrast zum direkt 
+                    folgenden Frauenchor „Ha! das war sein Gebet im Sterben!“, das wie beschrieben mit vierfachem <em>piano</em> 
+                    ausgezeichnet ist, sollte demnach so drastisch wie möglich ausfallen an dieser Schlüsselstelle des 
+                    Finales (siehe <a href="http://freischuetz-digital.de/edition/index.html?uri=xmldb:exist:///db/apps/contents/musicSources/freidi-musicSource_DJochum.xml#DJochum_surface208" target= "_blank">Peters-Partitur S. 182</a>). <!-- Achtung noch falsch! -->
+                </p>
+                <p>Die dynamische Binnendifferenzierung in puncto Tonstärke darf zweifellos als ein Charakteristikum dieser 
+                    Dirigierpartitur gesehen werden. Jochum denkt gleichsam in dynamischen Blöcken, meist in Vier- oder 
+                    Achttaktgruppen, was sich an der Vielzahl von entsprechenden Einträgen ablesen lässt. Auch den ungewöhnlichen 
+                    Orchestrationseffekten Webers gilt das besondere Augenmerk des Dirigenten. Dies wird besonders in der 
+                    Wolfsschlucht-Szene (II. Akt) deutlich, wenn er beispielsweise die Tatsache des Unisono der Pikkoloflöten 
+                    mit den ersten Geigen unterstreicht, indem er über das Streichersystem <a href="http://freischuetz-digital.de/edition/index.html?uri=xmldb:exist:///db/apps/contents/musicSources/freidi-musicSource_DJochum.xml#DJochum_mov10_measure374" target="_blank">„Picc“</a> notiert.
+                    An dieser Stelle zu Beginn des Presto-Schlussteils der Wolfsschlucht, wo auch das motivisch-thematische der 
+                    Ouvertüre übernommen wird und das Orchester gleichsam mit voller Wucht über dem unheimlichen Geschehen 
+                    hereinbricht, setzte Weber die Pikkoloflöten für ganze 39 Takte parallel zu den Violinen, was aufgrund 
+                    der großen Intervallsprünge alles andere als einer konventionellen ‚instrumentenspezifischen‘ Verwendung 
+                    entsprach. Dieser instrumentatorische Effekt war dem Dirigenten offenbar sehr wichtig und es entging ihm 
+                    auch nicht, dass intentional die Pikkoloflöten in <a href="http://freischuetz-digital.de/edition/index.html?uri=xmldb:exist:///db/apps/contents/musicSources/freidi-musicSource_A.xml#A_mov10_measure407" target="_blank">T. 407/408 im Autograph</a> (<a href="http://freischuetz-digital.de/edition/index.html?uri=xmldb:exist:///db/apps/contents/musicSources/freidi-musicSource_DJochum.xml#DJochum_mov10_measure414" target="_blank">T. 414/415 im Peters-Druck</a>) (bei Samiels „Hier bin ich“) weiterhin beteiligt 
+                    sein sollen, obwohl sie in der Peters-Partitur pausieren. Konsequenterweise trägt er für die ersten sechs 
+                    Noten des Streicher-Abgangs (T. 407/408) <a href="http://freischuetz-digital.de/edition/index.html?uri=xmldb:exist:///db/apps/contents/musicSources/freidi-musicSource_DJochum.xml#DJochum_mov10_measure414" target="_blank">„col Picc + 1. Fl. 8va“</a> ein.
+                </p>
+                <p>Der Eintrag <a href="http://freischuetz-digital.de/edition/index.html?uri=xmldb:exist:///db/apps/contents/musicSources/freidi-musicSource_DJochum.xml#DJochum_mov10_measure414" target="_blank">„col Picc“</a> in den ersten Violinen in den Takten 407 und 408 (für sechs Noten; vgl. T. 414/415 im Peters-Druck) wirft die Frage auf, 
+                    ob Jochum diese Ergänzung ohne die Konsultation weiterer Quellen vornehmen konnte. Natürlich ist nicht 
+                    auszuschließen, dass dies gleichsam intuitiv erfolgte, indes legt die Flöten-Partie ein solches Unisono 
+                    der Pikkoli mit den Violinen nicht nahe. Dass Jochum von der Hauptquelle, also Webers Autograph Kenntnis 
+                    hatte, verrät ein der Partitur beiliegender Notizzettel, der überschrieben ist mit: „Durchsicht des Faksimiles 
+                    des ‚Freischütz‘ in Berlin am 16.5.66 morgens im Bett“.<a href="#fn9" id="ref9"><sup class="textsuperscript"
+                        >9</sup></a> Diese Durchsicht nahm der Dirigent am Tag nach 
+                    der Freischütz-Premiere an der Deutschen Oper (15. Mai 1966) vor, und es ist anzunehmen, dass ihm das 
+                    Faksimile als Premierengeschenk überreicht wurde. Bei dem Faksimile handelt es sich um die erste 
+                    „Nachbildung der Eigenschrift [Webers] aus dem Besitz der Preußischen Staatsbibliothek“<a href="#fn10" id="ref10"><sup class="textsuperscript"
+                        >10</sup></a>, die 1942 
+                    in Berlin herausgebracht wurde. Dem 75-seitigen Vorwort dieses Faksimiles konnte Jochum jedoch kaum 
+                    philologischen Details entnehmen, solche gab es nur (sehr rudimentär) am Ende des Textes. Ein einziger 
+                    Satz widmet sich der ‚Editionsproblematik‘: „Im Einzelnen gibt es eine Fülle von Abweichungen zu den 
+                    neuen Ausgaben in den Bögen, Bezeichnungen usw. Auch kleine Versehen kommen vor.“<a href="#fn11" id="ref11"><sup class="textsuperscript"
+                        >11</sup></a>
+                </p>
+                <p>Die Begegnung mit Webers Autograph – von Jochum mit O [Original] bezeichnet – muss für den Dirigenten ein besonderes Erlebnis gewesen 
+                    sein, fand er sich doch in seinen Lesarten und den von ihm vorgenommenen Ergänzungen vollkommen bestätigt. Leider sind uns seine 
+                    Anmerkungen nur für die Ouvertüre überliefert (ob es überhaupt weitere gibt, ist fraglich); aufschlussreich sind sie allenthalben.
+                    Entscheidend ist, dass Jochum deutliche Kritik an der älteren Ausgabe von Soldan übt: 
+                    
+                    „Ich habe damit [mit dem Faksimile] die Soldansche Partitur von 1926 verglichen, sie ist genau wie meine Partitur, aber 
+                    im Revisionsbericht steht von allen obigen Dingen, wie sie wirklich in der O (und auch zum Teil im ersten Klavierauszug 
+                    von Webers Hand) sind, [nichts]. Es ist unbegreiflich, dass Soldan es dann in seiner Ausgabe nicht so gedruckt hat, 
+                    wie es im O steht!! Das O ist also absolut richtig!!“<a href="#fn12" id="ref12"><sup class="textsuperscript"
+                        >12</sup></a>
+                </p>
+                <p>Die Kritik an Soldan ist völlig berechtigt, vor allem weil die Ausgabe vorgibt, „nach dem Autograph“ ediert zu haben. Bemerkenswert ist 
+                    aber auch, dass Jochum noch den Klavierauszug (von Weber) zum Vergleich hinzugezogen hat.
+                    Die aus der Quellenlektüre neu gewonnenen Erkenntnisse wurden direkt in die Partitur übertragen. 
+                    So finden sich beispielsweise <a href="http://freischuetz-digital.de/edition/index.html?uri=xmldb:exist:///db/apps/contents/musicSources/freidi-musicSource_DJochum.xml#DJochum_mov0_measure91"><!-- statt surface15 -->in der Ouvertüre (T. 91ff.) Eintragungen mit dem Buchstaben O (für Original),</a>  
+                    die Jochums Befund nun umsetzen. „Ganzes Orchester bleibt  <span class="musical-symbols"><!-- Symbol eingefügt -->&#xE52F;</span> 2 Takte lang außer 3. Posaune: <span class="musical-symbols"><!-- statt: p -->&#xE520;</span>; im 3. Takt mit dem Einsatz der Hörner 
+                    alle Streicher  <span class="musical-symbols">&#xE52D;</span>“. Jochum korrigiert also die Bläser in Takt 91 in  <span class="musical-symbols"><!-- statt: „ff“ -->&#xE52F;</span> (statt  <span class="musical-symbols"><!-- statt: p -->&#xE520;</span>), die 3. Posaune verbleibt im <em>Piano</em>, die ersten 
+                    Violinen werden  <span class="musical-symbols">&#xE52D;</span> gesetzt, die restlichen Streicher nach  <span class="musical-symbols"><!-- statt: „ff“ -->&#xE52F;</span> (statt  <span class="musical-symbols"><!-- statt: p -->&#xE520;</span>) korrigiert.   
+                    Das Beispiel zeigt einmal mehr, worauf es Jochum wirklich ankam, nämlich auf die dynamische Differenzierung. Vor diesem Hintergrund 
+                    konnte er sich kaum mit der blockhaften Ergänzung dynamischer Zeichen, wie sie Soldan in seiner Ausgabe teilweise unternommen hat, 
+                    zufriedengeben. Die Lektüre des Autographs vermochte ihm somit wichtige Fingerzeige in dieser (seiner) Richtung zu geben. 
+                </p>
+                <p><em>Beispiel</em>: Da Jochum, wie oben bemerkt, das Autograph erst 1966  eingesehen hat, folgt die Einspielung von 1960 noch dem ursprünglichen Text der Peters-Partitur. Dieser Unterschied läßt sich an der beschriebenen Stelle gut hörbar nachvollziehen:<br/>
+                    &#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0; Jochum, Ouvertüre, T. 87ff.&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0; <audio id="audio_with_controls" controls="controls">
+                        <source src="../audio/Beispiel_Jochum_1_87.mp3" type="../audio/mp3"/>
+                    </audio> <br/>
+                    Bei Carlos Kleiber, der nachweislich das Autograph benutzt hat, ist der entsprechende dynamische Unterschied ab T. 91 deutlich erkennbar (<span class="musical-symbols"><!-- statt: „ff“ -->&#xE52F;</span> in den Streichern, ebenso beibehalten in Oboen und Fagotten).<br/>
+                    &#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0; Kleiber, Ouvertüre, T. 87ff.&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0; <audio id="audio_with_controls" controls="controls">
+                        <source src="../audio/Beispiel_Kleiber_1_87.mp3" type="../audio/mp3"/>
+                    </audio>  
+                </p>
+            </div>
+            <div class="span12">
+                <h3>Die Einspielung des <em>Freischütz</em> von Eugen Jochum</h3>
+                <p>Eugen Jochum ist vor allem als Dirigent von Symphonik des klassisch-romantischen Repertoires hervorgetreten. International bekannt 
+                    wurde er insbesondere durch seine Bruckner-Interpretationen, für die sein Name heute in erster Linie steht. Hier befand er 
+                    sich ganz in der Tradition seines Münchner Lehrers Siegmund von Hausegger, der sich als einer der Ersten für die Originalfassungen 
+                    von Bruckners Symphonien eingesetzt hatte. Jochums großes musikalisches Vorbild blieb zeitlebens Wilhelm Furtwängler, was sich selbst 
+                    in Annotationen in seinen Partituren konkretisiert.<a href="#fn13" id="ref13"><sup class="textsuperscript"
+                        >13</sup></a> Mit Furtwängler teilte er auch die ästhetische Präferenz für die deutsche Musik. 
+                    Mit der Oper kam er früh in seiner Karriere in Berührung, wesentlich ist hier vor allem die Zeit als Generalmusikdirektor an der 
+                    Hamburgischen Staatsoper und des Philharmonischen Orchesters (1934-1949). Die Fünfziger Jahre sind geprägt von seiner Tätigkeit als 
+                    Chefdirigent des Sinfonie-Orchesters des Bayerischen Rundfunks, welches er entscheidend formte.<a href="#fn14" id="ref14"><sup class="textsuperscript"
+                        >14</sup></a>
+                </p>
+                <p>In die 1950er und 1960er Jahre fallen die meisten seiner Operneinspielungen, im Dezember 1959 schließlich fand die des <em>Freischütz</em> im 
+                    Münchener Herkulessaal statt. Es scheint – sofern die Aufführungsdokumentation vollständig ist –, dass Jochum Webers Oper (integral) 
+                    vorher nicht dirigiert hat, mit Ausnahme der Ouvertüre, die sehr oft in seinen Konzertprogrammen aufscheint.<a href="#fn15" id="ref15"><sup class="textsuperscript"
+                        >15</sup></a> Nach der Einspielung bei der DG hat Jochum den Freischütz vor allem in der o.g. Aufführungsserie an der Deutschen Oper Berlin dirigiert. 
+                </p>
+                <p>Rein aufnahmetechnisch ist die Einspielung als sehr gut zu bezeichnen, mit ihrem transparent-hellen Klangbild war sie zu diesem Zeitpunkt (1960) 
+                    sicherlich  state of the art, auch wenn sie noch in das Mono-Zeitalter fällt. Dass die Aufnahme heute nicht unter die Referenz-Interpretationen 
+       (wie diejenige von Joseph Keilberth oder Carlos Kleiber) eingereiht wird, ist zweifellos der Sängerbesetzung geschuldet. Weder vermag Rita Streich 
+                    (Ännchen) komplett zu überzeugen, noch kommt Irmgard Seefried auch nur in die Nähe ihrer Glanzzeiten als Agathe. Auch Richard Holms Max wirkt 
+                    unausgeglichen in seiner Performance. Restlos zu überzeugen vermag nur Eberhard Waechter als Ottokar und vor allem Kurt Böhme, für den die Partie 
+                    des Kaspar in den 1950er und -60er Jahren eine Paraderolle par excellence war. 
+                </p>
+                <p>Die Jochum-Aufnahme verdient aber gleichwohl Beachtung, denn sie stellt interpretationsgeschichtlich ein wichtiges Bindeglied zwischen 
+                    der ‚romantischen‘ Tradition à la Furtwängler und den späteren, neuen Lesarten von Carlos Kleiber u.a. dar. (Dass letztere ein aufführungsgeschichtlicher 
+                    Meilenstein darstellt, ist unstrittig.) Gerade vor dem wirkmächtigen Hintergrund der Furtwängler-Tradition – sowie der Tatsache, dass der ältere Kollege 
+                    stets die ästhetische Orientierungsmarke gewesen war – gewinnt Jochums Interpretation Kontur und Signifikanz. Im Vergleich zu der Furtwängler-Einspielung 
+                    (1954) ist Jochums Interpretation als unsentimental und nachgerade ‚sachlich‘ zu bezeichnen. Damit verliert die Oper keineswegs ihren romantischen Zauber, 
+                    denn mit der Fokussierung auf Struktur und Binnendynamik (statt auf Klangmasse) vermag Jochum dem Werk neue Facetten abzulauschen. Zu der Versachlichung 
+                    gehört auch die Realisierung angemessener, d.h. partituranaloger Tempi, die bei Furtwängler mitunter regelrecht breitgetreten wurden, ohne dass daraus ein 
+                    dramatischer Mehrwehrt erkennbar wäre. Man vergleiche hier nur Kaspars „Schweig, damit dich niemand warnt“ (Nr. 5) in Furtwänglers und Jochums Lesart dieser 
+                    Arie (in beiden Fällen mit Kurt Böhme).</p>
+                    <p><em>Beispiel</em>: <a href="http://freischuetz-digital.de/edition/index.html?uri=xmldb:exist:///db/apps/contents/musicSources/freidi-musicSource_DJochum.xml#DJochum_mov5_measure17" target="_blank">
+                        Nr. 5, Kaspar, T. 17ff.: „Nichts kann vom tiefen Fall dich retten [...]“<br/><br/>
+                    </a>
+                        &#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;Furtwängler: &#x00A0;&#x00A0;&#x00A0;&#x00A0;  <audio id="audio_with_controls" controls="controls">
+                            <source src="../audio/Beispiel_Furtwaengler_5_17.mp3" type="../audio/mp3"/>
+                         </audio> 
+                        <spacer type="horizontal" size="15pt"/>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;Jochum:&#x00A0;&#x00A0;&#x00A0;&#x00A0;   <audio id="audio_with_controls" controls="controls">
+                                <source src="../audio/Beispiel_Jochum_5_17.mp3" type="../audio/mp3"/>
+                        </audio>
+                </p>
+                <p>Wo Furtwängler den Klang langsam und immer wieder aufs Neue gleichsam aus der Tiefe holt – mit der Gefahr der 
+                    Unschärfe – und damit den Sänger mitunter an den Rand des deklamatorisch Sinnvollen bringt, entwickelt Jochum die Arie gerade aus den (von Weber 
+                    intendierten) gegensätzlichen Deklamationsformen. Auf eine Formel gebracht: Wo Furtwängler hier primär symphonisch denkt, denkt Jochum eher vom Vokalen 
+                    her. Das Resultat ist trotz dieser unpathetischen Annäherung keineswegs weniger ‚dämonisch‘. Im Gegenteil: die unterschiedlichen Deklamationsarten 
+                    lassen die Abgründe von Kaspar weitaus stärker in Erscheinung treten als bei Furtwängler. 
+                </p>
+                <p>Dieses Beispiel mag pars pro toto stehen, um den durchaus ‚anderen‘ Ansatz Jochums gegenüber Webers Werk am Ende der 1950er Jahre zu demonstrieren. 
+                    Diese Interpretation verdient ohne Zweifel eine tiefergehende Betrachtung, die allerdings hier nicht Gegenstand der Diskussion ist.</p>
+                <p>Ausgehend von der oben angerissenen Problemstellung des Quellentypus Aufführungsmaterial soll vielmehr die Frage der ‚Nutzbarmachung‘ solcher Quellen 
+                    aufgeworfen werden. Diese Frage kann in verschiedene Richtungen perspektiviert werden. Selbstredend ist ein solcher Quellentypus für eine traditionelle 
+                    (autorspezifische) Edition irrelevant, da – wie im vorliegenden Fall – keinerlei ‚autoritative‘ Verbindungslinien zwischen Komponist (Werk) und Interpret 
+                    (Interpretation) existieren. Dies wird sich für die Edition der Musik des 20. Jahrhunderts insofern ändern, als sich dort Komponist und Interpret mitunter 
+                    im Medium der Schallaufzeichnung ‚treffen‘, was Konsequenzen für die Berücksichtigung unterschiedlicher Quellentypen in einer Edition nach sich zieht.
+                </p>
+            </div>
+            <div class="span12">
+                <p>Dem Projekt „Freischütz Digital – Paradigmatische Umsetzung eines genuin digitalen Editionskonzepts“ liegt die Idee eines „multidimensional model of a 
+                    music edition” von Frans Wiering<a href="#fn16" id="ref16"><sup class="textsuperscript"
+                        >16</sup></a> zugrunde. Im Arbeitspaket 6.2 dieses Projekts ging es um die Erschließung von (historischem) Aufführungsmaterial, 
+                    das sich einerseits in den o. g. Partiturabschriften und deren weiterer Quellendiffusion konkretisiert, mehr aber noch um die exemplarische Betrachtung 
+                    eines spezifischen Materials, das eben auch einen gleichsam intermedialen Vergleich zwischen einer schriftlichen Aufzeichnung und einer (korrespondierenden) 
+                    Audioquelle erlaubt. Die Zusammenführung einer graphischen und einer akustisch-performativen Domäne innerhalb einer digitalen Edition war dezidiertes 
+                    Programm von „Freischütz Digital“. Die Aufbereitung der Schallaufnahmen und deren komparative Visualisierung war Gegenstand eines eigenen Arbeitspakets 
+                    (AP 2.3). Insgesamt wurden dort 23 Aufnahmen des <em>Freischütz</em> aus der Zeit von 1951 bis 2001 implementiert, die somit ein halbes Jahrhundert 
+                    Interpretationsgeschichte des <em>Freischütz</em> abdecken. Entscheidende Bedeutung kommt dabei aber der damit verbundenen Visualisierung zu, welche die 
+                    zeitliche Dimension der einzelnen Nummern und Dialoge transparent macht (siehe das Schaubild zu AP 2.3). Diese Visualisierung erlaubt – bei aller 
+                    Vorsicht hinsichtlich der Binnenagogik – einen Vergleich der Zeitdauern der einzelnen Interpretationen und somit einen ersten Eindruck hinsichtlich 
+                    der Interpretation. Zumindest liefert diese Visualisierung eine Basis, von der aus die weitere Auswahl von Interpretationen für einen genuinen 
+                    Vergleich getroffen werden kann.
+                    (Es erscheint paradox, dass die Skepsis gegenüber solchen empirischen ‚Messungen‘ in dem Maße wächst, in dem sich diese verfeinern.<a href="#fn17" id="ref17"><sup class="textsuperscript"
+                        >17</sup></a> Schließlich 
+                    nahmen und nehmen nicht wenige Interpretationsvergleiche von der Kategorie Tempo/Zeit ihren Ausgang. Dies trifft im Übrigen auch für die beiden einzigen[!] Studien zu Weber zu.<a href="#fn18" id="ref18"><sup class="textsuperscript"
+                        >18</sup></a>)
+                </p>
+                <p>In jedem Fall erlauben die synchronisierten Aufnahmen vielfältige Möglichkeiten der ‚Messung‘ der einzelnen Einspielungen respektive Interpretationen.<a href="#fn19" id="ref19"><sup class="textsuperscript"
+                    >19</sup></a> 
+                    Weitergehende Visualisierungen vermitteln einen synoptischen Überblick zu Temporelationen, Rubato-Passagen oder klanglichen Verlaufsformen (siehe Schaubilder zu AP 2.3).</p>
+                <p>Im Zuge der Aufbereitung der Audio-Daten besteht nun die Möglichkeit, Jochums Tonaufnahme von 1959, mit seiner Dirigierpartitur zu synchronisieren. 
+                    Damit wäre die intendierte Synchronisierung von Bild- und Tonquelle, also graphischer und akustischer Domäne hergestellt, das heißt die Aufnahme an 
+                    die Partitur des Interpreten gekoppelt. Obschon dies im Rahmen einer (digitalen) Edition – für das Format Aufführungsmaterial – eine Neuerung darstellte, 
+                    so erschließt sich doch daraus nicht a priori ein Mehrwert für den Benutzer einer solchen Edition. Abgesehen von der Verfügbarkeit der Quelle im digitalen 
+                    Format wäre dies (noch) nichts, was nicht auch durch eine Zusammenführung traditioneller Medien bewerkstelligt werden könnte, vulgo: mittels eines CD-Players 
+                    und einer Reproduktion der Partitur.
+                </p>
+                <p>An diesem Punkt stellt sich nun gewissermaßen die Gretchenfrage, nämlich ob wir das Aufführungsmaterial gleichsam aufbereiten, mehr noch: editorisch 
+                    behandeln sollen. Selbst wenn die Gefahr des (vermeintlich) Tautologischen im Raum steht, nämlich das schriftliche Notat eines Interpreten neben 
+                    das akustische Resultat seiner Interpretation zu stellen, so scheint doch die Möglichkeit, eine solche Zusammenschau einmal exemplarisch ‚durchzuspielen‘, 
+                    von einigem Interesse, zumal wir bis dato noch nicht über allzu viele ähnlich gelagerte Quellenkonstellationen verfügen wie im vorliegenden Fall. 
+                    (Diese Situation wird sich im Rahmen der zunehmenden Erschließung von Rundfunkarchiven, mehr aber noch generell für die Musik des 20. und 21. Jahrhundert, alsbald ändern.)  
+                    Dass der Weg einer ‚Lesarten‘-Annotierung nur auf der Basis der Aufführungspartitur beschritten werden kann, liegt auf der Hand. 
+                    Insofern wäre die editorische Aufbereitung dieses Interpretationsformats unabhängig von der musikalischen Edition in „Freischütz Digital“. 
+                    Gleichwohl bediente sie sich der digitalen Visualisierungsmöglichkeiten von Edirom, bei der die Lesart an die Darstellung der Quellen geknüpft ist. 
+                    Konsequenterweise müsste Jochums Partitur in zwei Richtungen annotiert werden, zum einen in Richtung der Quellen (Peters-Partituren von 1890 und 1926, 
+                    Webers Autograph und Klavierauszug), und zum anderen in Richtung des Tondokuments, also des Klangresultats.
+                </p>
+                <p>Was die musikalischen (schriftlichen) Quellen betrifft, so eröffnet gerade die Konstellation im Falle Jochums mehrere Perspektiven. 
+                    Zum einen weil es von Seiten des Dirigenten eine (exakt datierbare) Begegnung mit einer anderen Quelle (Autograph) gegeben hat, 
+                    die zum anderen durchaus mit Konsequenzen, also Korrekturen, verbunden war. Das heißt: die Aufführungspartitur könnte in Richtung Autograph 
+                    perspektiviert werden. Die Tatsache, dass die Tonaufnahme vor der Begegnung mit dem Autograph-Faksimile lag, ließe mögliche Schlüsse über den 
+                    Status ante quem der Partitur zu, der sich zuallererst in der Einspielung (von 1959) konkretisiert. Da es vor der Aufführungsserie an der Deutschen Oper 
+                    (ab 1966) nur die Studio-Produktion gab, liegt es nahe, diesen Status ante quem mit dem Zeitpunkt der Aufnahme zu identifizieren.  
+                </p>
+                <p>Während wir im Bereich der musikalischen Quellen gewissermaßen auf traditionelle Methoden der Textkritik zurückgreifen können, ist dies beim Umgang 
+                    mit der akustischen Quelle naturgemäß schwieriger. Was können und sollen wir hier annotieren, welcher Art ‚Abgleich‘ zwischen den verschiedenen 
+                    Medienformaten ist überhaupt möglich, und sinnvoll? Die Kernfrage stellt sich vor diesem Hintergrund ohnehin von selbst: Welches Medium repräsentiert 
+                    eigentlich die Interpretation, das textuelle oder das akustisch-performative? Der von Hans-Joachim Hinrichsen formulierte Einwand, dass auch der hermeneutische 
+                    Interpretationsansatz gleichsam immer der ‚Umweg‘ über das klingende Resultat mitdenkt<a href="#fn20" id="ref20"><sup class="textsuperscript"
+                        >20</sup></a> (wenn nicht sogar vollzieht), lässt sich indirekt methodologisch 
+                    fruchtbar machen, indem er nach den materiellen Grundlagen von Interpretation fragt. Und auch Reinhard Kapps<a href="#fn21" id="ref21"><sup class="textsuperscript"
+                        >21</sup></a> bedenkenswerte Überlegung, ob Schallaufnahmen 
+                    im engeren Sinne apriorisch mit dem Begriff der Interpretation zu belegen sind, zielt ebenfalls ins Zentrum unseres Problems, wenn auch aus einer anderen 
+                    Richtung. Kapp sieht grundsätzlich die Empirie, d.h. das pure Messen (in der Interpretationsforschung) kritisch, wenn dem nicht ein gleichzeitiges  
+                    ‚Vermessen‘ des Notentextes komplementär gegenübersteht: „An ihnen [den Notentexten], als solchen, gäbe es auch einiges zu messen, zu vergleichen, 
+                    zu rechnen“.<a href="#fn22" id="ref22"><sup class="textsuperscript"
+                        >22</sup></a> Im Lichte dieser Position wäre die Implementierung einer Aufführungspartitur für die Interpretationsanalyse geradezu zwingend – bei 
+                    allen eventuellen hermeneutischen Querständen, die daraus resultieren.
+                </p>
+                <p>Angesichts der Quellensituation im Falle Jochums und vor dem Hintergrund, dass das Projekt „Freischütz Digital“ generell eher ein „proof of concept“ 
+                    darstellt, als dass es mit der Intention verbunden wäre, einen neuen Freischütz-Text vorzulegen, würde ich dem Experiment gewissermaßen den Vorzug 
+                    geben, das heißt: den Versuch starten. Da „Freischütz Digital“ ein bewusst offen gehaltenes Projekt darstellt, bietet es ideale Voraussetzungen, 
+                    um solche Studien an die jetzt geschaffene Plattform anzubinden. Unstrittig hätten wir hier zwei Quellenformate miteinander verkoppelt, die bis 
+                    dato mehrheitlich separat erkundet wurden, zum einen von Seiten der Editionspraxis und zum anderen von Seiten der Interpretationsforschung. Das 
+                    Resultat einer solchen Verkoppelung von akustisch-performativer und textueller Domäne könnte dem Konzept einer Interpretation mit philologischen 
+                    Mitteln nachspüren – und im besten Falle nahekommen, den ‚Geist‘ einer künstlerisch-interpretatorischen Hervorbringung wird sie indes nicht fassen können.</p>
+            </div>
+                
+            <div class="span12">
+                    <h3 id="footnotes">Footnotes</h3>
+                    <p id="fn1">1. Siehe hierzu aus jüngerer Zeit Christine Siegert, 
+                        „Die Aufführungsmateriale des italienischen Opernbetriebs in Eszterháza unter der Leitung Joseph Haydns“, 
+                        in: <em>Forum Musikbibliothek</em> 27 (2006), S. 231–238.<a href="#ref1"
+                            title="Jump back to footnote 1 in the text.">↩</a></p>
+                    <p id="fn2">2. Siehe hierzu exemplarisch das Problemfeld umreißend Kai Köpp, „Wagner historisch. 
+                        Methoden und Ergebnisse eines interpretationsgeschichtlichen Forschungsansatzes“, 
+                        in: <em>Wagnerspectrum</em>, 2014/1, S. 261–277.<a href="#ref2"
+                            title="Jump back to footnote 2 in the text.">↩</a></p>
+                    <p id="fn3">3. Zu den Pionierarbeiten siehe <em>Thematischer Katalog der 
+                        Opernsammlung in der Stadt- und Universitätsbibliothek Frankfurt am Main, 
+                        bearbeitet von Joachim Schlichte und Robert Didion</em>, Frankfurt am Main 1990.<a href="#ref3"
+                            title="Jump back to footnote 3 in the text.">↩</a></p>
+                    <p id="fn4">4. Siehe Daniel Brandenburg/ Thomas Seedorf (Hg.),
+                        <em>“Per ben vestir la virtuosa“. Die Oper des 18. und frühen 19. Jahrhunderts im Spannungsfeld 
+                        von Komponisten und Sängern</em>, Schliengen 2011.<a href="#ref4"
+                            title="Jump back to footnote 4 in the text.">↩</a></p>
+                    <p id="fn5">5. Hilary Poriss, <em>Changing the Score. 
+                        Arias, Prima Donnas, and the Authority of Performance</em>, Oxford u.a. 2009 
+                        (AMS Studies of Music).<a href="#ref5"
+                            title="Jump back to footnote 5 in the text.">↩</a></p>
+                <p id="fn6">6. In der Bayerischen Staatsbibliothek befinden sich (mit einer Ausnahme) 
+                    inzwischen alle Dirigierpartituren Jochums aus seinem Privatbesitz (Signatur: Mus. coll. 5.[ff.]). 
+                    Zur Quellensituation des gesamten Nachlasses siehe Renate Ulm, „Exemplarische Studie: Der 
+                    Dirigent Eugen Jochum und die Gründung des Symphonieorchesters des Bayerischen Rundfunks 1949“, 
+                    in: Markus Behmer/ Birgit Bernard/ Bettina Hasselbring (Hg.) 
+                    <em>Das Gedächtnis des Rundfunks.</em> <em>Die Archive der öffentlich-rechtlichen Sender und ihre 
+                        Bedeutung für die Forschung</em>, Wiesbaden 2014, S. 341–348. Für die Erlaubnis zur Nutzung 
+                    dieser Partitur und der kompletten Wiedergabe innerhalb von <em>Freischütz Digital</em> sei der Tochter Jochums, 
+                    Frau Veronica Jochum-von Moltke, sehr herzlich gedankt. Ein ebenso herzlicher Dank gilt 
+                    der Musikabteilung der Bayerischen Staatsbibliothek und Frau Dr. Veronika Giglberger für die 
+                    freundliche Unterstützung bei der Integration dieser Quelle.<a href="#ref6"
+                            title="Jump back to footnote 6 in the text.">↩</a></p>
+                <p id="fn7">7. Bayerische Staatsbibliothek: Mus. coll. 5.488. Im Nachlass-Material 
+                    befindet sich noch ein zweites Freischütz-Konvolut (Mus. coll. 5.489), 
+                    welches eine von Breitkopf &amp; Härtel autorisierte Ausgabe der Ouvertüre 
+                    (New York, ca. 1950, ebenfalls annotiert) umfasst, sowie 15 Viola-Stimmen (Mus. coll. 5.489, Beil.).<a href="#ref7"
+                            title="Jump back to footnote 7 in the text.">↩</a></p>
+                <p id="fn8">8. Die ältere Peters-Partitur mit dem Vorwort von Emil Vogel 
+                    enthielt keinerlei Hinweise auf die zugrundeliegenden Quellen, von einem 
+                    quellenkritischen Kommentar ganz zu schweigen.<a href="#ref8"
+                        title="Jump back to footnote 8 in the text.">↩</a></p>
+                <p id="fn9">9. Mus. coll. 5.488, Beil. An der angegebenen Stelle T. 407f. hat Weber 
+                    die unisono-Führung der Pikkoli über der Violine 1 selbst durch die Bezeichnung 
+                    „Piccoli“ und Pausensetzung ab der 3. Zählzeit von T. 408 eingetragen, so dass 
+                    hier Jochums Eintrag als Reaktion auf die Einsicht des Autographs identifiziert 
+                    werden könnte, wenn er nicht zusätzlich „+ 1. Fl 8va“ angegeben hätte – 
+                    was durch das Autograph nicht gedeckt ist.<a href="#ref9"
+                        title="Jump back to footnote 9 in the text.">↩</a></p>
+                <p id="fn10">10. Carl Maria von Weber, <em>Der Freischütz. Nachbildung der Eigenschrift aus 
+                    dem Besitz der Preußischen Staatsbibliothek</em>, hg. im Auftrage der Generalintendanz 
+                    der Preußischen Staatstheater von Georg Schünemann (zur Zweihundertjahrfeier der 
+                    Berliner Staatsoper (1742/1942), Berlin: Albert Frisch 1942<a href="#ref10"
+                        title="Jump back to footnote 10 in the text.">↩</a></p>
+                <p id="fn11">11. Faksimile (1942), ebenda, S. 80. Ganz anders dann in der zweiten 
+                    Publikation des <em>Freischütz</em>-Faksimiles (Leipzig: C. F. Peters 1979), zu der Georg 
+                    Knepler ein ingeniöses Nachwort beigetragen hat, welches ästhetische und 
+                    quellenphilologische Überlegungen synthetisierend reflektiert.<a href="#ref11"
+                        title="Jump back to footnote 11 in the text.">↩</a></p>
+                <p id="fn12">12. Mus. coll. 5.488, Beil.<a href="#ref12"
+                        title="Jump back to footnote 12 in the text.">↩</a></p>
+                <p id="fn13">13. Oftmals ist in den Partituren „F“ vermerkt, was auf die Interpretation 
+                    Furtwänglers an dieser Stelle hindeuten soll. (Freundlicher Hinweis von Renate Ulm.).<a href="#ref13"
+                    title="Jump back to footnote 13 in the text.">↩</a></p>
+                <p id="fn14">14. Siehe hierzu vor allem Stephanie Mauder, <em>Eugen Jochum als Chefdirigent 
+                    beim Bayerischen Rundfunk</em>, Frankfurt a. M. 2003 (Studien zur Geschichte des Bayerischen Rundfunks 2).<a href="#ref14"
+                    title="Jump back to footnote 14 in the text.">↩</a></p>
+                <p id="fn15">15. Vgl. die Dokumentation der Aufführungen („Konzertliste“) in: 
+                    <em>Eugen Jochum</em>, hg. von der Eugen-Jochum-Gesellschaft e.V. Ottobeuren, Annweiler 2005, S. 215–288.<a href="#ref15"
+                    title="Jump back to footnote 15 in the text.">↩</a></p>
+                <p id="fn16">16. Frans Wiering, “Digital Critical Editions of Music: A Multidimensional Model”, 
+                    in: Tim Crawford/ Lorna Gibson (Hg.), <em>Modern Methods for Musicology. Prospects, Proposals, and Realities</em>, 
+                    Farnham 2009, S. 23–45.<a href="#ref16"
+                        title="Jump back to footnote 16 in the text.">↩</a></p>
+                <p id="fn17">17. Vgl. hierzu exemplarisch die unterschiedlichen Positionen in Heinz von Loesch/ Stefan Weinzierl (Hg.), 
+                    <em>Gemessene Interpretation. Computergestützte Aufführungsanalyse im Kreuzverhör 
+                    der Disziplinen</em>, Mainz 2011 (Klang und Begriff 4).<a href="#ref17"
+                        title="Jump back to footnote 17 in the text.">↩</a></p>
+                <p id="fn18">18. Adalbert Kalix, <em>Studien über die Wiedergabe romantischer Musik in der Gegenwart an 
+                    Schallplatten-Aufnahmen der „Freischütz“-Ouvertüre C. M. v. Webers</em>, Diss. Erlangen 1933, 
+                    Nürnberg 1934, sowie Peter Overbeck, „‘C’est bon teint et ça ne s’use pas‘. Zur aufführungspraktischen Realisierung der Freischütz-Ouvertüre“, 
+                    in: <em>Weber-Studien</em> 3, hg. von Joachim Veit und Frank Ziegler, Mainz u.a. 1996, S. 364–380. 
+                    Overbeck vergleicht 14 Einspielungen und unternimmt Detailuntersuchungen an 
+                    neun Aufnahmen (Karl Böhm 1938, Herbert von Karajan 1943, Wilhelm Furtwängler 1944, Arturo Toscanini 
+                    1952, Erich Kleiber 1955, Ernest Ansermet 1959, Carlos Kleiber 1973, Karajan 1981, Claus Peter Flor 1993).<a href="#ref18"
+                        title="Jump back to footnote 18 in the text.">↩</a></p>
+                <p id="fn19">19. Zum methodologischen Ansatz siehe Meinard Müller und Verena Konz, 
+                    „Automatisierte Methoden zur Unterstützung der Interpretationsforschung“, in: von Loesch/ Weinzierl (Hg.), 
+                    <em>Gemessene Interpretation</em> (wie Anm. 17), S. 193–204<a href="#ref19"
+                    title="Jump back to footnote 19 in the text.">↩</a></p>
+                <p id="fn20">20. Hinrichsen, „Überlegungen zu einer Historik der Interpretationsforschung“, 
+                    in: von Loesch/ Weinzierl (Hg.), <em>Gemessene Interpretation</em>  (wie Anm. 17), S. 30.<a href="#ref20"
+                    title="Jump back to footnote 20 in the text.">↩</a></p>
+                <p id="fn21">21. Reinhard Kapp, „Aufzeichnung und ‚Aufzeichnung‘ von  Musik. 
+                    Zu den geschichtlichen Bedingungen einer technologisch gestützten Interpretationsanalyse“, 
+                    in: von Loesch/ Weinzierl (Hg.), <em>Gemessene Interpretation</em>  (wie Anm. 17),  S. 39–63.<a href="#ref21"
+                    title="Jump back to footnote 21 in the text.">↩</a></p>
+                <p id="fn22">22. Ebenda, S. 57.<a href="#ref12"
+                    title="Jump back to footnote 22 in the text.">↩</a></p>
+               </div>
+                
+                <div>
+                   <!-- <p>Test-Area</p>-->
+                        <!--<p>
+                            noch ein Text
+                            <audio id="audio_with_controls" controls="controls">
+                            <source src="../audio/MixDemo_Winds.mp3" type="../audio/mp3"/>
+                            </audio>
+                            auch hier testig
+                        </p>
+                    <p>
+                        <audio id="audio_with_controls" controls="controls">
+                            <source src="../audio/No.6-V.2_Fag_1.wav" type="../audio/wav"/>
+                        </audio>
+                        <p>Your browser does not support the HTML5 audio element. Es kann aber unter xx abegrufen werden</p>
+                    </p>-->
+                </div>
+                
+            </div>
+        
+        <script type="text/javascript">
+            window.activeNavLink = 'nav_publications';
+            window.backLink = 'publications.html';
+        </script>
+    </section>
+
+
+            <div id="footer"
+                style="padding-top: 5px; text-align: center; background-color: #EEEEEE; background-image: -moz-linear-gradient(center top , #F5F5F5 0%, #EEEEEE 100%);     background-repeat: repeat-x;     border: 1px solid #E5E5E5;     border-radius: 4px 4px 4px 4px;     height: 24px;     margin-bottom: 20px;     margin-top: 40px;     width: 100%;"
+                    ><a style="margin-right: 6px;" href="imprint.html">Imprint</a> · <a
+                        style="margin-left: 8px;" href="contact.html">Contact</a></div>
+        </div>
+        <script src="../scripts/jquery-1.12.3.min.js"></script>
+        <script src="../scripts/bootstrap.js"></script>
+        <script src="../scripts/main.js"></script>
+        <script src="../scripts/run_prettify.js"></script>
+    </body>
+</html>

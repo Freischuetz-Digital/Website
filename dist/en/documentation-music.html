@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Freischütz Digital</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="" />
+        <meta name="author" content="Daniel Röwenstrunk" />
+
+        <link rel="stylesheet" href="../styles/bootstrap.css" />
+        <link rel="stylesheet" href="../styles/bootstrap-responsive.css" />
+        <link href="../styles/bootswatch.css" rel="stylesheet" />
+        <link href="../styles/freidi.css" rel="stylesheet" />
+        <link href="../styles/ptsans.css" rel="stylesheet" />
+
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../pix/freidi_icon_144.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../pix/freidi_icon_114.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../pix/freidi_icon_72.png" />
+        <link rel="apple-touch-icon-precomposed" href="../pix/freidi_icon_57.png" />
+        <link rel="shortcut icon" href="../pix/freidi_favicon.png" />
+    </head>
+    <body>
+        <div style="position: absolute; right:30px; top: 10px;"><a href="javascript:setLang('de')">DE</a> | <a href="javascript:setLang('en')">EN</a></div>
+        <div id="content" class="container">
+            <div id="figure-top" class="figure visible-desktop">
+                <img style="height: 330px;" src="" alt="" />
+            </div>
+            <header id="overview" class="jumbotron subhead">
+                <div class="row" style="min-height: 0;">
+                    <div class="span8">
+                        <img style="margin: 40px 0 0 3px;" src="../pix/Logo_greenInset.png" />
+                    </div>
+                    <div class="span4"> </div>
+                </div>
+                <div id="navbar" class="subnav">
+                    <ul class="nav nav-pills">
+                        <li id="nav_freidi" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">Freischütz Digital <span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="index.html">Project's Goals</a></li>
+                                <li><a href="work-packages.html">Work Packages</a></li>
+                                <li><a href="locations.html">Institutions</a></li>
+                                <li><a href="team.html">People</a></li>
+                                <li><a href="process.html">Project History</a></li>
+                            </ul>
+                        </li>
+                        <li id="nav_edition">
+                            <a href="edition.html">Edirom Online</a>
+                        </li>
+                        <li id="nav_data-tools" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">Data and Tools <span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="data-and-tools.html">Overview</a></li>
+                                <li><a href="data.html">Data</a></li>
+                                <li><a href="tools.html">Tools</a></li>
+                                <li><a href="licences.html">Licenses</a></li>
+                            </ul>
+                        </li>
+                        <li id="nav_demos" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">Demos <span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="demos.html">Overview</a></li>
+                                <li><a href="demo-dynamic-score-rendering.html">Dynamic Score</a></li>
+                                <li><a href="demo-genetic-text-stages.html">Text Layers</a></li>
+                                <li><a href="demo-visualising-text-annotations.html">Text Annotations</a></li>
+                                <li><a href="demo-visualising-text-variance.html">Text Variance</a></li>
+                                <li><a href="demo-the-freischuetz-network.html">"The Freischütz Network" (Topic Map)</a></li>
+                                <li><a href="demo-sync-player.html">Synchro-Player</a></li>
+                                <li><a href="demo-multitrack-data-set.html">Multitrack Dataset</a></li>
+                                <li><a href="demo-single-microphone-switcher.html">Single Microphone Switcher</a></li>
+                                <li><a href="demo-instrument-equalizer.html">Instrument Equalizer</a></li>
+                            </ul>
+                        </li>
+                        <li id="nav_documentation" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">Documentation <span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="documentation.html">Overview</a></li>
+                                <li><a href="documentation-music.html">Score</a></li>
+                                <li><a href="documentation-libretti.html">Libretto</a></li>
+                                <li><a href="documentation-reference-texts.html">Reference Texts</a></li>
+                                <li><a href="documentation-audio.html">Audio</a></li>
+                            </ul>
+                        </li>
+                        <li id="nav_publications" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">Publications &amp;
+                                Talks <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="publications.html">Publications</a></li>
+                                <li><a href="talks.html">Talks</a></li>
+                                <li><a href="events.html">Events</a></li>
+                                <li><a href="meetings.html">Meetings</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div id="backlink" style="display:none;">
+                    <a href="#" onclick="nav_back(); false;">zurück</a>
+                </div>
+            </header>
+            
+            
+            	<section id="documentation-music">
+		<div class="page-header">
+			<h1>Dokumentation zum Notentext</h1>
+		</div>
+
+		<!-- include "_nav-docu.html" -->
+
+		<div class="row" style="margin-bottom: 50px;">
+
+			<div class="docu-project">
+				<div class="span12">
+					<div class="content">
+						<h4>Content</h4>
+						<ol type="1">
+							<li>
+								<a href="#editionsbegriff">Editionsbegriff</a>
+							</li>
+							<li>
+								<a href="#editionskonzept">Editionskonzept</a>
+							</li>
+							<li>
+								<a href="#core-konzept">Das <em>Core</em>-Konzept</a>
+							</li>
+							<li>
+								<a href="#werkzeuge">Werkzeuge</a>
+								<ul>
+									<li><a href="#pitchtool">Pitch-Tool</a></li>
+									<li><a href="#controleventtool">Controlevent-Tool</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#richtlinien">Richtlinien</a>
+							</li>
+							<li>
+								<a href="#workflows">Workflows</a>
+							</li>
+						</ol>
+					</div>
+
+					<h3 id="editionsbegriff">1. Zum Editionsbegriff bei FreiDi</h3>
+					<p>Der Begriff „<em>Edition</em>“ ist im Kontext des FreiDi-Projekts in einer spezifischen Weise zu verstehen und nicht mit einer traditionellen analogen Edition zu verwechseln, deren Hauptziel die Konstituierung eines kritisch edierten Werktextes ist. Das Projekt folgt vielmehr dem <em>multidimensional model</em> einer Edition, wie es Frans Wiering 2009 formuliert hat (<em>Digital Critical Editons of Music: A Multidimensional Model</em>, London 2006 / Ashgate 2009; <a href="http://www.methodsnetwork.ac.uk/redist/pdf/wiering.pdf">&#8594; PDF zum Download</a>). Grundlage jeglicher Arbeit ist dort eine reichhaltige Datensammlung in unterschiedlichen Domänen und die vielseitige Verknüpfung der jeweiligen Objekte. Wichtig ist, dass die Objekte nicht bloß als Abbildungen (also z.B. als Faksimiles oder im Notenneusatz), sondern auch in ihrer logischen Domäne (d.h. bei Musik und Texten in Form von <strong>Codierungen</strong> der Inhalte) vorliegen – zusätzlich kommt bei Musik die akustisch/performative Domäne hinzu. Auf dieser Basis können je nach Erkenntnisinteresse verschiedene Pfade durch diese Materialien verfolgt werden; dazu kann auch der Versuch einer "Edition" bzw. präziser von Editionen treten, da unterschiedliche Sichtweisen auch zu entsprechend voneinander abweichenden Editionsergebnissen führen können bzw. müssen. Im Projekt ging es vor allem darum, diese Möglichkeiten aufzuzeigen, ohne selbst einen kritischen Text vorzulegen – diese Aufgabe blieb der parallel entstehenden analogen Edition des <em>Freischütz</em> im Rahmen der WeGA überlassen, wo ein einziger „maßgeblicher“ Text erstellt wird, während es in FreiDi gerade darum geht, einen offeneren Textbegriff zu propagieren und nicht nur die autorisierte, sondern auch die postume Rezeption des Textes zu dokumentieren und durch die komfortable Vergleichbarkeit der Quellen auf Wandlungen im Textverständnis bzw. spezifische Probleme aufmerksam zu machen. Die Beziehungsstrukturen zwischen den Datenobjekten und neuartige Visualisierungsformen standen daher im Mittelpunkt der Bemühungen des Projekts.</p>
+					
+					<hr/>
+					
+					<h3 id="editionskonzept">2. Zum Editionskonzept</h3>
+					<p>Ein Hauptziel der Musikedition im Rahmen von <strong>Freischütz Digital</strong>
+						war es, das Potential vollständiger Codierungen der musikalischen Inhalte
+						und deren Verknüpfung mit weiteren Editionsbestandteilen aufzuzeigen.
+						Während der Arbeiten im Projekt wurde dabei deutlich, dass der mit den
+						Codierungen verbundene Aufwand <em>in der Praxis deutlich höher</em> ist,
+						als ursprünglich erwartet wurde. Dementsprechend wurde auf eine vollständige
+						Erfassung sämtlicher verfügbaren Quellen verzichtet, so dass die
+						freigewordenen Kapazitäten in die Entwicklung von Hilfsmitteln investiert
+						werden konnten, die diesen Aufwand erheblich senken können. Unter der
+						Perspektive der <strong>Nachhaltigkeit</strong> wurde der Schwerpunkt des
+						Projekts damit auf <strong>Workflows</strong> gelegt, die von anderen
+						Projekten nachgenutzt werden können und so deren Effizienz erhöhen, während
+						die Codierungen als ebenfalls nachnutzbares Projektergebnis
+							<em>quantitativ</em> eingeschränkt wurden. Dabei blieben Längs- und
+						Querschnitte durch die Oper erhalten, d.h. es wurde einerseits in einer Quelle
+						das gesamte Werk erfasst, andererseits wurden auch einzelne Sätze in der Breite aller
+						überlieferten Quellen dokumentiert. Aufgrund dieser Auswahl lassen sich alle
+						editorisch relevanten Phänomene und deren Umsetzung in der digitalen Edition
+						aufzeigen, so dass eine <em>qualitative</em> Einschränkung der Codierungen
+						vermieden wurde.</p>
+					<p>Grundlage der Arbeiten an der digitalen Musikedition von Webers
+							<em>Freischütz</em> stellt eine <strong>umfassende Codierung der musikalischen
+						Quellen</strong> mit <a href="http://music-encoding.org" class="external">MEI</a>
+						dar. Dabei werden die berücksichtigten Quellen in einer begrenzt
+						diplomatischen Übertragung erfasst, die es erlaubt, <em>Schreibgewohnheiten</em> etwa
+						im Hinblick auf Abkürzungen und ggf. Auflösung von Kurzschreibweisen,
+						<em>Orthographie</em> von Dynamikangaben und <em>Notationsformen</em> mehrerer Stimmen in einem
+						System (getrennte Halsung vs. akkordische Schreibweise) zu erfassen. Diese
+						Codierungen werden horizontal auf Taktebene bzw. vertikal für jedes einzelne
+						Notensystem mit den zugehörigen Faksimiles vernüpft, untereinander aber auf
+						Ebene des einzelnen Zeichens miteinander in Beziehung gesetzt. Dabei findet
+						findet keine Wertung der Quellen statt, die zu einer unterschiedlichen Handhabung führen würde
+						– spätere Abschriften und Drucke werden in gleicher Tiefe erschlossen wie
+						Webers Autograph.</p>
+					<p>Aus diesem Datengeflecht lässt sich die Entwicklung des Werktextes in jedem
+						Detail präzise rekonstruieren, wobei jede entstandene Variante sowohl im
+						Faksimile als auch in einer diplomatisch getreuen Übertragung angezeigt
+						werden kann. Der Benutzer der Ausgabe kann dabei die Granularität des
+						Vergleichs zweier Texte frei wählen: Sollen z.B. nur Unterschiede in Tonhöhe und
+						-dauer berücksichtigt werden oder sollen auch Schreibgewohnheiten miteinander
+						verglichen werden? Hier bietet gerade der <em>Freischütz</em> interessante
+						Auswertungsmöglichkeiten, da von zwei Kopisten mehrere Abschriften
+						vorliegen, so dass Untersuchungen etwa zur Auflösung von Kurzschreibweisen
+						durch den Vergleich mehrerer Abschriften eines Kopisten besonders komfortabel durchgeführt werden
+							können und neue Erkenntnisse erwarten lassen.</p>
+					<p>Wie erwähnt, verzichtete das Projekt im Gegensatz zu herkömmlichen Editionskonzepten 
+						bewusst auf die Erstellung eines <strong>Edierten Textes</strong>, 
+							denn das eigentliche Ziel dieser Art von Edition ist die
+							<strong>Dokumentation der Textentwicklung</strong> – auch jenseits der Kontrolle durch
+							dessen ursprünglichen Autor.</p><!-- hier weiter -->
+
+					<hr/>
+
+					<h3 id="core-konzept">3. Das <em>Core</em>-Konzept</h3>
+					<p>Die Codierungen der musikalischen Quellen des <em>Freischütz</em> folgen dem
+						sogenannten <em>Core</em>-Konzept. Dabei wird grundsätzlich zwischen
+							<em>substantiellen</em> und <em>akzidentellen</em> Informationen
+						unterschieden, die dann in unterschiedlicher Weise gehandhabt werden. Als
+							<em>substantielle</em> Informationen gelten etwa Tonhöhe und -dauer,
+						Artikulationsanweisungen oder die Reichweiten einzelner Bögen. Als
+							<em>akzidentelle</em> Informationen werden dagegen die Art der Balkung,
+						individuelle Abbreviaturen der verschiedenen Quellen oder die Richtung eines
+						Bogens (über oder unter dem System) bezeichnet. Beide Kategorien werden
+						mittels MEI erfasst, aber in verschiedenen Dateien abgelegt. Zunächst gibt
+						es eine sog. <em>Core</em>-Datei, in der sämtliche <em>substantiellen</em>
+						Informationen <em>aller</em> berücksichtigten Quellen abgelegt werden. Bei
+						Abweichungen der Quellen untereinander werden diese mittels
+							<strong>&lt;mei:app&gt;</strong> bzw. <strong>&lt;mei:rdg&gt;</strong>
+						erfasst, d.h. es werden lokal auf die variante Stelle begrenzt die beiden
+						(ggf. auch mehr) alternativen Lesarten codiert und ein Bezug zu den
+						entsprechenden Quellen hergestellt:</p>
+					<pre class="prettyprint"><code>&lt;!-- Datei core.xml: --&gt;
+&lt;app&gt;
+    &lt;rdg source="#A #KA1"&gt;
+        &lt;note pname="c"/&gt;
+    &lt;/rdg&gt;
+    &lt;rdg source="#KA2"&gt;
+        &lt;note pname="d"/&gt;
+    &lt;/rdg&gt;
+&lt;/app&gt;
+&lt;!-- Dieses stark vereinfachte Beispiel besagt, dass die Quellen A und KA1 eine Note "c" wiedergeben, während in Quelle KA2 ein "d" steht. --&gt;</code></pre>
+					<p>Um die so zu erfassenden Abweichungen zwischen den Quellen auf
+						aussagekräftige Unterschiede zu beschränken, werden in der Core-Datei
+						lediglich die wichtigsten Parameter des Notentextes erfasst. Damit ist
+						allein anhand dieser Datei lediglich eine <em>sinngemäße</em> Wiedergabe der
+						Quelle möglich, aber keine <em>diplomatische</em> Übertragung. Aus diesem Grund gibt
+						es für jede einzelne Quelle eine zusätzliche separate Datei, in welcher die
+						vorwiegend graphischen Aspekte des Notentextes beschrieben werden. Um eine
+						Dopplung der Informationen zu vermeiden, wird in diesen Dateien jedoch auf
+						die Codierung der substantiellen Informationen zugunsten eines Verweises auf
+						die entsprechende Stelle Core-Datei verzichtet. Am 
+							simplen Beispiel der Richtung eines Notenhalses lässt sich
+						dieses Konzept wie folgt verdeutlichen:</p>
+					<pre class="prettyprint"><code>&lt;!-- Datei core.xml: --&gt;
+&lt;note xml:id="qwert" pname="c" oct="4" dur="4"/&gt;
+	                        
+&lt;!-- Datei sourceA.xml: --&gt;
+&lt;note xml:id="asdfg" sameas="core.xml#qwert" stem.dir="up"/&gt;
+	                        
+&lt;!-- Datei sourceKA1.xml: --&gt;
+&lt;note xml:id="yxcvb" sameas="core.xml#qwert" stem.dir="down"/&gt;</code></pre>
+					<p>In der Core-Datei wird die Note als "<em>c</em>" in der vierten Oktave (also im
+						deutschen ein eingestrichenes <em>c</em>, i.e. <em>c</em>') mit der Dauer einer Viertel
+						erfasst. Die Codierung der Quelle nimmt ausdrücklich Bezug auf diese Note
+						und ergänzt die Information, dass der Hals der Note nach oben (Quelle A)
+						bzw. unten (Quelle KA1) gerichtet ist. Damit wird deutlich, wie inhaltlich
+						unwichtigere Abweichungen in die Codierungen der Quellen ausgelagert 
+						werden können, ohne in der Core-Datei ein separates
+						&lt;app&gt; zu erfordern.</p>
+					<p>Für analytische Zwecke reichen die Informationen der Core-Datei i.d.R. aus,
+						für eine (annähernd) diplomatische Wiedergabe wird jedoch die Kombination
+						der beiden Dateien benötigt. Nur in der Quellen-Datei werden u.a. auch
+						Kurzschreibweisen erfasst, d.h. es werden dort Taktwiederholungskürzel,
+						<em>colla-parte</em>-Anweisungen, Tremolo-Spielweisen und sonstige Faulenzer so
+						wiedergegeben, wie sie in der Quelle notiert sind. Diese individuellen
+						Abbreviaturen werden dann zusätzlich in der aufgelösten Form als Alternative
+							in der Quellen-Datei mit angegeben:</p>
+					<pre class="prettyprint"><code>&lt;!-- Datei source.xml: --&gt;
+&lt;choice&gt;
+    &lt;orig&gt;
+        &lt;mRpt/&gt;
+    &lt;/orig&gt;
+    &lt;reg&gt;
+        &lt;note sameas="core.xml#…"/&gt;
+        &lt;note sameas="core.xml#…"/&gt;
+        &lt;note sameas="core.xml#…"/&gt;
+        &lt;note sameas="core.xml#…"/&gt;
+    &lt;/reg&gt;
+&lt;/choice&gt;</code></pre>
+					<p>Die Codierung gibt an, dass in der Quelle ein Taktwiederholungszeichen steht,
+						welches in vier Noten aufzulösen ist. Diese vier Noten werden dann wie
+						gehabt mit der Core-Datei verknüpft. Zusätzlich werden sämtliche aufgelösten
+						Noten mit ihren Vorlagen verknüpft:</p>
+					<pre class="prettyprint"><code>&lt;!-- Datei core.xml, Takt n: --&gt;
+&lt;note xml:id="c1" dur="1"/&gt;
+
+&lt;!-- Datei core.xml, Takt n+1: --&gt;
+&lt;note xml:id="c2" dur="1"/&gt;
+
+&lt;!-- Datei source.xml, Takt n: --&gt;
+&lt;note xml:id="n1" sameas="core.xml#c1"/&gt;
+
+&lt;!-- Datei source.xml, Takt n+1: --&gt;
+&lt;choice&gt;
+    &lt;orig&gt;
+        &lt;mRpt/&gt;
+    &lt;/orig&gt;
+    &lt;reg&gt;
+        &lt;note xml:id="n2" corresp="#n1" sameas="core.xml#c2"/&gt;
+    &lt;/reg&gt;
+&lt;/choice&gt;</code></pre>
+					<p>Damit zeigt sich, dass die Kombination von Kurzschreibweisen sowie Aufteilung
+						von Core- und Quellen-Dateien bereits in einem solch trivialen Fall zu
+						erheblichem Markup mit einer Vielzahl von Querverweisen führt. Diese
+							<em>Komplexität</em> ergibt sich allerdings 
+						aus den Anforderungen an die Codierung und ließe sich auch durch andere
+						Codierungskonzepte nicht grundsätzlich 
+						ändern. Der wesentliche Vorteil des <em>Core</em>-Modells ist eine recht
+						saubere Trennung von "inhaltlichem Kern" der Quellen sowie der graphischen
+						Ausprägungen der einzelnen Quellen, die eine Identifizierung der inhaltlich
+						bedeutsamen Abweichungen erleichtert. Gleichzeitig lassen sich z.B. die
+						Kurzschreibweisen in den einzelnen Quellen gezielt nachvollziehen, und auch
+						ein Vergleich der graphischen Besonderheiten ist (über den Umweg der Core-Datei)
+						weiterhin möglich.</p>
+					
+					<!--<h3>open (?) topics</h3>
+					<ul>
+						<li>durch die Gleichbehandlung der autographen Überlieferung Aufhebung des
+							herkömmlichen Werk- und Autor-Begriffs</li>
+						<li>Mündigkeit des Benutzers, der eigene Fragestellungen formulieren
+							kann</li>
+						<li>zwingt zur Bereitstellung von "Lesepfaden" und ähnlichen
+							Hilfsmitteln</li>
+						<li>zielt nicht unmittelbar auf eine Aufführbarkeit der Edition, sondern die
+							Dokumentation der Entstehungs- und Verbreitungsgeschichte</li>
+						<li>damit gibt es Defizite in der Aufbereitung des Materials [ich bin nicht
+							sicher, ob wir hier noch meine Ideen einer dynamischen Anreicherung
+							umsetzen können, deshalb vielleicht lieber vorsichtig formulieren], so
+							dass nicht unmittelbar ein "praktischer" Text zu haben ist</li>
+						<li>Desiderat bleibt ebenfalls, die aufführungsspezifischen Korrekturen in
+							den Abschriften vollständig auszuwerten [Streichungen etc., hier
+							schaffen wir höchstens kurze Beispiele]</li>
+					</ul>-->
+
+					<hr/>
+
+					<h3 id="werkzeuge">4. Werkzeuge</h3>
+
+					<p>Für die Umsetzung des Datenmodells wurde eine Vielzahl von Werkzeugen
+						entwickelt. Diese unterteilen sich in Werkzeuge mit graphischer
+						Benutzeroberfläche, die bestimmte Informationen visualisieren und so die
+						Bearbeitung der Daten erleichtern, und Werkzeuge, die ohne graphische
+						Oberfläche benutzt werden.</p>
+					<ul>
+						<li>MusicXML to MEI</li>
+						<li>MEI cleaning</li>
+						<li>Edirom Editor</li>
+						<li>Include Music in Core</li>
+						<li>Include Music in Sources</li>
+						<li>Merge Core and Sources</li>
+						<li>Split in pages</li>
+						<li>PMD PitchProof</li>
+						<li>Add IDs and Tstamps</li>
+						<li>checkDurations</li>
+						<li>LyricProof</li>
+						<li>concatenate Pages</li>
+						<li>shortcuts</li>
+						<li>PMD ControlEvents</li>
+						<li>recore</li>
+					</ul>
+					<h4>MusicXML to MEI</h4>
+					<p>Als Grundlage der Codierungen der Notentexte dienen im Fall des <em>Freischütz</em>
+						mit Finale erstellte MusicXML-Dateien, die in Kooperation mit der
+						Carl-Maria-von-Weber-Gesamtausgabe (WeGA) entstanden sind und dort als
+						Roh-Vorlage für die Arbeit am edierten Text der Ausgabe dienen (der edierte Texte der WeGA wird später mit dem Programm
+							Score erstellt). Diese Dateien folgen im Wesentlichen Webers
+						Autograph, lösen aber sämtliche Kurzschreibweisen auf und enthalten bereits
+						erste editorische Ergänzungen. Nach dem Export nach MusicXML werden sie mit
+						dem von Seiten der MusicXML-Community bereitgestellten XSLT von partwise
+						MusicXML zu timewise MusicXML umgestellt, und dann mit dem von der
+						MEI-Community bereitgestellten XSLT nach MEI konvertiert.</p>
+					<h4>MEI cleaning</h4>
+					<p>Die generische Konvertierung von MusicXML nach MEI hinterlässt einige
+						unerwünschte Artefakte in den Daten. So finden sich u.a. graphische
+						Informationen zur Positionierung einzelner Zeichen, die aber nicht deren
+						Position im Autograph beschreiben, sondern innerhalb der Finale-Datei. Da
+						diese Informationen im Rahmen des Projekts nicht benötigt werden, wurde ein
+						XSLT (<strong>improveMusic.xsl</strong>) entwickelt, welches zunächst die
+						MEI-Dateien säubert und alle graphischen Informationen verwirft. Weiterhin
+						erkennt es u.a. die inhaltlich inkorrekte Codierung von Tremolos (die in
+						Finale rein graphisch, d.h. als Noten mit einem Strich durch den Hals
+						erfasst werden) und ersetzt dies durch die sachlich richtige Codierung
+						mittels &lt;mei:bTrem&gt; bzw. &lt;mei:fTrem&gt;. Weiterhin werden bestimmte
+						Strukturen normiert und verlässliche xml:ids für Takte angelegt.</p>
+					<h4>Edirom Editor</h4>
+					<p>Zunächst werden mit Edirom Editor in gewohnter Weise die einzelnen Quellen
+						des <em>Freischütz</em> aufbereitet und dort <em>für Edirom Online</em> exportiert.
+						Anschließend werden diese Dateien mit einem separaten XSLT
+							(<strong>improveEditorExport.xsl</strong>) aufbereitet. In diesem
+						Schritt werden u.a. verlässliche xml:ids für Takte angelegt, außerdem
+						Rückverweise von &lt;mei:zone&gt; zu &lt;mei:measure&gt; ergänzt.
+						Gleichzeitig legt das XSLT eine (temporäre) Datei an, über die die
+						Taktzählungen der unterschiedlichen Quellen kontrolliert werden können, um
+						dann durch zwei weitere, nach Bedarf einzusetzende XSLTs
+							(<strong>recountMeasures.xsl</strong> und
+							<strong>moveCoreRefs.xsl</strong>) eine Konkordanz der Quellen auf
+						Taktebene sicherzustellen. Dabei entsteht diese Konkordanz zu diesem Zeitpunkt nur durch den Gebrauch der gleichen
+						Taktzahlen.</p>
+					<h4>Include Music in Core</h4>
+					<p>In diesem Schritt werden die beiden bis dahin separaten Datengrundlagen – die
+						auf Finale basierende Codierung der Notentexte sowie die mit Edirom Editor
+						erstellte Erschließung des Manuskripts auf Taktebene ohne musikalischen
+						Inhalt – in Zusammenhang gestellt. Dabei ist zu beachten, dass die
+						Musikcodierungen nur Satzweise erfolgen, Edirom Editor aber eine Codierung
+						der gesamten Quellen bereitstellt. Dementsprechend erstellt das für diesen
+						Schritt verantwortliche XSLT (<strong>includeMusic2core.xsl</strong>) eine
+						<em>Core</em>-Datei, die lediglich den bereitgestellten Satz des <em>Freischütz</em>
+						beschreibt; die weiteren Arbeitsschritte sind daher bis auf Weiteres
+						satzbasiert.</p>
+					<p>Das XSLT nutzt die in den beiden vorhergehenden normalisierten xml:ids der
+						Takte, um die Codierungen des Notentextes mit den Dateien aus Edirom Editor
+						abzugleichen und eine neue Codierung anzulegen. Dabei werden die
+						akzidentellen Informationen der Quellen verworfen und eine
+						<em>Core</em>-Datei angelegt (vgl. <a href="datamodel.html">Datenmodell</a>). Diese <em>Core</em>-Datei
+						ist frei von allen Bezügen zu den Faksimiles der Quellen. Gleichzeitig wird
+						eine "Blaupause" angelegt, d.h. eine temporäre Datei, die als Vorlage für
+						die Codierung der einzelnen Quellen genutzt wird. Diese Blaupause enthält
+						die im Core verworfenen akzidentellen Informationen und stellt die im
+						Datenmodell beschriebenen Beziehungen zwischen Quellencodierung und
+							<em>Core</em>-Datei her.</p>
+					<h4>Include Music in Sources</h4>
+					<p>Hier werden die im vorhergehenden Schritt angelegten "Blaupausen" mit den
+						Dateien aus Edirom Editor tatsächlich zusammengeführt und eine Verbindung
+						von Faksimile-Referenzierung, Bezugnahme auf die <em>Core</em>-Datei und
+						lokaler Codierung akzidenteller Informationen erreicht. Das im <a href="datamodel.html">Datenmodell</a>
+						beschriebene <em>Core</em>-Konzept wird damit an dieser Stelle erstmals
+						umgesetzt. Das dafür genutzte XSLT
+						(<strong>includeMusic2source.xsl</strong>) erzeugt gleichzeitig
+						Faksimile-Referenzen für jedes einzelne &lt;mei:staff&gt;-Element, d.h. für
+						jedes System innerhalb der Partitur wird anhand der Besetzung und den
+						Abmessungen des Gesamttaktes berechnet, in welchem Faksimile-Ausschnitt es
+						zu finden ist. Diese Berechnung basiert auf pauschalen Annahmen und trifft
+						im Einzelfall bei sehr unregelmäßigem Schriftbild nicht den idealen
+						Seitenausschnitt, hat sich aber in der weit überwiegenden Zahl der Fälle
+						sehr bewährt und ist aufgrund einer hinreichenden Qualität einer überaus
+						zeitintensiven manuellen Erfassung dieser Ausschnitte jderzeit
+						vorzuziehen.</p>
+					<h4>Merge Core and Sources</h4>
+					<p>Nachdem die Daten im <em>Core</em>-Modell vorliegen, folgt nun das Überprüfen
+						der Daten anhand der Quellen. Wie erwähnt entsprechen die Grundcodierungen
+						annährend dem Autograph, geben dieses aber nach Auflösung aller
+						Kruzschreibweisen wieder. In einem ersten Schritt des Korrekturlesens müssen
+						daher die Daten nicht nur an die jeweilige Quelle angepasst werden, sondern
+						auch sämtliche "Fehlstellen" der Quelle wiederhergestellt werden.</p>
+					<p>Ein erster Versuch des Projekts, diese Maßnahmen mittels einer graphischen
+						Benutzeroberfläche, aber dennoch mit direktem Zugriff auf die Codierungen
+						des <em>Core</em>-Modells zu verwirklichen, hat sich dabei als nicht
+						praktikabel erwiesen. Durch die Notwendigkeit, jederzeit Quellencodierung
+						und <em>Core</em>-Datei im Blick zu behalten und in Bezug zu setzen, steigt die
+						Komplexität dieses Arbeitsschritts auf ein Maß, dass Flüchtigkeitfehler in
+						einem nicht mehr tolerierbaren Umfang unvermeidbar werden. Aus diesem Grund
+						wurde ein anderer Ansatz zum Überprüfen der Daten gewählt. Dazu wird die
+						gerade erst herbeigeführte Struktur wieder aufgelöst, und die substantiellen
+						Informationen der <em>Core</em>-Datei werden in die Quellen-Dateien per XSLT
+							 (<strong>mergeCoreSource.xsl</strong>) übernommen. Diese liegen nun
+						in einer aussagekräftigen, d.h. für sich genommen vollständigen Datei vor.
+						Allerdings bleiben die @sameas-Beziehungen der einzelnen Elemente in dem
+							<em>Core</em> erhalten, so dass die Möglichkeit zur Rückkehr in den <em>Core</em>
+						jederzeit gegeben ist. [NB: Tatsächlich benötigen wir diese Referenzen
+						letztlich nicht mehr, was aber zu diesem Zeitpunkt des Projekts so noch
+						nicht absehbar war.]</p>
+					<h4>Split in Pages</h4>
+					<p>Um das Korrekturlesen der Daten zu erleichtern, werden die satzweisen
+						Codierungen der einzelnen Quellen nun aufgelöst und in einzelne Dateien pro
+						Manuskript- bzw. Druckseite überführt. Dieser Schritt ist rein technisch
+						begründet und erleichtert das Auslesen und Speichern der Daten in den
+						folgenden Arbeitsschritten. Das dazu genutzte XSLT
+							(<strong>generateSystemFiles.xsl</strong>) erzeugt automatisch
+						Anmerkungen, welche die je aktuellen Angaben zur Partitur
+						(&lt;mei:scoreDef&gt;) enthält, in der also alle Schlüsselwechsel,
+						veränderten Tonarten und aktuell gültige Transpositionen hinterlegt
+						sind.</p>
+					<h4>PMD PitchProof</h4>
+					<p>Für diesen Schritt wurde ein webbasiertes Werkzeug entworfen und umgesetzt,
+						welches im Wesentlichen zum Korrekturlesen von Tonhöhen und -dauern
+						eingesetzt wird (siehe hierzu das weiter unten beschriebene <a href="#pitchtool">Pitch-Tool</a>).</p>
+					<p>Am Ende dieses Arbeitsschrittes entsprechen die Codierungen hinsichtlich der
+						Noten, Pausen und "Leerstellen" den jeweiligen Quellen.</p>
+					<h4>Add IDs and Tstamps</h4>
+					<p>Da im vorhergehenden Schritt mitunter neue Elemente von Hand angelegt wurden,
+						haben diese nicht immer eine (hinreichend eindeutige) @xml:id. In diesem
+						Schritt werden daher die korrekturgelesenen Daten per XSLT
+							(<strong>addIDs_and_tstamps.xsl</strong>) überprüft und wo nötig um
+						@xml:ids ergänzt. Gleichzeitig werden für alle Events in MEI (d.h. alle
+						Noten, Akkorde, Pausen etc.) automatisch die zugehörigen @tstamps (=
+						Zählzeiten) berechnet und ergänzt. Mit diesen Zählzeiten werden einerseits
+						benötigt, um alle ControlEvents (in erster Linie Bogensetzung und
+						Dynamikangaben) korrekturlesen zu können, andererseits lassen sich damit die
+						bestehenden Daten auf Plausibilität hin überprüfen (siehe nächsten
+						Schritt).</p>
+					<h4>checkDurations</h4>
+					<p>An dieser Stelle des Arbeitsablaufs wird mit einer Schematron-Datei
+							(<strong>sanityCheck_durations.sch</strong>) die Plausibilität der
+						bisherigen Daten kontrolliert. Dazu werden die zuvor errechneten Zählzeiten
+						mit der aktuellen Taktart verglichen, um so rhythmisch "unvollständige" oder
+						"übervolle" Takte zu identifizieren. Dabei handelt es sich zu einem großen
+						Teil um Flüchtigkeitsfehler während des Korrekturlesens, zu einem kleineren
+						Teil aber auch um tatsächliche "Fehler" der Quellen. In beiden Fällen
+						erfolgen die nötigen Anpassungen der Codierungen manuell in Oxygen, setzen
+						also ein detailliertes Verständnis von MEI und ein hohes Maß an Disziplin
+						voraus.</p>
+					<p>Während fehlerhafte Daten stillschweigend korrigiert und an den tatsächlichen
+						Quellenbefund angepasst werden, werden "Fehler" der Quellen (etwa
+						überzählige Punktierungen, fehlende Pausen etc.) als solche markiert und
+						editorisch sinnvoll aufgelöst. Dazu wird auf die MEI-Elemente &lt;sic&gt;
+						und &lt;corr&gt; zurückgegriffen, die mittels eines &lt;choice&gt; verbunden
+						werden. An dieser Stelle werden also erste explizit editorische Eingriffe in
+						die Codierungen notwendig.</p>
+					<h4>LyricProof</h4>
+					<p>In einem weiteren manuellen Schritt werden die Codierungen der
+						Textunterlegungen überprüft und korrigiert. Dazu wird mit einem einfachen
+						XSLT (<strong>prepareLyricsProof.xsl</strong>) eine HTML-Datei erzeugt, in
+						der ausschließlich die Textunterlegung angezeigt und durch diakritische
+						Zeichen (u.a. Taktstriche und Silbentrennungszeichen) in Bezug zur Partitur
+						gesetzt wird. Alle nötigen Änderungen erfolgen mit Oxygen direkt in den
+						Codierungen.</p>
+					<h4>concatenate Pages</h4>
+					<p>Vor dem nächsten Schritt ist es notwendig, die vorherige Aufteilung in eine
+						seitenbasierte Codierung zu revidieren und zu einer satzweisen Codierung
+						zurückzukehren. Zu diesem Zweck werden mit einem XSLT
+							(<strong>concatenateSystems.xsl</strong>) die einzelnen Dateien
+						zusammengeführt. Bei dieser Gelegenheit werden in der Musikcodierung
+						&lt;mei:pb/&gt;-Element ergänzt, die den Beginn einer neuen Seite anzeigen
+						und so eine seitenbasierte Auswertung der Daten erleichtern.</p>
+					<h4>shortcuts</h4>
+					<p>Der zweite wesentliche Teilbereich des Korrekturlesens der Daten ist die
+						Erfassung und Auflösung von Kurzschreibweisen. Zu diesem Zweck wird zunächst
+						eine separate Liste mit &lt;cpMark&gt;-Elementen angelegt, die sämtliche
+						Abbreviaturen der Quellen beschreiben. Bei diesem Element handelt es sich um
+						einen Ergänzungsvorschlag für MEI, der bislang nicht in den Standard
+						aufgenommen, aber bereits in andere Projekte wie <em>Beethovens
+							Werkstatt</em> übernommen wurde. &lt;cpMark&gt; steht dabei sowohl für
+							<em>copy mark</em> als auch für <em>colla parte mark</em>, da beide
+						Sachverhalte mit diesem als <em>control event</em> angelegten Element
+						erfasst werden können. Der einfache Fall einer Taktwiederholung wird damit
+						wie folgt beschrieben:</p>
+					<pre class="prettyprint"><code>&lt;cpMark staff="5" tstamp="1" tstamp2="0m+4" ref.offset="-1m+1" ref.offset2="0m+4"&gt;//&lt;/cpMark&gt;</code></pre>
+					<p>Das @ref.offset-Attribut gibt hier an, wie weit nach vorne der zu kopierende
+						Ausschnitt zu finden ist (im vorhergehenden Takt = "-1m", dort auf Zählzeit
+						1 "+1"). Die Länge des zu kopierenden Abschnitts wird über das
+						@ref.offset2-Attribut beschrieben, dessen Syntax deren von @tstamp2
+						entspricht und relativ zum mit @ref.offset beschriebenen Beginns des zu
+						kopierenden Abschnitts angegeben wird.</p>
+					<p><em>Colla-parte</em>-Anweisungen werden mit dem gleichen Element, aber anderen
+						Attributen angegeben:</p>
+					<pre class="prettyprint"><code>&lt;cpMark staff="5" tstamp="1" tstamp2="0m+4" ref.staff="12" dis="8" dis.place="above"&gt;c.B.in 8va&lt;/cpMark&gt;</code></pre>
+					<p>In dieser Codierung wird beschrieben, dass staff/@n=5 von Zählzeit 1 bis 4
+						nach oben oktaviert mit staff/@n=12 geführt werden soll. Die in den Quellen
+						vorgefundenen Kurzschreibweisen können dabei als Inhalt des
+						&lt;cpMark&gt;-Elements angegeben werden.</p>
+					<p>Die &lt;cpMark&gt;-Elemente werden in einer Liste angelegt und verweisen mit
+						einem temporären zusätzlichen Attribut auf den entsprechenden Takt. Diese
+						Liste wird von Hand allein unter Zuhilfenahme der Faksimiles erstellt, d.h.
+						sie stehen zunächst separat neben den eigentlichen Musikcodierungen.</p>
+					<p>Nach Anlegen der &lt;cpMark&gt;s werden diese beim Auflösen der
+						Kurzschreibweisen mittels XSLT (<strong>resolveShortCuts.xsl</strong>) in
+						einem vorgeschalteten internen Arbeitsschritt zunächst in die eigentlichen
+						Codierungen integriert, um dann letztlich umgesetzt zu werden. Die Auflösung
+						der Kurzschreibweisen erfolgt in mehreren Schritten und umfasst:</p>
+					<ul>
+						<li>das Auflösen von Tremolo-Anweisungen (&lt;mei:bTrem&gt; und
+							&lt;mei:fTrem&gt;)</li>
+						<li>das Auflösen von Taktwiederholungszeichen</li>
+						<li>sowie das Auflösen sonstiger <em>colla-parte</em>-Anweisungen und
+							Wiederholungszeichen.</li>
+					</ul>
+					<p>Zur Auflösung dieser Kurzschreibweisen wird jeweils der originale Befund
+						(häufig einfach eine Leerstelle in der Handschrift, d.h. ein
+						&lt;mei:space&gt;) in ein &lt;mei:orig&gt; gekapselt, neben dem in einem
+						&lt;mei:reg&gt; die zu übernehmenden Noten ergänzt werden. Beides wird in
+						einem &lt;mei:choice&gt; nebeneinandergestellt und erlaubt es so, originalen
+						Quellenbefund und für eine Aufführung vervollständigten Notentext zu
+						vergleichen. Die beim Erstellen des &lt;mei:reg&gt; generierten Noten
+						bekommen dabei immer einen Verweis auf ihre jeweiligen Vorlagen, so dass es
+						möglich wird, für jede Note der Partitur ihren jeweiligen Ursprung
+						nachzuvollziehen. Dabei werden auch mehrstufige Kurzschreibweisen korrekt
+						aufgelöst (etwa eine mehrtaktige <em>colla-parte</em>-Anweisung, in deren kopierter
+						Stimme Taktwiederholungen vorkommen).</p>
+					<h4>PMD ControlEvents</h4>
+					<p>Hier werden mit vier separaten Werkzeugen die in <em>Freischütz Digital</em>
+						berücksichtigten <em>control events</em> korrekturgelesen. Dabei handelt es
+						sich um Bindebögen (&lt;mei:slur&gt;), (de)crescendo-Gabeln
+						(&lt;mei:hairpin&gt;), Dynamikangaben (&lt;mei:dynam&gt;) sowie
+						Spielanweisungen (&lt;mei:dir&gt;).</p>
+
+					<p> Aufgabe der Tools ist die Unterstützung des genauen Angleichens
+						des Codes an die jeweilige Quelle. Dies geschieht durch das Pitch- sowie
+						durch das Controlevent-Tool.</p>
+						
+					<h5 id="pitchtool">Pitch-Tool</h5> 
+					<p>Das Pitch-Tool besteht aus einer
+						dreigeteilten, stimmenweisen Anordnung: Der Ausschnitt der jeweiligen Quelle
+						wird mit dem gerenderten Code abgeglichen. Änderungen werden direkt im
+						Code-Ausschnitt eingetragen. Neben der Ergänzung und Löschung von &lt;note&gt;,
+						&lt;rest&gt;, &lt;clef&gt;, &lt;space&gt; und &lt;mRpt&gt;-Elementen, ihrer jeweiligen ganz-
+						oder halbtaktigen Varianten sowie der &lt;beam&gt;, &lt;tuplet&gt;, &lt;bTrem&gt; und
+						&lt;fTrem&gt;-Elemente sind hier die Attribute @pname, @oct, @dur, @dot, @grace,
+						@accid, @artic, @tie sowie @stem.dir korrekturzulesen. Die Pfeile über den
+						Noten zeigen im vorliegenden Beispiel die codierte @stem.dir an. </p>
+						<img
+							style="width: 100%; display: block; margin-right: 20px; margin-bottom:20px; float:left;"
+							class="img-polaroid" src="../images/docu/PitchTool1.jpg" alt="pitchtool"
+							title="Noten"/>
+						
+						<h5 id="controleventtool">Controlevent-Tool</h5> 
+						<p>Im Controlevent-Tool geht die Korrektur
+						seitenweise vonstatten, um kontextabhängige Entscheidungen zu ermöglichen.
+						Relevant sind Bindebögen, Gabeln, Dynamik-Eintragung sowie Spielanweisungen.
+						Von Faulenzern oder <em>colla-parte</em>-Takten betroffene Controlevents werden
+						behandelt, als seien die betreffenden Stellen ausnotiert. (Eine Zuordnung
+						zum <em>colla parte</em> ist später durch das zu diesem gehörige &lt;expan&gt; möglich.)</p>
+						
+						<h6>Slurs</h6> 
+						<p>Die codierten &lt;slur&gt;-Elemente einer Seite werden aufgelistet. Ein
+						hier angewähltes &lt;slur&gt;-Element wird in der Quelle grafisch hervorgehoben
+						und anhand des Renderings auf korrekten Start- und Endpunkt sowie korrekte
+						@curvedir kontrolliert. Bei eindeutiger Lesart erfolgt dies über @startid
+						und @endid eines Bogen und wird automatisch durch Klick auf eine Note im
+						Rendering (grün hervorgehoben) festgelegt. Die @curvedir wird mittels
+						Dropdown-Menu korrigiert. Fehlende &lt;slur&gt;-Elemente werden ergänzt und
+						obsolete Elemente gelöscht. In Fällen uneindeutiger Lesart können jeweils
+						zwei Start- und Endpunkte ausgewählt werden, wodurch für den betreffenden
+						Bogen automatisch ein &lt;orig&gt;-Element sowie – je nach Anzahl der Lesarten –
+						entsprechende &lt;reg&gt;-Elemente angelegt werden. In diesem Fall wird für das
+						&lt;orig&gt; zusätzlich @tstamp und @tstamp2 des betreffenden Bogens angegeben,
+						um dessen Verlauf ohne Bezug auf ein event festzuhalten. </p>
+							<img
+								style="width: 100%; display: block; margin-right: 20px; margin-bottom:20px; float:left;"
+								class="img-polaroid" src="../images/docu/SlurProof1.jpg" alt="slurtool"
+								title="Noten"/>
+						
+						<h6>Hairpins</h6> 
+					<p>Wie bei der Slur-Kontrolle finden sich hier die Elemente einer kompletten Seite
+						aufgelistet und können mit der Quelle abgeglichen, ergänzt- oder gelöscht
+						werden. Im create-, bzw. im edit-Menu sind @tstamp und @tstamp2 einer Gabel
+						sowie @form, @staff und @place zu setzen bzw. zu korrigieren. Auch hier kann
+						im Fall einer Uneindeutigkeit einzelner Attribute mittels change-to ein
+						&lt;orig&gt; nebst &lt;reg&gt; für die betreffenden Gabeln angelegt werden. </p>
+						<img
+							style="width: 100%; display: block; margin-right: 20px; margin-bottom:20px; float:left;"
+							class="img-polaroid" src="../images/docu/Hairpins.jpg" alt="pitchtool"
+							title="Noten"/>
+						
+						<h6>Dynams &amp; Directions</h6>
+						<p>Auch die &lt;dynam&gt;- und &lt;dir&gt;-Elemente werden seitenweise
+						aufgelistet und abgeglichen. Die Kontrolle erfolgt wie im Fall der Hairpins.
+						Zusätzlich ist hier der betreffende Text (mittels &lt;rend&gt;-Element auch als
+						unterstrichener Text) einzufügen, bzw. zu korrigieren.
+							<img
+								style="width: 100%; display: block; margin-right: 20px; margin-bottom:20px; float:left;"
+								class="img-polaroid" src="../images/docu/Dynams.jpg" alt="pitchtool"
+								title="Noten"/>	
+							
+							<!--Beschreibung von
+						@tstamp-Kontrolle und Lyric-Proof? Hierfür gab es ja kein tool... Trotzdem
+						beschreiben? Wie sieht es mit concat und shortcuts aus? Beschreibung
+						nötig/sinnvoll? --></p>
+					<p>Wichtig ist dabei, dass in diesem Schritt auch die sich durch
+						Kurzschreibweisen ergebenden control events ergänzt werden, da diese häufig
+						die Grenzen zwischen bestehendem und generiertem Notentext überschreiten und
+						nicht hinreichend zuverlässig automatisch generiert werden können.</p>
+					<p>Am Ende dieses Schrittes liegen vollständige MEI-Codierungen der Quellen vor,
+						die diese weitgehend diplomatisch wiedergeben, alternativ Abbreviaturen und weitere Lücken im Notentext
+						auffüllen, sowie eine erste editorische Aufbereitung der jeweiligen Quellen
+						enthalten.</p>
+					<h4>addAccidGes</h4>
+					<p>Vor der automatisierten Zusammenführung der Daten ist es notwendig, die
+						klingende Tonhöhe jeder einzelnen Note zu ergänzen. Zu diesem Zweck wird mit
+						einem gesonderten XSLT (<strong>addAccid.ges.xsl</strong>) ein
+						@pnum-Attribut für jede Note angelegt, welches neben der direkten Tonhöhe
+						die Vorzeichnung, zwischenzeitliche Änderungen der Vorzeichnung oder lokale
+						Vorzeichen sowie Transpositionen und Oktavierungen berücksichtigt.</p>
+					<h4>recore</h4>
+					<p>Im vorerst letzten Schritt der Datenaufbereitung werden die überprüften Daten
+						wieder in das <em>Core</em>-Modell überführt, d.h. eine Separation zwischen
+						substantiellen und akzidentellen Informationen vorgenommen (vgl.
+						<a href="datamodel.html">Datenmodell</a>). Dazu wird zunächst per XSLT
+						(<strong>setupNewCore.xsl</strong>) mit der ersten vollständig überprüften
+						Quelle eines Satzes eine neue <em>Core</em>-Datei für diesen Satz angelegt,
+						sowie die Codierung der Quelle entsprechend des Datenmodells "abgereichert",
+						so dass lediglich die akzidentellen Informationen erhalten bleiben.</p>
+					<p>Mit einem weiteren XSLT (<strong>merge2Core.xsl</strong>) werden dann die
+						weiteren Quellen mit dieser neuen Core-Datei abgeglichen und in einem
+						zweistufigen Verfahren automatisch die Unterschiede erfasst. Zunächst
+						liefert das XSLT eine Liste der gefundenen Abweichungen, die dann manuell
+						anhand der Codierungen und Faksimiles überprüft werden muss. Erst nachdem
+						möglicherweise fehlerhafte Daten bereinigt wurden, wird das XSLT produktiv
+						genutzt. In diesem Modus werden automatisch &lt;mei:app&gt;-Elemente mit
+						&lt;mei:rdg&gt; für jede vorkommende Lesart angelegt, und die jeweils
+						nötigen Verweise aus den Quellen-Dateien in diese <em>Core</em>-Datei erzeugt.</p>
+					<p>Dieser Schritt ist überaus kritisch, da einerseits mögliche Codierungsfehler
+						als solche erkannt werden müssen, andererseits der leichtfertige Gebrauch zu
+						Daten führen kann, die sich aufgrund ihres Umfangs und ihrer Komplexität
+						nachträglich nur sehr bedingt manuell korrigieren lassen. Der Anspruch
+						dieses XSLTs ist überaus ambitioniert, da die Gleichheit der Quellen
+							<em>inhaltlich</em> bewertet wird, d.h. auch unterschiedliche
+						Schreibweisen des gleichen Inhalts werden als solche erkannt, etwa im Fall
+						von Bläserstimmen, die in einer Quelle akkordisch, in einer weiteren Quelle
+						aber als zwei Stimmen notiert sein können. Trotz gleicher Bedeutung
+						unterscheiden sich die Codierungen dieser Quellen deutlich, so dass ein
+						automatischer Vergleich alles andere als trivial ist. Nach der
+						Identifizierung der Unterschiede werden diese so lokal begrenzt wie möglich
+						wiedergegeben, d.h. es werden nicht einfach vollständige Takte
+						unterschieden, sondern gezielt nur die tatsächlich varianten Bereiche. Damit
+						wird automatisch eine Codierung erreicht, die dem üblichen Stil einer
+						manuellen Codierung entspricht. Außerdem werden <strong>automatisch Anmerkungen
+						angelegt</strong>, welche die jeweilige Varianz phänomenologisch beschreiben und als
+						Vorlage für eine (manuell anzulegende bzw. abzugleichendes) Erklärung des Phänomens durch den
+						Editor dienen können.</p>
+
+					<hr/>
+
+					<h3 id="richtlinien">4. Richtlinien</h3>
+					<p>Im Rahmen der Arbeiten hat sich gezeigt, dass Editionsrichtlinien in Form von <strong>Codierungsrichtlinien</strong> für derartige digitale Projekte eine Grundvoraussetzung für 
+						effektives Arbeiten darstellen. Die Offenheit der XML-Sprachen TEI und MEI, die unterschiedliche Codierungsformen für gleiche Sachverhalte erlauben und darin 
+						den spezifischen Bedürfnissen der Einzelprojekte entgegenkommen, erweist sich insbesondere in kollaborativen Projekten als problematisch, wenn nicht von Beginn 
+						an eine Einigung auf bevorzugte Lösungen erfolgt. Ist dies nicht der Fall, müssen spätere Verarbeitungsprozesse häufig eine solche Fülle von Alternativen 
+						berücksichtigen, dass sich dies als Hemmschuh für ein rasches Fortschreiten der Projekte erweist.</p>
+					<p>Die digitale Edition der <em>Textteile</em> der Weber-Gesamtausgabe hat daher für ihre TEI-Codierungen solche <a class="external" href="http://www.weber-gesamtausgabe.de/de/Projekt/Editionsrichtlinien_Text.html">Codierungsrichtlinien für die Textteile</a> erarbeitet, die gegenwärtig noch als beschreibende Richtlinien 
+					auf der Website des Projekts vorliegen, künftig aber in ein ODD-Dokument eingearbeitet werden sollen. Für FreiDi wurden in den Textteilen diese Codierungsanweisungen 
+					weitgehend übernommen und um Spezifika des Projekts ergänzt (vgl. die <a href="documentation-libretti.html#codierungsrichtlinien">Dokumentation zum Text</a>), für die <em>Musikcodierung</em> entwickelten sich die Codierungsgrundsätze aber erst im Verlaufe 
+					der Arbeiten und mussten wiederholt modizifiert oder erweitert werden, um den für das <em>Core</em>-Konzept notwendigen Bedingungen zu entsprechen. Da die Musikcodierung 
+					in der Hand weniger Mitarbeiter lag und zudem kontinuierlich eine enge Absprache mit der MEI-Community erfolgte, war eine über diesen Personenkreis hinausgehende Dokumentation 
+					der Richtlinien für die Arbeiten im Projekt selbst nicht erforderlich. Sinnvoll wäre das Erarbeiten solcher Richtlinien allerdings sobald weitere Editionen in dieser Form erstellt werden sollen, eine Orientierung an den Lösungen des FreiDi-Projekts ist jedoch problemlos durch die Veröffentlichung der MEI-Dateien von FreiDi über GitHub möglich.</p>
+
+					<hr/>
+
+					<h3 id="workflows">5. Workflows (nach Arbeitspaketen)</h3>
+					<p>Als Ausgangspunkt beim <strong>Aufbau der Datenbasis</strong> in <strong>AP 1.1</strong> dienten zum einen Notensatz-Rohdaten der Ouvertüre und der Nummern 1–16, die während des Projektverlaufs als Bearbeitungsvorlagen in Kooperation mit der Carl-Maria-von-Weber-Gesamtausgabe (WeGA) teils in Finale, teils in Sibelius entstanden und nun über das Zwischenformat MusicXML in ein Basis-MEI konvertiert wurden, das in späteren Schritten um die MEI-spezifischen Features angereichert und an die Inhalte der benutzten Quellen angeglichen werden sollte. Dies waren einerseits das Autograph Webers, das durchgängig codiert wurde, andererseits im Falle der ausgewählten Nummern 6, 8 und 9 die ermittelten autorisierten Kopien und der postume Partitur-Erstdruck (zu Einzelheiten vgl. AP 1.3 und AP 3).</p>
+					<p>Mit <strong>AP 1.3</strong> war der arbeitsaufwändigste Teil des Projekt verbunden: die <strong>MEI-Codierung der Notentexte</strong> auf der Basis der Transformationen aus MusicXML. Gemeinsam mit Raffaele Viglianti wurden zunächst Konzepte für die weitere Anreicherung und Korrektur der Daten in MEI entwickelt und getestet. Dabei stand zunächst das Autograph im Mittelpunkt. In einem zweiten Schritt wurde – nach einer Zwischenevaluierung der Codierungsarbeiten – ein Konzept für die Codierung der abschriftlichen Quellen entwickelt und dann die Codierung der Nummern 6, 8 und 9 an die acht Partiturabschriften und den Partitur-Erstdruck dieser Nummern angepasst. Die Notwendigkeit, diese Codierungen „korrekturzulesen“ führte rasch die Grenzen eines nur auf der Basis des Codes durchzuführenden Kontrollgangs vor Augen – der Zeitaufwand ist durch die Unüberschaubarkeit des Codes (trotz der prinzipiellen „Menschenlesbarkeit“) außerordentlich hoch und wäre für sämtliche Codierungen so in der Projektlaufzeit nicht durchführbar gewesen. Zudem führen die bewusst angebotenen Alternativen der Codierung gleicher Sachverhalte ohne strikte Editionsrichtlinien zu unterschiedlichen Lösungen, die den Korrekturvorgang weiter komplizieren. Deshalb wurden frühzeitig Konsequenzen gezogen und eigene <a href="#werkzeuge">proofMEI-data-Werkzeuge</a> auf der Basis der teilweisen Visualisierung der Codierung entwickelt, darunter das o.g. <em>pitch-control</em>-Werkzeug und das <em>controlevent</em>-Werkzeug. Weitere Prüfroutinen wurden mit Hilfe eigens entwickelter XSLTs (s.o.) durchgeführt, so etwa die Ergänzung klingender Tonhöhen (<em>gestural</em>) bei transponierenden Instrumenten. Ferner wurden zur Qualitätssicherung Schematron-Regeln zur Überprüfung von Tondauern und Metrum entwickelt, mit denen ein weiterer Korrekturdurchgang erfolgte.</p> 
+					<p>In der Anfangsphase mussten für das <em>pitchtool</em> die Daten in ein Zwischenformat überführt werden (<a href="https://abcjs.net/">abcjs</a> bzw. <a href="http://www.vexflow.com">VexFlow</a>), um sie darstellen zu können. Dies machte bei Korrekturen im Code-Fenster eine erneute Transformation bzw. ein Zurückspeichern in die MEI-Daten notwendig – hier einen sauberen Workflow zu etablieren, erwies sich ebenfalls als zeitaufwändig, wurde andererseits aber durch die erleichterte Bearbeitbarkeit von größeren Datenmengen wettgemacht. Erst in der letzten Projektphase stand die <a href="http://www.verovio.org">Verovio-Bibliothek</a> (Laurent Pugin) zur Verfügung, die ein solches Kontrollwerkzeug erheblich effektiver macht; in einer derzeit vorbereiteten Version des MEI-Score-Editors werden daher die in FreiDi praktizierten Verfahren in einer modifizierten Form angewendet, so dass damit in Kürze ein breiter nutzbares pitchtool-Werkzeug zur Verfügung stehen dürfte, das in den Workflow der Erarbeitung digitaler Editionen gut einzubinden ist (vgl. dazu die auch neueste Version von <a href="http://meise.de.dariah.eu/">MEISE</a>).</p>
+			<p>Zu den Aufgaben, die neben der Codierung zu bewältigen waren, gehörte auch die Erschließung sämtlicher editionsrelevanter Quellen als Faksimiles bis auf die Ebene der Einzeltakte, indem sämtliche Positionsangaben in der MEI-Codierung abgespeichert wurden.</p>
+					<p>Im Vorfeld war in <strong>AP 1.4</strong> eine <strong>Anbindung der Edirom-Werkzeuge an das TextGrid-Repository</strong> vorgesehen worden. Zu möglichen Schnittstellen für die Anwendung erfolgte eine Abstimmung mit Vertretern des <a href="https://www.textgrid.de">TextGrid-Projets</a> (Würzburg und Göttingen). Eine Anbindung der Daten an das <a href="https://textgridrep.org/">Repository</a> konnte aufgrund konzeptioneller Änderungen der Schnittstellen bei TextGrid aber erst mit dem ersten Vorab-Release 0.8.0 vollzogen werden. Nach einer Testphase fiel anschließend im Konsortium einmütig der Entschluss, die Datensicherung im TextGrid Repository von der eigentlichen Datenpräsentation (die weitgehend mit <em>Edirom</em> erfolgt) zu trennen, um dem Benutzer sowohl eine höhere Geschwindigkeit beim Abrufen der Daten als auch eine bessere Verfügbarkeit zu garantieren.</p>
+					<h4>AP 3.1 Erarbeitung eines Modells Digitaler Edition</h4>
+					<p>Im August 2013 wurde auf der <a href="http://www.balisage.net/2013/Program.html">Balisage-Konferenz</a> in Montréal durch die beiden Mitarbeiter Johannes Kepper und Daniel Röwenstrunk in Verbindung mit dem MEI-Entwickler Perry Roland ein Konzept zum Umgang mit musikalischer Varianz vorgestellt. Davon ausgehend wurde sowohl für die Musik- als auch die Textedition ein sogenanntes <strong>„Core“-Datenmodel</strong>l entwickelt; für ersteres war J. Kepper verantwortlich, für letzteres Raffaele Viglianti. Kepper hat dieses Modell in einem <a href="datamodel.html">Beitrag auf dieser Projektseite</a> eingehender beschrieben. Ausgangspunkt war das Problem, dass sich angesichts der Vielzahl zu kollationierender Quellen die detaillierte Verzeichnung von quellenübergreifender Varianz als unpraktisch erwies, da bereits marginale Unterschiede rasch zu einer „Verzweigung“ der Codierung im Sinne der <a href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/TC.html">parallel-segmentation-Methode</a> führen und damit in einer ohnehin umfangreichen Codierung stark redundante Daten entstehen, die Lesbarkeit und Bearbeitung erschweren. Die alternative Möglichkeit, alle Quellen nur für sich zu betrachten und in jeweils eigenen Dateien zu erfassen, bietet den Vorteil, in einer diplomatischen Codierung nur die Unsicherheiten eines einzigen Dokuments berücksichtigen zu müssen. Allerdings vergrößert sich dabei das Problem der Redundanz, da alle gleichbleibenden Anteile für jede Quelle separat hinterlegt werden müssen und Daten erst über eine separate Konkordanz von außen inhaltlich verknüpft werden können. Das <em>Core</em>-Konzept versucht die jeweiligen Vorteile beider Verfahren zu verbinden, indem Textidentisches in einer zentralen Datei abgelegt und aus den separaten (alle singulären diplomatischen Aspekte erfassenden) Codierungen der Einzelquellen unter Umgehung redundanter Doppelungen lediglich darauf verwiesen wird. Zugleich wird dabei – durch eine großenteils automatisierbare Verlinkung – eine Konkordanz der Daten erzeugt. 
+					</p>
+					<p>Die Analyse der Codierungen speziell der Notentexte (aber auch der textgenetischen Aspekte des Librettos) brachte unerwartet komplexe Fragestellungen bzw. Anforderungen an das Codierungsmodell hervor. Daraus ergab sich die Notwendigkeit der Entwicklung zahlreicher technisch unterstützender, semi-automatischer Workflows (basierend auf XSLT, Schematron, RNG; vgl. die Beschreibung der Werkzeuge), um auf der Basis der erzeugten Taktkonkordanz im Detailvergleich der Codierungen die Abweichungen der Quellen auszuwerten. Wesentliche Entwicklungen des Modells mussten sich auf diesen Bereich konzentrieren, da über diese Grundvoraussetzungen hinausgehende Konzepte ohne eine Exploration dieser Grundlagen nicht sinnvoll erschienen.</p>
+					<h4>AP 3.2 Erarbeitung der digitalen Edition</h4>
+						<p>Im Verlauf der Arbeiten zeigte sich, dass eine klare Abgrenzung von Codierungsarbeiten in AP 1.3 und Erarbeitung der Edition in AP 3.2 kaum möglich ist. Schon im Rahmen der Quellen-Dokumentation werden interpretierende editorische Eingriffe notwendig. Dies betrifft in erster Linie die sekundäre Schicht des Notentextes, deren Codierung in MEI mittels sogenannter <em>Control-Event</em>s erfolgt. Aus diesem Grund waren die Korrekturlese-Werkzeuge um Möglichkeiten zur editorischen Aufbereitung zu erweitern und wurden die entsprechenden Arbeiten, trotz ihres in Teilen rein dokumentierenden Charakters, in dieses AP verlagert, zumal die entstehenden Codierungen aufgrund des erarbeiteten Modells bereits eine erste Stufe einer digitalen Edition darstellen. Als Kriterium zur Abgrenzung von AP 1.3 und AP 3.2 wurde der Einsatz von <strong>&lt;choice/&gt;</strong> herangezogen: Mit diesem Element lassen sich nicht eindeutige Situationen der Quellen erfassen, d.h. im Falle der Control-Events etwa mehrdeutige Bogensetzungen oder Zuordnungsprobleme der Dynamik.</p> 
+			<p>In diesem Sinne wurden die Control-Event-Korrekturlesewerkzeuge um editorische Aspekte erweitert und zahlreiche kleinere, auf XSLT basierende Hilfswerkzeuge entwickelt, etwa zur Bestimmung der jeweiligen Zählzeiten aller Noten bzw. anderer Eintragungen in den Quellen. Folgende weitere Maßnahmen wurden durchgeführt: 
+				<ul>
+				<li>Für Kurzschreibweisen, wie etwa <em>colla-parte</em>-Anweisungen und Taktwiederholungen wurde eine <em>Stand-off</em>-Erfassung konzipiert und anschließend das entwickelte Modell an den Daten überprüft, nachjustiert und auf dieser Basis wurden dann alle entsprechenden Einträge in den ausgewählten Nummern sowie im vollständigen Autograph erfasst. Dieses Modell zur Erfassung von Kurzschreibweisen wurde dann auch als Vorschlag in die MEI-Community eingebracht. </li>
+				<li>Ebenfalls umgesetzt wurde eine alternative automatische Auflösung der Kurzschreibweisen bei gleichzeitiger Dokumentation des originalen Befundes und der Bezugspunkte des ausgeschriebenen Textes zur jeweiligen Vorlage.</li>
+					<li>Basierend auf den in AP 1.3 erstellten Schematron-Regeln wurden offensichtliche Kopisten- bzw. Stichfehler in den Quellen aufbereitet. So erfolgte eine Kennzeichnung rhythmischer Unstimmigkeiten durch <strong>&lt;sic/&gt;</strong> und die entsprechende Auflösung mittels <strong>&lt;corr/&gt;</strong> (Korrekturvorschlag), die beide in einem &lt;choice/&gt;-Element verbunden sind.</li>
+				<li>Als Vorbereitung zum automatischen Abgleich der Codierungen der Einzelquellen wurde die prototypische Umsetzung eines XSLT zur Bestimmung der tatsächlich klingenden Tonhöhe jeder Note, unter Berücksichtigung von Transpositionsanweisungen, Generalvorzeichnung sowie relevanter weiterer Vorschriften im Satzverlauf erarbeitet.</li>
+				<li>Ferner wurde ein semi-automatischer Vergleich der einzelnen Quellen mit Hilfe der erwähnten zentralen “<em>Core</em>-Datei” erarbeitet, in der alle Abweichungen der primären Paameter der betrachteten Sätze als Varianten dokumentiert sind, und auf die sich alle so verglichenen Quellen in der Art einer Konkordanz auf Einzelzeichen-Ebene beziehen. Ziel war eine vollständige Dokumentation der Quellenabweichungen (zunächst ohne Rücksicht auf ihre Relevanz in den Augen eines Editors!).</li>
+				<li>Für jene Nummern, die ausschließlich im Autograph erfasst sind, wurde ein alternativer und vereinfachter Workflow entwickelt, der eine geringere Erschließungstiefe zur Folge hat, aber die Datenerstellung in eklatanter Weise beschleunigt und damit eine erheblich größere Nachnutzbarkeit für andere Projekte bietet.</li>
+				<li>Schließlich war ein neuer <strong>Prototyp zur Codierung und Darstellung von Annotationen</strong> zu konzipieren und umzusetzen. Neben quasi semiautomatischen Annotationen, die mit Hilfe der <em>Core</em>-Datei erzeugt werden können, wurden auch Annotationen zu den Nummern 6, 8 und 9 aus der WeGA adaptiert, um die unterschiedliche Rolle und Wertigkeit von Annotationen zu illustrieren. Die wichtigen Bereiche der Verknüpfung von Annotationen bzw. der Rolle von Einzelstellen übergreifenden Annotationen, für die es auch im Bereich der Literatur noch kaum digitale Entsprechungen gibt, musste aus Zeitgründen ausgeklammert bleiben.</li>
+				</ul>
+					</p>
+					<p>Es ist den Projektpartnern bewusst, dass gerade im Bereich der Verwirklichung editorischer Konzepte die Auseinandersetzung mit den komplexen Codierungsproblemen dazu geführt hat, dass sich die ursprüngliche Vorstellung, hier bereits zufriedenstellende Lösungen bereitstellen zu können, nicht verwirklichen ließ. Im Sinne des Projekts schien aber die intensive Auseinandersetzung mit diesen grundlegenden Codierungsfragen wichtiger, da erst darauf aufbauend weitere Konzepte entwickelt werden können. Vor diesem Hintergrund kann hervorgehoben werden, dass es dem Projekt gelungen ist, den praktischen Beweis dafür zu erbringen, dass in den Textwissenschaften übliche Kollationierungsverfahren (wie bspw. mit Hilfe von <a href="http://collatex.net/">collateX</a>) grundsätzlich auch mit Musikcodierungen funktionieren, so dass in (einer allerdings noch weiter entfernten) Zukunft die Bewertung von Quellenvergleichen auf der Basis automatisierter Kollation erfolgen könnte.</p>
+						<p>In der letzten Phase des Projekts wurden eine Reihe von Texten zur Einführung und Erläuterung der Edition innerhalb von <em>Edirom Online</em> verfasst, darunter ein umfangreiches Kapitel zur Genese und Überlieferung der Musik mit Verlinkungen zu den entsprechenden Dokumenten der WeGA sowie ein Kapitel zur Rezeption des Werks.</p>
+				</div>
+			</div>
+
+		</div>
+	    
+	    <script type="text/javascript">
+	        window.activeNavLink = 'nav_documentation';
+	    </script>
+	    
+	</section>
+
+
+            <div id="footer"
+                style="padding-top: 5px; text-align: center; background-color: #EEEEEE; background-image: -moz-linear-gradient(center top , #F5F5F5 0%, #EEEEEE 100%);     background-repeat: repeat-x;     border: 1px solid #E5E5E5;     border-radius: 4px 4px 4px 4px;     height: 24px;     margin-bottom: 20px;     margin-top: 40px;     width: 100%;"
+                    ><a style="margin-right: 6px;" href="imprint.html">Imprint</a> · <a
+                        style="margin-left: 8px;" href="contact.html">Contact</a></div>
+        </div>
+        <script src="../scripts/jquery-1.12.3.min.js"></script>
+        <script src="../scripts/bootstrap.js"></script>
+        <script src="../scripts/main.js"></script>
+        <script src="../scripts/run_prettify.js"></script>
+    </body>
+</html>
