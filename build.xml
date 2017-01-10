@@ -14,12 +14,21 @@
         
         <mkdir dir="${dist.dir}"/>
 
-        <copydir src="${app.dir}" dest="${dist.dir}" excludes="**/sites/** **/templates/**"/>
+        <copydir src="${app.dir}" dest="${dist.dir}" excludes="**/sites/** **/sites-en/** **/templates/**"/>
 
         <copy todir="${dist.dir}">
             <fileset dir="${app.dir}/sites" includes="**/*.html"/>
             <filterchain>
                 <concatfilter prepend="${app.dir}/templates/_htmlstart.html" append="${app.dir}/templates/_htmlend.html" />
+            </filterchain>
+        </copy>
+
+        <mkdir dir="${dist.dir}/en/"/>
+
+        <copy todir="${dist.dir}/en/">
+            <fileset dir="${app.dir}/sites-en" includes="**/*.html"/>
+            <filterchain>
+                <concatfilter prepend="${app.dir}/templates/_htmlstart_en.html" append="${app.dir}/templates/_htmlend_en.html" />
             </filterchain>
         </copy>
         
