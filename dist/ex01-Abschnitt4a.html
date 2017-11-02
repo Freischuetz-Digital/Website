@@ -111,33 +111,98 @@
             </header>
             
             
-                <section id="edition">
-        <div class="page-header">
-            <h1>FreiDi <span style="font-style:italic;">plus</span></h1>
-        </div>
+            <html>
+    <head>
+        <title>Verovio Hello World! example</title>
         
-        <div class="row-fluid">
-            <div class="span5">
-                
-            </div>
-            <div class="span7">
-                <p>Auf FreiDi plus werden Arbeitsergebnisse bzw. Texte zugänglich gemacht, die nach dem offiziellen Abschluss des BMBF-Projekts im Sinne einer kontinuierlichen Weiterarbeit an oder mit den Daten entstanden. </p>
-            </div>
-            <div>
-                <h3 id="FreiDiplus_Content">Übersicht</h3>
-                <p>
-                    <ul>
-                        <li>Mitra Behpoori, Maya Sampson, Sebastian Schlicht und Joachim Veit: Zur Frage der Appoggiaturen in Webers "Freischütz": Zeitgenössische Theorie und musikalische Praxis, erläutert am Beispiel der Szene und Arie der Agathe Nr. 8, Detmold 2017 ⇾ <a href="appoggiatur.html">Zum Beitrag</a> (in Vorbereitung)</li>
-                    </ul>
-                </p>
-            </div>
-        </div>
+        <script src="http://www.verovio.org/javascript/develop/verovio-toolkit.js" type="text/javascript" ></script>
+        
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript" ></script>  
+        <style type="text/css">
+        
+            button {
+                color: #666666;
+            }
+            button.active {
+                color: #000000;
+            }
+            
+            svg g.rdg {
+                stroke: blue !important;
+                fill: blue !important;
+            }
+            
+            svg g.rdg + g.rdg {
+                stroke: green !important;
+                fill: green !important;
+            }
+            
+        </style> 
+    </head>
+    <body>
+        <button id="btn1" class="active">Variante 1</button>
+        <button id="btn2">Variante 2</button>
+        <div id="svg_output"/>
         
         <script type="text/javascript">
-            window.activeNavLink = 'nav_freidiplus';
+            var vrvToolkit = new verovio.toolkit();
+            var zoom = 38;
+            var border = 50;
+            var pageHeight = 2970;
+            var pageWidth = 2400;
+            
+            var mei;
+            
+            $('#btn1').on('click',function(e) {
+                $('#btn1').addClass('active');
+                $('#btn2').removeClass('active');
+                
+                func(1);
+            });
+            
+            $('#btn2').on('click',function(e) {
+                $('#btn2').addClass('active');
+                $('#btn1').removeClass('active');
+                
+                func(2);
+            });
+            
+            $.ajax({
+                url: "Agathe_Takt55_58.xml",
+                dataType: "text",
+                success: function(data) {
+                    pageHeight = $(document).height() * 100 / zoom ;
+                    pageWidth = $(document).width() * 100 / zoom ;
+                    
+                    mei = data;
+                    
+                    vrvToolkit.loadData(data);
+                    
+                    func(1);
+                    
+                }
+            });
+            
+            var func = function(i) {
+                
+                var options = {
+                    pageWidth: pageWidth,
+                    scale: zoom,
+                    adjustPageHeight: 1,
+                    appXPathQuery: './rdg[' + i + ']'
+                };
+                
+                vrvToolkit.setOptions( options );
+                vrvToolkit.loadData(mei);
+                svg = vrvToolkit.renderPage(1);
+                $("#svg_output").html(svg);
+                
+            };
+                
         </script>
         
-    </section>
+    </body>
+</html>
 
 
             <div id="footer"
