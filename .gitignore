@@ -5,3 +5,4 @@ dist/pm
 bower_components
 test/bower_components
 *.xpr
+.DS_Store
