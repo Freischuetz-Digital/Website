@@ -24,18 +24,22 @@
         </copy>
 
         <copy todir="${dist.dir}">
-            <fileset dir="${app.dir}/sites" includes="**/ex01-*.html"/>
+            <fileset dir="${app.dir}/sites" includes="**/ex01-*.html **/*.xml"/>
         </copy>
 
         <mkdir dir="${dist.dir}/en/"/>
 
         <copy todir="${dist.dir}/en/">
-            <fileset dir="${app.dir}/sites-en" includes="**/*.html"/>
+            <fileset dir="${app.dir}/sites-en" includes="**/*.html" excludes="**/ex01-*.html"/>
             <filterchain>
                 <concatfilter prepend="${app.dir}/templates/_htmlstart_en.html" append="${app.dir}/templates/_htmlend_en.html" />
             </filterchain>
         </copy>
         
+        <copy todir="${dist.dir}/en/">
+            <fileset dir="${app.dir}/sites-en" includes="**/ex01-*.html **/*.xml"/>
+        </copy>
+
     </target>
     
 </project>
