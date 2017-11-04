@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Schema verlinkt auf music-encoding.org (allgemeingültiges Schema, ohne Spezifikationen) -->
+<?xml-model href="http://www.music-encoding.org/schema/current/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<mei xmlns="http://www.music-encoding.org/ns/mei" xmlns:xlink="http://www.w3.org/1999/xlink">
+   <!-- Kopfbereich einer MEI-Datei um sämtliche bibliografische Angaben, Metadaten zu der Datei, dem Werk und seinen Quellen abzulegen -->
+   <!-- ein MEI-Minimal-Header MUSS eine fileDesc mit titleStmt haben um valide zu sein (auch wenn die Elemente nicht zwingend Inhalt haben müssen). -->
+   <!-- der header ist aber beliebig erweiterbar und ist extrem ausbaufähig je nachdem welchen Zweck er erfüllen soll -->
+   <meiHead>
+      <fileDesc>
+         <!-- der Titel der Datei! -->
+         <titleStmt>
+            <title n="1">Agathe von Joachim</title>
+            <title n="2">Auszug aus...</title>
+         </titleStmt>
+         <pubStmt/>
+         <sourceDesc>
+            <source n="1" xml:id="source1">
+               <!-- Titel der Quelle(n) -->
+               <titleStmt>
+                  <title>Titel der Quelle</title>
+               </titleStmt>
+               <pubStmt/>
+               <notesStmt>
+                  <!-- hier wird festgehalten woher die Datei überhaupt kommt -->
+                  <annot>Source MusicXML file created using Finale 2014 for Mac and Dolet Light for
+                     Finale 2014 on <date>2014-05-12</date>.</annot>
+               </notesStmt>
+            </source>
+            <source n="2" xml:id="source1">
+               <!-- ggf hier eine weitere Quelle anlegen, wenn zum Beispiele Apparate eingetragen werden sollen -->
+            </source>
+         </sourceDesc>
+      </fileDesc>
+      <!-- Angaben zum "Codierungsvorgang" mit zum Beiepiel einem pointer auf ein angewendetes stylesheet-->
+      <encodingDesc>
+         <appInfo>
+            <application xml:id="improveMusic.xsl">
+               <name>improveMusic.xsl</name>
+               <ptr target="../xslt/improveMusic.xsl"/>
+            </application>
+         </appInfo>
+      </encodingDesc>
+      <!-- in der workDesc können ggf. sämtliche Angaben zum Werk/Stück abgelegt werden, 
+         dazu gehören auch Instrumentation, Provenienz, incipits, uvm. -->
+      <workDesc>
+         <work>
+            <titleStmt>
+               <title/>
+            </titleStmt>
+         </work>
+      </workDesc>
+      <!-- alle Änderungen die an der Datei vorgenommen werden, sollten für einen besseren Überblick hier dokumentiert werden -->
+      <revisionDesc>
+         <change n="1">
+            <respStmt/>
+            <changeDesc>
+               <!-- wie zum Beispiel, dass die Datei aus einer MusicXML-Datei konvertiert wurde -->
+               <p>Transcoded from a MusicXML version 3.0 file using an XSLT stylesheet (musicxml2mei
+                  v. 3.0).</p>
+            </changeDesc>
+            <date>2014-05-13</date>
+         </change>
+         <change n="2">
+            <respStmt>
+               <persName nymref="#smBWB"/>
+            </respStmt>
+            <changeDesc>
+               <p>Content of WeGA_C07_Nr.08mei.xml processed with improveMusic.xsl in order to
+                  resolve mei:bTrems, mei:fTrems, intermediary mei:scoreDefs and mei:staffDef,
+                  transform mei:artic and mei:accid to respective attributes, etc.</p>
+            </changeDesc>
+            <date isodate="2014-05-15"/>
+         </change>
+         <change n="3">
+            <changeDesc>
+               <p>Stimme der Agathe automatisch aus cleanedMEI_mov_08.xml generiert (extract.xsl)</p>
+            </changeDesc>
+            <date>Datum eintragen</date>
+         </change>
+      </revisionDesc>
+   </meiHead>
+   <!-- hier beginnt der Musikteil -->
+   <music>
+      <body>
+         <!-- eine "musical division" als festgelegter Abschnitt, hier zum Beipiel Satz 8 aus dem Gesamtwerk, eine Datei kann beliebig viele mdivs enthalten -->
+         <mdiv xml:id="core_mov8">
+            <score>
+               <!-- Vorzeichnung, Schlüsselung, Tonart und Metrum -->
+               <scoreDef meter.count="4" meter.unit="4" meter.sym="common" key.sig="4s"
+                  key.mode="major">
+                  <staffGrp>
+                     <!-- hier die Angaben zu dem einzelnen System, um das es geht, 
+                        in diesem Fall die Stimme der Agathe im zehnten System der Gesamtpartitur -->
+                     <staffDef n="10" xml:id="P9" label="Agathe" label.abbr="A." lines="5"
+                        clef.line="2" clef.shape="G"/>
+                  </staffGrp>
+               </scoreDef>
+               <section>
+                  <!-- measure als Element für einen Takt, beinhaltet hier das System der Agathe-Stimme -->
+                 
+                  <!-- Takte können eingefügt und entfernt werden; der folgende Pausentakt steht als Beispiel -->
+                  
+                  <scoreDef meter.count="4" meter.unit="4" meter.sym="common" key.sig="0"
+                     key.mode="major">
+                     <staffGrp>
+                        <staffDef n="10" key.sig="0"/>
+                     </staffGrp>
+                  </scoreDef>
+                  <measure xml:id="prefix_measure103" n="103">
+                     <staff n="10">
+                        <layer n="1">
+                           <rest xml:id="d1e44798" dur="2"/>
+                           <rest xml:id="d1e44806" dur="4"/>
+                           <note xml:id="d1e44814" pname="g" oct="4" dur="4" stem.dir="up">
+                              <verse n="1">
+                                 <syl fontfam="Times New Roman">o</syl>
+                              </verse>
+                           </note>
+                        </layer>
+                     </staff>
+                  </measure>
+                  <measure xml:id="prefix_measure104" n="104">
+                     <staff n="10">
+                        <layer n="1">
+                           <note xml:id="d1e45282" pname="e" oct="5" dur="2" dots="1"
+                               stem.dir="down">
+                              <verse n="1">
+                                 <syl wordpos="i" con="d" fontfam="Times New Roman">sü</syl>
+                              </verse>
+                           </note>
+                           <note xml:id="d1e45304" pname="d" oct="5" dur="4" stem.dir="down">
+                              <verse n="1">
+                                 <syl wordpos="t" fontfam="Times New Roman">ße</syl>
+                              </verse>
+                           </note>
+                        </layer>
+                     </staff>
+                     <fermata tstamp="1" staff="10" startid="#d1e45282" place="above" form="norm"/>
+                  </measure>
+                  <measure xml:id="prefix_measure105" n="105">
+                     <staff n="10">
+                        <layer n="1">
+                           <app>
+                              <rdg label="1" source="#source1">
+                                 <note xml:id="d1e45768" pname="c" oct="5" dur="4" stem.dir="down">
+                                    <verse n="1">
+                                       <syl wordpos="i" con="d" fontfam="Times New Roman">Hoff</syl>
+                                    </verse>
+                                 </note>
+                              </rdg>
+                              <rdg label="2" source="#source2">
+                                 <note xml:id="d1e45768" pname="d" oct="5" dur="4" stem.dir="down">
+                                    <verse n="1">
+                                       <syl wordpos="i" con="d" fontfam="Times New Roman">Hoff</syl>
+                                    </verse>
+                                 </note> 
+                              </rdg>
+                           </app>
+                           
+                           <note xml:id="d1e45787" pname="c" oct="5" dur="4" stem.dir="down">
+                              <verse n="1">
+                                 <syl wordpos="t" fontfam="Times New Roman">nung!</syl>
+                              </verse>
+                           </note>
+                           <rest xml:id="d1e45806" dur="2"/>
+                        </layer>
+                     </staff>
+                  </measure>
+               </section>
+            </score>
+         </mdiv>
+      </body>
+   </music>
+</mei>
