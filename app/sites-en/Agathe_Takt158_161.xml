@@ -26,7 +26,7 @@
                      Finale 2014 on <date>2014-05-12</date>.</annot>
                </notesStmt>
             </source>
-            <source n="2" xml:id="source1">
+            <source n="2" xml:id="source2">
                <!-- ggf hier eine weitere Quelle anlegen, wenn zum Beispiele Apparate eingetragen werden sollen -->
             </source>
          </sourceDesc>
@@ -176,26 +176,24 @@
                              <rdg label="1" source="#source1">
                                 <note xml:id="d1e72804" grace="unknown" stem.mod="1slash" pname="e"
                                    oct="5" dur="4" stem.dir="up">
-                                  
                                 </note>
-                                
+                                <note xml:id="d1e72560aa" pname="d" oct="5" dur="2" dots="1" stem.dir="down"> 
+                                <verse n="1">
+                                   <syl con="u" halign="left" fontfam="Times New Roman">an</syl>
+                                </verse>
+                                </note>
                              </rdg>
                              <rdg label="2" source="#source2">
-                                <note xml:id="d1e72560" pname="e" oct="5" dur="4" stem.dir="down">
-                                   
+                                <note xml:id="d1e72560a" pname="e" oct="5" dur="2" stem.dir="down">  
+                                   <verse n="1">
+                                      <syl con="u" halign="left" fontfam="Times New Roman">an</syl>
+                                   </verse>
                                 </note>
-                             </rdg>
-                             
+                                <note xml:id="d1e72823" pname="d" oct="5" dur="4"
+                                   stem.dir="down" accid.ges="s">                       
+                                </note>
+                             </rdg>                         
                           </app>
-                           
-                           <note xml:id="d1e72823" pname="d" oct="5" dur="2" dots="1"
-                               stem.dir="down" accid.ges="s">
-                              <verse n="1">
-                                 <syl con="u" halign="left" fontfam="Times New Roman">an</syl>
-                              </verse>
-                              
-                              
-                           </note>
                            
                            <note xml:id="d1e72843" pname="b" oct="4" dur="4" stem.dir="down"/>
                         </layer>
