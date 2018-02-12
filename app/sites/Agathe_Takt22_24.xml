@@ -1,5 +1,4 @@
-
-?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- Schema verlinkt auf music-encoding.org (allgemeingültiges Schema, ohne Spezifikationen) -->
 <?xml-model href="http://www.music-encoding.org/schema/current/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <mei xmlns="http://www.music-encoding.org/ns/mei" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -10,8 +9,7 @@
         <fileDesc>
             <!-- der Titel der Datei! -->
             <titleStmt>
-                <title n="1">Agathe von Joachim</title>
-                <title n="2">Auszug aus...</title>
+                <title n="1">Arie der Agathe Nr. 8, T. 22-24</title>
             </titleStmt>
             <pubStmt/>
             <sourceDesc>

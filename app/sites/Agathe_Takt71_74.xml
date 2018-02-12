@@ -9,8 +9,7 @@
       <fileDesc>
          <!-- der Titel der Datei! -->
          <titleStmt>
-            <title n="1">Agathe von Joachim</title>
-            <title n="2">Auszug aus...</title>
+            <title n="1">Arie der Agathe Nr. 8, T. 71-74</title>
          </titleStmt>
          <pubStmt/>
          <sourceDesc>
@@ -26,7 +25,7 @@
                      Finale 2014 on <date>2014-05-12</date>.</annot>
                </notesStmt>
             </source>
-            <source n="2" xml:id="source1">
+            <source n="2" xml:id="source2">
                <!-- ggf hier eine weitere Quelle anlegen, wenn zum Beispiele Apparate eingetragen werden sollen -->
             </source>
          </sourceDesc>

@@ -9,7 +9,7 @@
       <fileDesc>
          <!-- der Titel der Datei! -->
          <titleStmt>
-            <title n="1">Agathe von Joachim</title>
+            <title n="1">Arie der Agathe Nr. 8, T. 141-145</title>
             <title n="2">Auszug aus...</title>
          </titleStmt>
          <pubStmt/>
@@ -26,7 +26,7 @@
                      Finale 2014 on <date>2014-05-12</date>.</annot>
                </notesStmt>
             </source>
-            <source n="2" xml:id="source1">
+            <source n="2" xml:id="source2">
                <!-- ggf hier eine weitere Quelle anlegen, wenn zum Beispiele Apparate eingetragen werden sollen -->
             </source>
          </sourceDesc>
@@ -190,7 +190,7 @@
                               </rdg>
                               <rdg label="2" source="#source2">
                                  
-                                 <note xml:id="d1e66775" pname="c" oct="5" dur="4" stem.dir="down">
+                                 <note xml:id="d1e66775a" pname="c" oct="5" dur="4" stem.dir="down">
                                     <verse n="1">
                                        <syl wordpos="m" con="d" fontfam="Times New Roman">wäh</syl>
                                     </verse>
@@ -276,7 +276,7 @@
                                  </note>      
                               </rdg>
                               <rdg label="2" source="#source2">
-                                 <note xml:id="d1e67728" pname="e" oct="5" dur="4" stem.dir="down"
+                                 <note xml:id="d1e67728a" pname="e" oct="5" dur="4" stem.dir="down"
                                     accid.ges="s">
                                     <verse n="1">
                                        <syl wordpos="m" con="d" fontfam="Times New Roman">wäh</syl>
