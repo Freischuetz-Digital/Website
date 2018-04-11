@@ -39,18 +39,19 @@
             var pageWidth = 2400;
             
             var mei;
+            var xPath = [];
             
             $('#btn1').on('click',function(e) {
                 $('#btn1').addClass('active');
                 $('#btn2').removeClass('active');
-                
+                xPath = [];
                 func(1);
             });
             
             $('#btn2').on('click',function(e) {
                 $('#btn2').addClass('active');
                 $('#btn1').removeClass('active');
-                
+                xPath = ["./rdg[2]"];
                 func(2);
             });
             
@@ -63,8 +64,6 @@
                     
                     mei = data;
                     
-                    vrvToolkit.loadData(data);
-                    
                     func(1);
                     
                 }
@@ -76,12 +75,12 @@
                     pageWidth: pageWidth,
                     scale: zoom,
                     adjustPageHeight: 1,
-                    appXPathQuery: './rdg[' + i + ']'
+                    appXPathQuery: xPath
                 };
                 
                 vrvToolkit.setOptions( options );
                 vrvToolkit.loadData(mei);
-                svg = vrvToolkit.renderPage(1);
+                svg = vrvToolkit.renderData(mei,options);
                 $("#svg_output").html(svg);
                 
             };
